@@ -1,8 +1,11 @@
-export type ProductItem = { name: string; detail: string; badge?: string };
+import { Images } from "../assets/images";
+
+export type ProductItem = { name: string; detail: string; badge?: string; image?: any };
 export type ProductCategory = {
   slug: string;
   name: string;
   intro: string;
+  image: any;
   highlights: string[];
   items: ProductItem[];
 };
@@ -10,56 +13,48 @@ export type ProductCategory = {
 export const productCategories: ProductCategory[] = [
   {
     slug: "dry-fruits",
-    name: "Dry Fruits",
+    name: "Dry Fruits & Nuts",
     intro:
       "Premium origin almonds, pistachios, cashews, figs and raisins curated for gifting and daily nourishment.",
+    image: Images.closeUpNuts,
     highlights: [
       "Iranian & Afghan sourcing",
       "Nitrogen-packed freshness",
       "Festive-ready tins",
     ],
     items: [
-      { name: "Iranian Pistachios", detail: "Roasted & salted | 200g & 500g tins", badge: "Best Seller" },
-      { name: "Californian Almonds", detail: "Lightly roasted | 250g pouches" },
-      { name: "W180 Cashews", detail: "Whole premium | 250g tins" },
-      { name: "Afghan Anjeer", detail: "Soft grade | 250g ribbon pouches" },
-      { name: "Golden Raisins", detail: "Shade-dried | 250g pouches" },
+      { name: "Filled Dry Fruit Gift Box", detail: "Luxurious assorted dry fruits in a premium gifting box.", badge: "Best Seller", image: Images.topViewDeskNuts },
+      { name: "Dry Fruit Gift Box", detail: "Classic assortment of roasted almonds, pistachios and cashews.", image: Images.topViewDiffNuts },
+      { name: "Metal Dry Fruit Box", detail: "Decorative metallic box, perfect for festive corporate gifting.", image: Images.topViewPistachios },
+      { name: "Dry Fruit Box", detail: "Standard high-quality rigid box with distinct partitions.", image: Images.woodenBoxNuts },
+      { name: "Premium Dry Fruits", detail: "Loose packaging for everyday consumption and health.", image: Images.nutsSetTable },
     ],
   },
   {
-    slug: "chocolate-gift-box",
-    name: "Chocolate Gift Box",
+    slug: "chocolates",
+    name: "Chocolates & Gift Boxes",
     intro:
-      "Hand-poured Belgian chocolates and pralines in red & gold magnetic boxes with custom notes.",
+      "Hand-poured Belgian chocolates and pralines in luxurious packaging with custom branding.",
+    image: Images.sweetiesDesk,
     highlights: ["Temperature-controlled packing", "Custom logo foil", "Vegan options"],
     items: [
-      { name: "Praline Assortment (12 pc)", detail: "Hazelnut, almond, caramel, dark sea salt" },
-      { name: "Ruby Almond Bark", detail: "With candied rose petals" },
-      { name: "Gianduja Squares", detail: "Classic Piemonte style" },
+      { name: "Corporate Chocolate Gift Box", detail: "Customizable box with your company's logo printed on wrapper.", badge: "Corporate", image: Images.driedFruitsCounter },
+      { name: "Chocolate Gift Box", detail: "Assorted pralines and truffles in an elegant magnetic box.", image: Images.topViewDriedFruits },
+      { name: "Premium Chocolate Box", detail: "A curated 12-piece selection of artisanal dark and milk chocolates.", image: Images.sweetiesDesk },
+      { name: "Artisanal Chocolates", detail: "Loose or small-batch bespoke chocolates.", image: Images.closeUpNuts },
     ],
   },
   {
-    slug: "juice",
+    slug: "juices",
     name: "Cold-Pressed Juices",
     intro:
-      "Fresh, no-concentrate juices in 200 ml glass bottles. Perfect for welcome hampers and events.",
+      "Fresh, no-concentrate juices in elegant glass bottles. Perfect for welcome hampers and events.",
+    image: Images.topViewDriedFruits,
     highlights: ["No refined sugar", "Fresh daily batches", "Returnable glass bottles"],
     items: [
-      { name: "Valencia Orange", detail: "Bright & pulpy" },
-      { name: "Pomegranate Ruby", detail: "Antioxidant rich" },
-      { name: "Almond Saffron Milk", detail: "With Kashmiri saffron & dates" },
-    ],
-  },
-  {
-    slug: "celebration-hampers",
-    name: "Celebration Hampers",
-    intro:
-      "Curated red & gold hampers with cards, ribbons and custom brand storytelling for each occasion.",
-    highlights: ["Concierge delivery", "Handwritten cards", "Tiered pricing for volume"],
-    items: [
-      { name: "Grande Corporate", detail: "Dry fruit quartet, praline box, floral card", badge: "Corporate" },
-      { name: "Festive Duo", detail: "Almond tin + pistachio tin with ribbon" },
-      { name: "Wedding Signature", detail: "Chocolate bark, nuts, artisanal tea, note" },
+      { name: "Classic Juices", detail: "Valencia Orange, Pomegranate Ruby", image: Images.topViewDiffNuts },
+      { name: "Premium Juice Hampers", detail: "Pack of 6 assorted wellness juices.", image: Images.nutsSetTable },
+      { name: "Almond Saffron Milk", detail: "With Kashmiri saffron & dates", image: Images.topViewPistachios },
     ],
   },
 ];

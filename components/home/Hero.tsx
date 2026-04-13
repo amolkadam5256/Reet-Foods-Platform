@@ -56,6 +56,7 @@ export function Hero() {
                   src={src}
                   alt="Luxury gifting collage"
                   fill
+                  sizes="(max-width: 768px) 33vw, 33vw"
                   className="object-cover"
                 />
               </div>

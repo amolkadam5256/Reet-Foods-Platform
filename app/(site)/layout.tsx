@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import Header from "@/components/common/Header";
 
 export default function SiteLayout({
   children,
@@ -8,46 +9,12 @@ export default function SiteLayout({
 }) {
   return (
     <div className="min-h-full flex flex-col">
-      <header className="sticky top-0 z-50 backdrop-blur bg-white/90 border-b border-reef-gold/25">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-reef-gold to-reef-burgundy flex items-center justify-center text-reef-charcoal font-semibold">
-              RF
-            </div>
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-reef-burgundy font-semibold">
-                Reet Foods
-              </p>
-              <p className="text-xs text-reef-charcoal/70">Pune, India</p>
-            </div>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link className="hover:text-reef-gold transition" href="/products">
-              Products
-            </Link>
-            <Link className="hover:text-reef-gold transition" href="/about">
-              About
-            </Link>
-            <Link className="hover:text-reef-gold transition" href="/gallery">
-              Gallery
-            </Link>
-            <Link className="hover:text-reef-gold transition" href="/contact">
-              Contact
-            </Link>
-          </nav>
-          <Link
-            href="/contact#quote"
-            className="inline-flex items-center gap-2 rounded-full bg-reef-gold text-reef-charcoal px-4 py-2 text-sm font-semibold shadow-lg shadow-reef-burgundy/15 hover:-translate-y-0.5 transition"
-          >
-            Get Best Quote
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">{children}</main>
 
       <footer className="border-t border-reef-gold/20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 md:grid-cols-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid gap-8 md:grid-cols-3">
           <div className="space-y-3">
             <p className="text-lg font-serif text-reef-burgundy">
               Crafted Gifting, Pune

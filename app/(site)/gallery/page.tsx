@@ -6,11 +6,11 @@ const photos = [
     alt: "Dry fruits spread",
   },
   {
-    src: "https://images.unsplash.com/photo-1481391319762-47dff72954d5?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
     alt: "Chocolate box",
   },
   {
-    src: "https://images.unsplash.com/photo-1502741509793-1bf00d85ae73?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
     alt: "Gift hamper",
   },
   {

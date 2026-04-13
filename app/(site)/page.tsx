@@ -15,7 +15,7 @@ const schema = {
   "@type": "LocalBusiness",
   name: "Reet Foods",
   image:
-    "https://images.unsplash.com/photo-1502741509793-1bf00d85ae73?auto=format&fit=crop&w=900&q=80",
+    "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
   url: "https://reetfoods.in",
   telephone: "+91-99999-99999",
   address: {

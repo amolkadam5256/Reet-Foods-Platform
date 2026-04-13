@@ -52,9 +52,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased bg-reef-cream text-reef-charcoal`}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased bg-white text-black`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-white text-black">{children}</body>
     </html>
   );
 }

@@ -19,7 +19,7 @@ export const categories: Category[] = [
     copy: "Belgian chocolates, pralines and luxury handmade assortments.",
     tag: "Corporate favourite",
     href: "/products/chocolate-gift-box",
-    img: "https://images.unsplash.com/photo-1481391319762-47dff72954d5?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Cold-Pressed Juices",
@@ -33,6 +33,6 @@ export const categories: Category[] = [
     copy: "Custom wedding & corporate hampers with branding options.",
     tag: "Wedding & festive",
     href: "/products/celebration-hampers",
-    img: "https://images.unsplash.com/photo-1502741509793-1bf00d85ae73?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
   },
 ];
