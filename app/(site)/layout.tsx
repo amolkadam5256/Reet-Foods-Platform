@@ -6,6 +6,8 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import HeaderTopBar from "@/components/common/HeaderTopBar";
 import HeaderNavBar from "@/components/common/HeaderNavBar";
+import { categories } from "@/data/categories";
+import { productCategories } from "@/data/products";
 
 type MenuGroup = {
   title: string;
@@ -19,14 +21,23 @@ type NavItem = {
   kind: "home" | "shop" | "simple" | "pages";
 };
 
+type SearchScope = "All" | "Products" | "Categories" | "Pages";
+
+type SearchEntry = {
+  label: string;
+  href: string;
+  scope: SearchScope;
+  description: string;
+};
+
 const navItems: NavItem[] = [
   { label: "Home", href: "/", kind: "home" },
-  { label: "Shop", href: "/products", kind: "shop" },
+  { label: "Products", href: "/products", kind: "shop" },
+  { label: "Corporate Gifting", href: "/contact", kind: "simple" },
+  { label: "About", href: "/about", kind: "simple" },
+  { label: "Gallery", href: "/gallery", kind: "simple" },
   { label: "Blog", href: "/blog", kind: "simple" },
-  { label: "Pages", href: "/about", kind: "pages" },
-  { label: "About Us", href: "/about", kind: "simple" },
   { label: "Contact", href: "/contact", kind: "simple" },
-  { label: "Jewellery", href: "/gallery", kind: "simple" },
 ];
 
 const menuGroups: Record<string, MenuGroup[]> = {
@@ -42,51 +53,50 @@ const menuGroups: Record<string, MenuGroup[]> = {
   ],
   shop: [
     {
-      title: "Shop page layout",
-      links: [
-        { label: "Grid Fullwidth", href: "/products" },
-        { label: "Left Sidebar", href: "/products" },
-        { label: "Right Sidebar", href: "/products" },
-        { label: "List Fullwidth", href: "/products" },
-        { label: "List Left Sidebar", href: "/products" },
-        { label: "List Right Sidebar", href: "/products" },
-      ],
-    },
-    {
-      title: "Signature categories",
+      title: "Products",
       links: [
         { label: "Dry Fruits", href: "/products/categories/dry-fruits" },
         { label: "Chocolates", href: "/products/categories/chocolates" },
         { label: "Gift Boxes", href: "/products/categories/chocolate-gift-box" },
-        { label: "Juices", href: "/products/categories/juice" },
+        { label: "Corporate Hampers", href: "/products/dry-fruit-box" },
+        { label: "View All Products", href: "/products" },
       ],
-      image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      title: "Single product types",
-      links: [
-        { label: "Single Product", href: "/products/dry-fruits" },
-        { label: "Single Product Sale", href: "/products/chocolate-gift-box" },
-        { label: "Single Product Variable", href: "/products/juice" },
-        { label: "Single Product Slider", href: "/products" },
-      ],
-    },
-  ],
-  pages: [
-    {
-      title: "Utility pages",
-      links: [
-        { label: "My Account", href: "/about" },
-        { label: "Wishlist", href: "/products" },
-        { label: "Cart", href: "/contact" },
-        { label: "Checkout", href: "/contact" },
-        { label: "FAQ", href: "/faq" },
-        { label: "Coming Soon", href: "/" },
-      ],
-      image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
     },
   ],
 };
+
+const searchEntries: SearchEntry[] = [
+  { label: "Home", href: "/", scope: "Pages", description: "Return to the homepage" },
+  { label: "Shop", href: "/products", scope: "Pages", description: "Browse all product categories" },
+  { label: "Blog", href: "/blog", scope: "Pages", description: "Read gifting and brand stories" },
+  { label: "About Us", href: "/about", scope: "Pages", description: "Learn about Reet Foods" },
+  { label: "Contact", href: "/contact", scope: "Pages", description: "Get in touch with our team" },
+  { label: "FAQ", href: "/faq", scope: "Pages", description: "Find quick answers" },
+  { label: "Dry Fruits", href: "/products/dry-fruits", scope: "Categories", description: "Premium nuts and festive gifting" },
+  { label: "Chocolate Gift Boxes", href: "/products/chocolate-gift-box", scope: "Categories", description: "Luxury chocolates and curated boxes" },
+  { label: "Cold-Pressed Juices", href: "/products/juice", scope: "Categories", description: "Fresh juice gifting options" },
+  { label: "Celebration Hampers", href: "/products/dry-fruit-box", scope: "Categories", description: "Corporate and festive hampers" },
+  ...categories.map((category) => ({
+    label: category.title,
+    href: category.href,
+    scope: "Categories" as const,
+    description: category.copy,
+  })),
+  ...productCategories.flatMap((category) => [
+    {
+      label: category.name,
+      href: `/products/${category.slug}`,
+      scope: "Products" as const,
+      description: category.intro,
+    },
+    ...category.items.map((item) => ({
+      label: item.name,
+      href: `/products/${category.slug}`,
+      scope: "Products" as const,
+      description: item.detail,
+    })),
+  ]),
+];
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -94,7 +104,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchScope, setSearchScope] = useState<"All" | "Products" | "Categories" | "Pages">("All");
+  const [searchScope, setSearchScope] = useState<SearchScope>("All");
   const [isScrolled, setIsScrolled] = useState(false);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
@@ -103,6 +113,21 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
     if (!openMenu) return [];
     return menuGroups[openMenu] ?? [];
   }, [openMenu]);
+
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return searchEntries.filter((entry) => {
+      const matchesScope = searchScope === "All" || entry.scope === searchScope;
+      const haystack = `${entry.label} ${entry.description}`.toLowerCase();
+      const matchesQuery = !q || haystack.includes(q);
+      return matchesScope && matchesQuery;
+    });
+  }, [searchQuery, searchScope]);
+
+  const suggestedResults = useMemo(() => {
+    if (searchQuery.trim()) return searchResults.slice(0, 6);
+    return searchEntries.slice(0, 6);
+  }, [searchQuery, searchResults]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -170,7 +195,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       ) : null}
 
       {searchOpen ? (
-        <div className="fixed inset-0 z-[80] bg-black/55 px-4 py-6 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[80] bg-black/55 px-4 pt-12 pb-6 backdrop-blur-sm sm:px-6 sm:pt-16">
           <div className="mx-auto max-w-4xl">
             <div className="border border-reef-gold/20 bg-white shadow-[0_24px_70px_rgba(0,0,0,0.2)]">
               <div className="flex items-center justify-between border-b border-reef-gold/10 px-5 py-4 sm:px-6">
@@ -187,10 +212,10 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   ×
                 </button>
               </div>
-              <div className="space-y-5 p-5 sm:p-6">
+              <div className="space-y-5 px-5 pb-6 pt-6 sm:px-6 sm:pb-7 sm:pt-7">
                 <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
                   <label className="flex items-center gap-3 border border-reef-gold/15 bg-[#faf8f3] px-4 py-3">
-                    <span aria-hidden>⌕</span>
+                    <span aria-hidden className="text-reef-gold">⌕</span>
                     <input
                       autoFocus
                       value={searchQuery}
@@ -229,6 +254,32 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                       {scope}
                     </button>
                   ))}
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-reef-gold">Suggestions</p>
+                    <p className="text-xs text-reef-charcoal/45">{searchResults.length} results</p>
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {suggestedResults.length ? (
+                      suggestedResults.map((item) => (
+                        <Link
+                          key={`${item.scope}-${item.href}-${item.label}`}
+                          href={item.href}
+                          onClick={() => setSearchOpen(false)}
+                          className="border border-reef-gold/15 px-4 py-4 transition duration-200 ease-out hover:border-reef-gold hover:bg-reef-cream"
+                        >
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-reef-gold">{item.scope}</p>
+                          <p className="mt-2 text-sm font-semibold text-reef-charcoal">{item.label}</p>
+                          <p className="mt-1 text-xs leading-5 text-reef-charcoal/60">{item.description}</p>
+                        </Link>
+                      ))
+                    ) : (
+                      <div className="border border-dashed border-reef-gold/20 px-4 py-6 text-sm text-reef-charcoal/65 sm:col-span-2">
+                        No results found. Try a different keyword or switch the filter to All.
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
