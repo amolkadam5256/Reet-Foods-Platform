@@ -1,3 +1,5 @@
+import { SiteShell } from "@/components/common/SiteShell";
+
 export const metadata = {
   title: "Contact Reet Foods | Get Best Quote",
   description:
@@ -6,93 +8,71 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-10">
-      <div className="flex items-center gap-3">
-        <div className="accent-bar" />
-        <h1 className="text-3xl font-serif text-reef-cream">Contact & Quotes</h1>
-      </div>
-      <p className="text-sm text-reef-cream/80">
-        Share your requirement and we will respond within one business day with options, pricing and delivery
-        timelines.
-      </p>
-
-      <div className="glass p-6 space-y-6" id="quote">
-        <form className="space-y-4">
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="text-sm text-reef-cream/80 space-y-2">
-              Full name
-              <input
-                className="w-full glass px-3 py-2 text-sm text-reef-cream bg-transparent"
-                type="text"
-                placeholder="Your name"
-                required
-              />
+    <SiteShell
+      eyebrow="Contact"
+      title="Tell us what you need and we’ll shape the right gifting option."
+      description="Share quantity, occasion, budget range, and delivery date. We’ll respond with product suggestions, packaging options, and pricing."
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+      sidePanelTitle="Fast response"
+      sidePanelBody="For the quickest reply, include the product category, order size, and preferred delivery window."
+      sideLinks={[
+        { label: "Call +91 99999 99999", href: "tel:+919999999999" },
+        { label: "WhatsApp us", href: "https://wa.me/919999999999?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote" },
+      ]}
+    >
+      <div id="quote" className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
+        <div className="border border-reef-gold/15 bg-white p-6">
+          <form className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="space-y-2 text-sm text-reef-charcoal/75">
+                Full name
+                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Your name" required />
+              </label>
+              <label className="space-y-2 text-sm text-reef-charcoal/75">
+                Company / Event
+                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Company / Event" />
+              </label>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="space-y-2 text-sm text-reef-charcoal/75">
+                Email
+                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="email" placeholder="you@example.com" required />
+              </label>
+              <label className="space-y-2 text-sm text-reef-charcoal/75">
+                Phone
+                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="tel" placeholder="+91..." required />
+              </label>
+            </div>
+            <label className="space-y-2 text-sm text-reef-charcoal/75">
+              Requirement
+              <textarea className="h-32 w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" placeholder="Quantity, product, delivery date, customization..." required />
             </label>
-            <label className="text-sm text-reef-cream/80 space-y-2">
-              Company
-              <input
-                className="w-full glass px-3 py-2 text-sm text-reef-cream bg-transparent"
-                type="text"
-                placeholder="Company / Event"
-              />
-            </label>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <label className="text-sm text-reef-cream/80 space-y-2">
-              Email
-              <input
-                className="w-full glass px-3 py-2 text-sm text-reef-cream bg-transparent"
-                type="email"
-                placeholder="you@example.com"
-                required
-              />
-            </label>
-            <label className="text-sm text-reef-cream/80 space-y-2">
-              Phone
-              <input
-                className="w-full glass px-3 py-2 text-sm text-reef-cream bg-transparent"
-                type="tel"
-                placeholder="+91..."
-                required
-              />
-            </label>
-          </div>
-          <label className="text-sm text-reef-cream/80 space-y-2">
-            Requirement
-            <textarea
-              className="w-full glass px-3 py-2 text-sm text-reef-cream bg-transparent h-28"
-              placeholder="Quantity, product, delivery date, customization..."
-              required
-            />
-          </label>
-          <button
-            type="submit"
-            className="inline-flex items-center gap-2 bg-reef-gold text-reef-ink px-5 py-3 rounded-full text-sm font-semibold shadow-lg shadow-reef-red/40"
-          >
-            Send Inquiry
-          </button>
-        </form>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3">
-        <div className="card p-5">
-          <p className="text-xs uppercase tracking-[0.2em] text-reef-gold mb-2">Call</p>
-          <p className="text-sm text-reef-cream/80">+91 99999 99999</p>
+            <button type="submit" className="inline-flex items-center gap-2 bg-reef-gold px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95">
+              Send Inquiry
+            </button>
+          </form>
         </div>
-        <div className="card p-5">
-          <p className="text-xs uppercase tracking-[0.2em] text-reef-gold mb-2">Email</p>
-          <p className="text-sm text-reef-cream/80">hello@reetfoods.in</p>
+
+        <div className="space-y-4">
+          <div className="border border-reef-gold/15 bg-[#111111] p-6 text-white">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-reef-gold">Contact details</p>
+            <div className="mt-4 space-y-3 text-sm text-white/72">
+              <p>+91 99999 99999</p>
+              <p>hello@reetfoods.in</p>
+              <p>Pune, Maharashtra, India</p>
+            </div>
+          </div>
+          <div className="border border-reef-gold/15 bg-white p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-reef-burgundy">What to include</p>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-reef-charcoal/72">
+              <li>Product type and quantity</li>
+              <li>Budget and gifting occasion</li>
+              <li>Delivery city and deadline</li>
+              <li>Branding or customization requests</li>
+            </ul>
+          </div>
         </div>
-        <a
-          className="card p-5 hover:border-reef-gold/60 transition"
-          href="https://wa.me/919999999999?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p className="text-xs uppercase tracking-[0.2em] text-reef-gold mb-2">WhatsApp</p>
-          <p className="text-sm text-reef-cream/80">Tap to chat</p>
-        </a>
       </div>
-    </div>
+    </SiteShell>
   );
 }

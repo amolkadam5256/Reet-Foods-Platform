@@ -1,11 +1,12 @@
+import type { StaticImageData } from "next/image";
 import { Images } from "../assets/images";
 
-export type ProductItem = { name: string; detail: string; badge?: string; image?: any };
+export type ProductItem = { name: string; detail: string; badge?: string; image?: StaticImageData };
 export type ProductCategory = {
   slug: string;
   name: string;
   intro: string;
-  image: any;
+  image: StaticImageData;
   highlights: string[];
   items: ProductItem[];
 };

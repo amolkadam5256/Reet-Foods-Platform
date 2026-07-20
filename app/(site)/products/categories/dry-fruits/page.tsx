@@ -1,28 +1,32 @@
 import Link from "next/link";
 import { productCategories } from "../../../../../data/products";
+import { SiteShell } from "@/components/common/SiteShell";
 
 const category = productCategories.find((c) => c.slug === "dry-fruits");
 
 export default function DryFruitsCategoryPage() {
   if (!category) return null;
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-6">
-      <h1 className="text-3xl font-serif text-reef-burgundy">{category.name}</h1>
-      <p className="text-sm text-reef-charcoal/80">{category.intro}</p>
-      <ul className="grid gap-4 md:grid-cols-3">
+    <SiteShell
+      eyebrow="Dry Fruits"
+      title={category.name}
+      description={category.intro}
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products", href: "/products" }, { label: category.name }]}
+      sidePanelTitle="Collection focus"
+      sidePanelBody="This page is styled to match the reference category panels, with strong visual hierarchy and quick quote access."
+      sideLinks={[{ label: "Get quote", href: "/contact#quote" }, { label: "View gift boxes", href: "/products/categories/chocolate-gift-box" }]}
+    >
+      <div className="grid gap-4 md:grid-cols-3">
         {category.items.map((item) => (
-          <li key={item.name} className="card p-4 space-y-2">
-            <p className="text-lg font-serif text-reef-charcoal">{item.name}</p>
-            <p className="text-sm text-reef-charcoal/70">{item.detail}</p>
-            <Link
-              href="/contact#quote"
-              className="text-sm font-semibold text-reef-burgundy hover:text-reef-gold"
-            >
-              Get Quote →
+          <div key={item.name} className="border border-reef-gold/15 bg-white p-5">
+            <p className="text-lg font-semibold text-reef-charcoal">{item.name}</p>
+            <p className="mt-2 text-sm leading-7 text-reef-charcoal/72">{item.detail}</p>
+            <Link href="/contact#quote" className="mt-4 inline-flex text-sm font-semibold text-reef-burgundy">
+              Get Quote
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </SiteShell>
   );
 }

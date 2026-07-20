@@ -32,7 +32,7 @@ export const categories: Category[] = [
     title: "Celebration Hampers",
     copy: "Custom wedding & corporate hampers with branding options.",
     tag: "Wedding & festive",
-    href: "/products/celebration-hampers",
+    href: "/products/dry-fruit-box",
     img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
   },
 ];

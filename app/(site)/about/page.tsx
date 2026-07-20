@@ -1,3 +1,5 @@
+import { SiteShell } from "@/components/common/SiteShell";
+
 export const metadata = {
   title: "About Reet Foods | Pune",
   description:
@@ -5,41 +7,49 @@ export const metadata = {
 };
 
 const values = [
-  { title: "Sourcing", detail: "Origin-specific nuts, Belgian couverture, fresh cold-pressed fruits." },
-  { title: "Presentation", detail: "Red & gold palette, magnetic boxes, embossed seals and ribbons." },
-  { title: "Service", detail: "Concierge coordination, delivery routing, GST-compliant billing." },
+  { title: "Sourcing", detail: "Origin-specific nuts, Belgian couverture, and fresh cold-pressed ingredients." },
+  { title: "Presentation", detail: "Red and gold packaging, rigid boxes, embossed seals, and ribbons." },
+  { title: "Service", detail: "Concierge coordination, delivery routing, and GST-compliant billing." },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16 space-y-10">
-      <div className="flex items-center gap-3">
-        <div className="accent-bar" />
-        <h1 className="text-3xl font-serif text-reef-cream">About Reet Foods</h1>
-      </div>
-      <p className="text-lg text-reef-cream/80 leading-relaxed">
-        Reet Foods was founded in Pune with a single idea: premium ingredients deserve equally premium
-        presentation. From origin-controlled dry fruits to hand-tempered chocolates and fresh cold-pressed
-        juices, every box is crafted to delight recipients across corporate, festive and wedding occasions.
-      </p>
-
+    <SiteShell
+      eyebrow="About Us"
+      title="Premium ingredients deserve a premium presentation."
+      description="Reet Foods was founded in Pune to make gifting feel polished, reliable, and memorable for corporate, festive, and wedding buyers."
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+      sidePanelTitle="Our promise"
+      sidePanelBody="We help you plan everything from product selection to packaging, labels, and delivery timelines."
+      sideLinks={[{ label: "Explore products", href: "/products" }, { label: "Ask for a quote", href: "/contact#quote" }]}
+    >
       <div className="grid gap-4 md:grid-cols-3">
-        {values.map((v) => (
-          <div key={v.title} className="card p-5">
-            <p className="text-sm uppercase tracking-[0.2em] text-reef-gold mb-2">{v.title}</p>
-            <p className="text-sm text-reef-cream/75">{v.detail}</p>
+        {values.map((item) => (
+          <div key={item.title} className="border border-reef-gold/15 bg-white p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-reef-burgundy">
+              {item.title}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-reef-charcoal/72">{item.detail}</p>
           </div>
         ))}
       </div>
 
-      <div className="glass p-6 space-y-4">
-        <h2 className="text-xl font-serif text-reef-cream">What we manage for you</h2>
-        <ul className="list-disc list-inside text-sm text-reef-cream/80 space-y-2">
-          <li>Concept to delivery gifting for corporate offsites, Diwali and weddings</li>
-          <li>Custom logo sleeves, ribbons, note cards and concierge drop-offs</li>
-          <li>Shelf-life and temperature-safe packing for pan-Pune transport</li>
-        </ul>
+      <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="border border-reef-gold/15 bg-white p-6">
+          <h2 className="text-2xl font-semibold text-reef-charcoal">What we manage for you</h2>
+          <ul className="mt-4 space-y-3 text-sm leading-7 text-reef-charcoal/72">
+            <li>Concept to delivery gifting for corporate offsites, Diwali, and weddings</li>
+            <li>Custom logo sleeves, ribbons, note cards, and concierge drop-offs</li>
+            <li>Shelf-life and temperature-safe packing for city and pan-India transport</li>
+          </ul>
+        </div>
+        <div className="border border-reef-gold/15 bg-[#111111] p-6 text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-reef-gold">Why people choose us</p>
+          <p className="mt-4 text-sm leading-7 text-white/72">
+            We focus on the parts buyers care about most: consistency, presentation, speed of response, and customization support.
+          </p>
+        </div>
       </div>
-    </div>
+    </SiteShell>
   );
 }
