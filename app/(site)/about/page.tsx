@@ -18,7 +18,7 @@ export default function AboutPage() {
       eyebrow="About Us"
       title="Premium ingredients deserve a premium presentation."
       description="Reet Foods was founded in Pune to make gifting feel polished, reliable, and memorable for corporate, festive, and wedding buyers."
-      breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
+      breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us", href: "/about" }]}
       sidePanelTitle="Our promise"
       sidePanelBody="We help you plan everything from product selection to packaging, labels, and delivery timelines."
       sideLinks={[{ label: "Explore products", href: "/products" }, { label: "Ask for a quote", href: "/contact#quote" }]}

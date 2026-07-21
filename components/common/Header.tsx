@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import HeaderTopBar from "@/components/common/HeaderTopBar";
 import HeaderNavBar from "@/components/common/HeaderNavBar";
 
@@ -24,7 +26,6 @@ const navItems: NavItem[] = [
   { label: "Pages", href: "/about", kind: "pages" },
   { label: "About Us", href: "/about", kind: "simple" },
   { label: "Contact", href: "/contact", kind: "simple" },
-  { label: "Jewellery", href: "/gallery", kind: "simple" },
 ];
 
 const menuGroups: Record<string, MenuGroup[]> = {
@@ -166,14 +167,14 @@ export default function Header() {
           <button type="button" className="absolute inset-0" aria-label="Close menu overlay" onClick={() => setMobileOpen(false)} />
           <aside className="absolute right-0 top-0 h-full w-[88vw] max-w-sm bg-white p-5">
             <div className="mb-6 flex items-center justify-between">
-              <img src="/images/logo.png" alt="Reet Foods" width={120} height={44} />
+              <Image src="/images/logo.png" alt="Reet Foods" width={120} height={44} priority />
               <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close navigation" className="text-reef-charcoal">
                 ×
               </button>
             </div>
             <div className="space-y-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="flex items-center justify-between border border-reef-gold/10 px-4 py-3 text-sm font-medium text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy"
@@ -181,7 +182,7 @@ export default function Header() {
                 >
                   <span>{item.label}</span>
                   <span aria-hidden>⌄</span>
-                </a>
+                </Link>
               ))}
             </div>
           </aside>
@@ -252,7 +253,7 @@ export default function Header() {
                 <div className="grid gap-3 sm:grid-cols-2">
                   {searchResults.length ? (
                     searchResults.map((item) => (
-                      <a
+                      <Link
                         key={item.href}
                         href={item.href}
                         onClick={() => setSearchOpen(false)}
@@ -260,7 +261,7 @@ export default function Header() {
                       >
                         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-reef-gold">{item.scope}</p>
                         <p className="mt-2 text-sm font-semibold text-reef-charcoal">{item.label}</p>
-                      </a>
+                      </Link>
                     ))
                   ) : (
                     <div className="border border-dashed border-reef-gold/20 px-4 py-6 text-sm text-reef-charcoal/65 sm:col-span-2">

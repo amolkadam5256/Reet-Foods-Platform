@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { productCategories } from "../../../../../data/products";
 
-const category = productCategories.find((c) => c.slug === "dry-fruits");
+const category = productCategories.find((c) => c.slug === "dry-fruit-box");
 
 export default function DryFruitBoxPage() {
   if (!category) return null;

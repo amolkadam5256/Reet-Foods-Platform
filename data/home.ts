@@ -1,7 +1,14 @@
+import driedFruitsCounter from "../assets/dried-fruits-nuts-counter.jpg";
+import sweetiesDesk from "../assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
+import nutsSetTable from "../assets/nuts-set-table.jpg";
+import topViewDriedFruits from "../assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
+import topViewPistachios from "../assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
+import woodenBoxNuts from "../assets/various-nuts-wooden-box.jpg";
+
 export const heroGallery = [
-  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
+  woodenBoxNuts,
+  sweetiesDesk,
+  driedFruitsCounter,
 ];
 
 export const highlightBar = [
@@ -16,25 +23,25 @@ export const featuredProducts = [
     name: "Royal Pistachio Gold Tin (200g)",
     info: "Roasted pistachios in an embossed gold tin designed for premium gifting.",
     badge: "Best Seller",
-    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+    img: topViewPistachios,
   },
   {
     name: "Ruby Chocolate Almond Rocks",
     info: "Hand-finished chocolate clusters with a refined, gift-ready presentation.",
     badge: "Premium",
-    img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
+    img: topViewDriedFruits,
   },
   {
     name: "Saffron Almond Milk (200 ml)",
     info: "Cold-pressed beverage with premium ingredients and no refined sugar.",
     badge: "Wellness",
-    img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=900&q=80",
+    img: sweetiesDesk,
   },
   {
     name: "Grande Corporate Hamper",
     info: "Dry fruits, pralines, floral card, and ribbon packaging for bulk gifting.",
     badge: "Corporate",
-    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+    img: nutsSetTable,
   },
 ];
 

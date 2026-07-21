@@ -32,8 +32,8 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "chocolates",
-    name: "Chocolates & Gift Boxes",
+    slug: "chocolate-gift-box",
+    name: "Chocolate Gift Boxes",
     intro:
       "Hand-poured Belgian chocolates and pralines in luxurious packaging with custom branding.",
     image: Images.sweetiesDesk,
@@ -46,7 +46,20 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "juices",
+    slug: "chocolates",
+    name: "Chocolates & Sweets",
+    intro:
+      "Rich confectionery, truffles and gourmet sweets crafted for premium gifting and corporate hampers.",
+    image: Images.sweetiesDesk,
+    highlights: ["Temperature-controlled packing", "Custom logo foil", "Vegan options"],
+    items: [
+      { name: "Assorted Truffle Box", detail: "Classic dark, milk and white truffles in a magnetic gift box.", image: Images.topViewDriedFruits },
+      { name: "Belgian Pralines", detail: "Hand-selected praline assortment with nut centres.", image: Images.closeUpNuts },
+      { name: "Gourmet Sweets Hamper", detail: "Curated sweets selection for festive and wedding gifting.", image: Images.driedFruitsCounter },
+    ],
+  },
+  {
+    slug: "juice",
     name: "Cold-Pressed Juices",
     intro:
       "Fresh, no-concentrate juices in elegant glass bottles. Perfect for welcome hampers and events.",
@@ -56,6 +69,19 @@ export const productCategories: ProductCategory[] = [
       { name: "Classic Juices", detail: "Valencia Orange, Pomegranate Ruby", image: Images.topViewDiffNuts },
       { name: "Premium Juice Hampers", detail: "Pack of 6 assorted wellness juices.", image: Images.nutsSetTable },
       { name: "Almond Saffron Milk", detail: "With Kashmiri saffron & dates", image: Images.topViewPistachios },
+    ],
+  },
+  {
+    slug: "dry-fruit-box",
+    name: "Celebration Hampers",
+    intro:
+      "Curated red and gold hampers with cards, ribbons and custom brand storytelling for every occasion.",
+    image: Images.woodenBoxNuts,
+    highlights: ["Concierge delivery", "Handwritten cards", "Tiered pricing for volume"],
+    items: [
+      { name: "Grande Corporate", detail: "Dry fruit quartet, praline box, floral card", image: Images.nutsSetTable },
+      { name: "Festive Duo", detail: "Almond tin + pistachio tin with ribbon", image: Images.woodenBoxNuts },
+      { name: "Wedding Signature", detail: "Chocolate bark, nuts, artisanal tea, note", image: Images.topViewPistachios },
     ],
   },
 ];

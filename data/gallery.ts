@@ -1,32 +1,39 @@
+import driedFruitsCounter from "../assets/dried-fruits-nuts-counter.jpg";
+import sweetiesDesk from "../assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
+import nutsSetTable from "../assets/nuts-set-table.jpg";
+import topViewDriedFruits from "../assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
+import topViewPistachios from "../assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
+import woodenBoxNuts from "../assets/various-nuts-wooden-box.jpg";
+
 export const photos = [
   {
-    src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+    src: woodenBoxNuts,
     alt: "Assorted nuts and dry fruits luxury platter",
   },
   {
-    src: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
+    src: topViewDriedFruits,
     alt: "Chocolate gift box with pralines",
   },
   {
-    src: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+    src: sweetiesDesk,
     alt: "Curated red and gold gift hamper",
   },
   {
-    src: "https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80",
+    src: driedFruitsCounter,
     alt: "Cold-pressed juice bottles",
   },
   {
-    src: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80",
+    src: topViewPistachios,
     alt: "Gourmet chocolates close-up",
   },
   {
-    src: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=900&q=80",
+    src: nutsSetTable,
     alt: "Assorted nuts in premium bowls",
   },
 ];
 
 export const videos = [
-  { title: "Corporate hamper walkthrough", link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-  { title: "Chocolate tempering line", link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-  { title: "Juice bottling BTS", link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  { title: "Corporate hamper walkthrough", link: "/gallery/videos" },
+  { title: "Chocolate tempering line", link: "/gallery/videos" },
+  { title: "Juice bottling BTS", link: "/gallery/videos" },
 ];

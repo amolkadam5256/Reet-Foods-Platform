@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import HeaderTopBar from "@/components/common/HeaderTopBar";
 import HeaderNavBar from "@/components/common/HeaderNavBar";
+import SeasonalOfferPopup from "@/components/common/SeasonalOfferPopup";
 import { categories } from "@/data/categories";
 import { productCategories } from "@/data/products";
 
@@ -58,7 +60,7 @@ const menuGroups: Record<string, MenuGroup[]> = {
         { label: "Dry Fruits", href: "/products/categories/dry-fruits" },
         { label: "Chocolates", href: "/products/categories/chocolates" },
         { label: "Gift Boxes", href: "/products/categories/chocolate-gift-box" },
-        { label: "Corporate Hampers", href: "/products/dry-fruit-box" },
+        { label: "Corporate Hampers", href: "/products/categories/dry-fruit-box" },
         { label: "View All Products", href: "/products" },
       ],
     },
@@ -72,10 +74,10 @@ const searchEntries: SearchEntry[] = [
   { label: "About Us", href: "/about", scope: "Pages", description: "Learn about Reet Foods" },
   { label: "Contact", href: "/contact", scope: "Pages", description: "Get in touch with our team" },
   { label: "FAQ", href: "/faq", scope: "Pages", description: "Find quick answers" },
-  { label: "Dry Fruits", href: "/products/dry-fruits", scope: "Categories", description: "Premium nuts and festive gifting" },
-  { label: "Chocolate Gift Boxes", href: "/products/chocolate-gift-box", scope: "Categories", description: "Luxury chocolates and curated boxes" },
-  { label: "Cold-Pressed Juices", href: "/products/juice", scope: "Categories", description: "Fresh juice gifting options" },
-  { label: "Celebration Hampers", href: "/products/dry-fruit-box", scope: "Categories", description: "Corporate and festive hampers" },
+  { label: "Dry Fruits", href: "/products/categories/dry-fruits", scope: "Categories", description: "Premium nuts and festive gifting" },
+  { label: "Chocolate Gift Boxes", href: "/products/categories/chocolate-gift-box", scope: "Categories", description: "Luxury chocolates and curated boxes" },
+  { label: "Cold-Pressed Juices", href: "/products/categories/juice", scope: "Categories", description: "Fresh juice gifting options" },
+  { label: "Celebration Hampers", href: "/products/categories/dry-fruit-box", scope: "Categories", description: "Corporate and festive hampers" },
   ...categories.map((category) => ({
     label: category.title,
     href: category.href,
@@ -163,7 +165,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         openMenu={openMenu}
         setOpenMenu={setOpenMenu}
       />
-      {isScrolled ? <div className="h-[54px]" aria-hidden /> : null}
+      {isScrolled ? <div className="h-[54px] lg:block hidden" aria-hidden /> : null}
 
       <main className="flex-1">{children}</main>
 
@@ -172,7 +174,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
           <button type="button" className="absolute inset-0" aria-label="Close menu overlay" onClick={() => setMobileOpen(false)} />
           <aside className="absolute right-0 top-0 h-full w-[88vw] max-w-sm bg-white p-5">
             <div className="mb-6 flex items-center justify-between">
-              <img src="/images/logo.png" alt="Reet Foods" width={120} height={44} />
+              <Image src="/images/logo.png" alt="Reet Foods" width={120} height={44} priority />
               <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close navigation" className="text-reef-charcoal">
                 ×
               </button>
@@ -286,6 +288,8 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
       ) : null}
+
+      <SeasonalOfferPopup />
 
       <footer className="border-t border-reef-gold/15 bg-[#111111] text-white">
         <div className="mx-auto grid max-w-[1440px] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:px-8">

@@ -69,7 +69,7 @@ export function Hero() {
           <div className="grid grid-cols-3 gap-3">
             {heroGallery.map((src, idx) => (
               <div
-                key={src}
+                key={idx}
                 className={`relative h-32 sm:h-44 rounded-2xl overflow-hidden shadow-md ${
                   idx === 1 ? "translate-y-6" : ""
                 }`}
