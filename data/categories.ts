@@ -10,35 +10,40 @@ export type Category = {
   tag: string;
   href: string;
   img: StaticImageData;
+  cta: string;
 };
 
 export const categories: Category[] = [
   {
-    title: "Dry Fruits",
-    copy: "Iranian pistachios, almonds, cashews, figs, premium blends.",
-    tag: "Festive best-seller",
-    href: "/products/dry-fruits",
+    title: "Premium Dry Fruits",
+    copy: "Nitrogen-packed premium origin nuts and figs for gifting and daily health.",
+    tag: "Hand-Selected Quality",
+    href: "/products/premium-dry-fruits",
     img: woodenBoxNuts,
+    cta: "Explore Collection",
   },
   {
-    title: "Chocolate Gift Boxes",
-    copy: "Belgian chocolates, pralines and luxury handmade assortments.",
-    tag: "Corporate favourite",
-    href: "/products/chocolate-gift-box",
+    title: "Artisanal Chocolates",
+    copy: "Hand-poured truffles and luxury Belgian pralines in custom magnetic boxes.",
+    tag: "Premium Confectionery",
+    href: "/products/artisanal-chocolates",
     img: topViewDriedFruits,
-  },
-  {
-    title: "Cold-Pressed Juices",
-    copy: "Fresh seasonal juices, no preservatives, wellness-focused.",
-    tag: "Fresh & cold",
-    href: "/products/juice",
-    img: driedFruitsCounter,
+    cta: "Explore Collection",
   },
   {
     title: "Celebration Hampers",
-    copy: "Custom wedding & corporate hampers with branding options.",
-    tag: "Wedding & festive",
-    href: "/products/dry-fruit-box",
+    copy: "Elegantly curated luxury gift hampers for weddings and festive celebrations.",
+    tag: "Festive & Wedding",
+    href: "/products/celebration-hampers",
     img: sweetiesDesk,
+    cta: "Explore Collection",
+  },
+  {
+    title: "Cold-Pressed Juices",
+    copy: "Fresh seasonal wellness juices with no preservatives. Perfect for welcome hampers.",
+    tag: "Fresh & Natural",
+    href: "/products/cold-pressed-juices",
+    img: driedFruitsCounter,
+    cta: "Explore Collection",
   },
 ];

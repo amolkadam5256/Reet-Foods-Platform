@@ -1,59 +1,97 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { featuredProducts } from "../../data/home";
-import { Card, CardContent } from "../ui/card";
-import { Badge } from "../ui/badge";
+import { FiArrowRight } from "react-icons/fi";
+import { featuredProducts } from "@/data/home";
+
+const badgeStyles: Record<string, string> = {
+  "Best Seller": "bg-reef-burgundy text-white",
+  "Premium": "bg-reef-charcoal text-white",
+  "Wellness": "bg-[#2d7a3a] text-white",
+  "Corporate": "bg-reef-gold text-reef-charcoal",
+};
 
 export function FeaturedProducts() {
   return (
-    <section className="section" aria-labelledby="featured-heading">
-      <div className="flex items-center justify-between gap-4 mb-6">
+    <section
+      className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+      aria-labelledby="featured-heading"
+    >
+      <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-reef-burgundy">
-            Curated products
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-reef-gold">
+            Signature Collections
           </p>
-          <h2 id="featured-heading" className="text-3xl font-bold text-gray-900">
-            Featured for gifting
+          <h2
+            id="featured-heading"
+            className="mt-3 font-[family-name:var(--font-playfair)] text-3xl text-reef-charcoal sm:text-4xl"
+          >
+            Trusted by Connoisseurs
           </h2>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
+            Explore our most sought-after curations — from premium origin dry fruits to artisanal chocolate gift boxes, trusted by India&apos;s leading enterprises.
+          </p>
         </div>
-        <p className="hidden md:block text-sm text-gray-500 max-w-md text-right">
-          Products chosen to sell the premium feel first, then the ingredients.
-        </p>
+        <Link
+          href="/products"
+          className="inline-flex shrink-0 items-center gap-2 border border-reef-gold/30 px-6 py-3 text-sm font-semibold text-reef-charcoal transition duration-200 hover:border-reef-gold hover:text-reef-burgundy"
+        >
+          View All Products <FiArrowRight />
+        </Link>
       </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        {featuredProducts.map((item) => (
-          <Card key={item.name} className="overflow-hidden hover:shadow-md transition-shadow">
-            <CardContent className="p-5 flex gap-4 items-center h-full">
-              <div className="relative h-24 w-24 shrink-0 rounded-lg overflow-hidden border border-gray-100 bg-gray-50">
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  fill
-                  sizes="96px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col flex-1 justify-center">
-                <Badge variant="secondary" className="w-fit mb-2">
+
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {featuredProducts.map((item, index) => (
+          <Link
+            key={item.name}
+            href="/contact#quote"
+            className={[
+              "group overflow-hidden bg-white transition duration-300 hover:shadow-[0_12px_40px_rgba(212,175,55,0.22)]",
+              index === 0
+                ? "border-2 border-reef-gold shadow-sm"
+                : "border border-reef-gold/15 hover:border-reef-gold/40",
+            ].join(" ")}
+          >
+            <div className="relative h-56 overflow-hidden bg-[#f8f5f0]">
+              <Image
+                src={item.img}
+                alt={item.name}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
+              {item.badge ? (
+                <span className={`absolute left-3 top-3 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.18em] shadow-sm ${
+                  badgeStyles[item.badge] ?? "bg-reef-burgundy text-white"
+                }`}>
                   {item.badge}
-                </Badge>
-                <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                </span>
+              ) : null}
+            </div>
+            <div className="p-5 flex flex-col justify-between h-[200px]">
+              <div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-reef-charcoal group-hover:text-reef-burgundy transition-colors duration-200">
                   {item.name}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                <p className="mt-2 text-[13px] leading-5 text-reef-charcoal/75 line-clamp-2">
                   {item.info}
                 </p>
-                <Link
-                  href="/contact#quote"
-                  className="mt-3 text-sm font-semibold text-reef-burgundy hover:text-reef-burgundy/80 transition-colors inline-flex items-center gap-1"
-                >
-                  Get Quote <span aria-hidden>→</span>
-                </Link>
               </div>
-            </CardContent>
-          </Card>
+              <div className="flex items-center justify-between border-t border-reef-gold/10 pt-4 mt-auto">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-reef-charcoal/50">
+                  Price on Request
+                </span>
+                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-reef-burgundy transition-all duration-300 group-hover:gap-3 group-hover:text-reef-gold">
+                  <span>Inquire</span>
+                  <FiArrowRight className="text-sm" />
+                </div>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 }
+

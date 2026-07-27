@@ -1,4 +1,5 @@
 import { SiteShell } from "@/components/common/SiteShell";
+import { Images } from "@/assets/images";
 
 const faqs = [
   { q: "What is your minimum order quantity?", a: "MOQ depends on the product and customization level. We support both small premium runs and large bulk orders." },
@@ -24,6 +25,8 @@ export default function FaqPage() {
       sidePanelTitle="Need something specific?"
       sidePanelBody="If your question is about a custom order, we’re usually faster if you share the order size and timeline."
       sideLinks={[{ label: "Contact us", href: "/contact#quote" }, { label: "Browse products", href: "/products" }]}
+      image={Images.closeUpNuts}
+      imageAlt="Close-up of premium mixed nuts"
     >
       <div className="space-y-3">
         {faqs.map((item) => (

@@ -28,7 +28,7 @@ export default function CategoryDropdown({
         </span>
         <button
           type="button"
-          className="inline-flex justify-between items-center w-full sm:w-36 rounded-xl border border-reef-gold/30 shadow-sm px-3 py-1.5 bg-white text-xs font-medium text-reef-charcoal hover:bg-reef-gold/5 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-reef-gold"
+          className="inline-flex justify-between items-center w-full sm:w-36 rounded-xl border border-reef-gold/30 shadow-sm px-3 py-1.5 bg-white font-[family-name:var(--font-playfair)] text-xs font-semibold text-reef-charcoal hover:bg-reef-gold/5 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-reef-gold"
           onClick={() => setIsOpen(s => !s)}
         >
           {currentCategory?.name || "Select Category"}
@@ -47,7 +47,7 @@ export default function CategoryDropdown({
                 setIsOpen(false);
                 router.push(`/products/${c.slug}`);
               }}
-              className={`block w-full text-left px-3 py-2 text-xs ${
+              className={`block w-full text-left px-3 py-2 font-[family-name:var(--font-playfair)] text-xs ${
                 currentSlug === c.slug 
                   ? 'bg-reef-gold/10 font-bold text-reef-burgundy' 
                   : 'text-reef-charcoal hover:bg-reef-gold/5'

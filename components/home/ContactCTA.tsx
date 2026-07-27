@@ -55,7 +55,7 @@ export function ContactCTA() {
                   Submit enquiry
                 </Button>
                 <a
-                  href="https://wa.me/919999999999?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+                  href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto"
@@ -77,16 +77,17 @@ export function ContactCTA() {
           <CardContent className="p-8 flex-1 flex flex-col gap-5">
             <div>
               <h3 className="text-xl font-bold text-gray-900">Visit Reet Foods, Pune</h3>
-              <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                Pune, Maharashtra, India
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed font-medium">
+                Shop No. F14, Ground Floor, Streets of Europe Mall, <br />
+                Maan Road, near Infosys Circle, Hinjewadi Phase I, Pune, Maharashtra
                 <br />
-                GST billing and pan-India shipping partners
+                <span className="text-xs text-gray-500 font-normal">GST billing &amp; pan-India shipping partners</span>
               </p>
             </div>
             <div className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex-1 min-h-[260px]">
               <iframe
                 title="Reet Foods Pune"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.539697775597!2d73.8567!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0656f1237fb%3A0xa0!2sPune!5e0!3m2!1sen!2sin!4v1611111111111!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.5647!2d73.7385!3d18.5912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc100000001%3A0x0!2sHinjawadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1611111111111!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "260px" }}
@@ -96,8 +97,8 @@ export function ContactCTA() {
             </div>
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
               <p className="text-sm font-medium text-gray-900 leading-relaxed">
-                <span className="text-gray-500">Call:</span> +91 99999 99999 <br />
-                <span className="text-gray-500">Email:</span> hello@reetfoods.in
+                <span className="text-gray-500">Call / WhatsApp:</span> +91 9890609611 / +91 8007518088 <br />
+                <span className="text-gray-500">Email:</span> reetfoodspune@gmail.com
               </p>
             </div>
           </CardContent>

@@ -16,83 +16,41 @@ type MenuGroup = {
 type NavItem = {
   label: string;
   href: string;
-  kind: "home" | "shop" | "simple" | "pages";
+  kind: "shop" | "simple";
 };
 
 const navItems: NavItem[] = [
-  { label: "Home", href: "/", kind: "home" },
-  { label: "Shop", href: "/products", kind: "shop" },
+  { label: "Home", href: "/", kind: "simple" },
+  { label: "Products", href: "/products", kind: "shop" },
+  { label: "Corporate Gifting", href: "/corporate-gifting", kind: "simple" },
   { label: "Blog", href: "/blog", kind: "simple" },
-  { label: "Pages", href: "/about", kind: "pages" },
-  { label: "About Us", href: "/about", kind: "simple" },
+  { label: "About", href: "/about", kind: "simple" },
+  { label: "Gallery", href: "/gallery", kind: "simple" },
   { label: "Contact", href: "/contact", kind: "simple" },
 ];
 
 const menuGroups: Record<string, MenuGroup[]> = {
-  home: [
-    {
-      title: "Home layouts",
-      links: [
-        { label: "Home One", href: "/" },
-        { label: "Home Two", href: "/" },
-        { label: "Home Three", href: "/" },
-      ],
-    },
-  ],
   shop: [
     {
-      title: "Shop page layout",
+      title: "Products",
       links: [
-        { label: "Grid Fullwidth", href: "/products" },
-        { label: "Left Sidebar", href: "/products" },
-        { label: "Right Sidebar", href: "/products" },
-        { label: "List Fullwidth", href: "/products" },
-        { label: "List Left Sidebar", href: "/products" },
-        { label: "List Right Sidebar", href: "/products" },
-      ],
-    },
-    {
-      title: "Signature categories",
-      links: [
-        { label: "Dry Fruits", href: "/products/categories/dry-fruits" },
-        { label: "Chocolates", href: "/products/categories/chocolates" },
-        { label: "Gift Boxes", href: "/products/categories/chocolate-gift-box" },
-        { label: "Juices", href: "/products/categories/juice" },
+        { label: "Premium Dry Fruits", href: "/products/categories/dry-fruits" },
+        { label: "Artisanal Chocolates", href: "/products/categories/chocolates" },
+        { label: "Celebration Hampers", href: "/products/categories/celebration-hampers" },
+        { label: "Cold-Pressed Juices", href: "/products/categories/juice" },
+        { label: "Build Your Box", href: "/contact#quote" },
       ],
       image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      title: "Single product types",
-      links: [
-        { label: "Single Product", href: "/products/dry-fruits" },
-        { label: "Single Product Sale", href: "/products/chocolate-gift-box" },
-        { label: "Single Product Variable", href: "/products/juice" },
-        { label: "Single Product Slider", href: "/products" },
-      ],
-    },
-  ],
-  pages: [
-    {
-      title: "Utility pages",
-      links: [
-        { label: "My Account", href: "/about" },
-        { label: "Wishlist", href: "/products" },
-        { label: "Cart", href: "/contact" },
-        { label: "Checkout", href: "/contact" },
-        { label: "FAQ", href: "/faq" },
-        { label: "Coming Soon", href: "/" },
-      ],
-      image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
-    },
+    }
   ],
 };
 
 const searchScopes = ["All", "Products", "Categories", "Pages"] as const;
 const searchEntries = [
-  { label: "Dry Fruits", href: "/products/categories/dry-fruits", scope: "Products" },
-  { label: "Chocolates", href: "/products/categories/chocolates", scope: "Products" },
-  { label: "Gift Boxes", href: "/products/categories/chocolate-gift-box", scope: "Products" },
-  { label: "Juices", href: "/products/categories/juice", scope: "Products" },
+  { label: "Premium Dry Fruits", href: "/products/premium-dry-fruits", scope: "Products" },
+  { label: "Artisanal Chocolates", href: "/products/artisanal-chocolates", scope: "Products" },
+  { label: "Celebration Hampers", href: "/products/celebration-hampers", scope: "Products" },
+  { label: "Cold-Pressed Juices", href: "/products/cold-pressed-juices", scope: "Products" },
   { label: "Products Page", href: "/products", scope: "Pages" },
   { label: "About Us", href: "/about", scope: "Pages" },
   { label: "Contact", href: "/contact", scope: "Pages" },
@@ -103,6 +61,7 @@ export default function Header() {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpenItem, setMobileOpenItem] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchScope, setSearchScope] = useState<(typeof searchScopes)[number]>("All");
@@ -173,17 +132,67 @@ export default function Header() {
               </button>
             </div>
             <div className="space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="flex items-center justify-between border border-reef-gold/10 px-4 py-3 text-sm font-medium text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <span>{item.label}</span>
-                  <span aria-hidden>⌄</span>
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const hasSubMenu = item.kind !== "simple" && menuGroups[item.kind];
+                const isExpanded = mobileOpenItem === item.label;
+
+                return (
+                  <div key={item.label}>
+                    {hasSubMenu ? (
+                      <div className="flex w-full flex-col">
+                        <div className="flex w-full items-stretch border border-reef-gold/10 transition duration-200 ease-out focus-within:border-reef-gold hover:border-reef-gold">
+                          <Link
+                            href={item.href}
+                            className="flex-1 px-4 py-3 text-left font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-wide text-reef-charcoal transition hover:text-reef-burgundy"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                          <button
+                            type="button"
+                            onClick={() => setMobileOpenItem(isExpanded ? null : item.label)}
+                            className="flex w-12 items-center justify-center border-l border-reef-gold/10 text-lg text-reef-charcoal transition hover:bg-reef-gold/5 hover:text-reef-burgundy"
+                            aria-label={`Toggle ${item.label} submenu`}
+                          >
+                            <span aria-hidden className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : "translate-y-[-2px]"}`}>
+                              ⌄
+                            </span>
+                          </button>
+                        </div>
+                        {isExpanded ? (
+                          <div className="mt-1 flex flex-col space-y-1 pl-4 pr-1">
+                            {menuGroups[item.kind].map((group) => (
+                              <div key={group.title} className="py-2">
+                                <ul className="space-y-1">
+                                  {group.links.map((link) => (
+                                    <li key={link.label}>
+                                      <Link
+                                        href={link.href}
+                                        className="block border-l-2 border-transparent py-2 pl-3 font-[family-name:var(--font-playfair)] text-sm text-reef-charcoal/80 transition hover:border-reef-gold hover:text-reef-burgundy"
+                                        onClick={() => setMobileOpen(false)}
+                                      >
+                                        {link.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="flex w-full items-center justify-between border border-reef-gold/10 px-4 py-3 font-[family-name:var(--font-playfair)] text-sm font-semibold tracking-wide text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        <span>{item.label}</span>
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </aside>
         </div>

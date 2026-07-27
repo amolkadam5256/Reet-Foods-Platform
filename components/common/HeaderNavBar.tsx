@@ -2,19 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { Images } from "@/assets/images";
 
 type MenuGroup = {
   title: string;
-  links: Array<{ label: string; href: string }>;
+  links: Array<{ label: string; href: string; desc?: string; image?: any; badge?: string }>;
   image?: string;
 };
 
 type NavItem = {
   label: string;
   href: string;
-  kind: "home" | "shop" | "simple" | "pages";
+  kind: "shop" | "simple";
 };
 
 type HeaderNavBarProps = {
@@ -26,9 +27,46 @@ type HeaderNavBarProps = {
   isActive: (href: string) => boolean;
 };
 
+const productDropdownItems = [
+  {
+    label: "Premium Dry Fruits",
+    href: "/products/categories/dry-fruits",
+    desc: "Origin almonds, pistachios, cashews & figs.",
+    image: Images.topViewPistachios,
+    badge: "Best Seller",
+  },
+  {
+    label: "Artisanal Chocolates",
+    href: "/products/categories/chocolates",
+    desc: "Belgian dark truffles & nut pralines.",
+    image: Images.sweetiesDesk,
+    badge: "Most Loved",
+  },
+  {
+    label: "Celebration Hampers",
+    href: "/products/categories/celebration-hampers",
+    desc: "Red & gold festive corporate hampers.",
+    image: Images.nutsSetTable,
+    badge: "Luxury",
+  },
+  {
+    label: "Cold-Pressed Juices",
+    href: "/products/categories/juice",
+    desc: "100% natural glass-bottled fruit juices.",
+    image: Images.topViewDriedFruits,
+    badge: "Fresh",
+  },
+  {
+    label: "Build Your Box",
+    href: "/contact#quote",
+    desc: "Custom logo printing & custom box sizes.",
+    image: Images.woodenBoxNuts,
+    badge: "Custom",
+  },
+];
+
 export default function HeaderNavBar({
   navItems,
-  currentGroups,
   openMenu,
   setOpenMenu,
   isScrolled,
@@ -44,42 +82,91 @@ export default function HeaderNavBar({
       <div className="mx-auto flex max-w-[1440px] items-stretch px-4 sm:px-6 lg:px-8">
         <nav className="hidden flex-1 items-stretch lg:flex">
           {navItems.map((item) => (
-            <div key={item.label} className="group relative" onMouseEnter={() => setOpenMenu(item.kind === "simple" ? null : item.kind)} onMouseLeave={() => setOpenMenu(null)}>
+            <div
+              key={item.label}
+              className="group relative"
+              onMouseEnter={() => setOpenMenu(item.kind === "simple" ? null : item.kind)}
+              onMouseLeave={() => setOpenMenu(null)}
+            >
               <Link
                 href={item.href}
                 className={[
-                  "flex h-[54px] items-center gap-1 px-4 text-[13px] font-semibold uppercase tracking-[0.08em] text-white transition duration-200 ease-out sm:px-5",
+                  "flex h-[54px] items-center gap-1 px-4 font-[family-name:var(--font-playfair)] text-[13px] font-semibold uppercase tracking-[0.08em] text-white transition duration-200 ease-out sm:px-5",
                   isActive(item.href) ? "bg-white/10" : "hover:bg-white/10",
                 ].join(" ")}
               >
                 {item.label}
                 {item.kind !== "simple" ? <FiChevronDown className="h-4 w-4" /> : null}
               </Link>
+
               {item.kind !== "simple" && openMenu === item.kind ? (
-                <div className="absolute left-0 top-full w-[900px] border border-reef-gold/15 bg-white p-6 text-reef-charcoal shadow-[0_20px_50px_rgba(18,16,15,0.15)]">
-                  <div className="grid gap-6 lg:grid-cols-[1.2fr_1.2fr_0.8fr]">
-                    {currentGroups.map((group) => (
-                      <div key={group.title}>
-                        <h3 className="mb-4 text-[15px] font-semibold uppercase tracking-[0.12em] text-reef-charcoal">
-                          {group.title}
-                        </h3>
-                        <div className="space-y-3 text-[15px] text-reef-charcoal/75">
-                          {group.links.map((link) => (
-                            <Link key={link.label} href={link.href} className="block transition duration-200 ease-out hover:text-reef-burgundy">
-                              {link.label}
-                            </Link>
-                          ))}
-                        </div>
+                <div className="absolute left-0 top-full w-[940px] border border-reef-gold/20 bg-white p-6 text-reef-charcoal shadow-[0_20px_50px_rgba(18,16,15,0.18)]">
+                  <div className="mb-4 flex items-center justify-between border-b border-reef-gold/15 pb-3">
+                    <p className="font-[family-name:var(--font-playfair)] text-sm font-bold uppercase tracking-[0.12em] text-[#7a0019]">
+                      Product Collections
+                    </p>
+                    <Link
+                      href="/products"
+                      className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#d4af37] hover:text-[#7a0019]"
+                    >
+                      View All Products &rarr;
+                    </Link>
+                  </div>
+
+                  <div className="grid gap-6 lg:grid-cols-[1.8fr_1fr]">
+                    {/* Categories grid without small images */}
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {productDropdownItems.map((p) => (
+                        <Link
+                          key={p.label}
+                          href={p.href}
+                          className="group/item flex flex-col justify-between border border-reef-gold/15 bg-[#fcfbf8] p-4 transition duration-200 hover:border-[#d4af37] hover:bg-white hover:shadow-sm"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="font-[family-name:var(--font-playfair)] text-sm font-bold text-reef-charcoal group-hover/item:text-[#7a0019]">
+                                {p.label}
+                              </span>
+                              {p.badge && (
+                                <span className="bg-[#7a0019] px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.12em] text-white">
+                                  {p.badge}
+                                </span>
+                              )}
+                            </div>
+                            <p className="mt-1 text-[11px] leading-relaxed text-reef-charcoal/70">
+                              {p.desc}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Featured Megamenu Banner */}
+                    <div className="relative flex flex-col justify-between border border-reef-gold/20 bg-[#111111] p-5">
+                      <div>
+                        <span
+                          style={{ color: "#1c1c1c", backgroundColor: "#d4af37" }}
+                          className="inline-block px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em]"
+                        >
+                          B2B Corporate Gifting
+                        </span>
+                        <h4
+                          style={{ color: "#ffffff" }}
+                          className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold"
+                        >
+                          Custom Logo Gift Hampers
+                        </h4>
+                        <p style={{ color: "rgba(255,255,255,0.75)" }} className="mt-1.5 text-xs leading-relaxed">
+                          Laser logo engraving, custom printed sleeves, and insured Pan-India bulk dispatch.
+                        </p>
                       </div>
-                    ))}
-                    <div className="overflow-hidden border border-reef-gold/15 bg-reef-cream">
-                      <Image
-                        src={currentGroups.find((group) => group.image)?.image ?? "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80"}
-                        alt="Featured product"
-                        width={300}
-                        height={360}
-                        className="h-full w-full object-cover"
-                      />
+                      <Link
+                        href="/contact#quote"
+                        style={{ color: "#1c1c1c", backgroundColor: "#d4af37" }}
+                        className="mt-4 inline-flex items-center justify-center gap-2 py-2.5 text-xs font-bold uppercase tracking-[0.14em] transition hover:opacity-90"
+                      >
+                        Request Quote <FiArrowRight />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -87,7 +174,8 @@ export default function HeaderNavBar({
             </div>
           ))}
         </nav>
-        <div className="ml-auto hidden items-stretch md:flex">
+
+        <div className="ml-auto hidden items-stretch lg:flex">
           {[
             { label: "Facebook", href: "https://facebook.com", icon: FaFacebookF },
             { label: "Instagram", href: "https://instagram.com", icon: FaInstagram },

@@ -28,7 +28,7 @@ export default function HeaderTopBar({ isScrolled, onOpenSearch, onOpenMobile }:
           </button>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center border border-reef-gold/20 text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center border border-reef-gold/20 text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2 lg:hidden"
             onClick={onOpenMobile}
             aria-label="Open navigation"
           >

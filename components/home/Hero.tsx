@@ -30,7 +30,7 @@ export function Hero() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/919999999999?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+              href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
               target="_blank"
               rel="noreferrer"
             >

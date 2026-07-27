@@ -10,10 +10,11 @@ export async function generateStaticParams() {
   return productCategories.map((cat) => ({ slug: cat.slug }));
 }
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
-export function generateMetadata({ params }: Props) {
-  const category = productCategories.find((c) => c.slug === params.slug);
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const category = productCategories.find((c) => c.slug === slug);
   return {
     title: category
       ? `${category.name} | Reet Foods Pune`
@@ -24,8 +25,8 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
-export default function ProductDetail({ params }: Props) {
-  const { slug } = params;
+export default async function ProductDetail({ params }: Props) {
+  const { slug } = await params;
   const category = productCategories.find((c) => c.slug === slug);
   if (!category) return notFound();
 

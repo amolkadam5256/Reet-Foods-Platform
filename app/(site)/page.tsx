@@ -13,7 +13,20 @@ import {
   FiPlay,
 } from "react-icons/fi";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
-import { featuredProducts, heroGallery, testimonials } from "../../data/home";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { FeaturedProducts } from "@/components/home/FeaturedProducts";
+import { CorporateGifting } from "@/components/home/CorporateGifting";
+import { AboutBrand } from "@/components/home/AboutBrand";
+import { OurProcess } from "@/components/home/OurProcess";
+import { IndustriesWeServe } from "@/components/home/IndustriesWeServe";
+import { Testimonials } from "@/components/home/Testimonials";
+import { Certifications } from "@/components/home/Certifications";
+import { GalleryPreview } from "@/components/home/GalleryPreview";
+import { LatestBlogs } from "@/components/home/LatestBlogs";
+import { FAQSection } from "@/components/home/FAQSection";
+import { FinalCTA } from "@/components/home/FinalCTA";
+import { ManufacturingPreview } from "@/components/home/ManufacturingPreview";
+import { featuredProducts, heroGallery } from "../../data/home";
 import { categories } from "../../data/categories";
 import sweetiesDesk from "@/assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
 import topViewDriedFruits from "@/assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
@@ -27,55 +40,55 @@ type HeroCategory = {
 
 const centerSlides = [
   {
-    title: "Gifting, made memorable.",
-    subtitle: "The Reet Foods signature collection",
-    price: "₹8,999.00",
+    title: "Premium Dry Fruits & Luxury Chocolate Hampers",
+    subtitle: "Premium Dry Fruits • Corporate Gifting • PAN India",
+    price: "",
     image: heroGallery[0],
     description:
-      "Premium dry fruits, elegant chocolates and curated hampers for every thoughtful occasion.",
-    cta: "Explore gift boxes",
+      "Curated artisanal chocolates and premium dry fruits for corporate gifting, weddings, and festive celebrations. Elevate your brand with custom packaging and seamless bulk orders.",
+    cta: "Explore Premium Hampers",
   },
   {
-    title: "A better way to say thank you.",
-    subtitle: "Corporate & bulk gifting",
-    price: "₹16,999.00",
+    title: "Seamless Corporate & Bulk Gifting",
+    subtitle: "Dedicated Bulk Support • Custom Branded Boxes",
+    price: "",
     image: heroGallery[1],
     description:
-      "Make your next client, team or event gifting moment feel distinctly considered.",
-    cta: "Plan a bulk order",
+      "Make your next client, team, or event gifting moment feel distinctly considered with our premium corporate curation.",
+    cta: "Request Corporate Quote",
   },
   {
-    title: "Celebrate the season beautifully.",
-    subtitle: "Festive favourites, freshly packed",
-    price: "Starting at ₹1599.00",
+    title: "Celebrate The Season Beautifully",
+    subtitle: "Premium Grade Quality • PAN India Delivery",
+    price: "",
     image: heroGallery[2],
     description:
-      "Beautifully presented flavours for festivals, weddings and every celebration in between.",
-    cta: "View festive collection",
+      "Beautifully presented flavours for festivals, weddings and every celebration in between. Nitrogen-packed freshness in every box.",
+    cta: "Shop The Collection",
   },
 ];
 
 const promotionalCards = [
   {
-    offer: "10% off on gift boxes",
+    tagline: "Hand-Selected Origin Nuts",
     title: "Premium Dry Fruits",
-    code: "REET10",
     image: woodenBoxNuts,
-    href: "/products/categories/dry-fruits",
+    href: "/products/premium-dry-fruits",
+    cta: "Shop Dry Fruits",
   },
   {
-    offer: "Curated for every occasion",
-    title: "Chocolate Gifting",
-    code: "SWEET10",
+    tagline: "Artisanal Belgian Chocolates",
+    title: "Chocolate Gift Boxes",
     image: topViewDriedFruits,
-    href: "/products/categories/chocolates",
+    href: "/products/artisanal-chocolates",
+    cta: "Shop Chocolates",
   },
   {
-    offer: "Custom orders welcome",
+    tagline: "Seamless Bulk Gifting",
     title: "Corporate Hampers",
-    code: "BULK10",
     image: sweetiesDesk,
     href: "/contact#quote",
+    cta: "Plan Bulk Order",
   },
 ];
 
@@ -84,6 +97,7 @@ export default function Home() {
   const [categoriesOpen, setCategoriesOpen] = useState(true);
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [bestProductIndex, setBestProductIndex] = useState(0);
   const slide = centerSlides[activeSlide];
 
   const selectSlide = (index: number) =>
@@ -94,6 +108,13 @@ export default function Home() {
     const timer = window.setInterval(() => selectSlide(activeSlide + 1), 6000);
     return () => window.clearInterval(timer);
   }, [activeSlide, isPaused]);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setBestProductIndex((prev) => (prev + 1) % featuredProducts.length);
+    }, 5000);
+    return () => window.clearInterval(timer);
+  }, []);
   const heroCategories: HeroCategory[] = [
     {
       label: "Dry Fruits & Nuts",
@@ -124,7 +145,7 @@ export default function Home() {
   return (
     <div className="bg-[#fbf7f1]">
       <WhatsAppButton
-        href="https://wa.me/919999999999?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+        href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
         label="WhatsApp Us"
       />
 
@@ -173,7 +194,7 @@ export default function Home() {
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="flex items-center justify-between px-4 py-4 text-sm text-reef-charcoal/80 transition duration-200 ease-out hover:bg-reef-cream hover:text-reef-burgundy"
+                        className="flex items-center justify-between px-4 py-4 font-[family-name:var(--font-playfair)] text-sm text-reef-charcoal/80 transition duration-200 ease-out hover:bg-reef-cream hover:text-reef-burgundy"
                       >
                         <span>{item.label}</span>
                       </Link>
@@ -189,7 +210,7 @@ export default function Home() {
                             value === item.label ? null : item.label,
                           )
                         }
-                        className="flex w-full items-center justify-between px-4 py-4 text-left text-sm text-reef-charcoal/80 transition duration-200 ease-out hover:bg-reef-cream hover:text-reef-burgundy"
+                        className="flex w-full items-center justify-between px-4 py-4 text-left font-[family-name:var(--font-playfair)] text-sm text-reef-charcoal/80 transition duration-200 ease-out hover:bg-reef-cream hover:text-reef-burgundy"
                         aria-expanded={isOpen}
                       >
                         <span>{item.label}</span>
@@ -263,18 +284,20 @@ export default function Home() {
                   <span className="h-px w-8 bg-reef-gold" />
                   {slide.subtitle}
                 </p>
-                <h1 className="mt-5 max-w-lg font-[family-name:var(--font-playfair)] text-4xl leading-[1.04] text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
+                <h1 className="mt-5 max-w-lg font-[family-name:var(--font-playfair)] text-2xl leading-[1.1] text-white drop-shadow-sm sm:text-3xl lg:text-3xl">
                   {slide.title}
                 </h1>
                 <p className="mt-5 max-w-md text-sm leading-6 text-white/82 sm:text-base">
                   {slide.description}
                 </p>
-                <p className="mt-6 text-lg font-semibold text-reef-gold sm:text-xl">
-                  {slide.price}
-                </p>
+                {slide.price && (
+                  <p className="mt-6 text-lg font-semibold text-reef-gold sm:text-xl">
+                    {slide.price}
+                  </p>
+                )}
                 <Link
                   href={activeSlide === 1 ? "/contact#quote" : "/products"}
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-reef-gold px-6 py-3.5 text-sm font-bold text-reef-charcoal shadow-lg transition duration-200 hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2a1c15]"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-[#1c1c1c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2a1c15]"
                 >
                   {slide.cta} <FiArrowRight className="text-base" />
                 </Link>
@@ -298,7 +321,7 @@ export default function Home() {
                     className={[
                       "h-2.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
                       activeSlide === index
-                        ? "w-9 bg-reef-gold"
+                        ? "w-9 bg-[#d4af37]"
                         : "w-2.5 bg-white/70 hover:bg-white",
                     ].join(" ")}
                   />
@@ -333,54 +356,186 @@ export default function Home() {
             </div>
           </section>
 
-          <aside className="border border-reef-gold/20 bg-white p-5 text-center">
-            <p className="text-[14px] font-medium text-reef-charcoal/65">
+          <aside className="border border-reef-gold/20 bg-white p-5 text-center shadow-sm">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
               Best Product
             </p>
-            <h3 className="mt-1 text-[22px] font-semibold text-reef-charcoal">
-              Off The Month
+            <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-[22px] font-bold text-reef-charcoal">
+              Of The Month
             </h3>
-            <div className="mt-6 relative h-[320px] overflow-hidden border border-reef-gold/10 bg-[#f8f7f4]">
-              <Image
-                src={featuredProducts[0].img}
-                alt={featuredProducts[0].name}
-                fill
-                sizes="280px"
-                className="object-cover"
-              />
+
+            <div className="mt-4 relative h-[300px] overflow-hidden border border-reef-gold/15 bg-[#f8f7f4]">
+              {featuredProducts.map((item, index) => (
+                <Image
+                  key={item.name}
+                  src={item.img}
+                  alt={item.name}
+                  fill
+                  sizes="280px"
+                  className={[
+                    "object-cover transition-opacity duration-1000 ease-in-out",
+                    bestProductIndex === index ? "opacity-100 z-10" : "opacity-0 z-0",
+                  ].join(" ")}
+                />
+              ))}
+              <div className="absolute left-3 top-3 z-20 rounded-full bg-[#7a0019] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white shadow-sm">
+                Best Seller
+              </div>
+            </div>
+
+            <div className="mt-4 space-y-3">
+              <p className="font-[family-name:var(--font-playfair)] text-sm font-bold text-reef-charcoal line-clamp-1">
+                Royal Pistachio Gold Tin
+              </p>
+
+              <Link
+                href="/contact#quote"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d4af37] py-2.5 text-xs font-bold text-[#1c1c1c] shadow-sm transition duration-200 hover:bg-[#7a0019] hover:text-white"
+              >
+                Get Quote <FiArrowRight className="text-sm" />
+              </Link>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8" aria-label="Featured gifting offers">
+      {/* ── TRUST BAR MARQUEE ────────────────────────────────────────────── */}
+      <div className="overflow-hidden border-y border-reef-gold/15 bg-white py-3" aria-hidden="true">
+        <div className="reef-marquee flex items-center gap-0 whitespace-nowrap">
+          {[
+            "✦ FSSAI Certified Facility",
+            "✦ Nitrogen-Sealed Freshness",
+            "✦ PAN India Cold-Chain Delivery",
+            "✦ Bulk Orders from 25 Units",
+            "✦ Custom Branding & Logo Printing",
+            "✦ 24-Hour Quote Response",
+            "✦ ISO Quality Standards",
+            "✦ 500+ Corporate Clients",
+            "✦ Wedding & Festive Hampers",
+            "✦ Temperature-Controlled Logistics",
+            // Duplicate for seamless loop
+            "✦ FSSAI Certified Facility",
+            "✦ Nitrogen-Sealed Freshness",
+            "✦ PAN India Cold-Chain Delivery",
+            "✦ Bulk Orders from 25 Units",
+            "✦ Custom Branding & Logo Printing",
+            "✦ 24-Hour Quote Response",
+            "✦ ISO Quality Standards",
+            "✦ 500+ Corporate Clients",
+            "✦ Wedding & Festive Hampers",
+            "✦ Temperature-Controlled Logistics",
+          ].map((text, i) => (
+            <span
+              key={i}
+              className="mx-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-reef-charcoal/65"
+            >
+              {text}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── CONTACT STRIP ───────────────────────────────────────────────── */}
+      <div className="border-b border-reef-gold/10 bg-[#fdf9f5]">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-4 px-4 py-4 sm:flex-row sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-reef-charcoal/65 sm:justify-start">
+            <a
+              href="tel:+919890609611"
+              className="flex items-center gap-2 font-semibold transition hover:text-reef-burgundy"
+            >
+              <svg className="h-4 w-4 text-reef-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +91 98906 09611
+            </a>
+            <a
+              href="tel:+918007518088"
+              className="flex items-center gap-2 font-semibold transition hover:text-reef-burgundy"
+            >
+              <svg className="h-4 w-4 text-reef-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +91 80075 18088
+            </a>
+            <a
+              href="mailto:reetfoodspune@gmail.com"
+              className="flex items-center gap-2 transition hover:text-reef-burgundy"
+            >
+              <svg className="h-4 w-4 text-reef-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              reetfoodspune@gmail.com
+            </a>
+          </div>
+          <p className="flex items-center gap-2 text-[11px] text-reef-charcoal/45">
+            <svg className="h-3.5 w-3.5 text-reef-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune 411057
+          </p>
+        </div>
+      </div>
+      {/* ── SECTION 1: Category Cards (3 promo cards) ─────────────────── */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8"
+        aria-label="Featured gifting offers"
+      >
         <div className="grid gap-5 md:grid-cols-3">
           {promotionalCards.map((card, index) => (
-            <Link key={card.title} href={card.href} aria-label={`Shop ${card.title}`} className="group relative h-44 overflow-hidden border border-reef-gold/20 bg-[#f4f5f6] sm:h-48">
-              <div className="absolute inset-y-0 left-0 z-10 flex w-[53%] flex-col justify-center bg-[#f4f5f6] px-6 py-5 sm:px-8">
-                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-reef-charcoal/65">{card.offer}</p>
-                <h2 className="mt-1 font-[family-name:var(--font-playfair)] text-2xl leading-tight text-reef-charcoal sm:text-3xl">{card.title}</h2>
-                <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-reef-gold">Code: {card.code}</p>
-                <span className="mt-2 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-reef-burgundy transition group-hover:gap-3">Shop now <FiArrowRight /></span>
+            <Link
+              key={card.title}
+              href={card.href}
+              aria-label={`Shop ${card.title}`}
+              className="group relative h-[200px] overflow-hidden border border-reef-gold/20 bg-white sm:h-[220px]"
+            >
+              <div className="absolute inset-y-0 left-0 z-10 flex w-[56%] flex-col justify-center bg-white px-5 sm:px-8">
+                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-reef-charcoal/50">
+                  {card.tagline}
+                </p>
+                <h2 className="mt-2.5 font-[family-name:var(--font-playfair)] text-2xl leading-[1.15] text-reef-charcoal sm:text-[26px]">
+                  {card.title}
+                </h2>
+                <div className="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-reef-burgundy transition-all duration-300 group-hover:gap-3 group-hover:text-reef-gold">
+                  <span>{card.cta}</span>
+                  <FiArrowRight className="text-sm" />
+                </div>
               </div>
-              <Image
-                src={card.image}
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className={[
-                  "object-cover object-right transition duration-700 ease-out group-hover:scale-110",
-                  index === 1 ? "animate-[reef-image-drift_12s_ease-in-out_infinite_alternate]" : "",
-                ].join(" ")}
+              <div className="absolute inset-y-0 right-0 w-[44%] overflow-hidden">
+                <Image
+                  src={card.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className={[
+                    "object-cover object-center transition duration-700 ease-out group-hover:scale-105",
+                    index === 1
+                      ? "animate-[reef-image-drift_12s_ease-in-out_infinite_alternate]"
+                      : "",
+                  ].join(" ")}
+                />
+              </div>
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 left-[56%] z-20 w-px bg-reef-gold/30 transition duration-500 group-hover:bg-reef-gold"
               />
-              <div aria-hidden className="pointer-events-none absolute inset-y-0 left-[53%] z-20 w-px bg-reef-gold" />
-              <div aria-hidden className="pointer-events-none absolute inset-x-0 top-1/2 z-20 h-px bg-reef-gold/80 transition duration-500 group-hover:bg-reef-burgundy" />
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8">
+      {/* ── SECTION 2: Shop by Categories ──────────────────────────────── */}
+      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mb-10 text-center">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl text-reef-charcoal sm:text-4xl">
+            Crafted For Every Occasion
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-reef-charcoal/70 sm:text-base">
+            Discover our signature collection of artisanal chocolates and
+            premium dry fruits. Curated thoughtfully for personal celebrations,
+            luxury weddings, and distinguished corporate gift boxes.
+          </p>
+        </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category) => (
             <Link
@@ -401,35 +556,172 @@ export default function Home() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-reef-gold">
                   {category.tag}
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold text-reef-charcoal">
+                <h3 className="mt-2 text-2xl font-[family-name:var(--font-playfair)] text-reef-charcoal">
                   {category.title}
-                </h2>
+                </h3>
                 <p className="mt-2 text-sm leading-6 text-reef-charcoal/70">
                   {category.copy}
                 </p>
+                <div className="mt-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-reef-burgundy transition-all duration-300 group-hover:gap-3 group-hover:text-reef-gold">
+                  <span>{category.cta}</span>
+                  <FiArrowRight className="text-sm" />
+                </div>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-2">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.name}
-              className="border border-reef-gold/15 bg-white p-6"
-            >
-              <p className="text-sm leading-7 text-reef-charcoal/72">
-                {testimonial.quote}
-              </p>
-              <p className="mt-4 text-sm font-semibold text-reef-burgundy">
-                {testimonial.name}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ── SECTION 3: Why Reet Foods ───────────────────────────────────── */}
+      <WhyChooseUs />
+
+      {/* ── SECTION 4: Featured Products ────────────────────────────────── */}
+      <FeaturedProducts />
+
+      {/* ── SECTION 5: Corporate Gifting ────────────────────────────────── */}
+      <CorporateGifting />
+
+      {/* ── SECTION 6: About Brand ──────────────────────────────────────── */}
+      <AboutBrand />
+
+      {/* ── SECTION 7: Our Process ──────────────────────────────────────── */}
+      <OurProcess />
+
+      {/* ── SECTION 7.5: Manufacturing Preview ──────────────────────────── */}
+      <ManufacturingPreview />
+
+      {/* ── SECTION 8: Industries We Serve ──────────────────────────────── */}
+      <IndustriesWeServe />
+
+      {/* ── SECTION 9: Testimonials ─────────────────────────────────────── */}
+      <Testimonials />
+
+      {/* ── SECTION 10: Certifications ──────────────────────────────────── */}
+      <Certifications />
+
+      {/* ── SECTION 11: Gallery Preview ─────────────────────────────────── */}
+      <GalleryPreview />
+
+      {/* ── SECTION 12: Latest Blogs ────────────────────────────────────── */}
+      <LatestBlogs />
+
+      {/* ── SECTION 13: FAQ ─────────────────────────────────────────────── */}
+      <FAQSection />
+
+      {/* ── SECTION 14: Final CTA ───────────────────────────────────────── */}
+      <FinalCTA />
+
+      {/* ── SEO JSON-LD Structured Data Schemas ────────────────────────── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": ["Organization", "LocalBusiness", "FoodEstablishment"],
+              "name": "Reet Foods & Gifting",
+              "url": "https://reetfoods.com",
+              "logo": "https://reetfoods.com/logo.png",
+              "image": "https://reetfoods.com/images/hero.jpg",
+              "description": "Pune's premier manufacturer of premium dry fruits, artisanal chocolates, and bespoke corporate gifting hampers. FSSAI certified, ISO quality standards, PAN India delivery.",
+              "priceRange": "₹₹–₹₹₹",
+              "servesCuisine": "Gifting, Dry Fruits, Artisanal Chocolates",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Shop no F14 Ground floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I",
+                "addressLocality": "Pune",
+                "addressRegion": "Maharashtra",
+                "postalCode": "411057",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "18.5900",
+                "longitude": "73.7380"
+              },
+              "email": "reetfoodspune@gmail.com",
+              "telephone": ["+91-9890609611", "+91-8007518088"],
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9890609611",
+                  "contactType": "customer service",
+                  "areaServed": "IN",
+                  "availableLanguage": ["en", "hi"],
+                  "contactOption": "TollFree"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-8007518088",
+                  "contactType": "sales",
+                  "areaServed": "IN",
+                  "availableLanguage": ["en", "hi", "mr"]
+                }
+              ],
+              "sameAs": [
+                "https://wa.me/919890609611",
+                "https://facebook.com/reetfoods",
+                "https://instagram.com/reetfoods",
+                "https://linkedin.com/company/reetfoods"
+              ],
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                  "opens": "09:00",
+                  "closes": "19:00"
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What products does Reet Foods offer for corporate gifting?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reet Foods offers premium dry fruit boxes, hand-finished Belgian chocolate gift hampers, cold-pressed fruit juices, and custom-branded corporate gift boxes with laser logo printing."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you deliver corporate gifting hampers pan-India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide insured temperature-controlled cold-chain delivery across all major cities and states in India."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the minimum order quantity for corporate gifting?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our minimum order quantity for corporate gifting starts at 25 units. For smaller bespoke orders, please contact us directly."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you customise the packaging with a company logo?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. We offer full custom branding including logo printing, ribbon personalisation, branded note cards, and custom tissue paper. A proof is provided before production."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I contact Reet Foods for a bulk order quote?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can reach us at +91 9890609611, +91 8007518088, email reetfoodspune@gmail.com, or WhatsApp us at https://wa.me/919890609611. Our team responds within 24 hours."
+                  }
+                }
+              ]
+            }
+          ])
+        }}
+      />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { SiteShell } from "@/components/common/SiteShell";
+import { Images } from "@/assets/images";
 
 const posts = [
   {
@@ -38,6 +39,8 @@ export default function BlogPage() {
       sidePanelTitle="Popular reads"
       sidePanelBody="Use these articles to compare packaging approaches, corporate gifting ideas, and seasonal buying patterns."
       sideLinks={[{ label: "Explore products", href: "/products" }, { label: "Talk to us", href: "/contact#quote" }]}
+      image={Images.topViewDeskNuts}
+      imageAlt="Premium dry fruit assortment"
     >
       <div className="grid gap-4 md:grid-cols-2">
         {posts.map((post) => (
