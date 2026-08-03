@@ -1,11 +1,15 @@
-import driedFruitsCounter from "../assets/dried-fruits-nuts-counter.jpg";
-import sweetiesDesk from "../assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
-import nutsSetTable from "../assets/nuts-set-table.jpg";
-import topViewDriedFruits from "../assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
-import topViewPistachios from "../assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
-import woodenBoxNuts from "../assets/various-nuts-wooden-box.jpg";
-import closeUpNuts from "../assets/close-up-view-nuts-concept-arrangement.jpg";
-import topViewDiffNuts from "../assets/top-view-different-types-nuts.jpg";
+import { reetFoodImages } from "../assets/reetFoodImages";
+
+const [
+  driedFruitsCounter,
+  sweetiesDesk,
+  nutsSetTable,
+  topViewDriedFruits,
+  topViewPistachios,
+  woodenBoxNuts,
+  closeUpNuts,
+  topViewDiffNuts,
+] = reetFoodImages;
 
 export const heroGallery = [
   woodenBoxNuts,

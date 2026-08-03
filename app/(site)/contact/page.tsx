@@ -1,20 +1,22 @@
 import { SiteShell } from "@/components/common/SiteShell";
 import { Images } from "@/assets/images";
+import { business } from "@/data/business";
+import { ContactEnquiryForm } from "@/components/common/ContactEnquiryForm";
 
 export const metadata = {
   title: "Contact Reet Foods | Get Best Quote",
   description:
-    "Contact Reet Foods, Pune for premium dry fruits, chocolate gift boxes, juices and corporate hampers. Get the best quote within 24 hours.",
+    "Contact Reet Foods, Pune for premium dry fruits, custom corporate gifts, festive hampers and bulk gifting.",
 };
 
 export default function ContactPage() {
   return (
     <SiteShell
       eyebrow="Contact"
-      title="Tell us what you need and we’ll shape the right gifting option."
-      description="Share quantity, occasion, budget range, and delivery date. We’ll respond with product suggestions, packaging options, and pricing."
+      title="Tell us your gifting brief and we’ll shape the right option."
+      description="Share your quantity, occasion, budget range and delivery date. We customise dry fruit boxes and gift hampers with packaging, logo branding and message cards."
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
-      sidePanelTitle="Fast response"
+      sidePanelTitle="Plan your order"
       sidePanelBody="For the quickest reply, include the product category, order size, and preferred delivery window."
       sideLinks={[
         { label: "Call +91 9890609611", href: "tel:+919890609611" },
@@ -26,35 +28,39 @@ export default function ContactPage() {
     >
       <div id="quote" className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
         <div className="border border-reef-gold/15 bg-white p-6">
-          <form className="space-y-4">
+          <ContactEnquiryForm />
+          {/* <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+            <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+            <input type="hidden" name="subject" value="New Reet Foods website enquiry" />
+            <input type="hidden" name="from_name" value="Reet Foods Website" />
             <div className="grid gap-4 md:grid-cols-2">
               <label className="space-y-2 text-sm text-reef-charcoal/75">
                 Full name
-                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Your name" required />
+                <input name="name" className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Your name" required />
               </label>
               <label className="space-y-2 text-sm text-reef-charcoal/75">
                 Company / Event
-                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Company / Event" />
+                <input name="company_or_event" className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="text" placeholder="Company / Event" />
               </label>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               <label className="space-y-2 text-sm text-reef-charcoal/75">
                 Email
-                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="email" placeholder="you@example.com" required />
+                <input name="email" className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="email" placeholder="you@example.com" required />
               </label>
               <label className="space-y-2 text-sm text-reef-charcoal/75">
                 Phone
-                <input className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="tel" placeholder="+91..." required />
+                <input name="phone" className="w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" type="tel" placeholder="+91..." required />
               </label>
             </div>
             <label className="space-y-2 text-sm text-reef-charcoal/75">
               Requirement
-              <textarea className="h-32 w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" placeholder="Quantity, product, delivery date, customization..." required />
+              <textarea name="message" className="h-32 w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 outline-none" placeholder="Quantity, product, delivery date, customization..." required />
             </label>
             <button type="submit" className="inline-flex items-center gap-2 bg-reef-gold px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95">
               Send Inquiry
             </button>
-          </form>
+          </form> */}
         </div>
 
         <div className="space-y-4">
@@ -71,11 +77,14 @@ export default function ContactPage() {
               </p>
               <div className="mt-2 pt-2 border-t border-white/10 leading-relaxed">
                 <strong className="block text-white mb-1">Store &amp; Office Address:</strong>
-                Reet Foods <br />
-                Streets of Europe mall, Shop no F14 Ground floor, <br />
-                Hinjewadi phase I, maan road near Infosys circle, <br />
-                Pune, Maharashtra, India
+                {business.officeAddress}
               </div>
+              <div className="mt-2 pt-2 border-t border-white/10 leading-relaxed">
+                <strong className="block text-white mb-1">Factory Address:</strong>
+                {business.factoryAddress}
+              </div>
+              <p>FSSAI Licence No. {business.fssaiLicense}</p>
+              <p>GSTIN: {business.gstNumber}</p>
             </div>
           </div>
           <div className="border border-reef-gold/15 bg-white p-6">

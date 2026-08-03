@@ -1,5 +1,5 @@
 import { GalleryClient } from "./GalleryClient";
-import { photos, videos } from "@/data/gallery";
+import { videos } from "@/data/gallery";
 
 export const metadata = {
   title: "Gallery | Reet Foods Pune",
@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function GalleryPage() {
-  return <GalleryClient photos={photos} videos={videos} />;
+  return <GalleryClient videos={videos} />;
 }

@@ -17,8 +17,8 @@ export default function ShippingPolicyPage() {
           and handling time.
         </p>
         <p>
-          Our team will share estimated dispatch and delivery timelines during
-          order confirmation.
+          We support PAN-India and export delivery. Typical delivery takes 3 to
+          4 days; the final timeline is confirmed during order confirmation.
         </p>
         <p>
           Please review your contact details carefully so we can ensure smooth

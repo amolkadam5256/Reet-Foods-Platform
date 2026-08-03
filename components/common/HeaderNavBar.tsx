@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Images } from "@/assets/images";
+import type { StaticImageData } from "next/image";
 
 type MenuGroup = {
   title: string;
-  links: Array<{ label: string; href: string; desc?: string; image?: any; badge?: string }>;
+  links: Array<{ label: string; href: string; desc?: string; image?: StaticImageData; badge?: string }>;
   image?: string;
 };
 
@@ -31,35 +31,35 @@ const productDropdownItems = [
   {
     label: "Premium Dry Fruits",
     href: "/products/categories/dry-fruits",
-    desc: "Origin almonds, pistachios, cashews & figs.",
+    desc: "Premium dry fruits selected for retail, festive and corporate gifting.",
     image: Images.topViewPistachios,
     badge: "Best Seller",
   },
   {
-    label: "Artisanal Chocolates",
-    href: "/products/categories/chocolates",
-    desc: "Belgian dark truffles & nut pralines.",
+    label: "Dry Fruit Gift Boxes",
+    href: "/products/categories/dry-fruit-box",
+    desc: "Gift-ready dry fruit boxes tailored to your quantity and budget.",
     image: Images.sweetiesDesk,
-    badge: "Most Loved",
+    badge: "Gift Ready",
   },
   {
-    label: "Celebration Hampers",
-    href: "/products/categories/celebration-hampers",
-    desc: "Red & gold festive corporate hampers.",
+    label: "Festive Hampers",
+    href: "/products/celebration-hampers",
+    desc: "Custom hampers for Diwali, client gifts, employee kits and events.",
     image: Images.nutsSetTable,
-    badge: "Luxury",
+    badge: "Festive",
   },
   {
-    label: "Cold-Pressed Juices",
-    href: "/products/categories/juice",
-    desc: "100% natural glass-bottled fruit juices.",
-    image: Images.topViewDriedFruits,
-    badge: "Fresh",
-  },
-  {
-    label: "Build Your Box",
+    label: "Custom Corporate Gifts",
     href: "/contact#quote",
-    desc: "Custom logo printing & custom box sizes.",
+    desc: "Branded gifting solutions with custom packaging and message cards.",
+    image: Images.topViewDriedFruits,
+    badge: "Corporate",
+  },
+  {
+    label: "Build Your Gift Box",
+    href: "/contact#quote",
+    desc: "Choose products, packaging and branding for your gifting brief.",
     image: Images.woodenBoxNuts,
     badge: "Custom",
   },
@@ -154,10 +154,10 @@ export default function HeaderNavBar({
                           style={{ color: "#ffffff" }}
                           className="mt-3 font-[family-name:var(--font-playfair)] text-lg font-bold"
                         >
-                          Custom Logo Gift Hampers
+                          Corporate Gifting, Made to Fit
                         </h4>
                         <p style={{ color: "rgba(255,255,255,0.75)" }} className="mt-1.5 text-xs leading-relaxed">
-                          Laser logo engraving, custom printed sleeves, and insured Pan-India bulk dispatch.
+                          Premium dry fruit hampers with logo branding, custom message cards and packaging that fits your budget.
                         </p>
                       </div>
                       <Link

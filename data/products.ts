@@ -9,11 +9,6 @@ import product2Detail1 from "../assets/Product 2/Product_2.png";
 import product2Detail2 from "../assets/Product 2/Product_3.png";
 import product2Detail3 from "../assets/Product 2/Product_4.png";
 import product2Detail4 from "../assets/Product 2/Product_5.jpg";
-import product3Main from "../assets/Product 3/Product_1.png";
-import product3Detail1 from "../assets/Product 3/Product_2.png";
-import product3Detail2 from "../assets/Product 3/Product_3.png";
-import product3Detail3 from "../assets/Product 3/Product_4.png";
-import product3Detail4 from "../assets/Product 3/Product_5.jpg";
 import product4Main from "../assets/Product 4/Product_1.png";
 import product4Detail1 from "../assets/Product 4/Product_2.png";
 import product4Detail2 from "../assets/Product 4/Product_3.png";
@@ -66,21 +61,6 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    slug: "cold-pressed-juices",
-    name: "Cold-Pressed Juices",
-    intro:
-      "Fresh, no-concentrate juices in elegant glass bottles. Perfect for welcome hampers and events.",
-    image: product3Main,
-    highlights: ["No refined sugar", "Fresh daily batches", "Returnable glass bottles"],
-    items: [
-      { name: "Classic Juice Selection", detail: "A vibrant assortment of fresh, no-concentrate juices for welcome hampers and celebrations.", image: product3Main },
-      { name: "Wellness Juice Hamper", detail: "A curated mixed set of bottled juices designed for healthy gifting and event refreshment.", image: product3Detail1 },
-      { name: "Pomegranate & Citrus Blend", detail: "A bright fruit-led option that brings a refreshing touch to premium gift boxes.", image: product3Detail2 },
-      { name: "Almond Saffron Milk", detail: "A rich, comforting beverage with dates and saffron for a distinctly Indian gifting experience.", image: product3Detail3 },
-      { name: "Custom Event Beverage Set", detail: "Add branded labels and choose a bottle selection to match your event or corporate hamper.", image: product3Detail4 },
-    ],
-  },
-  {
     slug: "celebration-hampers",
     name: "Celebration Hampers",
     intro:
@@ -96,3 +76,94 @@ export const productCategories: ProductCategory[] = [
     ],
   },
 ];
+
+export interface Product {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  price: number;
+  image: StaticImageData;
+  shortDescription: string;
+  description: string;
+  badge?: string;
+  moq?: string;
+}
+
+// Generate a comprehensive, flat list of gourmet products derived from category items
+export const products: Product[] = productCategories.flatMap((cat, catIdx) => 
+  cat.items.map((item, itemIdx) => {
+    const slug = item.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+    
+    // Distribute dry fruits vs dry fruit boxes
+    let categoryName = cat.name;
+    let categorySlug = cat.slug;
+    
+    if (cat.slug === "premium-dry-fruits") {
+      if (item.name.toLowerCase().includes("box") || item.name.toLowerCase().includes("gift")) {
+        categoryName = "Dry Fruit Gift Boxes";
+        categorySlug = "dry-fruit-box";
+      } else {
+        categoryName = "Dry Fruits";
+        categorySlug = "dry-fruits";
+      }
+    } else if (cat.slug === "artisanal-chocolates") {
+      if (item.name.toLowerCase().includes("box") || item.name.toLowerCase().includes("gift")) {
+        categoryName = "Chocolate Gift Boxes";
+        categorySlug = "chocolate-box";
+      } else {
+        categoryName = "Premium Chocolates";
+        categorySlug = "chocolates";
+      }
+    } else if (cat.slug === "celebration-hampers") {
+      if (item.name.toLowerCase().includes("corporate") || item.name.toLowerCase().includes("appreciation")) {
+        categoryName = "Corporate Gifts";
+        categorySlug = "corporate-gifts";
+      } else {
+        categoryName = "Celebration Hampers";
+        categorySlug = "hampers";
+      }
+    }
+
+    return {
+      id: `p-${catIdx}-${itemIdx}`,
+      name: item.name,
+      slug,
+      category: categoryName,
+      categorySlug: categorySlug,
+      price: 299 + (itemIdx * 150),
+      image: item.image || cat.image,
+      shortDescription: item.detail,
+      description: `${item.detail} Carefully curated and packaged by Reet Foods for high premium standards.`,
+      badge: item.badge,
+      moq: "10 Units",
+    };
+  })
+);
+
+// Add custom cold-pressed juices to flat products list
+const juiceImages = [product1Main, product2Main, product4Main];
+const juiceNames = [
+  "Antioxidant Pomegranate Blend",
+  "Detox Green Celery Juice",
+  "Valencia Orange Boost",
+  "Hydrating Watermelon Mint",
+  "Ginger Lemon Zest Booster"
+];
+
+const juiceProducts: Product[] = juiceNames.map((name, idx) => ({
+  id: `juice-${idx}`,
+  name,
+  slug: name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+  category: "Cold Pressed Juices",
+  categorySlug: "juices",
+  price: 149 + (idx * 20),
+  image: juiceImages[idx % juiceImages.length],
+  shortDescription: "100% natural cold pressed juice with zero added sugar or chemical preservatives.",
+  description: "Freshly extracted fruit and botanical blends. Kept chilled at our Pune facility for raw nutrient retention.",
+  badge: "100% Raw",
+  moq: "12 Bottles"
+}));
+
+products.push(...juiceProducts);

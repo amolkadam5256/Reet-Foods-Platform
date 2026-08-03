@@ -67,7 +67,7 @@ export default function Header() {
   const [searchScope, setSearchScope] = useState<(typeof searchScopes)[number]>("All");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : (pathname ? pathname.startsWith(href) : false));
 
   const currentGroups = useMemo(() => {
     if (!openMenu) return [];
@@ -126,7 +126,7 @@ export default function Header() {
           <button type="button" className="absolute inset-0" aria-label="Close menu overlay" onClick={() => setMobileOpen(false)} />
           <aside className="absolute right-0 top-0 h-full w-[88vw] max-w-sm bg-white p-5">
             <div className="mb-6 flex items-center justify-between">
-              <Image src="/images/logo.png" alt="Reet Foods" width={120} height={44} priority />
+              <Image src="/images/logo.png" alt="Reet Foods" width={140} height={44} className="h-10 w-auto object-contain" priority />
               <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close navigation" className="text-reef-charcoal">
                 ×
               </button>

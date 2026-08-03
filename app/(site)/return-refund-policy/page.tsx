@@ -12,8 +12,8 @@ export default function ReturnRefundPolicyPage() {
       </div>
       <div className="glass p-6 space-y-4 text-sm text-reef-charcoal/80 leading-7">
         <p>
-          Because many of our products are edible and customized, returns may
-          not be applicable once production or dispatch begins.
+          Reet Foods has a no-returns policy. Because many products are edible
+          and customised, returns are not accepted once production or dispatch begins.
         </p>
         <p>
           If you receive an incorrect or damaged order, contact us promptly with

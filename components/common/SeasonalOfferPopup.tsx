@@ -11,6 +11,8 @@ export default function SeasonalOfferPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const closePopup = () => {
@@ -38,10 +40,26 @@ export default function SeasonalOfferPopup() {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!email.trim()) return;
-    setIsSubscribed(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error("Submission failed");
+      setIsSubscribed(true);
+    } catch {
+      setSubmitError("We could not submit your request. Please try again or contact us on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -87,12 +105,16 @@ export default function SeasonalOfferPopup() {
             </div>
           ) : (
             <form className="mt-7" onSubmit={handleSubmit}>
+              <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+              <input type="hidden" name="subject" value="New Reet Foods seasonal offer signup" />
+              <input type="hidden" name="from_name" value="Reet Foods Website" />
               <label className="sr-only" htmlFor="seasonal-offer-email">
                 Email address
               </label>
               <div className="flex flex-col gap-2 sm:flex-row">
                 <input
                   id="seasonal-offer-email"
+                  name="email"
                   type="email"
                   required
                   value={email}
@@ -102,15 +124,17 @@ export default function SeasonalOfferPopup() {
                 />
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="inline-flex min-h-12 items-center justify-center gap-2 bg-reef-burgundy px-5 text-sm font-semibold text-white transition hover:bg-[#5d0013] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2"
                 >
-                  Claim my offer <FiArrowRight />
+                  {isSubmitting ? "Submitting…" : "Claim my offer"} <FiArrowRight />
                 </button>
               </div>
               <p className="mt-3 text-xs leading-5 text-reef-charcoal/50">
                 No spam, just beautiful gifting inspiration. You can unsubscribe
                 anytime.
               </p>
+              {submitError ? <p className="mt-3 text-xs text-reef-burgundy">{submitError}</p> : null}
             </form>
           )}
 

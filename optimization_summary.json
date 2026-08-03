@@ -1,0 +1,3309 @@
+{
+  "totalImages": 213,
+  "totalOrigBytes": 335395350,
+  "totalOptBytes": 313462238,
+  "savedBytes": 21933112,
+  "savedMB": "20.92",
+  "percentSaved": "6.5",
+  "duplicateSetsCount": 12,
+  "duplicateSets": [
+    [
+      "f6f4d5afd2c81b30a355994da427dba2",
+      [
+        "assets/Brand/Logo.png",
+        "public/images/logo.png",
+        "public/logo.png"
+      ]
+    ],
+    [
+      "29410980ab75d50cbe9e7468039a4db2",
+      [
+        "assets/Dummy_Img/anthony-camp-X5LAqXehKJo-unsplash (1).jpg",
+        "assets/Dummy_Img/anthony-camp-X5LAqXehKJo-unsplash.jpg"
+      ]
+    ],
+    [
+      "722b08d723279fbb778523ba8029bed7",
+      [
+        "assets/Dummy_Img/katya-azimova-QFHN8XN923I-unsplash (1).jpg",
+        "assets/Dummy_Img/katya-azimova-QFHN8XN923I-unsplash.jpg"
+      ]
+    ],
+    [
+      "4482527c9f0b8d965aa1b33544009dbe",
+      [
+        "assets/Dummy_Img/mel-poole-vQQoZzKO9Ig-unsplash (1).jpg",
+        "assets/Dummy_Img/mel-poole-vQQoZzKO9Ig-unsplash.jpg"
+      ]
+    ],
+    [
+      "71a07a62acacd71d559b4411ab0e5b5b",
+      [
+        "assets/Dummy_Img/naina-pahuja-aMp74URt0jo-unsplash (1).jpg",
+        "assets/Dummy_Img/naina-pahuja-aMp74URt0jo-unsplash.jpg"
+      ]
+    ],
+    [
+      "e34dc02d30c2037632b49320e1a45e51",
+      [
+        "assets/Dummy_Img/sumit-kumar-TPAFv6lvl2w-unsplash (1).jpg",
+        "assets/Dummy_Img/sumit-kumar-TPAFv6lvl2w-unsplash.jpg"
+      ]
+    ],
+    [
+      "c901031621e30dcbbe400c739f509acb",
+      [
+        "assets/Favicon/apple-icon.png",
+        "assets/Favicon/apple-touch-icon.png",
+        "public/apple-icon.png",
+        "public/apple-touch-icon.png"
+      ]
+    ],
+    [
+      "da3c3b72deac326e4cfadcae85b24a4f",
+      [
+        "assets/Favicon/favicon-96x96.png",
+        "assets/Favicon/icon1.png",
+        "public/favicon-96x96.png",
+        "public/icon1.png"
+      ]
+    ],
+    [
+      "d43d411f7f7dc41ebeb1f6c425ae8b23",
+      [
+        "assets/Favicon/favicon.svg",
+        "public/favicon.svg"
+      ]
+    ],
+    [
+      "de906b7c7c087df161f5f8b8f82df257",
+      [
+        "assets/Favicon/icon0.svg",
+        "public/icon0.svg"
+      ]
+    ],
+    [
+      "1bc1d3154884b75f81623ff94590dd50",
+      [
+        "assets/Favicon/web-app-manifest-192x192.png",
+        "public/web-app-manifest-192x192.png"
+      ]
+    ],
+    [
+      "d66352cf913758ed9e8e712ba20939c2",
+      [
+        "assets/Favicon/web-app-manifest-512x512.png",
+        "public/web-app-manifest-512x512.png"
+      ]
+    ]
+  ],
+  "unusedImagesCount": 20,
+  "unusedImages": [
+    "assets/Brand/Logo.png",
+    "assets/Dummy_Img/anthony-camp-X5LAqXehKJo-unsplash (1).jpg",
+    "assets/Dummy_Img/katya-azimova-QFHN8XN923I-unsplash (1).jpg",
+    "assets/Dummy_Img/mel-poole-vQQoZzKO9Ig-unsplash (1).jpg",
+    "assets/Dummy_Img/naina-pahuja-aMp74URt0jo-unsplash (1).jpg",
+    "assets/Dummy_Img/sumit-kumar-TPAFv6lvl2w-unsplash (1).jpg",
+    "assets/Dummy_Img/wooden-plate-with-dried-fruits-marble-table.jpg",
+    "assets/Favicon/apple-icon.png",
+    "assets/Favicon/icon0.svg",
+    "assets/Favicon/icon1.png",
+    "public/apple-icon.png",
+    "public/file.svg",
+    "public/globe.svg",
+    "public/icon0.svg",
+    "public/icon1.png",
+    "public/images/category_chocolates.png",
+    "public/images/category_juices.png",
+    "public/next.svg",
+    "public/vercel.svg",
+    "public/window.svg"
+  ],
+  "auditResults": [
+    {
+      "rel": "assets/Brand/Logo.png",
+      "fileName": "Logo.png",
+      "ext": ".png",
+      "origSize": 1015647,
+      "optSize": 371602,
+      "savedBytes": 644045,
+      "savedPercent": "63.4",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/aaron-burden-zunGugEsJCE-unsplash.jpg",
+      "fileName": "aaron-burden-zunGugEsJCE-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4158826,
+      "optSize": 4158826,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4608px -> 2048px)",
+      "width": 4608,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/aditya-saxena-Cq8yPKtX6w4-unsplash.jpg",
+      "fileName": "aditya-saxena-Cq8yPKtX6w4-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2317405,
+      "optSize": 2317405,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3840px -> 2048px)",
+      "width": 3840,
+      "height": 5760,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/ainur-iman-B10nXwcpqn8-unsplash.jpg",
+      "fileName": "ainur-iman-B10nXwcpqn8-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1957315,
+      "optSize": 1957315,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3983px -> 2048px)",
+      "width": 3983,
+      "height": 2656,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/alimentos-fotogenicos-p12Jh8rotSw-unsplash.jpg",
+      "fileName": "alimentos-fotogenicos-p12Jh8rotSw-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3897591,
+      "optSize": 3897591,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5835px -> 2048px)",
+      "width": 5835,
+      "height": 3890,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/anthony-camp-X5LAqXehKJo-unsplash (1).jpg",
+      "fileName": "anthony-camp-X5LAqXehKJo-unsplash (1).jpg",
+      "ext": ".jpg",
+      "origSize": 2439147,
+      "optSize": 2439147,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/anthony-camp-X5LAqXehKJo-unsplash.jpg",
+      "fileName": "anthony-camp-X5LAqXehKJo-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2439147,
+      "optSize": 2439147,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/ash-dhakne-Y19GN7DIRuc-unsplash.jpg",
+      "fileName": "ash-dhakne-Y19GN7DIRuc-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1354344,
+      "optSize": 1354344,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3843px -> 2048px)",
+      "width": 3843,
+      "height": 2513,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/ashes-sitoula-rUrNMppwEuM-unsplash.jpg",
+      "fileName": "ashes-sitoula-rUrNMppwEuM-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4129705,
+      "optSize": 4129705,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5452px -> 2048px)",
+      "width": 5452,
+      "height": 4106,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/beechmore-books-ZGMmMDu6P6s-unsplash.jpg",
+      "fileName": "beechmore-books-ZGMmMDu6P6s-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2805178,
+      "optSize": 2805178,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3024px -> 2048px)",
+      "width": 3024,
+      "height": 3024,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/close-up-view-nuts-concept-arrangement.jpg",
+      "fileName": "close-up-view-nuts-concept-arrangement.jpg",
+      "ext": ".jpg",
+      "origSize": 3814131,
+      "optSize": 3814131,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6720px -> 2048px)",
+      "width": 6720,
+      "height": 3780,
+      "pages": [
+        "assets/Dummy_Img/images.js",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/coco-tafoya-_Q0dP8xiUGA-unsplash.jpg",
+      "fileName": "coco-tafoya-_Q0dP8xiUGA-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2238575,
+      "optSize": 2238575,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3024px -> 2048px)",
+      "width": 3024,
+      "height": 4032,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/customerbox-wrSzhreXnNc-unsplash.jpg",
+      "fileName": "customerbox-wrSzhreXnNc-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2007498,
+      "optSize": 2007498,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5328px -> 2048px)",
+      "width": 5328,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/customerbox-zep5axcGd5s-unsplash.jpg",
+      "fileName": "customerbox-zep5axcGd5s-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1722933,
+      "optSize": 1722933,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5328px -> 2048px)",
+      "width": 5328,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/cyberbackpack-com-jzF3PYBnhiY-unsplash.jpg",
+      "fileName": "cyberbackpack-com-jzF3PYBnhiY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2880335,
+      "optSize": 2880335,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6720px -> 2048px)",
+      "width": 6720,
+      "height": 4480,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/david-everett-strickler-9QndjmrMeBE-unsplash.jpg",
+      "fileName": "david-everett-strickler-9QndjmrMeBE-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 950537,
+      "optSize": 950537,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4928px -> 2048px)",
+      "width": 4928,
+      "height": 3264,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/dean-pugh-eNIAipH_Bcs-unsplash.jpg",
+      "fileName": "dean-pugh-eNIAipH_Bcs-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 960991,
+      "optSize": 960991,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3959px -> 2048px)",
+      "width": 3959,
+      "height": 3340,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/deeliver-OZZTEU1Pn1w-unsplash.jpg",
+      "fileName": "deeliver-OZZTEU1Pn1w-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4461085,
+      "optSize": 4461085,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6000px -> 2048px)",
+      "width": 6000,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/dmitry-mashkin-N5fp98wt6h8-unsplash.jpg",
+      "fileName": "dmitry-mashkin-N5fp98wt6h8-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3491730,
+      "optSize": 3491730,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4000px -> 2048px)",
+      "width": 4000,
+      "height": 2667,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/dried-fruits-nuts-counter.jpg",
+      "fileName": "dried-fruits-nuts-counter.jpg",
+      "ext": ".jpg",
+      "origSize": 10553732,
+      "optSize": 10553732,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4200px -> 2048px)",
+      "width": 4200,
+      "height": 2800,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "data/categories.ts",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/firdaus-roslan-nfr_aSoOI18-unsplash.jpg",
+      "fileName": "firdaus-roslan-nfr_aSoOI18-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1470321,
+      "optSize": 1470321,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 2048,
+      "height": 2048,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/food-photographer-jennifer-pallian-dcPNZeSY3yk-unsplash.jpg",
+      "fileName": "food-photographer-jennifer-pallian-dcPNZeSY3yk-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1035946,
+      "optSize": 1035946,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1799,
+      "height": 2248,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg",
+      "fileName": "front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg",
+      "ext": ".jpg",
+      "origSize": 10217418,
+      "optSize": 10217418,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3803px -> 2048px)",
+      "width": 3803,
+      "height": 3803,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "app/(site)/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "data/categories.ts",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/gaurav-kumar-bC9JUKZUbf4-unsplash.jpg",
+      "fileName": "gaurav-kumar-bC9JUKZUbf4-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2643916,
+      "optSize": 2643916,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3473px -> 2048px)",
+      "width": 3473,
+      "height": 5209,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/gaurav-kumar-f0Kfz51x2Zc-unsplash.jpg",
+      "fileName": "gaurav-kumar-f0Kfz51x2Zc-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2109152,
+      "optSize": 2109152,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3397px -> 2048px)",
+      "width": 3397,
+      "height": 5096,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/hello-sunday-yihjsumj9Uw-unsplash.jpg",
+      "fileName": "hello-sunday-yihjsumj9Uw-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1347269,
+      "optSize": 1347269,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4240px -> 2048px)",
+      "width": 4240,
+      "height": 2384,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/i-m-zion-JumkyaXXA_o-unsplash.jpg",
+      "fileName": "i-m-zion-JumkyaXXA_o-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 6505917,
+      "optSize": 6505917,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5462px -> 2048px)",
+      "width": 5462,
+      "height": 5464,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/in-tr-ng-d-ng-daZPDnz9lQY-unsplash.jpg",
+      "fileName": "in-tr-ng-d-ng-daZPDnz9lQY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 848865,
+      "optSize": 848865,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2560px -> 2048px)",
+      "width": 2560,
+      "height": 2560,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/jason-hu-LTkz7ODlmTU-unsplash.jpg",
+      "fileName": "jason-hu-LTkz7ODlmTU-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2429160,
+      "optSize": 2429160,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4096px -> 2048px)",
+      "width": 4096,
+      "height": 3072,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/jerry-yan-GM-kX1FzULw-unsplash.jpg",
+      "fileName": "jerry-yan-GM-kX1FzULw-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2365754,
+      "optSize": 2365754,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6240px -> 2048px)",
+      "width": 6240,
+      "height": 4160,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/karl-kohler-dGIEMeN2MV8-unsplash.jpg",
+      "fileName": "karl-kohler-dGIEMeN2MV8-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 311109,
+      "optSize": 311109,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2692px -> 2048px)",
+      "width": 2692,
+      "height": 3365,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/katya-azimova-QFHN8XN923I-unsplash (1).jpg",
+      "fileName": "katya-azimova-QFHN8XN923I-unsplash (1).jpg",
+      "ext": ".jpg",
+      "origSize": 4932542,
+      "optSize": 4932542,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3927px -> 2048px)",
+      "width": 3927,
+      "height": 5891,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/katya-azimova-QFHN8XN923I-unsplash.jpg",
+      "fileName": "katya-azimova-QFHN8XN923I-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4932542,
+      "optSize": 4932542,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3927px -> 2048px)",
+      "width": 3927,
+      "height": 5891,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/khampha-phimmachak-vdkAt1S7fCc-unsplash.jpg",
+      "fileName": "khampha-phimmachak-vdkAt1S7fCc-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4108614,
+      "optSize": 4108614,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/lee-milo-QBvU0hIfqeY-unsplash.jpg",
+      "fileName": "lee-milo-QBvU0hIfqeY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 8285141,
+      "optSize": 8285141,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5464px -> 2048px)",
+      "width": 5464,
+      "height": 8192,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/mel-poole-8EIyi9Fd0vQ-unsplash.jpg",
+      "fileName": "mel-poole-8EIyi9Fd0vQ-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 804600,
+      "optSize": 804600,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4644px -> 2048px)",
+      "width": 4644,
+      "height": 3715,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/mel-poole-vQQoZzKO9Ig-unsplash (1).jpg",
+      "fileName": "mel-poole-vQQoZzKO9Ig-unsplash (1).jpg",
+      "ext": ".jpg",
+      "origSize": 1174574,
+      "optSize": 1174574,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3956px -> 2048px)",
+      "width": 3956,
+      "height": 4945,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/mel-poole-vQQoZzKO9Ig-unsplash.jpg",
+      "fileName": "mel-poole-vQQoZzKO9Ig-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1174574,
+      "optSize": 1174574,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3956px -> 2048px)",
+      "width": 3956,
+      "height": 4945,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/monique-carrati-ONn4OfAnxZY-unsplash.jpg",
+      "fileName": "monique-carrati-ONn4OfAnxZY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3525969,
+      "optSize": 3525969,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6000px -> 2048px)",
+      "width": 6000,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/naina-pahuja-aMp74URt0jo-unsplash (1).jpg",
+      "fileName": "naina-pahuja-aMp74URt0jo-unsplash (1).jpg",
+      "ext": ".jpg",
+      "origSize": 1548833,
+      "optSize": 1548833,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/naina-pahuja-aMp74URt0jo-unsplash.jpg",
+      "fileName": "naina-pahuja-aMp74URt0jo-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1548833,
+      "optSize": 1548833,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/naveena-v-MV_nCPtkgDI-unsplash.jpg",
+      "fileName": "naveena-v-MV_nCPtkgDI-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4964567,
+      "optSize": 4964567,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5742px -> 2048px)",
+      "width": 5742,
+      "height": 3828,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/newpowa-yEBRJw-noTQ-unsplash.jpg",
+      "fileName": "newpowa-yEBRJw-noTQ-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 5655074,
+      "optSize": 5655074,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4326px -> 2048px)",
+      "width": 4326,
+      "height": 6489,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/nina-mercado-CnrDuY0tFrg-unsplash.jpg",
+      "fileName": "nina-mercado-CnrDuY0tFrg-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3156548,
+      "optSize": 3156548,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6720px -> 2048px)",
+      "width": 6720,
+      "height": 4480,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/nuts-set-table.jpg",
+      "fileName": "nuts-set-table.jpg",
+      "ext": ".jpg",
+      "origSize": 17554219,
+      "optSize": 17554219,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5600px -> 2048px)",
+      "width": 5600,
+      "height": 4474,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/obi-HRs8rl9O8wQ-unsplash.jpg",
+      "fileName": "obi-HRs8rl9O8wQ-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2691537,
+      "optSize": 2691537,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5244px -> 2048px)",
+      "width": 5244,
+      "height": 7202,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/pavel-polivka-7lS8ChNKsFs-unsplash.jpg",
+      "fileName": "pavel-polivka-7lS8ChNKsFs-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1850059,
+      "optSize": 1850059,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6000px -> 2048px)",
+      "width": 6000,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/perfect-snacks-Id50rGJYNwU-unsplash.jpg",
+      "fileName": "perfect-snacks-Id50rGJYNwU-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 4603503,
+      "optSize": 4603503,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6262px -> 2048px)",
+      "width": 6262,
+      "height": 4175,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/pot-head-coffee-lwXeyp17P8o-unsplash.jpg",
+      "fileName": "pot-head-coffee-lwXeyp17P8o-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2590161,
+      "optSize": 2590161,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3024px -> 2048px)",
+      "width": 3024,
+      "height": 4032,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/prafull-maheshwari-LCIrQbX6OdI-unsplash.jpg",
+      "fileName": "prafull-maheshwari-LCIrQbX6OdI-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 5322745,
+      "optSize": 5322745,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6016px -> 2048px)",
+      "width": 6016,
+      "height": 4016,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/pure-julia-sx0VVRZpj6s-unsplash.jpg",
+      "fileName": "pure-julia-sx0VVRZpj6s-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3822338,
+      "optSize": 3822338,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4000px -> 2048px)",
+      "width": 4000,
+      "height": 6000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rafael-pedroso-4HE4wcL_qTE-unsplash.jpg",
+      "fileName": "rafael-pedroso-4HE4wcL_qTE-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1500991,
+      "optSize": 1500991,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2581px -> 2048px)",
+      "width": 2581,
+      "height": 3872,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rafael-pedroso-APSZtT67IzI-unsplash.jpg",
+      "fileName": "rafael-pedroso-APSZtT67IzI-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1685897,
+      "optSize": 1685897,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2581px -> 2048px)",
+      "width": 2581,
+      "height": 3872,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rafael-pedroso-PTZHRRHn1Gk-unsplash.jpg",
+      "fileName": "rafael-pedroso-PTZHRRHn1Gk-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1283631,
+      "optSize": 1283631,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2581px -> 2048px)",
+      "width": 2581,
+      "height": 3872,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/renata-kurtveliieva-berezhna-eQ_LKQdADeg-unsplash.jpg",
+      "fileName": "renata-kurtveliieva-berezhna-eQ_LKQdADeg-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1851211,
+      "optSize": 1851211,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3072px -> 2048px)",
+      "width": 3072,
+      "height": 4607,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/renee-thompson-3NfyYN_FoEM-unsplash.jpg",
+      "fileName": "renee-thompson-3NfyYN_FoEM-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1360900,
+      "optSize": 1360900,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5120px -> 2048px)",
+      "width": 5120,
+      "height": 2880,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rombo-Obo0jgxJO6s-unsplash.jpg",
+      "fileName": "rombo-Obo0jgxJO6s-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1627221,
+      "optSize": 1627221,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rombo-TEEj2Y3vGj4-unsplash.jpg",
+      "fileName": "rombo-TEEj2Y3vGj4-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3099591,
+      "optSize": 3099591,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5184px -> 2048px)",
+      "width": 5184,
+      "height": 3456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rosario-fernandes-abJPrTOWXVY-unsplash.jpg",
+      "fileName": "rosario-fernandes-abJPrTOWXVY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3378208,
+      "optSize": 3378208,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5456px -> 2048px)",
+      "width": 5456,
+      "height": 3632,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rosario-fernandes-IYB5hJLuRIQ-unsplash.jpg",
+      "fileName": "rosario-fernandes-IYB5hJLuRIQ-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2447316,
+      "optSize": 2447316,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5456px -> 2048px)",
+      "width": 5456,
+      "height": 3632,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rosario-fernandes-mlTWxO0kUgE-unsplash.jpg",
+      "fileName": "rosario-fernandes-mlTWxO0kUgE-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2696435,
+      "optSize": 2696435,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3632px -> 2048px)",
+      "width": 3632,
+      "height": 5456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/rosario-fernandes-x9e4XkOBSTY-unsplash.jpg",
+      "fileName": "rosario-fernandes-x9e4XkOBSTY-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2259303,
+      "optSize": 2259303,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3632px -> 2048px)",
+      "width": 3632,
+      "height": 5456,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/ryan-hoffman-Kf6UgCx5mb8-unsplash.jpg",
+      "fileName": "ryan-hoffman-Kf6UgCx5mb8-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 223843,
+      "optSize": 223843,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2122px -> 2048px)",
+      "width": 2122,
+      "height": 3181,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/simona-sergi-9AosJc43_nQ-unsplash.jpg",
+      "fileName": "simona-sergi-9AosJc43_nQ-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 2562313,
+      "optSize": 2562313,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5760px -> 2048px)",
+      "width": 5760,
+      "height": 3840,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/sj-RQiLzyDNa-k-unsplash.jpg",
+      "fileName": "sj-RQiLzyDNa-k-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1003106,
+      "optSize": 1003106,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2890px -> 2048px)",
+      "width": 2890,
+      "height": 3853,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/slidebean-1UlRm7FIjKo-unsplash.jpg",
+      "fileName": "slidebean-1UlRm7FIjKo-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1192166,
+      "optSize": 1192166,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (2667px -> 2048px)",
+      "width": 2667,
+      "height": 4000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/sooji-min-Kfdvn0cW9FE-unsplash.jpg",
+      "fileName": "sooji-min-Kfdvn0cW9FE-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 919506,
+      "optSize": 919506,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3000px -> 2048px)",
+      "width": 3000,
+      "height": 2000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/sumit-kumar-TPAFv6lvl2w-unsplash (1).jpg",
+      "fileName": "sumit-kumar-TPAFv6lvl2w-unsplash (1).jpg",
+      "ext": ".jpg",
+      "origSize": 3203411,
+      "optSize": 3203411,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6063px -> 2048px)",
+      "width": 6063,
+      "height": 6063,
+      "pages": []
+    },
+    {
+      "rel": "assets/Dummy_Img/sumit-kumar-TPAFv6lvl2w-unsplash.jpg",
+      "fileName": "sumit-kumar-TPAFv6lvl2w-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 3203411,
+      "optSize": 3203411,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6063px -> 2048px)",
+      "width": 6063,
+      "height": 6063,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/sumit-kumar-TsozR0t2kwo-unsplash.jpg",
+      "fileName": "sumit-kumar-TsozR0t2kwo-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1122548,
+      "optSize": 1122548,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3693px -> 2048px)",
+      "width": 3693,
+      "height": 2799,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/sun-lingyan-_H0fjILH5Vw-unsplash.jpg",
+      "fileName": "sun-lingyan-_H0fjILH5Vw-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1976595,
+      "optSize": 1976595,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4000px -> 2048px)",
+      "width": 4000,
+      "height": 6000,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/tamim-khan-nkTH5LAmTt8-unsplash.jpg",
+      "fileName": "tamim-khan-nkTH5LAmTt8-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 621652,
+      "optSize": 621652,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1964,
+      "height": 2899,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/top-view-desk-with-nuts-different-dried-fruits-dark-surface.jpg",
+      "fileName": "top-view-desk-with-nuts-different-dried-fruits-dark-surface.jpg",
+      "ext": ".jpg",
+      "origSize": 11673257,
+      "optSize": 11673257,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4326px -> 2048px)",
+      "width": 4326,
+      "height": 3840,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/top-view-different-types-nuts.jpg",
+      "fileName": "top-view-different-types-nuts.jpg",
+      "ext": ".jpg",
+      "origSize": 2353836,
+      "optSize": 2353836,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (4800px -> 2048px)",
+      "width": 4800,
+      "height": 3840,
+      "pages": [
+        "assets/Dummy_Img/images.js",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/top-view-dried-fruits-different-nuts-dark-surface.jpg",
+      "fileName": "top-view-dried-fruits-different-nuts-dark-surface.jpg",
+      "ext": ".jpg",
+      "origSize": 18999260,
+      "optSize": 18999260,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3840px -> 2048px)",
+      "width": 3840,
+      "height": 5760,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "app/(site)/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "data/categories.ts",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg",
+      "fileName": "top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg",
+      "ext": ".jpg",
+      "origSize": 17897003,
+      "optSize": 17897003,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5654px -> 2048px)",
+      "width": 5654,
+      "height": 5206,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "components/home/CorporateGifting.tsx",
+        "components/home/ManufacturingPreview.tsx",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/towfiqu-barbhuiya-36qMj6lrbk0-unsplash.jpg",
+      "fileName": "towfiqu-barbhuiya-36qMj6lrbk0-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 1560032,
+      "optSize": 1560032,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (6240px -> 2048px)",
+      "width": 6240,
+      "height": 4160,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/ubaid-e-alyafizi-gQhrrWOG60c-unsplash.jpg",
+      "fileName": "ubaid-e-alyafizi-gQhrrWOG60c-unsplash.jpg",
+      "ext": ".jpg",
+      "origSize": 346226,
+      "optSize": 346226,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (3840px -> 2048px)",
+      "width": 3840,
+      "height": 2160,
+      "pages": [
+        "assets/Dummy_Img/images.js"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/various-nuts-wooden-box.jpg",
+      "fileName": "various-nuts-wooden-box.jpg",
+      "ext": ".jpg",
+      "origSize": 4204901,
+      "optSize": 4204901,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (5107px -> 2048px)",
+      "width": 5107,
+      "height": 3405,
+      "pages": [
+        "app/(site)/gallery/GalleryClient.tsx",
+        "app/(site)/gallery/photos/page.tsx",
+        "app/(site)/page.tsx",
+        "assets/Dummy_Img/images.js",
+        "data/categories.ts",
+        "data/gallery.ts",
+        "data/home.ts"
+      ]
+    },
+    {
+      "rel": "assets/Dummy_Img/wooden-plate-with-dried-fruits-marble-table.jpg",
+      "fileName": "wooden-plate-with-dried-fruits-marble-table.jpg",
+      "ext": ".jpg",
+      "origSize": 15533223,
+      "optSize": 15533223,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Resized (7360px -> 2048px)",
+      "width": 7360,
+      "height": 4912,
+      "pages": []
+    },
+    {
+      "rel": "assets/Favicon/apple-icon.png",
+      "fileName": "apple-icon.png",
+      "ext": ".png",
+      "origSize": 53508,
+      "optSize": 20322,
+      "savedBytes": 33186,
+      "savedPercent": "62.0",
+      "action": "PNG Compressed",
+      "width": 180,
+      "height": 180,
+      "pages": []
+    },
+    {
+      "rel": "assets/Favicon/apple-touch-icon.png",
+      "fileName": "apple-touch-icon.png",
+      "ext": ".png",
+      "origSize": 53508,
+      "optSize": 20322,
+      "savedBytes": 33186,
+      "savedPercent": "62.0",
+      "action": "PNG Compressed",
+      "width": 180,
+      "height": 180,
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "assets/Favicon/favicon-96x96.png",
+      "fileName": "favicon-96x96.png",
+      "ext": ".png",
+      "origSize": 18709,
+      "optSize": 7724,
+      "savedBytes": 10985,
+      "savedPercent": "58.7",
+      "action": "PNG Compressed",
+      "width": 96,
+      "height": 96,
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "assets/Favicon/favicon.svg",
+      "fileName": "favicon.svg",
+      "ext": ".svg",
+      "origSize": 927748,
+      "optSize": 927748,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "assets/Favicon/icon0.svg",
+      "fileName": "icon0.svg",
+      "ext": ".svg",
+      "origSize": 927748,
+      "optSize": 927748,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "assets/Favicon/icon1.png",
+      "fileName": "icon1.png",
+      "ext": ".png",
+      "origSize": 18709,
+      "optSize": 7724,
+      "savedBytes": 10985,
+      "savedPercent": "58.7",
+      "action": "PNG Compressed",
+      "width": 96,
+      "height": 96,
+      "pages": []
+    },
+    {
+      "rel": "assets/Favicon/web-app-manifest-192x192.png",
+      "fileName": "web-app-manifest-192x192.png",
+      "ext": ".png",
+      "origSize": 59025,
+      "optSize": 22834,
+      "savedBytes": 36191,
+      "savedPercent": "61.3",
+      "action": "PNG Compressed",
+      "width": 192,
+      "height": 192,
+      "pages": [
+        "assets/Favicon/manifest.json",
+        "public/manifest.json"
+      ]
+    },
+    {
+      "rel": "assets/Favicon/web-app-manifest-512x512.png",
+      "fileName": "web-app-manifest-512x512.png",
+      "ext": ".png",
+      "origSize": 348308,
+      "optSize": 124242,
+      "savedBytes": 224066,
+      "savedPercent": "64.3",
+      "action": "PNG Compressed",
+      "width": 512,
+      "height": 512,
+      "pages": [
+        "assets/Favicon/manifest.json",
+        "public/manifest.json"
+      ]
+    },
+    {
+      "rel": "assets/Product 1/Product_1.png",
+      "fileName": "Product_1.png",
+      "ext": ".png",
+      "origSize": 1790710,
+      "optSize": 504384,
+      "savedBytes": 1286326,
+      "savedPercent": "71.8",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 1/Product_2.png",
+      "fileName": "Product_2.png",
+      "ext": ".png",
+      "origSize": 2462386,
+      "optSize": 682231,
+      "savedBytes": 1780155,
+      "savedPercent": "72.3",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 1/Product_3.png",
+      "fileName": "Product_3.png",
+      "ext": ".png",
+      "origSize": 1587465,
+      "optSize": 481033,
+      "savedBytes": 1106432,
+      "savedPercent": "69.7",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 1/Product_4.png",
+      "fileName": "Product_4.png",
+      "ext": ".png",
+      "origSize": 1828361,
+      "optSize": 524346,
+      "savedBytes": 1304015,
+      "savedPercent": "71.3",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 1/Product_5.jpg",
+      "fileName": "Product_5.jpg",
+      "ext": ".jpg",
+      "origSize": 180498,
+      "optSize": 180498,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 2/Product_1.png",
+      "fileName": "Product_1.png",
+      "ext": ".png",
+      "origSize": 1635547,
+      "optSize": 545168,
+      "savedBytes": 1090379,
+      "savedPercent": "66.7",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 2/Product_2.png",
+      "fileName": "Product_2.png",
+      "ext": ".png",
+      "origSize": 2217385,
+      "optSize": 724480,
+      "savedBytes": 1492905,
+      "savedPercent": "67.3",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 2/Product_3.png",
+      "fileName": "Product_3.png",
+      "ext": ".png",
+      "origSize": 1517308,
+      "optSize": 515935,
+      "savedBytes": 1001373,
+      "savedPercent": "66.0",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 2/Product_4.png",
+      "fileName": "Product_4.png",
+      "ext": ".png",
+      "origSize": 1702490,
+      "optSize": 529502,
+      "savedBytes": 1172988,
+      "savedPercent": "68.9",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 2/Product_5.jpg",
+      "fileName": "Product_5.jpg",
+      "ext": ".jpg",
+      "origSize": 91488,
+      "optSize": 91488,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 3/Product_1.png",
+      "fileName": "Product_1.png",
+      "ext": ".png",
+      "origSize": 2060605,
+      "optSize": 695642,
+      "savedBytes": 1364963,
+      "savedPercent": "66.2",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 3/Product_2.png",
+      "fileName": "Product_2.png",
+      "ext": ".png",
+      "origSize": 1740309,
+      "optSize": 585501,
+      "savedBytes": 1154808,
+      "savedPercent": "66.4",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 3/Product_3.png",
+      "fileName": "Product_3.png",
+      "ext": ".png",
+      "origSize": 1910602,
+      "optSize": 652599,
+      "savedBytes": 1258003,
+      "savedPercent": "65.8",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 3/Product_4.png",
+      "fileName": "Product_4.png",
+      "ext": ".png",
+      "origSize": 1472247,
+      "optSize": 521288,
+      "savedBytes": 950959,
+      "savedPercent": "64.6",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 3/Product_5.jpg",
+      "fileName": "Product_5.jpg",
+      "ext": ".jpg",
+      "origSize": 151170,
+      "optSize": 151170,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 4/Product_1.png",
+      "fileName": "Product_1.png",
+      "ext": ".png",
+      "origSize": 1481330,
+      "optSize": 500469,
+      "savedBytes": 980861,
+      "savedPercent": "66.2",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 4/Product_2.png",
+      "fileName": "Product_2.png",
+      "ext": ".png",
+      "origSize": 1642943,
+      "optSize": 553843,
+      "savedBytes": 1089100,
+      "savedPercent": "66.3",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 4/Product_3.png",
+      "fileName": "Product_3.png",
+      "ext": ".png",
+      "origSize": 1647009,
+      "optSize": 575620,
+      "savedBytes": 1071389,
+      "savedPercent": "65.1",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 4/Product_4.png",
+      "fileName": "Product_4.png",
+      "ext": ".png",
+      "origSize": 1887329,
+      "optSize": 688206,
+      "savedBytes": 1199123,
+      "savedPercent": "63.5",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Product 4/Product_5.jpg",
+      "fileName": "Product_5.jpg",
+      "ext": ".jpg",
+      "origSize": 163520,
+      "optSize": 163520,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "data/products.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_1.jpg",
+      "fileName": "reet_food_1.jpg",
+      "ext": ".jpg",
+      "origSize": 96100,
+      "optSize": 96100,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_10.jpg",
+      "fileName": "reet_food_10.jpg",
+      "ext": ".jpg",
+      "origSize": 102585,
+      "optSize": 102585,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_11.jpg",
+      "fileName": "reet_food_11.jpg",
+      "ext": ".jpg",
+      "origSize": 80331,
+      "optSize": 80331,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_12.jpg",
+      "fileName": "reet_food_12.jpg",
+      "ext": ".jpg",
+      "origSize": 93587,
+      "optSize": 93587,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_13.jpg",
+      "fileName": "reet_food_13.jpg",
+      "ext": ".jpg",
+      "origSize": 132470,
+      "optSize": 132470,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_14.jpg",
+      "fileName": "reet_food_14.jpg",
+      "ext": ".jpg",
+      "origSize": 116998,
+      "optSize": 116998,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_15.jpg",
+      "fileName": "reet_food_15.jpg",
+      "ext": ".jpg",
+      "origSize": 146346,
+      "optSize": 146346,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_16.jpg",
+      "fileName": "reet_food_16.jpg",
+      "ext": ".jpg",
+      "origSize": 134479,
+      "optSize": 134479,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_17.jpg",
+      "fileName": "reet_food_17.jpg",
+      "ext": ".jpg",
+      "origSize": 136535,
+      "optSize": 136535,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_18.jpg",
+      "fileName": "reet_food_18.jpg",
+      "ext": ".jpg",
+      "origSize": 186823,
+      "optSize": 186823,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_19.jpg",
+      "fileName": "reet_food_19.jpg",
+      "ext": ".jpg",
+      "origSize": 137684,
+      "optSize": 137684,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_2.jpg",
+      "fileName": "reet_food_2.jpg",
+      "ext": ".jpg",
+      "origSize": 91768,
+      "optSize": 91768,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_20.jpg",
+      "fileName": "reet_food_20.jpg",
+      "ext": ".jpg",
+      "origSize": 102899,
+      "optSize": 102899,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_21.jpg",
+      "fileName": "reet_food_21.jpg",
+      "ext": ".jpg",
+      "origSize": 108764,
+      "optSize": 108764,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_22.jpg",
+      "fileName": "reet_food_22.jpg",
+      "ext": ".jpg",
+      "origSize": 111975,
+      "optSize": 111975,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_23.jpg",
+      "fileName": "reet_food_23.jpg",
+      "ext": ".jpg",
+      "origSize": 108469,
+      "optSize": 108469,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_24.jpg",
+      "fileName": "reet_food_24.jpg",
+      "ext": ".jpg",
+      "origSize": 133514,
+      "optSize": 133514,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_25.jpg",
+      "fileName": "reet_food_25.jpg",
+      "ext": ".jpg",
+      "origSize": 150429,
+      "optSize": 150429,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_26.jpg",
+      "fileName": "reet_food_26.jpg",
+      "ext": ".jpg",
+      "origSize": 118287,
+      "optSize": 118287,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_27.jpg",
+      "fileName": "reet_food_27.jpg",
+      "ext": ".jpg",
+      "origSize": 111620,
+      "optSize": 111620,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_28.jpg",
+      "fileName": "reet_food_28.jpg",
+      "ext": ".jpg",
+      "origSize": 124708,
+      "optSize": 124708,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_29.jpg",
+      "fileName": "reet_food_29.jpg",
+      "ext": ".jpg",
+      "origSize": 122220,
+      "optSize": 122220,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_3.jpg",
+      "fileName": "reet_food_3.jpg",
+      "ext": ".jpg",
+      "origSize": 101733,
+      "optSize": 101733,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_30.jpg",
+      "fileName": "reet_food_30.jpg",
+      "ext": ".jpg",
+      "origSize": 119020,
+      "optSize": 119020,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_31.jpg",
+      "fileName": "reet_food_31.jpg",
+      "ext": ".jpg",
+      "origSize": 95083,
+      "optSize": 95083,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_32.jpg",
+      "fileName": "reet_food_32.jpg",
+      "ext": ".jpg",
+      "origSize": 172545,
+      "optSize": 172545,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_33.jpg",
+      "fileName": "reet_food_33.jpg",
+      "ext": ".jpg",
+      "origSize": 143730,
+      "optSize": 143730,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_34.jpg",
+      "fileName": "reet_food_34.jpg",
+      "ext": ".jpg",
+      "origSize": 151903,
+      "optSize": 151903,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_35.jpg",
+      "fileName": "reet_food_35.jpg",
+      "ext": ".jpg",
+      "origSize": 110600,
+      "optSize": 110600,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_36.jpg",
+      "fileName": "reet_food_36.jpg",
+      "ext": ".jpg",
+      "origSize": 178105,
+      "optSize": 178105,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_37.jpg",
+      "fileName": "reet_food_37.jpg",
+      "ext": ".jpg",
+      "origSize": 104159,
+      "optSize": 104159,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_38.jpg",
+      "fileName": "reet_food_38.jpg",
+      "ext": ".jpg",
+      "origSize": 162538,
+      "optSize": 162538,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_39.jpg",
+      "fileName": "reet_food_39.jpg",
+      "ext": ".jpg",
+      "origSize": 134577,
+      "optSize": 134577,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_4.jpg",
+      "fileName": "reet_food_4.jpg",
+      "ext": ".jpg",
+      "origSize": 92889,
+      "optSize": 92889,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_40.jpg",
+      "fileName": "reet_food_40.jpg",
+      "ext": ".jpg",
+      "origSize": 128567,
+      "optSize": 128567,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_41.jpg",
+      "fileName": "reet_food_41.jpg",
+      "ext": ".jpg",
+      "origSize": 113263,
+      "optSize": 113263,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_42.jpg",
+      "fileName": "reet_food_42.jpg",
+      "ext": ".jpg",
+      "origSize": 127268,
+      "optSize": 127268,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_43.jpg",
+      "fileName": "reet_food_43.jpg",
+      "ext": ".jpg",
+      "origSize": 106291,
+      "optSize": 106291,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_44.jpg",
+      "fileName": "reet_food_44.jpg",
+      "ext": ".jpg",
+      "origSize": 141429,
+      "optSize": 141429,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_45.jpg",
+      "fileName": "reet_food_45.jpg",
+      "ext": ".jpg",
+      "origSize": 110476,
+      "optSize": 110476,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_46.jpg",
+      "fileName": "reet_food_46.jpg",
+      "ext": ".jpg",
+      "origSize": 145909,
+      "optSize": 145909,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_47.jpg",
+      "fileName": "reet_food_47.jpg",
+      "ext": ".jpg",
+      "origSize": 101658,
+      "optSize": 101658,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_48.jpg",
+      "fileName": "reet_food_48.jpg",
+      "ext": ".jpg",
+      "origSize": 71424,
+      "optSize": 71424,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_49.jpg",
+      "fileName": "reet_food_49.jpg",
+      "ext": ".jpg",
+      "origSize": 97411,
+      "optSize": 97411,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_5.jpg",
+      "fileName": "reet_food_5.jpg",
+      "ext": ".jpg",
+      "origSize": 109364,
+      "optSize": 109364,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_50.jpg",
+      "fileName": "reet_food_50.jpg",
+      "ext": ".jpg",
+      "origSize": 98103,
+      "optSize": 98103,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_51.jpg",
+      "fileName": "reet_food_51.jpg",
+      "ext": ".jpg",
+      "origSize": 118014,
+      "optSize": 118014,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_52.jpg",
+      "fileName": "reet_food_52.jpg",
+      "ext": ".jpg",
+      "origSize": 116868,
+      "optSize": 116868,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_53.jpg",
+      "fileName": "reet_food_53.jpg",
+      "ext": ".jpg",
+      "origSize": 93300,
+      "optSize": 93300,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_54.jpg",
+      "fileName": "reet_food_54.jpg",
+      "ext": ".jpg",
+      "origSize": 79954,
+      "optSize": 79954,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_55.jpg",
+      "fileName": "reet_food_55.jpg",
+      "ext": ".jpg",
+      "origSize": 112227,
+      "optSize": 112227,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_56.jpg",
+      "fileName": "reet_food_56.jpg",
+      "ext": ".jpg",
+      "origSize": 92426,
+      "optSize": 92426,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_57.jpg",
+      "fileName": "reet_food_57.jpg",
+      "ext": ".jpg",
+      "origSize": 130524,
+      "optSize": 130524,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_58.jpg",
+      "fileName": "reet_food_58.jpg",
+      "ext": ".jpg",
+      "origSize": 67761,
+      "optSize": 67761,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_59.jpg",
+      "fileName": "reet_food_59.jpg",
+      "ext": ".jpg",
+      "origSize": 107040,
+      "optSize": 107040,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_6.jpg",
+      "fileName": "reet_food_6.jpg",
+      "ext": ".jpg",
+      "origSize": 125441,
+      "optSize": 125441,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_60.jpg",
+      "fileName": "reet_food_60.jpg",
+      "ext": ".jpg",
+      "origSize": 82840,
+      "optSize": 82840,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_61.jpg",
+      "fileName": "reet_food_61.jpg",
+      "ext": ".jpg",
+      "origSize": 126082,
+      "optSize": 126082,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_62.jpg",
+      "fileName": "reet_food_62.jpg",
+      "ext": ".jpg",
+      "origSize": 83367,
+      "optSize": 83367,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_63.jpg",
+      "fileName": "reet_food_63.jpg",
+      "ext": ".jpg",
+      "origSize": 78152,
+      "optSize": 78152,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_64.jpg",
+      "fileName": "reet_food_64.jpg",
+      "ext": ".jpg",
+      "origSize": 109711,
+      "optSize": 109711,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_65.jpg",
+      "fileName": "reet_food_65.jpg",
+      "ext": ".jpg",
+      "origSize": 132275,
+      "optSize": 132275,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_66.jpg",
+      "fileName": "reet_food_66.jpg",
+      "ext": ".jpg",
+      "origSize": 124337,
+      "optSize": 124337,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_67.jpg",
+      "fileName": "reet_food_67.jpg",
+      "ext": ".jpg",
+      "origSize": 199122,
+      "optSize": 199122,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_68.jpg",
+      "fileName": "reet_food_68.jpg",
+      "ext": ".jpg",
+      "origSize": 103897,
+      "optSize": 103897,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_69.jpg",
+      "fileName": "reet_food_69.jpg",
+      "ext": ".jpg",
+      "origSize": 88413,
+      "optSize": 88413,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_7.jpg",
+      "fileName": "reet_food_7.jpg",
+      "ext": ".jpg",
+      "origSize": 96933,
+      "optSize": 96933,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_70.jpg",
+      "fileName": "reet_food_70.jpg",
+      "ext": ".jpg",
+      "origSize": 114583,
+      "optSize": 114583,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_71.jpg",
+      "fileName": "reet_food_71.jpg",
+      "ext": ".jpg",
+      "origSize": 109264,
+      "optSize": 109264,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_72.jpg",
+      "fileName": "reet_food_72.jpg",
+      "ext": ".jpg",
+      "origSize": 101060,
+      "optSize": 101060,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_73.jpg",
+      "fileName": "reet_food_73.jpg",
+      "ext": ".jpg",
+      "origSize": 131973,
+      "optSize": 131973,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_74.jpg",
+      "fileName": "reet_food_74.jpg",
+      "ext": ".jpg",
+      "origSize": 138689,
+      "optSize": 138689,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_75.jpg",
+      "fileName": "reet_food_75.jpg",
+      "ext": ".jpg",
+      "origSize": 124428,
+      "optSize": 124428,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_76.jpg",
+      "fileName": "reet_food_76.jpg",
+      "ext": ".jpg",
+      "origSize": 108019,
+      "optSize": 108019,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_77.jpg",
+      "fileName": "reet_food_77.jpg",
+      "ext": ".jpg",
+      "origSize": 163329,
+      "optSize": 163329,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_78.jpg",
+      "fileName": "reet_food_78.jpg",
+      "ext": ".jpg",
+      "origSize": 146141,
+      "optSize": 146141,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_79.jpg",
+      "fileName": "reet_food_79.jpg",
+      "ext": ".jpg",
+      "origSize": 126216,
+      "optSize": 126216,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_8.jpg",
+      "fileName": "reet_food_8.jpg",
+      "ext": ".jpg",
+      "origSize": 109125,
+      "optSize": 109125,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_80.jpg",
+      "fileName": "reet_food_80.jpg",
+      "ext": ".jpg",
+      "origSize": 89114,
+      "optSize": 89114,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_81.jpg",
+      "fileName": "reet_food_81.jpg",
+      "ext": ".jpg",
+      "origSize": 126535,
+      "optSize": 126535,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_82.jpg",
+      "fileName": "reet_food_82.jpg",
+      "ext": ".jpg",
+      "origSize": 99184,
+      "optSize": 99184,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_83.jpg",
+      "fileName": "reet_food_83.jpg",
+      "ext": ".jpg",
+      "origSize": 143758,
+      "optSize": 143758,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_84.jpg",
+      "fileName": "reet_food_84.jpg",
+      "ext": ".jpg",
+      "origSize": 81456,
+      "optSize": 81456,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_85.jpg",
+      "fileName": "reet_food_85.jpg",
+      "ext": ".jpg",
+      "origSize": 120006,
+      "optSize": 120006,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_86.jpg",
+      "fileName": "reet_food_86.jpg",
+      "ext": ".jpg",
+      "origSize": 82986,
+      "optSize": 82986,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_87.jpg",
+      "fileName": "reet_food_87.jpg",
+      "ext": ".jpg",
+      "origSize": 100295,
+      "optSize": 100295,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 724,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "assets/Reet Food/reet_food_9.jpg",
+      "fileName": "reet_food_9.jpg",
+      "ext": ".jpg",
+      "origSize": 87320,
+      "optSize": 87320,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 724,
+      "height": 1024,
+      "pages": [
+        "assets/reetFoodImages.ts"
+      ]
+    },
+    {
+      "rel": "public/apple-icon.png",
+      "fileName": "apple-icon.png",
+      "ext": ".png",
+      "origSize": 53508,
+      "optSize": 20322,
+      "savedBytes": 33186,
+      "savedPercent": "62.0",
+      "action": "PNG Compressed",
+      "width": 180,
+      "height": 180,
+      "pages": []
+    },
+    {
+      "rel": "public/apple-touch-icon.png",
+      "fileName": "apple-touch-icon.png",
+      "ext": ".png",
+      "origSize": 53508,
+      "optSize": 20322,
+      "savedBytes": 33186,
+      "savedPercent": "62.0",
+      "action": "PNG Compressed",
+      "width": 180,
+      "height": 180,
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "public/favicon-96x96.png",
+      "fileName": "favicon-96x96.png",
+      "ext": ".png",
+      "origSize": 18709,
+      "optSize": 7724,
+      "savedBytes": 10985,
+      "savedPercent": "58.7",
+      "action": "PNG Compressed",
+      "width": 96,
+      "height": 96,
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "public/favicon.svg",
+      "fileName": "favicon.svg",
+      "ext": ".svg",
+      "origSize": 927748,
+      "optSize": 927748,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": [
+        "app/layout.tsx"
+      ]
+    },
+    {
+      "rel": "public/file.svg",
+      "fileName": "file.svg",
+      "ext": ".svg",
+      "origSize": 391,
+      "optSize": 391,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "public/globe.svg",
+      "fileName": "globe.svg",
+      "ext": ".svg",
+      "origSize": 1035,
+      "optSize": 1035,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "public/icon0.svg",
+      "fileName": "icon0.svg",
+      "ext": ".svg",
+      "origSize": 927748,
+      "optSize": 927748,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "public/icon1.png",
+      "fileName": "icon1.png",
+      "ext": ".png",
+      "origSize": 18709,
+      "optSize": 7724,
+      "savedBytes": 10985,
+      "savedPercent": "58.7",
+      "action": "PNG Compressed",
+      "width": 96,
+      "height": 96,
+      "pages": []
+    },
+    {
+      "rel": "public/images/category_chocolates.png",
+      "fileName": "category_chocolates.png",
+      "ext": ".png",
+      "origSize": 734689,
+      "optSize": 734689,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 1024,
+      "pages": []
+    },
+    {
+      "rel": "public/images/category_dry_fruits.png",
+      "fileName": "category_dry_fruits.png",
+      "ext": ".png",
+      "origSize": 865216,
+      "optSize": 865216,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 1024,
+      "pages": [
+        "components/common/SeasonalOfferPopup.tsx"
+      ]
+    },
+    {
+      "rel": "public/images/category_juices.png",
+      "fileName": "category_juices.png",
+      "ext": ".png",
+      "origSize": 722163,
+      "optSize": 722163,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "Preserved",
+      "width": 1024,
+      "height": 1024,
+      "pages": []
+    },
+    {
+      "rel": "public/images/logo.png",
+      "fileName": "logo.png",
+      "ext": ".png",
+      "origSize": 1015647,
+      "optSize": 371602,
+      "savedBytes": 644045,
+      "savedPercent": "63.4",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "app/(site)/layout.tsx",
+        "app/(site)/page.tsx",
+        "app/(site)/products/page.tsx",
+        "components/common/Header.tsx",
+        "components/common/HeaderTopBar.tsx"
+      ]
+    },
+    {
+      "rel": "public/logo.png",
+      "fileName": "logo.png",
+      "ext": ".png",
+      "origSize": 1015647,
+      "optSize": 371602,
+      "savedBytes": 644045,
+      "savedPercent": "63.4",
+      "action": "PNG Compressed",
+      "width": 1080,
+      "height": 1080,
+      "pages": [
+        "app/(site)/layout.tsx",
+        "app/(site)/page.tsx",
+        "app/(site)/products/page.tsx",
+        "components/common/Header.tsx",
+        "components/common/HeaderTopBar.tsx"
+      ]
+    },
+    {
+      "rel": "public/next.svg",
+      "fileName": "next.svg",
+      "ext": ".svg",
+      "origSize": 1375,
+      "optSize": 1375,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "public/vercel.svg",
+      "fileName": "vercel.svg",
+      "ext": ".svg",
+      "origSize": 128,
+      "optSize": 128,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    },
+    {
+      "rel": "public/web-app-manifest-192x192.png",
+      "fileName": "web-app-manifest-192x192.png",
+      "ext": ".png",
+      "origSize": 59025,
+      "optSize": 22834,
+      "savedBytes": 36191,
+      "savedPercent": "61.3",
+      "action": "PNG Compressed",
+      "width": 192,
+      "height": 192,
+      "pages": [
+        "assets/Favicon/manifest.json",
+        "public/manifest.json"
+      ]
+    },
+    {
+      "rel": "public/web-app-manifest-512x512.png",
+      "fileName": "web-app-manifest-512x512.png",
+      "ext": ".png",
+      "origSize": 348308,
+      "optSize": 124242,
+      "savedBytes": 224066,
+      "savedPercent": "64.3",
+      "action": "PNG Compressed",
+      "width": 512,
+      "height": 512,
+      "pages": [
+        "assets/Favicon/manifest.json",
+        "public/manifest.json"
+      ]
+    },
+    {
+      "rel": "public/window.svg",
+      "fileName": "window.svg",
+      "ext": ".svg",
+      "origSize": 385,
+      "optSize": 385,
+      "savedBytes": 0,
+      "savedPercent": "0.0",
+      "action": "SVG Cleaned",
+      "pages": []
+    }
+  ]
+}

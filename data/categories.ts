@@ -1,8 +1,7 @@
 import type { StaticImageData } from "next/image";
-import driedFruitsCounter from "../assets/dried-fruits-nuts-counter.jpg";
-import sweetiesDesk from "../assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
-import topViewDriedFruits from "../assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
-import woodenBoxNuts from "../assets/various-nuts-wooden-box.jpg";
+import { reetFoodImages } from "../assets/reetFoodImages";
+
+const [driedFruitsCounter, sweetiesDesk, topViewDriedFruits, woodenBoxNuts] = reetFoodImages;
 
 export type Category = {
   title: string;
@@ -16,33 +15,33 @@ export type Category = {
 export const categories: Category[] = [
   {
     title: "Premium Dry Fruits",
-    copy: "Nitrogen-packed premium origin nuts and figs for gifting and daily health.",
-    tag: "Hand-Selected Quality",
+    copy: "Premium dry fruits selected for retail, festive and corporate gifting.",
+    tag: "Quality Dry Fruits",
     href: "/products/premium-dry-fruits",
     img: woodenBoxNuts,
     cta: "Explore Collection",
   },
   {
-    title: "Artisanal Chocolates",
-    copy: "Hand-poured truffles and luxury Belgian pralines in custom magnetic boxes.",
-    tag: "Premium Confectionery",
-    href: "/products/artisanal-chocolates",
+    title: "Dry Fruit Gift Boxes",
+    copy: "Gift-ready dry fruit boxes customised to your quantity, occasion and budget.",
+    tag: "Gift Ready",
+    href: "/products/categories/dry-fruit-box",
     img: topViewDriedFruits,
     cta: "Explore Collection",
   },
   {
-    title: "Celebration Hampers",
-    copy: "Elegantly curated luxury gift hampers for weddings and festive celebrations.",
-    tag: "Festive & Wedding",
+    title: "Festive Hampers",
+    copy: "Custom gift hampers for Diwali, client gifts, employee kits and celebrations.",
+    tag: "Festive Gifting",
     href: "/products/celebration-hampers",
     img: sweetiesDesk,
     cta: "Explore Collection",
   },
   {
-    title: "Cold-Pressed Juices",
-    copy: "Fresh seasonal wellness juices with no preservatives. Perfect for welcome hampers.",
-    tag: "Fresh & Natural",
-    href: "/products/cold-pressed-juices",
+    title: "Custom Corporate Gifts",
+    copy: "Corporate gift solutions with logo branding, custom message cards and flexible packaging.",
+    tag: "Corporate Gifting",
+    href: "/contact#quote",
     img: driedFruitsCounter,
     cta: "Explore Collection",
   },

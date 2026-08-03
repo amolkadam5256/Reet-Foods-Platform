@@ -34,23 +34,6 @@ export function SiteShell({
     <div className="relative bg-[#fbf7f1]">
       <div className="absolute inset-x-0 top-0 h-48 bg-[linear-gradient(180deg,rgba(212,175,55,0.12),rgba(255,255,255,0))]" />
       <div className="relative mx-auto max-w-[1440px] px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        {breadcrumbs?.length ? (
-          <div className="mb-5 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-reef-charcoal/55">
-            {breadcrumbs.map((crumb, index) => (
-              <span key={crumb.label} className="inline-flex items-center gap-2">
-                {crumb.href ? (
-                  <Link href={crumb.href} className="hover:text-reef-burgundy">
-                    {crumb.label}
-                  </Link>
-                ) : (
-                  <span>{crumb.label}</span>
-                )}
-                {index < breadcrumbs.length - 1 ? <span>/</span> : null}
-              </span>
-            ))}
-          </div>
-        ) : null}
-
         <div className="grid items-start gap-6 xl:grid-cols-[1.2fr_0.38fr]">
           <section className={`${flat ? "rounded-lg" : "rounded-[28px]"} border border-white/70 bg-white/90 p-6 shadow-[0_18px_60px_rgba(29,22,17,0.07)] sm:p-8`}>
             {eyebrow ? (

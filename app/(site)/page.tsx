@@ -12,7 +12,6 @@ import {
   FiPause,
   FiPlay,
 } from "react-icons/fi";
-import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { CorporateGifting } from "@/components/home/CorporateGifting";
@@ -28,9 +27,9 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { ManufacturingPreview } from "@/components/home/ManufacturingPreview";
 import { featuredProducts, heroGallery } from "../../data/home";
 import { categories } from "../../data/categories";
-import sweetiesDesk from "@/assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
-import topViewDriedFruits from "@/assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
-import woodenBoxNuts from "@/assets/various-nuts-wooden-box.jpg";
+import { reetFoodImages } from "@/assets/reetFoodImages";
+
+const [, sweetiesDesk, , topViewDriedFruits, , woodenBoxNuts] = reetFoodImages;
 
 type HeroCategory = {
   label: string;
@@ -40,12 +39,12 @@ type HeroCategory = {
 
 const centerSlides = [
   {
-    title: "Premium Dry Fruits & Luxury Chocolate Hampers",
+    title: "Premium Dry Fruits & Custom Corporate Gift Hampers",
     subtitle: "Premium Dry Fruits • Corporate Gifting • PAN India",
     price: "",
     image: heroGallery[0],
     description:
-      "Curated artisanal chocolates and premium dry fruits for corporate gifting, weddings, and festive celebrations. Elevate your brand with custom packaging and seamless bulk orders.",
+      "Premium dry fruits and custom gift hampers for corporate gifting, festive celebrations and events. Choose packaging, logo branding and message cards to fit your budget.",
     cta: "Explore Premium Hampers",
   },
   {
@@ -77,11 +76,11 @@ const promotionalCards = [
     cta: "Shop Dry Fruits",
   },
   {
-    tagline: "Artisanal Belgian Chocolates",
-    title: "Chocolate Gift Boxes",
+    tagline: "Gift-Ready Dry Fruit Boxes",
+    title: "Dry Fruit Gift Boxes",
     image: topViewDriedFruits,
-    href: "/products/artisanal-chocolates",
-    cta: "Shop Chocolates",
+    href: "/products/categories/dry-fruit-box",
+    cta: "Explore Gift Boxes",
   },
   {
     tagline: "Seamless Bulk Gifting",
@@ -124,17 +123,17 @@ export default function Home() {
       ],
     },
     {
-      label: "Chocolate Gift Boxes",
+      label: "Dry Fruit Gift Boxes",
       children: [
-        { label: "Corporate Boxes", href: "/products/chocolate-gift-box" },
-        { label: "Premium Assortments", href: "/products/chocolate-gift-box" },
+        { label: "Corporate Gift Boxes", href: "/products/categories/dry-fruit-box" },
+        { label: "Festive Gift Boxes", href: "/products/categories/dry-fruit-box" },
       ],
     },
     {
-      label: "Cold-Pressed Juices",
+      label: "Custom Corporate Gifts",
       children: [
-        { label: "Gift Hampers", href: "/products/juice" },
-        { label: "Corporate Orders", href: "/products/juice" },
+        { label: "Logo Branding", href: "/contact#quote" },
+        { label: "Bulk Orders", href: "/contact#quote" },
       ],
     },
     { label: "Celebration Hampers", href: "/products/dry-fruit-box" },
@@ -144,11 +143,6 @@ export default function Home() {
 
   return (
     <div className="bg-[#fbf7f1]">
-      <WhatsAppButton
-        href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
-        label="WhatsApp Us"
-      />
-
       <section className="mx-auto max-w-[1440px] px-4 py-6 sm:px-6 lg:px-8">
         <div className="grid gap-6 xl:grid-cols-[280px_minmax(0,1fr)_280px]">
           <aside className="border border-reef-gold/20 bg-white">
@@ -531,9 +525,8 @@ export default function Home() {
             Crafted For Every Occasion
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-reef-charcoal/70 sm:text-base">
-            Discover our signature collection of artisanal chocolates and
-            premium dry fruits. Curated thoughtfully for personal celebrations,
-            luxury weddings, and distinguished corporate gift boxes.
+            Discover premium dry fruits, gift boxes and custom hampers. Curated
+            for corporate teams, festive celebrations, events and personal gifting.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -621,7 +614,7 @@ export default function Home() {
               "@type": ["Organization", "LocalBusiness", "FoodEstablishment"],
               "name": "Reet Foods & Gifting",
               "url": "https://reetfoods.com",
-              "logo": "https://reetfoods.com/logo.png",
+              "logo": "https://reetfoods.in/logo.png",
               "image": "https://reetfoods.com/images/hero.jpg",
               "description": "Pune's premier manufacturer of premium dry fruits, artisanal chocolates, and bespoke corporate gifting hampers. FSSAI certified, ISO quality standards, PAN India delivery.",
               "priceRange": "₹₹–₹₹₹",

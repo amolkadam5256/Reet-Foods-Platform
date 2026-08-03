@@ -1,13 +1,36 @@
-import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import { productCategories } from "../../../../data/products";
-import CategoryDropdown from "@/components/common/CategoryDropdown";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { constructMetadata } from "@/components/seo/Metadata";
+import { ProductSchema } from "@/components/seo/ProductSchema";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
+import { PageHero } from "@/components/common/PageHero";
+import { SectionHeading } from "@/components/common/SectionHeading";
+import { ProductCard } from "@/components/common/Cards";
+import { CTA } from "@/components/common/CTA";
+import { productCategories } from "@/data/products";
+import { Images } from "@/assets/images";
+import {
+  FiCheck,
+  FiShield,
+  FiPackage,
+  FiTruck,
+  FiAward,
+  FiClock,
+  FiBox,
+  FiPhoneCall,
+  FiCheckCircle,
+} from "react-icons/fi";
 
 export async function generateStaticParams() {
-  return productCategories.map((cat) => ({ slug: cat.slug }));
+  const categoryParams = productCategories.map((cat) => ({ slug: cat.slug }));
+  const itemParams = productCategories.flatMap((cat) =>
+    cat.items.map((item) => ({
+      slug: item.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+    }))
+  );
+  return [...categoryParams, ...itemParams];
 }
 
 type Props = { params: Promise<{ slug: string }> };
@@ -15,114 +38,254 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const category = productCategories.find((c) => c.slug === slug);
-  return {
-    title: category
-      ? `${category.name} | Reet Foods Pune`
-      : "Products | Reet Foods Pune",
-    description: category
-      ? category.intro
-      : "Premium dry fruits, chocolates and juices from Reet Foods.",
-  };
+  
+  // Search item match if slug is item
+  let itemMatch: { name: string; detail: string } | undefined;
+  if (!category) {
+    for (const cat of productCategories) {
+      const found = cat.items.find(
+        (i) => i.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") === slug
+      );
+      if (found) {
+        itemMatch = found;
+        break;
+      }
+    }
+  }
+
+  const title = category
+    ? `${category.name} | Reet Foods & Gifting Pune`
+    : itemMatch
+    ? `${itemMatch.name} | Reet Foods & Gifting Pune`
+    : "Gourmet Product Details | Reet Foods Pune";
+
+  const description = category
+    ? category.intro
+    : itemMatch
+    ? itemMatch.detail
+    : "Explore gourmet dry fruits, artisan chocolates, and custom gift boxes in Pune.";
+
+  return constructMetadata({
+    title,
+    description,
+    canonical: `/products/${slug}`,
+  });
 }
 
-export default async function ProductDetail({ params }: Props) {
+export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
-  const category = productCategories.find((c) => c.slug === slug);
+  
+  let category = productCategories.find((c) => c.slug === slug);
+  let selectedItem = category ? category.items[0] : undefined;
+
+  if (!category) {
+    for (const cat of productCategories) {
+      const found = cat.items.find(
+        (i) => i.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") === slug
+      );
+      if (found) {
+        category = cat;
+        selectedItem = found;
+        break;
+      }
+    }
+  }
+
   if (!category) return notFound();
 
-  const categoryOptions = productCategories.map(c => ({ slug: c.slug, name: c.name }));
+  const titleName = selectedItem ? selectedItem.name : category.name;
+  const descriptionText = selectedItem ? selectedItem.detail : category.intro;
+  const mainImage = selectedItem?.image || category.image;
+
+  const faqs = [
+    {
+      question: "What is the Minimum Order Quantity (MOQ) for custom branding?",
+      answer: "Custom logo branding on gift boxes starts at a minimum order of 15 units. Standard non-branded gift boxes have no minimum.",
+    },
+    {
+      question: "What is the expected delivery timeline for corporate orders?",
+      answer: "Standard orders in Pune are delivered within 24-48 hours. Custom branded bulk orders across India are dispatched in 3 to 5 business days.",
+    },
+    {
+      question: "Are your dry fruits and chocolates certified for corporate compliance?",
+      answer: "Yes, all products carry complete FSSAI certifications, nutritional labeling, ingredient transparency, and food-grade packaging compliance.",
+    },
+  ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div className="mx-auto max-w-7xl space-y-12 px-4 py-8 sm:px-6 lg:px-8">
+      <ProductSchema
+        name={titleName}
+        description={descriptionText}
+        image="https://reetfoods.com/assets/images/logo.png"
+        category={category.name}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Products", url: "/products" },
+          { name: category.name, url: `/products/categories/${category.slug}` },
+          { name: titleName, url: `/products/${slug}` },
+        ]}
+      />
+      <FAQSchema faqs={faqs} />
 
-      <CategoryDropdown currentSlug={slug} categories={categoryOptions} />
+      <PageHero
+        eyebrow={category.name}
+        title={titleName}
+        description={descriptionText}
+        breadcrumbs={[
+          { label: "Products", href: "/products" },
+          { label: category.name, href: `/products#${category.slug}` },
+          { label: titleName },
+        ]}
+        image={mainImage}
+        imageAlt={titleName}
+        primaryCta={{ label: "Request Volume Quote", href: "/contact#quote" }}
+        secondaryCta={{ label: "WhatsApp Inquiry", href: "https://wa.me/919876543210" }}
+        sideBadge="Grade-A Certified"
+      />
 
-      <div className="flex flex-col lg:flex-row items-start gap-10">
-
-        {/* Left image column */}
-        <div className="w-full lg:w-5/12">
-          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-            <Image
-              src={category.image}
-              alt={category.name}
-              fill
-              className="object-cover transition duration-500 hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-            <h1 className="absolute bottom-6 left-6 text-3xl font-bold text-white drop-shadow-md">
-              {category.name}
-            </h1>
-          </div>
-        </div>
-
-        {/* Right Details Column */}
-        <div className="w-full lg:w-7/12">
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed bg-gray-50 p-4 border-l-4 border-reef-burgundy rounded-r-lg">
-            {category.intro}
-          </p>
-
-          <Card className="mb-10 bg-gray-50 border-gray-200">
-            <CardContent className="p-5 flex items-center gap-4">
-              <span className="h-10 w-10 shrink-0 rounded-full bg-reef-burgundy text-white flex items-center justify-center font-bold text-lg shadow-sm">
-                RF
-              </span>
-              <p className="text-sm md:text-base text-gray-700 font-medium flex-1">
-                Talk to our gifting concierge for volume pricing, logo printing and delivery schedules.
-              </p>
-              <Link
-                href="/contact#quote"
-                tabIndex={-1}
-              >
-                <Button variant="primary" className="whitespace-nowrap">
-                  Get Best Quote →
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-            {category.items.map((item) => (
-              <Card key={item.name} className="flex flex-col group relative overflow-hidden border-gray-200 transition-shadow duration-300 hover:shadow-lg">
-                {item.image && (
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image src={item.image} alt={item.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                )}
-                <CardContent className="p-6 flex flex-col gap-3 flex-1 relative">
-                  {item.badge && (
-                    <span className="absolute top-4 right-4 bg-reef-burgundy text-[10px] uppercase tracking-wider font-bold text-white px-3 py-1 rounded-full shadow-sm z-10">
-                      {item.badge}
-                    </span>
-                  )}
-                  <p className="text-xl font-bold text-gray-900 transition-colors">{item.name}</p>
-                  <p className="text-sm text-gray-600 mb-2 leading-relaxed">{item.detail}</p>
-                  <Link
-                    href="/contact#quote"
-                    className="mt-auto inline-block text-xs uppercase tracking-widest font-bold text-reef-burgundy hover:text-reef-burgundy/80 transition"
-                  >
-                    Ask for quote →
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-12 p-6 rounded-2xl bg-gray-50 text-sm md:text-base">
-            <p className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <svg className="w-5 h-5 text-reef-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-              Included Standard Services:
+      {/* Specifications & Overview */}
+      <section className="grid gap-8 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-6">
+          <div className="rounded-2xl border border-reef-gold/20 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal">
+              Product Overview & Specifications
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-reef-charcoal/80">
+              {descriptionText} Each item in this collection undergoes rigorous quality inspection at our Hinjewadi Phase I facility in Pune. Designed specifically to maintain crunchiness, flavor integrity, and exquisite visual presentation.
             </p>
-            <ul className="grid sm:grid-cols-2 gap-3 text-sm text-gray-600">
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-reef-burgundy/50" /> Custom note cards and brand ribboning</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-reef-burgundy/50" /> Temperature-safe transport within Pune city</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-reef-burgundy/50" /> GST billing and corporate invoices</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-reef-burgundy/50" /> Priority fulfillment & tracking</li>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl bg-reef-cream/50 p-4 border border-reef-gold/15">
+                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">Origin & Quality</span>
+                <p className="mt-1 text-xs text-reef-charcoal font-medium">Single-origin premium imports & local artisan craft</p>
+              </div>
+              <div className="rounded-xl bg-reef-cream/50 p-4 border border-reef-gold/15">
+                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">Packaging Architecture</span>
+                <p className="mt-1 text-xs text-reef-charcoal font-medium">Airtight nitrogen-flushed tins & magnetic hardtop boxes</p>
+              </div>
+              <div className="rounded-xl bg-reef-cream/50 p-4 border border-reef-gold/15">
+                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">Shelf Life</span>
+                <p className="mt-1 text-xs text-reef-charcoal font-medium">9 to 12 Months when stored in cool dry environment</p>
+              </div>
+              <div className="rounded-xl bg-reef-cream/50 p-4 border border-reef-gold/15">
+                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">Certification</span>
+                <p className="mt-1 text-xs text-reef-charcoal font-medium">100% FSSAI certified & food-grade compliance</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Corporate Branding & Customization */}
+          <div className="rounded-2xl border border-reef-gold/20 bg-white p-6 shadow-sm sm:p-8">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal">
+              Custom Branding & Corporate Personalization
+            </h2>
+            <p className="mt-2 text-xs text-reef-charcoal/70">
+              Elevate your corporate relationships with bespoke box sleeves, metallic plate laser engraving, and custom note cards.
+            </p>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2 text-xs text-reef-charcoal/80">
+              <li className="flex items-center gap-2">
+                <FiCheckCircle className="h-4 w-4 text-reef-burgundy shrink-0" />
+                <span>Gold Foil & Metallic Logo Embossing</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FiCheckCircle className="h-4 w-4 text-reef-burgundy shrink-0" />
+                <span>Custom Ribbon Ties & Sleeve Wraps</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FiCheckCircle className="h-4 w-4 text-reef-burgundy shrink-0" />
+                <span>Personalized Recipient Message Cards</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FiCheckCircle className="h-4 w-4 text-reef-burgundy shrink-0" />
+                <span>PAN India Multi-Address Dispatch</span>
+              </li>
             </ul>
           </div>
         </div>
-      </div>
+
+        {/* Quick Purchase Concierge Sidebar */}
+        <div className="space-y-6">
+          <div className="rounded-2xl border border-reef-gold/30 bg-reef-charcoal p-6 text-white shadow-xl">
+            <span className="inline-block rounded-full bg-reef-gold/20 px-3 py-1 text-[10px] font-semibold uppercase text-reef-gold">
+              Concierge Ordering
+            </span>
+            <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+              Instant Corporate Quote
+            </h3>
+            <p className="mt-2 text-xs leading-relaxed text-white/75">
+              Need 25+ boxes for client gifting or corporate events? Speak directly with our Pune account team for tiered pricing slabs.
+            </p>
+
+            <div className="mt-6 space-y-3">
+              <Link
+                href="/contact#quote"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-reef-gold px-5 py-3 text-xs font-semibold text-reef-charcoal transition hover:bg-white hover:text-reef-burgundy"
+              >
+                <FiPhoneCall className="h-4 w-4" />
+                <span>Request Custom Quote</span>
+              </Link>
+              <a
+                href="https://wa.me/919876543210?text=Hi%20Reet%20Foods%2C%20I%20want%20details%20for%20product%20slug"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-reef-gold/40 bg-white/10 px-5 py-3 text-xs font-semibold text-white transition hover:bg-white/20"
+              >
+                <span>WhatsApp Assistance</span>
+              </a>
+            </div>
+
+            <div className="mt-6 border-t border-white/10 pt-4 text-[11px] text-white/60 space-y-1">
+              <p>✓ Guaranteed Freshness</p>
+              <p>✓ Doorstep Delivery in Pune</p>
+              <p>✓ GST Compliant Invoicing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Lineup Items */}
+      <section>
+        <SectionHeading
+          eyebrow="Category Lineup"
+          title={`More Items in ${category.name}`}
+          description="Explore complementary gift boxes and assortments crafted with the same precision."
+        />
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {category.items.map((item, idx) => {
+            const itemSlug = item.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+            return (
+              <ProductCard
+                key={idx}
+                id={`item-${idx}`}
+                name={item.name}
+                category={category.name}
+                image={item.image || category.image}
+                slug={itemSlug}
+                description={item.detail}
+                badge={item.badge || "Gourmet"}
+              />
+            );
+          })}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">
+        <SectionHeading eyebrow="Have Questions?" title="Product Details FAQ" />
+        <div className="mt-6 space-y-4">
+          {faqs.map((faq, idx) => (
+            <div key={idx} className="rounded-lg border border-reef-gold/15 bg-reef-cream/40 p-5">
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">{faq.question}</h3>
+              <p className="mt-2 text-xs leading-relaxed text-reef-charcoal/75">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <CTA />
     </div>
   );
 }

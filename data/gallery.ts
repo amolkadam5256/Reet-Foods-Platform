@@ -1,11 +1,9 @@
-import driedFruitsCounter from "../assets/dried-fruits-nuts-counter.jpg";
-import sweetiesDesk from "../assets/front-view-desk-with-sweeties-dried-fruits-marmalades-sweets-wooden-desk-sweet-confectionery-color-composition.jpg";
-import nutsSetTable from "../assets/nuts-set-table.jpg";
-import topViewDriedFruits from "../assets/top-view-dried-fruits-different-nuts-dark-surface.jpg";
-import topViewPistachios from "../assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
-import woodenBoxNuts from "../assets/various-nuts-wooden-box.jpg";
+import type { StaticImageData } from "next/image";
+import { reetFoodImages } from "../assets/reetFoodImages";
 import { galleryImages } from "../assets/images";
 import { productCategories } from "./products";
+
+const [driedFruitsCounter, sweetiesDesk, nutsSetTable, topViewDriedFruits, topViewPistachios, woodenBoxNuts] = reetFoodImages;
 
 const featuredPhotos = [
   {
@@ -52,8 +50,8 @@ export const photos = [
     type: "Reet Foods collection",
     description: "Premium gifting photography from Reet Foods & Gifting.",
   })),
-  ...galleryImages.map((src, index) => ({
-    src,
+  ...galleryImages.map((src: StaticImageData | { default: StaticImageData } | string, index: number) => ({
+    src: (typeof src === "object" && src && "default" in src ? src.default : src) as StaticImageData,
     alt: `Reet Foods premium gifting collection photo ${index + 1}`,
     title: `Reet Foods Collection ${index + 1}`,
     type: "Gifting inspiration",

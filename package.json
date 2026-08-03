@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images:optimize": "node scripts/optimizeImages.js",
+    "images:duplicates": "node scripts/analyzeDuplicates.js",
+    "images:blur": "node scripts/generateBlurDataURLs.js",
+    "images:report": "node scripts/generateReports.js",
+    "images:all": "node scripts/optimizeImages.js && node scripts/generateBlurDataURLs.js && node scripts/generateReports.js && node scripts/analyzeDuplicates.js"
   },
   "dependencies": {
     "next": "16.2.3",

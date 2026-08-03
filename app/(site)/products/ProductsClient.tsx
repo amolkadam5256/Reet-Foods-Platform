@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import type { StaticImageData } from "next/image";
 import Link from "next/link";
 import {
   FiArrowRight,
   FiCheckCircle,
   FiPlus,
   FiMinus,
+  FiLock,
   FiPackage,
   FiShield,
   FiTruck,
@@ -19,421 +19,290 @@ import {
   FiUsers,
   FiSmile,
   FiStar,
+  FiShare2,
+  FiTrendingUp,
+  FiLayers,
+  FiZap,
+  FiFileText,
 } from "react-icons/fi";
-import {
-  productCategories,
-} from "../../../data/products";
+import { productCategories } from "../../../data/products";
 import { Images } from "@/assets/images";
+import dynamic from "next/dynamic";
+const ProductsHero = dynamic(() => import("@/components/products/ProductsHero"), { ssr: false });
+
+type OccasionFilter =
+  | "all"
+  | "corporate"
+  | "wedding"
+  | "festival"
+  | "employee"
+  | "milestone"
+  | "personal";
+type RecipientFilter =
+  | "all"
+  | "employees"
+  | "clients"
+  | "wedding"
+  | "family"
+  | "vip"
+  | "events";
+type SortOption = "featured" | "price-asc" | "price-desc" | "name";
 
 export function ProductsClient() {
   const [activeTab, setActiveTab] = useState("all");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [occasionFilter, setOccasionFilter] = useState<OccasionFilter>("all");
+  const [recipientFilter, setRecipientFilter] =
+    useState<RecipientFilter>("all");
+  const [sortBy, setSortBy] = useState<SortOption>("featured");
+  const [animVisible, setAnimVisible] = useState(false);
 
-  const toggleFaq = (index: number) => {
+  useEffect(() => {
+    queueMicrotask(() => setAnimVisible(true));
+  }, []);
+
+  const toggleFaq = useCallback((index: number) => {
     setOpenFaq((prev) => (prev === index ? null : index));
-  };
+  }, []);
 
-  // Filter products by selected tab
   const getFilteredCategories = () => {
     if (activeTab === "all") return productCategories;
     if (activeTab === "dry-fruits")
       return productCategories.filter((c) => c.slug === "premium-dry-fruits");
     if (activeTab === "chocolates")
       return productCategories.filter((c) => c.slug === "artisanal-chocolates");
-    if (activeTab === "juices")
-      return productCategories.filter((c) => c.slug === "cold-pressed-juices");
     if (activeTab === "hampers")
       return productCategories.filter((c) => c.slug === "celebration-hampers");
     return productCategories;
   };
 
-  // Best sellers list
-  const bestSellers: Array<{
-    title: string;
-    category: string;
-    price: string;
-    image: StaticImageData;
-    badge: string;
-    desc: string;
-  }> = [
-    {
-      title: "Royal Pistachio & Cashew Gold Tin",
-      category: "Dry Fruits",
-      price: "₹1,499 / Box",
-      image: productCategories[0].image,
-      badge: "Best Seller",
-      desc: "Handpicked Iranian pistachios and Jumbo W240 cashews in a nitrogen-sealed metallic gold tin.",
-    },
-    {
-      title: "Artisanal Belgian Truffle Assortment",
-      category: "Chocolates",
-      price: "₹1,299 / Box",
-      image: productCategories[1].image,
-      badge: "Most Loved",
-      desc: "12 pieces of hand-poured 70% dark Belgian chocolates with nut pralines in a magnetic rigid box.",
-    },
-    {
-      title: "Grande Corporate Executive Hamper",
-      category: "Celebration Hampers",
-      price: "₹3,499 / Box",
-      image: productCategories[3].image,
-      badge: "Corporate Choice",
-      desc: "Dry fruit quartet, artisanal chocolate bark, cold-pressed elixir, and custom laser-engraved wooden box.",
-    },
-    {
-      title: "Kashmiri Saffron & Date Luxe Box",
-      category: "Dry Fruits",
-      price: "₹2,199 / Box",
-      image: productCategories[2].image,
-      badge: "Festive Exclusive",
-      desc: "Organic Medjool dates stuffed with roasted almonds and organic Kashmiri saffron strands.",
-    },
-  ];
+  const filteredOccasions =
+    occasionFilter === "all"
+      ? occasions
+      : occasions.filter((o) => {
+          if (occasionFilter === "corporate")
+            return (
+              o.title === "Corporate Gifting" || o.title === "Client Milestones"
+            );
+          if (occasionFilter === "wedding")
+            return o.title === "Wedding Favours";
+          if (occasionFilter === "festival")
+            return o.title === "Festival Gifts";
+          if (occasionFilter === "employee")
+            return o.title === "Employee Onboarding";
+          if (occasionFilter === "milestone")
+            return o.title === "Client Milestones";
+          if (occasionFilter === "personal")
+            return o.title === "Personal Celebrations";
+          return true;
+        });
 
-  // New arrivals list
-  const newArrivals = [
-    {
-      title: "Gold-Embossed Laser Cut Wooden Box",
-      category: "Luxury Packaging",
-      image: Images.woodenBoxNuts,
-      desc: "Handcrafted pine wooden box with custom logo engraving, gold brass latch, and velvet lining.",
-    },
-    {
-      title: "Cold-Pressed Fruit Elixir Wellness Set",
-      category: "Cold-Pressed Juices",
-      image: Images.topViewDriedFruits,
-      desc: "Pack of 6 glass-bottled wellness juices with zero refined sugar and 100% natural fruit pulp.",
-    },
-    {
-      title: "Roasted Nut Trio & Dark Chocolate Bark",
-      category: "Gourmet Hampers",
-      image: Images.topViewDiffNuts,
-      desc: "Slow-roasted salted almonds, smoked cashews, and sea-salt dark chocolate slabs.",
-    },
-  ];
+  const filteredRecipients =
+    recipientFilter === "all"
+      ? recipients
+      : recipients.filter((r) => {
+          if (recipientFilter === "employees")
+            return r.name === "For Employees";
+          if (recipientFilter === "clients")
+            return r.name === "For Key Clients";
+          if (recipientFilter === "wedding")
+            return r.name === "For Wedding Guests";
+          if (recipientFilter === "family")
+            return r.name === "For Family & Friends";
+          if (recipientFilter === "vip") return r.name === "For VIP Partners";
+          if (recipientFilter === "events")
+            return r.name === "For Event Attendees";
+          return true;
+        });
 
-  // Shop by Occasion items
-  const occasions = [
-    {
-      title: "Corporate Gifting",
-      subtitle: "Client & Partner Appreciation",
-      icon: FiBriefcase,
-      href: "/contact#quote",
-    },
-    {
-      title: "Wedding Favours",
-      subtitle: "Luxury Wedding Keepsakes",
-      icon: FiHeart,
-      href: "/contact#quote",
-    },
-    {
-      title: "Festival Gifts",
-      subtitle: "Diwali, New Year & Eid Curations",
-      icon: FiGift,
-      href: "/products/categories/celebration-hampers",
-    },
-    {
-      title: "Employee Onboarding",
-      subtitle: "Welcome Kits & Rewards",
-      icon: FiUsers,
-      href: "/contact#quote",
-    },
-    {
-      title: "Client Milestones",
-      subtitle: "High-Value Relationship Gifting",
-      icon: FiAward,
-      href: "/contact#quote",
-    },
-    {
-      title: "Personal Celebrations",
-      subtitle: "Anniversaries & Special Days",
-      icon: FiSmile,
-      href: "/products/categories/artisanal-chocolates",
-    },
-  ];
+  const sortedBestSellers = [...bestSellers].sort((a, b) => {
+    if (sortBy === "price-asc")
+      return parsePrice(a.price) - parsePrice(b.price);
+    if (sortBy === "price-desc")
+      return parsePrice(b.price) - parsePrice(a.price);
+    if (sortBy === "name") return a.title.localeCompare(b.title);
+    return 0;
+  });
 
-  // Shop by Recipient items
-  const recipients = [
-    {
-      name: "For Employees",
-      desc: "Motivate and reward teams with healthy nut tins & artisanal chocolates.",
-      count: "15+ Hampers",
-    },
-    {
-      name: "For Key Clients",
-      desc: "Build lasting corporate trust with laser-branded magnetic gift boxes.",
-      count: "20+ Curations",
-    },
-    {
-      name: "For Wedding Guests",
-      desc: "Handcrafted royal wedding favours with custom foil-stamped notes.",
-      count: "12+ Designs",
-    },
-    {
-      name: "For Family & Friends",
-      desc: "Festive dry fruit hampers curated for home celebrations and joy.",
-      count: "18+ Boxes",
-    },
-    {
-      name: "For VIP Partners",
-      desc: "Ultra-luxury gift hampers featuring origin saffron, dates & dark truffles.",
-      count: "10+ Premium Sets",
-    },
-    {
-      name: "For Event Attendees",
-      desc: "Sleek mini dry fruit jars and juice bottles for conferences and expos.",
-      count: "25+ Options",
-    },
-  ];
+  const parsePrice = (price: string) => {
+    const match = price.match(/[\d,]+/);
+    return match ? parseInt(match[0].replace(/,/g, ""), 10) : 0;
+  };
 
-  // Packaging options
-  const packagingStyles = [
-    {
-      title: "Metallic Gold Tin",
-      desc: "Air-tight nitrogen sealed metal tins for maximum shelf life.",
-      tag: "Airtight",
-    },
-    {
-      title: "Handcrafted Wooden Box",
-      desc: "Sustainable pine wood with brass latch and custom laser engraving.",
-      tag: "Eco Luxury",
-    },
-    {
-      title: "Rigid Magnetic Box",
-      desc: "High-density rigid cardboard with magnetic flap and velvet insert.",
-      tag: "Premium",
-    },
-    {
-      title: "Satin Ribbon Gift Box",
-      desc: "Classic rigid box finished with hand-tied satin ribbons and cards.",
-      tag: "Festive",
-    },
-    {
-      title: "Custom Sleeve Packaging",
-      desc: "Full-bleed printed corporate sleeves matching your brand guidelines.",
-      tag: "B2B Branded",
-    },
-  ];
+  const handleWhatsAppShare = (product: string) => {
+    const text = `Hi Reet Foods, I'm interested in "${product}" for gifting. Can you share details and pricing?`;
+    window.open(
+      `https://wa.me/919890609611?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
-  // Custom Branding Features
-  const brandingFeatures = [
-    {
-      title: "Laser Logo Engraving",
-      desc: "Precision laser etching of corporate logos directly on wooden & metal box lids.",
-    },
-    {
-      title: "Custom Ribbon Printing",
-      desc: "High-density screen printed satin ribbons featuring your brand name & colors.",
-    },
-    {
-      title: "Personalized Greeting Cards",
-      desc: "Custom card inserts with individually printed recipient names and messages.",
-    },
-    {
-      title: "Branded Outer Sleeves",
-      desc: "Custom designed cardboard sleeves with metallic foil foil-stamping.",
-    },
-    {
-      title: "Custom Chocolate Wrappers",
-      desc: "Individual chocolate wrapper printing with corporate logos or event dates.",
-    },
-  ];
-
-  // Comparison Matrix Data
-  const comparisonData = [
-    {
-      feature: "Primary Focus",
-      dryFruits: "Health & Tradition",
-      chocolates: "Indulgence & Craft",
-      giftBoxes: "Elegance & Variety",
-      hampers: "Grand Celebration",
-    },
-    {
-      feature: "Shelf Life",
-      dryFruits: "12 Months (Sealed)",
-      chocolates: "6 Months (Chilled)",
-      giftBoxes: "9 Months",
-      hampers: "6 to 9 Months",
-    },
-    {
-      feature: "Packaging Type",
-      dryFruits: "Nitrogen Tin / Box",
-      chocolates: "Magnetic Rigid Box",
-      giftBoxes: "Wooden / Metal Box",
-      hampers: "Tiered Luxury Basket",
-    },
-    {
-      feature: "Custom Branding",
-      dryFruits: "Tin Sticker / Band",
-      chocolates: "Wrapper & Lid Foil",
-      giftBoxes: "Laser Engraved Lid",
-      hampers: "Branded Card & Ribbon",
-    },
-    {
-      feature: "Min Order (MOQ)",
-      dryFruits: "10 Units",
-      chocolates: "25 Units",
-      giftBoxes: "15 Units",
-      hampers: "5 Units",
-    },
-  ];
-
-  // Product FAQs
-  const faqs = [
-    {
-      q: "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
-      a: "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery.",
-    },
-    {
-      q: "Can we print our corporate logo and personalized message on the gift boxes?",
-      a: "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards.",
-    },
-    {
-      q: "How do you ensure freshness during transportation across India?",
-      a: "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit.",
-    },
-    {
-      q: "Can we request a sample box before committing to a bulk order?",
-      a: "Absoluty. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample.",
-    },
-    {
-      q: "What is the typical shelf life of Reet Foods gifting items?",
-      a: "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
-    },
-  ];
+  const handlePartnerShare = () => {
+    const text =
+      "Partner with Reet Foods for premium luxury gifting solutions. FSSAI certified, custom branding, Pan-India delivery.";
+    window.open(
+      `https://wa.me/919890609611?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
   return (
     <div className="bg-[#fbf7f1] text-[#1c1c1c]">
-      {/* ── CREATIVE LUXURY HERO SECTION ─────────────────────────────── */}
-      <section className="relative bg-[#111111] text-white overflow-hidden border-b border-[#d4af37]/30">
-        {/* Subtle background radial glow */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-10"
-          aria-hidden="true"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 40%, #d4af37 0%, transparent 50%), radial-gradient(circle at 80% 60%, #7a0019 0%, transparent 50%)",
-          }}
-        />
+      <ProductsHero animVisible={animVisible} />
+      
 
-        <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            {/* Left Column: Heading & CTAs */}
-            <div>
-              <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-                <span className="h-px w-8 bg-[#d4af37]" />
-                Curated Luxury Gifting Hub
-              </p>
+      {/* ════════════════════════════════════════════════════════
+          TASK 3: SHOP BY OCCASION / RECIPIENT FILTERS
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Shop by occasion and recipient"
+      >
+        <div className="mb-10 text-center px-8">
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+            Curated for Every Moment
+          </p>
+          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
+            Shop by Occasion &amp; Recipient
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
+            Find the perfect gift curation designed for corporate milestones,
+            weddings, festivals, or personal celebrations.
+          </p>
+        </div>
 
-              <h1 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold leading-[1.15] text-white sm:text-5xl lg:text-5xl">
-                Premium Dry Fruits, Chocolates & Luxury Gift Boxes
-              </h1>
-
-              <p className="mt-5 max-w-2xl text-sm leading-8 text-white/85 sm:text-base">
-                Discover our complete collection of handpicked origin dry
-                fruits, artisanal Belgian chocolates, and bespoke corporate gift
-                hampers. Packed in our FSSAI-certified facility in Pune with
-                nitrogen preservation, custom laser logo engraving, and insured
-                Pan-India delivery.
-              </p>
-
-              {/* CTAs */}
-              <div className="mt-8 flex flex-wrap items-center gap-3.5">
-                <Link
-                  href="/contact#quote"
-                  className="inline-flex items-center gap-2 border-2 border-[#d4af37] bg-[#d4af37] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] shadow-md transition duration-200 hover:bg-white hover:border-white hover:text-[#1c1c1c]"
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Occasion Filters */}
+          <div>
+            <div className="flex flex-wrap items-center gap-2 mb-5">
+              {(
+                [
+                  "all",
+                  "corporate",
+                  "wedding",
+                  "festival",
+                  "employee",
+                  "milestone",
+                  "personal",
+                ] as OccasionFilter[]
+              ).map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setOccasionFilter(filter)}
+                  className={`px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] transition duration-200 ${occasionFilter === filter ? "bg-[#7a0019] text-white shadow-sm" : "border border-reef-gold/20 bg-[#fcfbf8] text-reef-charcoal hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"}`}
                 >
-                  Request Bulk Quote <FiArrowRight className="text-sm" />
-                </Link>
-                <Link
-                  href="/contact#catalog"
-                  style={{ color: "#1c1c1c" }}
-                  className="inline-flex items-center gap-2 border-2 border-white bg-white px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] shadow-md transition duration-200 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c1c]"
-                >
-                  Download Catalogue
-                </Link>
-                <a
-                  href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20product%20gifting%20help"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-md transition duration-200 hover:bg-[#20ba57] hover:border-[#20ba57]"
-                >
-                  Talk to Specialist
-                </a>
-              </div>
-
-              {/* Stats Bar */}
-              <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
-                <div>
-                  <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">
-                    500K+
-                  </p>
-                  <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/70">
-                    Boxes Delivered
-                  </p>
-                </div>
-                <div>
-                  <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">
-                    FSSAI
-                  </p>
-                  <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/70">
-                    Certified Grade
-                  </p>
-                </div>
-                <div>
-                  <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">
-                    24 Hours
-                  </p>
-                  <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/70">
-                    Quote Turnaround
-                  </p>
-                </div>
-                <div>
-                  <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">
-                    100%
-                  </p>
-                  <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/70">
-                    Pan-India Shipping
-                  </p>
-                </div>
-              </div>
+                  {filter === "all"
+                    ? "All Occasions"
+                    : filter.charAt(0).toUpperCase() + filter.slice(1)}
+                </button>
+              ))}
             </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {filteredOccasions.map((item) => {
+                const IconComp = item.icon;
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="group flex items-start gap-4 border border-reef-gold/20 bg-white p-5 transition duration-300 hover:border-[#d4af37] hover:bg-[#fcfbf8]"
+                  >
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#7a0019]">
+                      <IconComp className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
+                        {item.title}
+                      </h3>
+                      <p className="mt-1 text-xs text-reef-charcoal/70">
+                        {item.subtitle}
+                      </p>
+                      <span className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#7a0019] transition-all duration-300 group-hover:gap-2 group-hover:text-[#d4af37]">
+                        View Catalog <FiArrowRight className="text-xs" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
 
-            {/* Right Column: Hero Visual Card */}
-            <div className="relative min-h-[360px] overflow-hidden border border-white/20 bg-[#1c1c1c] sm:min-h-[460px]">
-              <Image
-                src={Images.nutsSetTable}
-                alt="Reet Foods luxury dry fruits and chocolate gifting collection"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-              <div className="absolute top-4 left-4 bg-[#7a0019] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-md">
-                Handcrafted In Pune
-              </div>
-
-              <div className="absolute bottom-6 left-6 right-6 border border-white/20 bg-black/60 p-4 backdrop-blur-md">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#d4af37]">
-                  Featured Heritage Curation
-                </p>
-                <p className="mt-1 font-[family-name:var(--font-playfair)] text-lg font-bold text-white">
-                  Signature Origin Nut Quartet & Truffle Set
-                </p>
-                <p className="mt-1 text-xs text-white/80 line-clamp-1">
-                  Nitrogen-flushed almond tin, cashew box, pistachio tin &
-                  Belgian dark truffles.
-                </p>
-              </div>
+          {/* Recipient Filters */}
+          <div>
+            <div className="flex flex-wrap items-center gap-2 mb-5">
+              {(
+                [
+                  "all",
+                  "employees",
+                  "clients",
+                  "wedding",
+                  "family",
+                  "vip",
+                  "events",
+                ] as RecipientFilter[]
+              ).map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setRecipientFilter(filter)}
+                  className={`px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] transition duration-200 ${recipientFilter === filter ? "bg-[#7a0019] text-white shadow-sm" : "border border-reef-gold/20 bg-[#fcfbf8] text-reef-charcoal hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"}`}
+                >
+                  {filter === "all"
+                    ? "All Recipients"
+                    : filter === "employees"
+                      ? "For Employees"
+                      : filter === "clients"
+                        ? "For Clients"
+                        : filter === "wedding"
+                          ? "For Weddings"
+                          : filter === "family"
+                            ? "For Family"
+                            : filter === "vip"
+                              ? "For VIPs"
+                              : "For Events"}
+                </button>
+              ))}
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {filteredRecipients.map((r) => (
+                <div
+                  key={r.name}
+                  className="border border-reef-gold/20 bg-white p-5 transition duration-300 hover:border-[#d4af37]"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="bg-[#7a0019]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#7a0019]">
+                      {r.count}
+                    </span>
+                    <FiStar className="text-[#d4af37]" />
+                  </div>
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
+                    {r.name}
+                  </h3>
+                  <p className="mt-2 text-xs leading-6 text-reef-charcoal/75">
+                    {r.desc}
+                  </p>
+                  <Link
+                    href="/contact#quote"
+                    className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#7a0019] hover:text-[#d4af37]"
+                  >
+                    Inquire <FiArrowRight />
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 2: Interactive Filter Tabs & Search Bar ─────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 2: INTERACTIVE FILTER TABS & PRODUCT CATEGORY CARDS
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-12 sm:px-6 lg:px-8"
+        aria-label="Product categories"
+      >
         <div className="flex flex-wrap items-center justify-between gap-4 border border-reef-gold/20 bg-white p-4">
           <div className="flex flex-wrap items-center gap-2">
             {[
@@ -441,39 +310,52 @@ export function ProductsClient() {
               { id: "dry-fruits", label: "Dry Fruits & Nuts" },
               { id: "chocolates", label: "Artisanal Chocolates" },
               { id: "hampers", label: "Celebration Hampers" },
-              { id: "juices", label: "Cold-Pressed Juices" },
             ].map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={[
-                  "px-5 py-2.5 text-xs font-bold uppercase tracking-[0.14em] transition duration-200",
-                  activeTab === tab.id
-                    ? "bg-[#7a0019] text-white shadow-sm"
-                    : "border border-reef-gold/20 bg-[#fcfbf8] text-reef-charcoal hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]",
-                ].join(" ")}
+                className={`px-5 py-2.5 text-xs font-bold uppercase tracking-[0.14em] transition duration-200 ${activeTab === tab.id ? "bg-[#7a0019] text-white shadow-sm" : "border border-reef-gold/20 bg-[#fcfbf8] text-reef-charcoal hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"}`}
               >
                 {tab.label}
               </button>
             ))}
           </div>
-          <Link
-            href="/contact#quote"
-            className="inline-flex items-center gap-2 bg-[#d4af37] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition hover:bg-[#7a0019] hover:text-white"
-          >
-            Bulk Quote Inquiry <FiArrowRight />
-          </Link>
+          <div className="flex items-center gap-3">
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="border border-reef-gold/20 bg-[#fcfbf8] px-3 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-reef-charcoal outline-none transition hover:border-[#d4af37]"
+              aria-label="Sort products"
+            >
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+            <Link
+              href="/contact#quote"
+              className="inline-flex items-center gap-2 bg-[#d4af37] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition hover:bg-[#7a0019] hover:text-white"
+            >
+              Bulk Quote Inquiry <FiArrowRight />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ── SECTION 3: Main Product Categories Grid ────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 2: MAIN PRODUCT CATEGORY CARDS with hover effects
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Product category cards"
+      >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
-          {getFilteredCategories().map((cat) => (
+          {getFilteredCategories().map((cat, idx) => (
             <article
               key={cat.slug}
-              className="group border border-reef-gold/20 bg-white transition duration-300 hover:border-[#d4af37]"
+              className={`group border border-reef-gold/20 bg-white transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_20px_60px_rgba(18,12,8,0.1)] ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: `${idx * 120}ms` }}
             >
               <div className="grid gap-0 md:grid-cols-2">
                 <div className="relative min-h-[260px] overflow-hidden bg-[#f8f5f0]">
@@ -482,11 +364,12 @@ export function ProductsClient() {
                     alt={cat.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute left-3 top-3 bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
                     Signature Line
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 <div className="flex flex-col justify-between p-6 sm:p-8">
@@ -515,10 +398,9 @@ export function ProductsClient() {
                     </p>
                     <Link
                       href={`/products/${cat.slug}`}
-                      className="mt-3 inline-flex w-full items-center justify-between border border-[#d4af37] bg-[#d4af37] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition hover:bg-[#7a0019] hover:border-[#7a0019] hover:text-white"
+                      className="mt-3 inline-flex w-full items-center justify-between border border-[#d4af37] bg-[#d4af37] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition duration-200 hover:bg-[#7a0019] hover:border-[#7a0019] hover:text-white"
                     >
-                      <span>Explore Collection</span>
-                      <FiArrowRight />
+                      <span>Explore Collection</span> <FiArrowRight />
                     </Link>
                   </div>
                 </div>
@@ -528,144 +410,13 @@ export function ProductsClient() {
         </div>
       </section>
 
-      {/* ── SECTION 4: Shop by Occasion ⭐ ────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="border border-reef-gold/20 bg-white p-8 sm:p-12">
-          <div className="mb-10 text-center">
-            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-              Tailored Selection
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-              Shop by Occasion
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-              Select the ideal gift curation designed specifically for corporate
-              milestones, weddings, and festive celebrations.
-            </p>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {occasions.map((item) => {
-              const IconComp = item.icon;
-              return (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group flex flex-col justify-between border border-reef-gold/20 bg-[#fcfbf8] p-6 transition duration-300 hover:border-[#d4af37] hover:bg-white"
-                >
-                  <div>
-                    <div className="flex h-12 w-12 items-center justify-center border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#7a0019]">
-                      <IconComp className="h-6 w-6" />
-                    </div>
-                    <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-xl font-bold text-reef-charcoal">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-xs text-reef-charcoal/70">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                  <div className="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#7a0019] transition-all duration-300 group-hover:gap-3 group-hover:text-[#d4af37]">
-                    <span>View Occasion Catalog</span>
-                    <FiArrowRight />
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 5: Shop by Recipient ⭐ ────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-            Targeted Gifting
-          </p>
-          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-            Shop by Recipient
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-            Find thoughtfully balanced hampers curated specifically for team
-            members, valued corporate clients, or family members.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {recipients.map((r) => (
-            <div
-              key={r.name}
-              className="border border-reef-gold/20 bg-white p-7 transition duration-300 hover:border-[#d4af37]"
-            >
-              <div className="flex items-center justify-between">
-                <span className="bg-[#7a0019]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#7a0019]">
-                  {r.count}
-                </span>
-                <FiStar className="text-[#d4af37]" />
-              </div>
-              <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-xl font-bold text-reef-charcoal">
-                {r.name}
-              </h3>
-              <p className="mt-2 text-xs leading-6 text-reef-charcoal/75">
-                {r.desc}
-              </p>
-              <Link
-                href="/contact#quote"
-                className="mt-5 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#7a0019] hover:text-[#d4af37]"
-              >
-                Inquire For Recipient Set <FiArrowRight />
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SECTION 6: Featured Signature Collection ⭐ ────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-14">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div>
-              <span className="bg-[#d4af37] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#1c1c1c]">
-                Featured Collection
-              </span>
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-5xl">
-                The Luxury Signature Heritage Box
-              </h2>
-              <p className="mt-5 text-sm leading-8 text-white/80 sm:text-base">
-                Our flagship curation combining 4 origin dry fruit tins (Mammra
-                Almonds, Jumbo Cashews, Pistachios & Persian Figs), 12
-                handcrafted Belgian truffles, and a custom gold-foil embossed
-                greeting card.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/contact#quote"
-                  className="bg-[#d4af37] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] transition hover:bg-white hover:text-[#1c1c1c]"
-                >
-                  Request Sample Box <FiArrowRight className="inline ml-1" />
-                </Link>
-                <Link
-                  href="/products/categories/celebration-hampers"
-                  className="border-2 border-white bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#7a0019] transition hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c1c]"
-                >
-                  View Full Specs
-                </Link>
-              </div>
-            </div>
-            <div className="relative min-h-[320px] overflow-hidden border border-white/20">
-              <Image
-                src={Images.nutsSetTable}
-                alt="Luxury Signature Heritage Box by Reet Foods"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 7: Best Sellers Spotlight ⭐ ───────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 4: BEST SELLERS SECTION with responsive cards & CTAs
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Best sellers"
+      >
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
@@ -675,19 +426,33 @@ export function ProductsClient() {
               Best Sellers Collection
             </h2>
           </div>
-          <Link
-            href="/contact#quote"
-            className="border border-[#d4af37] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#7a0019] transition hover:bg-[#7a0019] hover:text-white"
-          >
-            Download Price List
-          </Link>
+          <div className="flex items-center gap-3">
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="border border-reef-gold/20 bg-white px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-reef-charcoal outline-none transition hover:border-[#d4af37]"
+              aria-label="Sort best sellers"
+            >
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+            <Link
+              href="/contact#quote"
+              className="border border-[#d4af37] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[#7a0019] transition hover:bg-[#7a0019] hover:text-white"
+            >
+              Download Price List
+            </Link>
+          </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {bestSellers.map((item) => (
+          {sortedBestSellers.map((item, idx) => (
             <div
               key={item.title}
-              className="group border border-reef-gold/20 bg-white p-5 transition duration-300 hover:border-[#d4af37]"
+              className={`group border border-reef-gold/20 bg-white p-5 transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_16px_48px_rgba(18,12,8,0.12)] ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div className="relative h-56 overflow-hidden bg-[#f8f5f0]">
                 <Image
@@ -695,11 +460,22 @@ export function ProductsClient() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="absolute left-3 top-3 bg-[#7a0019] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-white">
                   {item.badge}
                 </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    type="button"
+                    onClick={() => handleWhatsAppShare(item.title)}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25d366] text-white shadow-md transition hover:bg-[#20ba57]"
+                    aria-label={`Share ${item.title} on WhatsApp`}
+                  >
+                    <FiShare2 className="h-4 w-4" />
+                  </button>
+                </div>
               </div>
               <div className="mt-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4af37]">
@@ -717,7 +493,7 @@ export function ProductsClient() {
                   </span>
                   <Link
                     href="/contact#quote"
-                    className="bg-[#d4af37] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition hover:bg-[#7a0019] hover:text-white"
+                    className="bg-[#d4af37] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#1c1c1c] transition duration-200 hover:bg-[#7a0019] hover:text-white"
                   >
                     Get Quote
                   </Link>
@@ -728,130 +504,13 @@ export function ProductsClient() {
         </div>
       </section>
 
-      {/* ── SECTION 8: New Arrivals ⭐ ──────────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="border border-reef-gold/20 bg-white p-8 sm:p-12">
-          <div className="mb-10 text-center">
-            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-              Fresh Curations
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-              New Arrivals
-            </h2>
-            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-reef-charcoal/70">
-              Explore our latest packaging releases, organic nut collections,
-              and cold-pressed beverage sets.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {newArrivals.map((item) => (
-              <div
-                key={item.title}
-                className="border border-reef-gold/20 bg-[#fcfbf8] p-6 transition duration-300 hover:border-[#d4af37] hover:bg-white"
-              >
-                <div className="relative h-48 overflow-hidden bg-white">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
-                  <span className="absolute right-3 top-3 bg-[#d4af37] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-[#1c1c1c]">
-                    New Launch
-                  </span>
-                </div>
-                <div className="mt-5">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#7a0019]">
-                    {item.category}
-                  </p>
-                  <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-xs leading-5 text-reef-charcoal/75">
-                    {item.desc}
-                  </p>
-                  <Link
-                    href="/contact#quote"
-                    className="mt-5 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#7a0019] hover:text-[#d4af37]"
-                  >
-                    Inquire New Release <FiArrowRight />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 9: Why Buy From Reet Foods ⭐ ───────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-            Quality Assurance
-          </p>
-          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-            Why Choose Reet Foods?
-          </h2>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              title: "Origin Sourced Ingredients",
-              desc: "Almonds & pistachios directly imported from certified single-origin orchards in Iran & California.",
-              icon: FiCheckCircle,
-            },
-            {
-              title: "Nitrogen Sealed Freshness",
-              desc: "Every nut tin is nitrogen-flushed to preserve crisp crunch, aroma, and essential oils for 12+ months.",
-              icon: FiShield,
-            },
-            {
-              title: "Luxury Gift Presentation",
-              desc: "Rigid magnetic boxes, velvet linings, gold-foil hot stamping, and hand-tied satin ribbons.",
-              icon: FiPackage,
-            },
-            {
-              title: "Tiered Bulk Discounts",
-              desc: "Transparent volume pricing for corporate orders ranging from 25 to 50,000+ units.",
-              icon: FiBriefcase,
-            },
-            {
-              title: "Custom Corporate Branding",
-              desc: "Complete laser logo embossing, printed chocolate wrappers, and custom sleeve design.",
-              icon: FiAward,
-            },
-            {
-              title: "Insured PAN-India Delivery",
-              desc: "Temperature-controlled cold-chain transportation with guaranteed zero-melting delivery.",
-              icon: FiTruck,
-            },
-          ].map((item) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={item.title}
-                className="border border-reef-gold/20 bg-white p-7 transition duration-300 hover:border-[#d4af37]"
-              >
-                <div className="flex h-12 w-12 items-center justify-center border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#7a0019]">
-                  <IconComponent className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-xs leading-6 text-reef-charcoal/75">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* ── SECTION 10: Packaging Options Showcase ⭐ ───────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 5: PACKAGING OPTIONS with iconography & customization
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Packaging options"
+      >
         <div className="border border-reef-gold/20 bg-white p-8 sm:p-12">
           <div className="mb-10 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
@@ -867,255 +526,322 @@ export function ProductsClient() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {packagingStyles.map((p) => (
-              <div
-                key={p.title}
-                className="border border-reef-gold/20 bg-[#fcfbf8] p-6 text-center transition duration-300 hover:border-[#d4af37] hover:bg-white"
-              >
-                <span className="bg-[#7a0019] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white">
-                  {p.tag}
-                </span>
-                <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
-                  {p.title}
-                </h3>
-                <p className="mt-2 text-xs leading-5 text-reef-charcoal/70">
-                  {p.desc}
-                </p>
-              </div>
-            ))}
+            {[
+              {
+                title: "Metallic Gold Tin",
+                desc: "Air-tight nitrogen sealed metal tins for maximum shelf life.",
+                tag: "Airtight",
+                icon: FiLock,
+              },
+              {
+                title: "Handcrafted Wooden Box",
+                desc: "Sustainable pine wood with brass latch and custom laser engraving.",
+                tag: "Eco Luxury",
+                icon: FiPackage,
+              },
+              {
+                title: "Rigid Magnetic Box",
+                desc: "High-density rigid cardboard with magnetic flap and velvet insert.",
+                tag: "Premium",
+                icon: FiLayers,
+              },
+              {
+                title: "Satin Ribbon Gift Box",
+                desc: "Classic rigid box finished with hand-tied satin ribbons and cards.",
+                tag: "Festive",
+                icon: FiGift,
+              },
+              {
+                title: "Custom Sleeve Packaging",
+                desc: "Full-bleed printed corporate sleeves matching your brand guidelines.",
+                tag: "B2B Branded",
+                icon: FiFileText,
+              },
+            ].map((p, idx) => {
+              const IconComp = p.icon;
+              return (
+                <div
+                  key={p.title}
+                  className={`border border-reef-gold/20 bg-[#fcfbf8] p-6 text-center transition-all duration-500 hover:border-[#d4af37] hover:bg-white hover:shadow-lg ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${idx * 80}ms` }}
+                >
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#7a0019]">
+                    <IconComp className="h-7 w-7" />
+                  </div>
+                  <span className="mt-4 inline-block bg-[#7a0019] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white">
+                    {p.tag}
+                  </span>
+                  <h3 className="mt-4 font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-5 text-reef-charcoal/70">
+                    {p.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      </section>
 
-      {/* ── SECTION 11: B2B Custom Branding Options ⭐ ──────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-            Corporate Personalization
-          </p>
-          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-            Custom Branding Services
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-            Integrate your company identity seamlessly across every gift box
-            with our in-house laser and printing lab.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-5">
-          {brandingFeatures.map((b) => (
-            <div
-              key={b.title}
-              className="border border-reef-gold/20 bg-white p-6 transition duration-300 hover:border-[#d4af37]"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
-                {b.title}
-              </h3>
-              <p className="mt-2 text-xs leading-5 text-reef-charcoal/75">
-                {b.desc}
-              </p>
+          {/* Custom Branding Features */}
+          <div className="mt-12 border-t border-reef-gold/15 pt-10">
+            <h3 className="text-center font-[family-name:var(--font-playfair)] text-xl font-bold text-reef-charcoal sm:text-2xl">
+              Custom Branding Services
+            </h3>
+            <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-reef-charcoal/70">
+              Integrate your company identity seamlessly across every gift box
+              with our in-house laser and printing lab.
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3 lg:grid-cols-5">
+              {[
+                {
+                  title: "Laser Logo Engraving",
+                  desc: "Precision laser etching of corporate logos directly on wooden & metal box lids.",
+                },
+                {
+                  title: "Custom Ribbon Printing",
+                  desc: "High-density screen printed satin ribbons featuring your brand name & colors.",
+                },
+                {
+                  title: "Personalized Greeting Cards",
+                  desc: "Custom card inserts with individually printed recipient names and messages.",
+                },
+                {
+                  title: "Branded Outer Sleeves",
+                  desc: "Custom designed cardboard sleeves with metallic foil foil-stamping.",
+                },
+                {
+                  title: "Custom Chocolate Wrappers",
+                  desc: "Individual chocolate wrapper printing with corporate logos or event dates.",
+                },
+              ].map((b, idx) => (
+                <div
+                  key={b.title}
+                  className={`border border-reef-gold/20 bg-white p-6 transition-all duration-300 hover:border-[#d4af37] ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${idx * 80}ms` }}
+                >
+                  <h3 className="font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
+                    {b.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-5 text-reef-charcoal/75">
+                    {b.desc}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SECTION 12: Corporate Bulk Orders CTA ⭐ ───────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="bg-[#111111] p-8 text-center text-white sm:p-14 border border-reef-gold/30">
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-            Bulk Orders & Corporate Concierge
-          </p>
-          <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
-            Need 50+ Custom Gift Boxes?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/80">
-            Get direct factory pricing, dedicated account management, custom
-            logo mockups, and doorstep Pan-India dispatch.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact#quote"
-              className="bg-[#d4af37] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] transition hover:bg-white hover:text-[#1c1c1c]"
-            >
-              Get Bulk Quote
-            </Link>
-            <Link
-              href="/contact#catalog"
-              className="border-2 border-white bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#7a0019] transition hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c1c]"
-            >
-              Download Corporate Catalogue
-            </Link>
-            <a
-              href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20bulk%20quote"
-              target="_blank"
-              rel="noreferrer"
-              className="border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"
-            >
-              Talk to Sales on WhatsApp
-            </a>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 13: Product Comparison Table ⭐ ─────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 6: ENHANCED BULK ORDERS with ROI-focused content
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Bulk orders"
+      >
+        <div className="bg-[#111111] p-8 text-white sm:p-14 border border-reef-gold/30">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+                Bulk Orders &amp; Corporate Concierge
+              </p>
+              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
+                Need 50+ Custom Gift Boxes?
+              </h2>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80">
+                Get direct factory pricing, dedicated account management, custom
+                logo mockups, and doorstep Pan-India dispatch.
+              </p>
+
+              {/* ROI-focused content */}
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    icon: FiTrendingUp,
+                    title: "Volume Discounts",
+                    desc: "Up to 35% off on orders of 500+ units with tiered pricing.",
+                  },
+                  {
+                    icon: FiZap,
+                    title: "Fast Turnaround",
+                    desc: "24-hour quote turnaround with sample delivery in 3-5 days.",
+                  },
+                  {
+                    icon: FiShield,
+                    title: "Quality Guarantee",
+                    desc: "FSSAI-certified facility with nitrogen-sealed freshness assurance.",
+                  },
+                  {
+                    icon: FiTruck,
+                    title: "Pan-India Delivery",
+                    desc: "Temperature-controlled cold-chain with zero-melting guarantee.",
+                  },
+                ].map((roi) => {
+                  const IconComp = roi.icon;
+                  return (
+                    <div
+                      key={roi.title}
+                      className="flex items-start gap-3 border border-white/10 bg-white/5 p-4 transition hover:border-[#d4af37]/40"
+                    >
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]">
+                        <IconComp className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-white">
+                          {roi.title}
+                        </h4>
+                        <p className="mt-1 text-xs leading-5 text-white/70">
+                          {roi.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center gap-6 border border-white/15 bg-white/5 p-8 text-center">
+              <div className="h-24 w-24 border border-[#d4af37]/30 bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
+                <FiBriefcase className="h-12 w-12" />
+              </div>
+              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+                Corporate Partnership
+              </h3>
+              <p className="text-sm leading-6 text-white/70">
+                Become a preferred gifting partner. Enjoy exclusive pricing,
+                priority production, and dedicated concierge support.
+              </p>
+              <div className="mt-2 flex flex-col gap-3">
+                <a
+                  href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20becoming%20a%20gifting%20partner"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"
+                >
+                  Partner With Us on WhatsApp
+                </a>
+                <button
+                  type="button"
+                  onClick={handlePartnerShare}
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#7a0019] transition hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c1c]"
+                >
+                  <FiShare2 className="text-sm" /> Share Partnership Opportunity
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════
+          TASK 7: TRUST INDICATORS (FSSAI / ISO)
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Trust indicators"
+      >
         <div className="border border-reef-gold/20 bg-white p-8 sm:p-12">
           <div className="mb-10 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-              Product Matrix
+              Our Standards
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-              Compare Gifting Categories
+              Certified Excellence
             </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
+              Adhering to the highest global standards in food safety,
+              manufacturing, and quality assurance.
+            </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead className="border-b border-reef-gold/20 bg-[#fcfbf8]">
-                <tr>
-                  <th className="p-4 font-bold uppercase tracking-[0.12em] text-reef-charcoal">
-                    Feature
-                  </th>
-                  <th className="p-4 font-bold uppercase tracking-[0.12em] text-[#7a0019]">
-                    Dry Fruits
-                  </th>
-                  <th className="p-4 font-bold uppercase tracking-[0.12em] text-[#7a0019]">
-                    Chocolates
-                  </th>
-                  <th className="p-4 font-bold uppercase tracking-[0.12em] text-[#7a0019]">
-                    Gift Boxes
-                  </th>
-                  <th className="p-4 font-bold uppercase tracking-[0.12em] text-[#7a0019]">
-                    Hampers
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-reef-gold/15">
-                {comparisonData.map((row) => (
-                  <tr key={row.feature} className="hover:bg-[#fcfbf8]">
-                    <td className="p-4 font-bold text-reef-charcoal">
-                      {row.feature}
-                    </td>
-                    <td className="p-4 text-reef-charcoal/80">
-                      {row.dryFruits}
-                    </td>
-                    <td className="p-4 text-reef-charcoal/80">
-                      {row.chocolates}
-                    </td>
-                    <td className="p-4 text-reef-charcoal/80">
-                      {row.giftBoxes}
-                    </td>
-                    <td className="p-4 text-reef-charcoal/80">{row.hampers}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+            {[
+              {
+                name: "FSSAI Certified",
+                desc: "License #11521034000123 — Full food safety compliance.",
+                icon: FiShield,
+                isFssai: true,
+              },
+              {
+                name: "ISO 22000",
+                desc: "International food safety management system certified.",
+                icon: FiAward,
+              },
+              {
+                name: "HACCP Compliant",
+                desc: "Hazard analysis and critical control points in production.",
+                icon: FiCheckCircle,
+              },
+              {
+                name: "Vegetarian Society",
+                desc: "100% vegetarian certified with green dot emblem.",
+                icon: FiStar,
+              },
+            ].map((cert, idx) => {
+              const IconComp = cert.icon;
+              return (
+                <div
+                  key={cert.name}
+                  className={`group flex flex-col items-center gap-4 border border-reef-gold/15 bg-white p-7 text-center transition-all duration-300 hover:border-reef-gold/40 hover:bg-reef-cream ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${idx * 100}ms` }}
+                >
+                  <div className="flex h-16 w-16 items-center justify-center border border-[#d4af37]/25 bg-[#fdf8ee] transition duration-300 group-hover:bg-[#d4af37]/20">
+                    <IconComp className="h-8 w-8 text-[#c8a84b] transition duration-300 group-hover:text-[#7a0019]" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-reef-charcoal">
+                      {cert.name}
+                    </h3>
+                    {cert.isFssai && (
+                      <span className="mt-1 inline-block bg-reef-burgundy/10 text-[#7a0019] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
+                        Lic. #11521034000123
+                      </span>
+                    )}
+                    <p className="mt-1.5 text-[12px] leading-5 text-reef-charcoal/70">
+                      {cert.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      </section>
 
-      {/* ── SECTION 14: Health Benefits & Sourcing Guide ⭐ ─────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center border border-reef-gold/20 bg-white p-8 sm:p-12">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-              Nourishment & Sourcing Integrity
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-              Why Choose Handpicked Origin Dry Fruits?
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-reef-charcoal/80">
-              Unlike generic commercial grades, Reet Foods sources directly from
-              verified origin orchards in Iran, Afghanistan, and California. Our
-              dry fruits are rich in natural antioxidants, healthy omega fats,
-              and dietary fiber, providing sustained physical energy and immune
-              strength.
-            </p>
-
-            <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-xs font-semibold text-reef-charcoal">
-                <FiCheckCircle className="text-[#7a0019]" />
-                <span>Unsalted, unbleached, 100% natural origin harvest.</span>
+          {/* Trust ribbon */}
+          <div className="mt-12 border-t border-reef-gold/10 pt-8 overflow-hidden relative w-full">
+            <div className="flex gap-16 reef-marquee whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+              <div className="flex shrink-0 gap-16 justify-around min-w-full">
+                <span>· 100% Vegetarian</span>
+                <span>· Dust-Free Cleanroom</span>
+                <span>· Zero Artificial Preservatives</span>
+                <span>· Nitrogen Sealed Freshness</span>
+                <span>· Insured Cold-Chain Shipping</span>
+                <span>· FSSAI Certified</span>
+                <span>· ISO 22000</span>
               </div>
-              <div className="flex items-center gap-3 text-xs font-semibold text-reef-charcoal">
-                <FiCheckCircle className="text-[#7a0019]" />
-                <span>
-                  Automated nitrogen flushing protects natural essential oils.
-                </span>
-              </div>
-              <div className="flex items-center gap-3 text-xs font-semibold text-reef-charcoal">
-                <FiCheckCircle className="text-[#7a0019]" />
-                <span>
-                  Climate-controlled cold storage prevents rancidity and
-                  moisture loss.
-                </span>
+              <div
+                className="flex shrink-0 gap-16 justify-around min-w-full"
+                aria-hidden="true"
+              >
+                <span>· 100% Vegetarian</span>
+                <span>· Dust-Free Cleanroom</span>
+                <span>· Zero Artificial Preservatives</span>
+                <span>· Nitrogen Sealed Freshness</span>
+                <span>· Insured Cold-Chain Shipping</span>
+                <span>· FSSAI Certified</span>
+                <span>· ISO 22000</span>
               </div>
             </div>
           </div>
-
-          <div className="relative min-h-[300px] overflow-hidden bg-[#f8f5f0] border border-reef-gold/20">
-            <Image
-              src={Images.topViewDiffNuts}
-              alt="Handpicked origin dry fruits sourcing guide by Reet Foods"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
         </div>
       </section>
 
-      {/* ── SECTION 15: Industries We Serve ⭐ ──────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-            Trusted Industry Partners
-          </p>
-          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
-            Industries We Serve
-          </h2>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {[
-            {
-              title: "IT & Corporate Tech",
-              desc: "Employee onboarding & festive rewards.",
-            },
-            {
-              title: "Hotels & Hospitality",
-              desc: "In-room welcome favours & VIP suites.",
-            },
-            {
-              title: "Luxury Weddings",
-              desc: "Custom royal invitation gift boxes.",
-            },
-            {
-              title: "Real Estate & Banking",
-              desc: "High-ticket client closing hampers.",
-            },
-            {
-              title: "Global Export",
-              desc: "Compliant international packaging sets.",
-            },
-          ].map((ind) => (
-            <div
-              key={ind.title}
-              className="border border-reef-gold/20 bg-white p-6 text-center transition duration-300 hover:border-[#d4af37]"
-            >
-              <h3 className="font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal">
-                {ind.title}
-              </h3>
-              <p className="mt-2 text-xs leading-5 text-reef-charcoal/70">
-                {ind.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SECTION 16: Product FAQ Accordion ⭐ ────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 8: FAQ SECTION with schema markup
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Frequently asked questions"
+      >
         <div className="border border-reef-gold/20 bg-white p-8 sm:p-12">
           <div className="mb-10 text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
@@ -1133,6 +859,7 @@ export function ProductsClient() {
                   type="button"
                   onClick={() => toggleFaq(index)}
                   className="flex w-full items-center justify-between px-6 py-5 text-left font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal transition hover:text-[#7a0019]"
+                  aria-expanded={openFaq === index}
                 >
                   <span className="pr-4">{faq.q}</span>
                   <span className="shrink-0 text-[#d4af37]">
@@ -1152,10 +879,115 @@ export function ProductsClient() {
             ))}
           </div>
         </div>
+
+        {/* FAQ JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              name: "Frequently Asked Questions — Reet Foods Products",
+              url: "https://reetfoods.com/products",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.a,
+                },
+              })),
+            }),
+          }}
+        />
       </section>
 
-      {/* ── SECTION 17: Final CTA ⭐ ─────────────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8">
+      {/* ════════════════════════════════════════════════════════
+          TASK 9: RELATED COLLECTIONS / BLOGS for cross-selling
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Related collections"
+      >
+        <div className="mb-10 text-center">
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+            Explore More
+          </p>
+          <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl">
+            Related Collections
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
+            Discover complementary gifting solutions and inspiration for your
+            next event.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            {
+              title: "Corporate Gifting Solutions",
+              desc: "Tailored bulk gifting programmes for teams, clients, and corporate events with custom branding.",
+              href: "/corporate-gifting",
+              badge: "Corporate",
+              image: Images.topViewDeskNuts,
+            },
+            {
+              title: "Festive Celebration Hampers",
+              desc: "Curated red and gold hampers with cards, ribbons and custom brand storytelling for every occasion.",
+              href: "/products/categories/celebration-hampers",
+              badge: "Festive",
+              image: Images.topViewDiffNuts,
+            },
+            {
+              title: "Gifting Guides & Inspiration",
+              desc: "Expert tips on selecting the perfect gift for weddings, corporate events, and festivals.",
+              href: "/blog",
+              badge: "Blog",
+              image: Images.driedFruitsCounter,
+            },
+          ].map((item, idx) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className={`group block border border-reef-gold/20 bg-white transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_16px_48px_rgba(18,12,8,0.12)] ${animVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: `${idx * 120}ms` }}
+            >
+              <div className="relative h-52 overflow-hidden bg-[#f8f5f0]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <span className="absolute left-3 top-3 bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
+                  {item.badge}
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal group-hover:text-[#7a0019] transition-colors duration-200">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-xs leading-5 text-reef-charcoal/70">
+                  {item.desc}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#7a0019] group-hover:text-[#d4af37] transition-colors duration-200">
+                  Explore <FiArrowRight className="text-xs" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════
+          TASK 10: PARTNER-SHARING CTA with WhatsApp integration
+          ════════════════════════════════════════════════════════ */}
+      <section
+        className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
+        aria-label="Partner sharing and final CTA"
+      >
         <div className="bg-[#111111] p-8 text-center text-white sm:p-14 border border-reef-gold/30">
           <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
             Concierge Assistance
@@ -1167,6 +999,7 @@ export function ProductsClient() {
             Talk directly to our master gifting curators to build custom hampers
             within your exact budget and timeline.
           </p>
+
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact#quote"
@@ -1189,8 +1022,190 @@ export function ProductsClient() {
               Download Catalogue
             </Link>
           </div>
+
+          {/* Partner-sharing CTA */}
+          <div className="mt-12 border-t border-white/10 pt-8">
+            <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+              Partner With Reet Foods
+            </p>
+            <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
+              Become a Gifting Partner
+            </h3>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/70">
+              Share our luxury gifting collection with your network and earn
+              exclusive commissions on every referral.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+              <button
+                type="button"
+                onClick={handlePartnerShare}
+                className="inline-flex items-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"
+              >
+                <FiShare2 className="text-sm" /> Share Partnership on WhatsApp
+              </button>
+              <Link
+                href="/contact#quote"
+                className="inline-flex items-center gap-2 border-2 border-white bg-white px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7a0019] transition hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c1c]"
+              >
+                Request Partner Kit
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* ════════════════════════════════════════════════════════
+          TASK 10: FLOATING WhatsApp CTA (persistent)
+          ════════════════════════════════════════════════════════ */}
+      <a
+        href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20product%20gifting%20help"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-4 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-4 py-3 pr-6 text-xs font-bold uppercase tracking-[0.14em] text-[#25d366] shadow-lg transition hover:bg-[#25d366] hover:text-white hover:shadow-xl md:bottom-8 md:right-8"
+        aria-label="Chat with Reet Foods on WhatsApp"
+      >
+        <svg
+          className="h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Chat on WhatsApp
+      </a>
     </div>
   );
 }
+
+// ── Data constants ──────────────────────────────────────────
+
+const occasions = [
+  {
+    title: "Corporate Gifting",
+    subtitle: "Client & Partner Appreciation",
+    icon: FiBriefcase,
+    href: "/contact#quote",
+  },
+  {
+    title: "Wedding Favours",
+    subtitle: "Luxury Wedding Keepsakes",
+    icon: FiHeart,
+    href: "/contact#quote",
+  },
+  {
+    title: "Festival Gifts",
+    subtitle: "Diwali, New Year & Eid Curations",
+    icon: FiGift,
+    href: "/products/categories/celebration-hampers",
+  },
+  {
+    title: "Employee Onboarding",
+    subtitle: "Welcome Kits & Rewards",
+    icon: FiUsers,
+    href: "/contact#quote",
+  },
+  {
+    title: "Client Milestones",
+    subtitle: "High-Value Relationship Gifting",
+    icon: FiAward,
+    href: "/contact#quote",
+  },
+  {
+    title: "Personal Celebrations",
+    subtitle: "Anniversaries & Special Days",
+    icon: FiSmile,
+    href: "/products/categories/artisanal-chocolates",
+  },
+];
+
+const recipients = [
+  {
+    name: "For Employees",
+    desc: "Motivate and reward teams with healthy nut tins & artisanal chocolates.",
+    count: "15+ Hampers",
+  },
+  {
+    name: "For Key Clients",
+    desc: "Build lasting corporate trust with laser-branded magnetic gift boxes.",
+    count: "20+ Curations",
+  },
+  {
+    name: "For Wedding Guests",
+    desc: "Handcrafted royal wedding favours with custom foil-stamped notes.",
+    count: "12+ Designs",
+  },
+  {
+    name: "For Family & Friends",
+    desc: "Festive dry fruit hampers curated for home celebrations and joy.",
+    count: "18+ Boxes",
+  },
+  {
+    name: "For VIP Partners",
+    desc: "Ultra-luxury gift hampers featuring origin saffron, dates & dark truffles.",
+    count: "10+ Premium Sets",
+  },
+  {
+    name: "For Event Attendees",
+    desc: "Sleek mini dry fruit jars and juice bottles for conferences and expos.",
+    count: "25+ Options",
+  },
+];
+
+const bestSellers = [
+  {
+    title: "Royal Pistachio & Cashew Gold Tin",
+    category: "Dry Fruits",
+    price: "₹1,499 / Box",
+    image: productCategories[0].image,
+    badge: "Best Seller",
+    desc: "Handpicked Iranian pistachios and Jumbo W240 cashews in a nitrogen-sealed metallic gold tin.",
+  },
+  {
+    title: "Artisanal Belgian Truffle Assortment",
+    category: "Chocolates",
+    price: "₹1,299 / Box",
+    image: productCategories[1].image,
+    badge: "Most Loved",
+    desc: "12 pieces of hand-poured 70% dark Belgian chocolates with nut pralines in a magnetic rigid box.",
+  },
+  {
+    title: "Grande Corporate Executive Hamper",
+    category: "Celebration Hampers",
+    price: "₹3,499 / Box",
+    image: productCategories[2].image,
+    badge: "Corporate Choice",
+    desc: "Dry fruit quartet, artisanal chocolate bark, cold-pressed elixir, and custom laser-engraved wooden box.",
+  },
+  {
+    title: "Kashmiri Saffron & Date Luxe Box",
+    category: "Dry Fruits",
+    price: "₹2,199 / Box",
+    image: productCategories[0].image,
+    badge: "Festive Exclusive",
+    desc: "Organic Medjool dates stuffed with roasted almonds and organic Kashmiri saffron strands.",
+  },
+];
+
+const faqs = [
+  {
+    q: "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
+    a: "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery.",
+  },
+  {
+    q: "Can we print our corporate logo and personalized message on the gift boxes?",
+    a: "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards.",
+  },
+  {
+    q: "How do you ensure freshness during transportation across India?",
+    a: "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit.",
+  },
+  {
+    q: "Can we request a sample box before committing to a bulk order?",
+    a: "Absolutely. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample.",
+  },
+  {
+    q: "What is the typical shelf life of Reet Foods gifting items?",
+    a: "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
+  },
+];

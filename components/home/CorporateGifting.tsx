@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiCheck } from "react-icons/fi";
-import topViewPistachios from "@/assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
+import { reetFoodImages } from "@/assets/reetFoodImages";
+
+const topViewPistachios = reetFoodImages[4];
 
 const highlights = [
   "Employee & Client Gifts",
@@ -55,13 +57,17 @@ export function CorporateGifting() {
             </span>
           </div>
           <p className="mt-5 text-sm leading-7 text-reef-charcoal/70">
-            Leave a lasting impression on clients and employees with custom-branded
-            luxury hampers. From concept to doorstep — managed with precision and elegance.
+            Leave a lasting impression on clients and employees with
+            custom-branded luxury hampers. From concept to doorstep — managed
+            with precision and elegance.
           </p>
 
           <ul className="mt-7 space-y-3">
             {highlights.map((point) => (
-              <li key={point} className="flex items-center gap-3 text-sm font-medium text-[#1c1c1c]/90">
+              <li
+                key={point}
+                className="flex items-center gap-3 text-sm font-medium text-[#1c1c1c]/90"
+              >
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#d4af37]/20 text-[#7a0019]">
                   <FiCheck className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
@@ -72,10 +78,10 @@ export function CorporateGifting() {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
-              href="/corporate-gifting"
+              href="/contact#catalog"
               className="inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-[#b8952b] hover:text-white"
             >
-              Request Corporate Catalogue <FiArrowRight />
+              Download Catalogue <FiArrowRight />
             </Link>
             <Link
               href="/contact#quote"
@@ -88,8 +94,19 @@ export function CorporateGifting() {
               href="tel:+919890609611"
               className="inline-flex items-center gap-2 rounded-full border border-reef-charcoal/15 bg-white px-6 py-3.5 text-sm font-bold text-reef-charcoal shadow-sm transition duration-200 hover:border-reef-gold hover:text-reef-burgundy"
             >
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.8}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
               </svg>
               Call: +91 98906 09611
             </a>

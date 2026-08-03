@@ -1,0 +1,17 @@
+export const business = {
+  legalName: "Reet Foods and Giftings",
+  brandName: "Reet Foods",
+  established: "2016",
+  businessType: "Wholesaler & Retailer",
+  gstNumber: "27FHIPK0363N1ZX",
+  fssaiLicense: "21526079003816",
+  email: "reetfoodspune@gmail.com",
+  phones: ["+91 9890609611", "+91 8007518088"],
+  whatsapp: "919890609611",
+  officeAddress: "Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057",
+  factoryAddress: "Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027",
+  productionCapacity: "Up to 500 gifts per day",
+  largestCorporateOrder: "More than 1,000 gifts in a single corporate Diwali order",
+  delivery: "PAN-India and export delivery support; typical delivery is 3 to 4 days.",
+  returnPolicy: "No returns",
+} as const;

@@ -4,6 +4,22 @@ import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 
 export function ContactCTA() {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("sending");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: new FormData(event.currentTarget) });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error("Submission failed");
+      event.currentTarget.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="section" id="contact" aria-labelledby="contact-heading">
       <div className="flex items-center gap-3 mb-8">
@@ -23,27 +39,31 @@ export function ContactCTA() {
               Keep it simple. Share your quantity, budget, timeline, and
               packaging requirement. We will respond with a workable quote.
             </p>
-            <form className="space-y-5" id="quote">
+            <form className="space-y-5" id="quote" onSubmit={handleSubmit}>
+              <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+              <input type="hidden" name="subject" value="New homepage gifting enquiry" />
+              <input type="hidden" name="from_name" value="Reet Foods Website" />
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="text-sm font-medium text-gray-700 space-y-1.5">
                   <span className="block">Name</span>
-                  <Input type="text" placeholder="Your name" required />
+                  <Input name="name" type="text" placeholder="Your name" required />
                 </label>
                 <label className="text-sm font-medium text-gray-700 space-y-1.5">
                   <span className="block">Mobile number</span>
-                  <Input type="tel" placeholder="+91..." required />
+                  <Input name="phone" type="tel" placeholder="+91..." required />
                 </label>
               </div>
               <label className="text-sm font-medium text-gray-700 space-y-1.5">
                 <span className="block">Product requirement</span>
                 <Textarea
-                  placeholder="Dry fruits, chocolates, hampers, quantity, delivery date"
+                  name="message"
+                  placeholder="Dry fruits, hampers, quantity, delivery date"
                   required
                 />
               </label>
               <label className="text-sm font-medium text-gray-700 space-y-1.5">
                 <span className="block">Event type</span>
-                <select className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy focus-visible:border-reef-burgundy">
+                <select name="event_type" className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy focus-visible:border-reef-burgundy">
                   <option>Corporate</option>
                   <option>Wedding</option>
                   <option>Festival</option>
@@ -51,8 +71,8 @@ export function ContactCTA() {
                 </select>
               </label>
               <div className="flex flex-wrap gap-4 pt-2">
-                <Button type="submit" size="lg" className="w-full sm:w-auto">
-                  Submit enquiry
+                <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
+                  {status === "sending" ? "Sending…" : "Submit enquiry"}
                 </Button>
                 <a
                   href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
@@ -104,6 +124,10 @@ export function ContactCTA() {
           </CardContent>
         </Card>
       </div>
+      {status !== "idle" ? <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/45 px-4" role="dialog" aria-modal="true"><div className="w-full max-w-sm bg-white p-6 text-center shadow-2xl"><p className="text-lg font-semibold text-reef-charcoal">{status === "sending" ? "Sending your enquiry…" : status === "success" ? "Enquiry sent successfully" : "We could not send your enquiry"}</p><p className="mt-2 text-sm text-reef-charcoal/70">{status === "sending" ? "Please wait a moment." : status === "success" ? "Thank you for reaching out. We’ll get back to you soon." : "Please try again or contact us on WhatsApp."}</p>{status !== "sending" ? <Button type="button" className="mt-5" onClick={() => setStatus("idle")}>Close</Button> : null}</div></div> : null}
     </section>
   );
 }
+"use client";
+
+import { useState } from "react";

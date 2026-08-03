@@ -1,18 +1,49 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { FiChevronLeft, FiChevronRight, FiDownload, FiHeart, FiPlay, FiX } from "react-icons/fi";
+import { productCategories } from "@/data/products";
+import { reetFoodImages } from "@/assets/reetFoodImages";
+import { galleryImages } from "@/assets/images";
 
-type GalleryImage = StaticImageData | { default: StaticImageData };
-type GalleryPhoto = { src: GalleryImage; alt: string; title?: string; type?: string; description?: string };
+const [driedFruitsCounter, sweetiesDesk, nutsSetTable, topViewDriedFruits, topViewPistachios, woodenBoxNuts] = reetFoodImages;
+
+type GalleryPhoto = { src: StaticImageData; alt: string; title?: string; type?: string; description?: string };
 type GalleryVideo = { title: string; link: string };
 
-function resolveImage(source: GalleryImage): StaticImageData {
-  return "default" in source ? source.default : source;
-}
+const featuredPhotos: GalleryPhoto[] = [
+  { src: woodenBoxNuts, alt: "Assorted nuts and dry fruits luxury platter", title: "Assorted nuts and dry fruits luxury platter", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+  { src: topViewDriedFruits, alt: "Chocolate gift box with pralines", title: "Chocolate gift box with pralines", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+  { src: sweetiesDesk, alt: "Curated red and gold gift hamper", title: "Curated red and gold gift hamper", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+  { src: driedFruitsCounter, alt: "Cold-pressed juice bottles", title: "Cold-pressed juice bottles", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+  { src: topViewPistachios, alt: "Gourmet chocolates close-up", title: "Gourmet chocolates close-up", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+  { src: nutsSetTable, alt: "Assorted nuts in premium bowls", title: "Assorted nuts in premium bowls", type: "Reet Foods collection", description: "Premium gifting photography from Reet Foods & Gifting." },
+];
 
-export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; videos: GalleryVideo[] }) {
+const productPhotos: GalleryPhoto[] = productCategories.flatMap((category) =>
+  category.items.filter((item) => item.image).map((item) => ({
+    src: item.image!,
+    alt: item.name,
+    title: item.name,
+    type: category.name,
+    description: item.detail,
+  })),
+);
+
+const photos: GalleryPhoto[] = [
+  ...productPhotos,
+  ...featuredPhotos,
+  ...galleryImages.map((src: StaticImageData | { default: StaticImageData } | string, index: number) => ({
+    src: (typeof src === "object" && src && "default" in src ? src.default : src) as StaticImageData,
+    alt: `Reet Foods premium gifting collection photo ${index + 1}`,
+    title: `Reet Foods Collection ${index + 1}`,
+    type: "Gifting inspiration",
+    description: "Premium food, gifting and packaging inspiration from Reet Foods.",
+  })),
+];
+
+export function GalleryClient({ videos }: { videos: GalleryVideo[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [activeVideo, setActiveVideo] = useState<GalleryVideo | null>(null);
   const [liked, setLiked] = useState<Set<number>>(new Set());
@@ -25,12 +56,16 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
   const activePhoto = activeIndex === null ? null : visiblePhotos[activeIndex];
 
   const close = () => setActiveIndex(null);
-  const showPrevious = () => setActiveIndex((index) => index === null ? null : (index - 1 + visiblePhotos.length) % visiblePhotos.length);
-  const showNext = () => setActiveIndex((index) => index === null ? null : (index + 1) % visiblePhotos.length);
+  const showPrevious = useCallback(() => setActiveIndex((index) => index === null ? null : (index - 1 + visiblePhotos.length) % visiblePhotos.length), [visiblePhotos.length]);
+  const showNext = useCallback(() => setActiveIndex((index) => index === null ? null : (index + 1) % visiblePhotos.length), [visiblePhotos.length]);
   
   const toggleLike = (index: number) => setLiked((current) => {
     const next = new Set(current);
-    next.has(index) ? next.delete(index) : next.add(index);
+    if (next.has(index)) {
+      next.delete(index);
+    } else {
+      next.add(index);
+    }
     return next;
   });
 
@@ -50,13 +85,12 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
       window.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
     };
-  }, [activeIndex, activeVideo]);
+  }, [activeIndex, activeVideo, showPrevious, showNext]);
 
   return (
     <main className="bg-[#fbf7f1] py-12 sm:py-16">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <header className="relative overflow-hidden bg-gradient-to-br from-[#201316] via-[#160b0d] to-[#0e0506] text-white p-8 sm:p-12 lg:p-16 border border-reef-gold/25 shadow-[0_24px_50px_rgba(28,12,8,0.18)] mb-12 rounded-2xl">
-          {/* Creative mesh gradients & particles glow */}
           <div className="absolute -right-16 -top-16 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-3xl" />
           <div className="absolute left-1/3 -bottom-16 h-64 w-64 rounded-full bg-[#7a0019]/35 blur-3xl" />
           <div className="absolute right-1/4 bottom-1/4 h-32 w-32 rounded-full bg-[#2d7a3a]/10 blur-3xl" />
@@ -74,15 +108,14 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
                 Explore our curated gifting, premium ingredients, and behind-the-scenes production moments. Select any photo to view it in full screen.
               </p>
               
-              {/* Trust & Count Strip */}
               <div className="mt-8 flex flex-wrap gap-5 border-t border-white/10 pt-6">
                 <div>
-                  <p className="text-xl font-bold font-[family-name:var(--font-playfair)] text-[#d4af37]">99+ Photos</p>
+                  <p className="text-xl font-bold font-[family-name:var(--font-playfair)] text-[#d4af37]">{photos.length} Photos</p>
                   <p className="text-[9px] font-bold uppercase tracking-wider text-white/45">High Resolution</p>
                 </div>
                 <div className="w-px h-8 bg-white/15 self-center hidden sm:block" />
                 <div>
-                  <p className="text-xl font-bold font-[family-name:var(--font-playfair)] text-[#d4af37]">03 Stories</p>
+                  <p className="text-xl font-bold font-[family-name:var(--font-playfair)] text-[#d4af37]">{videos.length} Stories</p>
                   <p className="text-[9px] font-bold uppercase tracking-wider text-white/45">Process Videos</p>
                 </div>
                 <div className="w-px h-8 bg-white/15 self-center hidden sm:block" />
@@ -93,44 +126,25 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
               </div>
             </div>
             
-            {/* Visual Polaroid / Museum Frame Collage */}
             <div className="hidden lg:flex items-center justify-center relative h-72 w-full select-none">
-              {/* Image 1 - Left slanted */}
               <div className="absolute left-6 w-36 h-48 rounded-xl overflow-hidden border border-reef-gold/30 shadow-2xl -rotate-6 transform transition duration-500 hover:rotate-0 hover:scale-110 hover:z-30 z-10 bg-[#12080a] cursor-pointer">
-                <Image
-                  src={resolveImage(photos[0].src)}
-                  alt={photos[0].alt}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-2.5 left-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[8px] text-white/95 text-center font-medium line-clamp-1 border border-white/10">
                   {photos[0].title}
                 </div>
               </div>
               
-              {/* Image 2 - Center elevated */}
               <div className="absolute w-40 h-52 rounded-xl overflow-hidden border-2 border-reef-gold shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20 transform transition duration-500 hover:scale-110 bg-[#12080a] cursor-pointer">
-                <Image
-                  src={resolveImage(photos[1].src)}
-                  alt={photos[1].alt}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={photos[1].src} alt={photos[1].alt} fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-2 right-2 bg-black/80 backdrop-blur-sm px-2.5 py-1.5 rounded text-[9px] text-[#d4af37] text-center font-bold tracking-wider border border-[#d4af37]/25">
                   {photos[1].title}
                 </div>
               </div>
               
-              {/* Image 3 - Right slanted */}
               <div className="absolute right-6 w-36 h-48 rounded-xl overflow-hidden border border-reef-gold/30 shadow-2xl rotate-6 transform transition duration-500 hover:rotate-0 hover:scale-110 hover:z-30 z-10 bg-[#12080a] cursor-pointer">
-                <Image
-                  src={resolveImage(photos[2].src)}
-                  alt={photos[2].alt}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={photos[2].src} alt={photos[2].alt} fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-2.5 left-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[8px] text-white/95 text-center font-medium line-clamp-1 border border-white/10">
                   {photos[2].title}
@@ -155,10 +169,11 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
                 key={filter}
                 type="button"
                 onClick={() => { setActiveFilter(filter); setActiveIndex(null); setVisibleCount(15); }}
+                aria-pressed={activeFilter === filter}
                 className={`rounded-full border px-5 py-2 text-xs font-semibold transition duration-200 ${
                   activeFilter === filter
                     ? "border-reef-burgundy bg-reef-burgundy text-white shadow-sm"
-                    : "border-reef-gold/20 bg-white text-reef-charcoal hover:border-reef-gold hover:text-reef-burgundy"
+                    : "border-reef-gold/20 bg-white text-reef-charcoal hover:border-reef-burgundy hover:text-reef-burgundy hover:bg-reef-burgundy/5"
                 }`}
               >
                 {filter}
@@ -174,13 +189,7 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
                 onClick={() => setActiveIndex(index)}
                 className="group relative aspect-[4/3] overflow-hidden rounded-md bg-reef-cream text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-reef-gold/40"
               >
-                <Image
-                  src={resolveImage(photo.src)}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                />
+                <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover transition duration-500 group-hover:scale-105" />
                 <span className="absolute inset-0 bg-[#1c1c1c]/0 transition duration-350 group-hover:bg-[#1c1c1c]/40" />
                 <span className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-black/90 via-black/45 to-transparent p-4 pt-10 text-white transition duration-300 group-hover:translate-y-0">
                   <span className="block text-[9px] font-bold uppercase tracking-[0.16em] text-reef-gold">{photo.type ?? "Collection"}</span>
@@ -195,7 +204,7 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
               <button
                 type="button"
                 onClick={() => setVisibleCount((prev) => prev + 15)}
-                className="inline-flex items-center gap-2 border-2 border-reef-gold/30 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-reef-charcoal transition duration-250 hover:border-reef-gold hover:bg-reef-cream hover:text-reef-burgundy shadow-sm rounded-full"
+                className="inline-flex items-center gap-2 border-2 border-reef-gold/30 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-[0.15em] text-reef-charcoal transition duration-250 hover:border-reef-burgundy hover:bg-reef-burgundy hover:text-white shadow-sm rounded-full"
               >
                 See More Photos
               </button>
@@ -214,7 +223,7 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
                 key={video.title}
                 type="button"
                 onClick={() => setActiveVideo(video)}
-                className="group flex items-center justify-between border border-reef-gold/15 bg-white p-6 transition duration-300 text-left hover:border-reef-gold hover:shadow-[0_14px_28px_rgba(29,22,17,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold/40"
+                className="group flex items-center justify-between border border-reef-gold/15 bg-white p-6 transition duration-300 text-left hover:border-reef-burgundy hover:shadow-[0_14px_28px_rgba(29,22,17,0.07)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold/40"
               >
                 <div>
                   <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold text-reef-charcoal">{video.title}</h3>
@@ -234,11 +243,11 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
 
       {activePhoto && activeIndex !== null ? (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8 animate-fade-in" role="dialog" aria-modal="true" aria-label={`Viewing ${activePhoto.alt}`}>
-          <button type="button" onClick={close} className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-reef-charcoal" aria-label="Close full screen image"><FiX className="h-5 w-5" /></button>
+          <button type="button" onClick={close} className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-reef-burgundy hover:text-white" aria-label="Close full screen image"><FiX className="h-5 w-5" /></button>
           <button type="button" onClick={showPrevious} className="absolute left-3 top-1/2 z-10 -translate-y-1/2 p-3 text-white transition hover:text-reef-gold sm:left-6" aria-label="Previous image"><FiChevronLeft className="h-9 w-9" /></button>
           <figure className="relative flex h-full w-full max-w-6xl flex-col items-center justify-center">
             <div className="relative h-[72vh] w-full">
-              <Image src={resolveImage(activePhoto.src)} alt={activePhoto.alt} fill sizes="100vw" className="object-contain" priority />
+              <Image src={activePhoto.src} alt={activePhoto.alt} fill sizes="100vw" className="object-contain" priority />
             </div>
             <figcaption className="mt-4 flex w-full max-w-4xl flex-wrap items-end justify-between gap-3 text-white">
               <div>
@@ -253,12 +262,12 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
                   className={`flex select-none items-center gap-2 rounded-md border px-3 py-2 text-xs font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
                     liked.has(activeIndex)
                       ? "border-reef-burgundy bg-reef-burgundy text-white"
-                      : "border-white/25 text-white hover:bg-white/10"
+                      : "border-white/25 text-white hover:bg-reef-burgundy/80"
                   }`}
                 >
                   <FiHeart className={liked.has(activeIndex) ? "fill-current text-white" : ""} /> Like
                 </button>
-                <a href={resolveImage(activePhoto.src).src} download className="flex items-center gap-2 rounded-md bg-reef-gold px-4 py-2 text-xs font-bold text-reef-charcoal transition hover:bg-white"><FiDownload /> Download</a>
+                <a href={activePhoto.src.src} download className="flex items-center gap-2 rounded-md bg-reef-gold px-4 py-2 text-xs font-bold text-reef-charcoal transition hover:bg-white"><FiDownload /> Download</a>
               </div>
             </figcaption>
           </figure>
@@ -276,7 +285,7 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
           <button
             type="button"
             onClick={() => setActiveVideo(null)}
-            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-reef-charcoal"
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-reef-burgundy hover:text-white"
             aria-label="Close video player"
           >
             <FiX className="h-5 w-5" />
@@ -295,4 +304,3 @@ export function GalleryClient({ photos, videos }: { photos: GalleryPhoto[]; vide
     </main>
   );
 }
-

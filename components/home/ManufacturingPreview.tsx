@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiShield, FiCheckCircle, FiPackage, FiTruck } from "react-icons/fi";
-import topViewPistachios from "@/assets/top-view-pistachios-with-hazelnuts-walnuts-wooden-stand-green-surface.jpg";
+import { reetFoodImages } from "@/assets/reetFoodImages";
+
+const topViewPistachios = reetFoodImages[4];
 
 export function ManufacturingPreview() {
   return (
@@ -25,8 +27,7 @@ export function ManufacturingPreview() {
               State-of-the-Art Production & Cold Storage
             </h2>
             <p className="mt-4 text-sm leading-7 text-reef-charcoal/80 sm:text-base">
-              Every box from Reet Foods is packed in our FSSAI-licensed, climate-controlled facility in Pune. 
-              Utilizing automated nitrogen flushing and dust-free cleanroom assembly, we preserve peak natural freshness, oil content, and texture without artificial preservatives.
+              Reet Foods prepares premium dry fruit boxes, festive hampers and custom corporate gifts at its FSSAI-licensed Pune facility. Every order is checked for product, packaging and branding details before dispatch.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -127,7 +128,7 @@ export function ManufacturingPreview() {
                 </p>
               </div>
               <span className="rounded-full bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
-                FSSAI Lic. #11521034000123
+                FSSAI Lic. #21526079003816
               </span>
             </div>
           </div>
