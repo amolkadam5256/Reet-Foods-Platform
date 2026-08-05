@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FiArrowRight, FiShield, FiCheckCircle, FiPackage, FiTruck } from "react-icons/fi";
+import {
+  FiArrowRight,
+  FiShield,
+  FiCheckCircle,
+  FiPackage,
+  FiTruck,
+} from "react-icons/fi";
 import { reetFoodImages } from "@/assets/reetFoodImages";
 
 const topViewPistachios = reetFoodImages[4];
@@ -27,7 +33,10 @@ export function ManufacturingPreview() {
               State-of-the-Art Production & Cold Storage
             </h2>
             <p className="mt-4 text-sm leading-7 text-reef-charcoal/80 sm:text-base">
-              Reet Foods prepares premium dry fruit boxes, festive hampers and custom corporate gifts at its FSSAI-licensed Pune facility. Every order is checked for product, packaging and branding details before dispatch.
+              Reet Foods prepares premium dry fruit boxes, festive hampers and
+              custom corporate gifts at its FSSAI-licensed Pune facility. Every
+              order is checked for product, packaging and branding details
+              before dispatch.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -83,14 +92,14 @@ export function ManufacturingPreview() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-[#7a0019] hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:text-white"
               >
                 Learn About Our Process <FiArrowRight />
               </Link>
               <Link
                 href="/contact#quote"
                 style={{ color: "#7a0019" }}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:bg-[#7a0019] hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:text-white"
               >
                 Request Facility Audit Report
               </Link>
@@ -107,14 +116,15 @@ export function ManufacturingPreview() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            
+
             {/* Top Address Overlay */}
             <div className="absolute top-6 left-6 right-6 rounded-xl border border-white/20 bg-black/65 p-4 backdrop-blur-md text-white sm:max-w-[280px] transform hover:scale-[1.02] transition-transform duration-300">
               <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#d4af37]">
                 Facility Location
               </p>
               <p className="mt-1.5 text-[11px] leading-relaxed text-white/85 font-medium">
-                Shop no F14 Ground floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune 411057
+                Shop no F14 Ground floor, Streets of Europe Mall, Maan Road near
+                Infosys Circle, Hinjewadi Phase I, Pune 411057
               </p>
             </div>
 

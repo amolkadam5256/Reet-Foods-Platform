@@ -86,7 +86,7 @@ export function CorporateGifting() {
             <Link
               href="/contact#quote"
               style={{ color: "#7a0019" }}
-              className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:bg-[#7a0019] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:text-white"
             >
               Get a Quote
             </Link>

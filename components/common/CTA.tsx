@@ -34,7 +34,7 @@ export function CTA({
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
             href={primaryButtonHref}
-            className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-7 py-3.5 text-sm font-semibold text-reef-charcoal shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-reef-gold/40"
+            className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-7 py-3.5 text-sm font-semibold text-reef-charcoal shadow-lg transition-all   hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-reef-gold/40"
           >
             <FiPhoneCall className="h-4 w-4" />
             <span>{primaryButtonText}</span>
