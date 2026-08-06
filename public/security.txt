@@ -3,7 +3,7 @@ expires: 2027-08-06T00:00:00.000Z
 encryption: https://reetfoodsngiftings.com/.well-known/pgp-key.txt
 preferred-languages: en, hi
 canonical: https://reetfoodsngiftings.com/.well-known/security.txt
-policy: https://reetfoodsngiftings.com/privacy-policy
+policy: https://reetfoodsngiftings.com/privcontinueacy-policy
 acknowledgments: https://reetfoodsngiftings.com/humans.txt
 
 # Reet Foods & Giftings Security Contact
