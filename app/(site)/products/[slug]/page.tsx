@@ -117,7 +117,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <ProductSchema
         name={titleName}
         description={descriptionText}
-        image="https://reetfoods.com/assets/images/logo.png"
+        image="https://reetfoodsngiftings.com/assets/images/logo.png"
         category={category.name}
       />
       <BreadcrumbSchema

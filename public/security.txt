@@ -1,0 +1,12 @@
+contact: security@reetfoodsngiftings.com
+expires: 2027-08-06T00:00:00.000Z
+encryption: https://reetfoodsngiftings.com/.well-known/pgp-key.txt
+preferred-languages: en, hi
+canonical: https://reetfoodsngiftings.com/.well-known/security.txt
+policy: https://reetfoodsngiftings.com/privacy-policy
+acknowledgments: https://reetfoodsngiftings.com/humans.txt
+
+# Reet Foods & Giftings Security Contact
+# If you discover a security vulnerability, please disclose it responsibly.
+# We are a small business and do not currently operate a bug bounty program.
+# Please allow 5 business days for a response.

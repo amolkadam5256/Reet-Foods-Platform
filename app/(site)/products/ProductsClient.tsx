@@ -888,7 +888,7 @@ export function ProductsClient() {
               "@context": "https://schema.org",
               "@type": "FAQPage",
               name: "Frequently Asked Questions — Reet Foods Products",
-              url: "https://reetfoods.com/products",
+              url: "https://reetfoodsngiftings.com/products",
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.q,

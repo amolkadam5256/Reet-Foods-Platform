@@ -1,0 +1,183 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://reetfoodsngiftings.com/#organization",
+      "name": "Reet Foods & Giftings",
+      "legalName": "Reet Foods and Giftings",
+      "url": "https://reetfoodsngiftings.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://reetfoodsngiftings.com/logo.png",
+        "width": 200,
+        "height": 60
+      },
+      "foundingDate": "2016",
+      "address": {
+        "@type": "PostalAddress",
+        "@id": "https://reetfoodsngiftings.com/#address",
+        "streetAddress": "Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road",
+        "addressLocality": "Hinjewadi Phase I",
+        "addressRegion": "MH",
+        "postalCode": "411057",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.instagram.com/reetfoods",
+        "https://www.facebook.com/reetfoods",
+        "https://www.linkedin.com/company/reetfoods",
+        "https://wa.me/919890609611"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://reetfoodsngiftings.com/#localbusiness",
+      "name": "Reet Foods & Giftings",
+      "image": "https://reetfoodsngiftings.com/og-image.jpg",
+      "priceRange": "₹₹₹",
+      "servesCuisine": "Gourmet Gifting",
+      "address": { "@id": "https://reetfoodsngiftings.com/#address" },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.5912,
+        "longitude": 73.7389
+      },
+      "hasMap": "https://maps.google.com/?q=Streets+of+Europe+Mall+Hinjewadi+Pune",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://reetfoodsngiftings.com/#website",
+      "url": "https://reetfoodsngiftings.com",
+      "name": "Reet Foods & Giftings",
+      "description": "Premium corporate gifting, dry fruits, artisanal chocolates and luxury hampers — Pune, PAN India delivery.",
+      "publisher": { "@id": "https://reetfoodsngiftings.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://reetfoodsngiftings.com/products?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reetfoodsngiftings.com/products/premium-dry-fruits#product",
+      "name": "Signature Dry Fruit Box",
+      "description": "A generous assortment of premium almonds, cashews and pistachios in nitrogen-sealed packaging.",
+      "category": "Premium Dry Fruits",
+      "brand": { "@id": "https://reetfoodsngiftings.com/#organization" },
+      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "image": "https://reetfoodsngiftings.com/og-image.jpg",
+      "sku": "RFG-DF-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "499",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": { "@id": "https://reetfoodsngiftings.com/#organization" }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reetfoodsngiftings.com/products/artisanal-chocolates#product",
+      "name": "Corporate Chocolate Gift Box",
+      "description": "Hand-poured Belgian chocolates with custom logo branding for corporate gifting.",
+      "category": "Artisanal Chocolates",
+      "brand": { "@id": "https://reetfoodsngiftings.com/#organization" },
+      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+      "sku": "RFG-CH-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "799",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://reetfoodsngiftings.com/#organization" }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reetfoodsngiftings.com/products/celebration-hampers#product",
+      "name": "Grande Celebration Hamper",
+      "description": "Complete luxury gifting experience with premium dry fruits, chocolates and presentation box.",
+      "category": "Celebration Hampers",
+      "brand": { "@id": "https://reetfoodsngiftings.com/#organization" },
+      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
+      "sku": "RFG-HM-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "1999",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://reetfoodsngiftings.com/#organization" }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://reetfoodsngiftings.com/corporate-gifting#service",
+      "name": "Corporate Gifting Services",
+      "description": "End-to-end corporate gifting solutions including custom logo branding, bulk dry fruit boxes, and PAN India multi-address delivery for enterprise clients.",
+      "provider": { "@id": "https://reetfoodsngiftings.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "India" },
+      "url": "https://reetfoodsngiftings.com/corporate-gifting",
+      "serviceType": "Corporate Gifting",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "description": "Tiered bulk pricing from 25 to 50,000 units"
+      }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://reetfoodsngiftings.com/products#catalog",
+      "name": "Reet Foods Gift Catalog",
+      "description": "Complete product catalog featuring premium dry fruits, artisanal chocolates, luxury hampers, and corporate gift boxes.",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Premium Dry Fruits",
+          "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Artisanal Chocolates",
+          "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates"
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Celebration Hampers",
+          "url": "https://reetfoodsngiftings.com/products/celebration-hampers"
+        }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://reetfoodsngiftings.com/#navigation",
+      "name": "Main Navigation",
+      "url": "https://reetfoodsngiftings.com",
+      "hasPart": [
+        { "@type": "SiteNavigationElement", "name": "Home", "url": "https://reetfoodsngiftings.com" },
+        { "@type": "SiteNavigationElement", "name": "Products", "url": "https://reetfoodsngiftings.com/products" },
+        { "@type": "SiteNavigationElement", "name": "Corporate Gifting", "url": "https://reetfoodsngiftings.com/corporate-gifting" },
+        { "@type": "SiteNavigationElement", "name": "Corporate Gifting Pune", "url": "https://reetfoodsngiftings.com/corporate-gifting/pune" },
+        { "@type": "SiteNavigationElement", "name": "Gallery", "url": "https://reetfoodsngiftings.com/gallery" },
+        { "@type": "SiteNavigationElement", "name": "Blog", "url": "https://reetfoodsngiftings.com/blog" },
+        { "@type": "SiteNavigationElement", "name": "About", "url": "https://reetfoodsngiftings.com/about" },
+        { "@type": "SiteNavigationElement", "name": "Contact", "url": "https://reetfoodsngiftings.com/contact" },
+        { "@type": "SiteNavigationElement", "name": "FAQ", "url": "https://reetfoodsngiftings.com/faq" }
+      ]
+    }
+  ]
+}

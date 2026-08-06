@@ -14,7 +14,7 @@ export interface ProductSchemaProps {
 export function ProductSchema({
   name,
   description,
-  image = "https://reetfoods.com/assets/images/product-default.jpg",
+  image = "https://reetfoodsngiftings.com/assets/images/product-default.jpg",
   sku = "REET-FOOD-DEFAULT",
   price = "499",
   currency = "INR",
@@ -35,7 +35,7 @@ export function ProductSchema({
     "category": category,
     "offers": {
       "@type": "Offer",
-      "url": `https://reetfoods.com/products`,
+      "url": `https://reetfoodsngiftings.com/products`,
       "priceCurrency": currency,
       "price": price,
       "itemCondition": "https://schema.org/NewCondition",

@@ -1,0 +1,141 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-08-06",
+  "brand": "Reet Foods & Giftings",
+  "website": "https://reetfoodsngiftings.com",
+  "categories": {
+    "homepage": [
+      {
+        "id": "hp-faq-01",
+        "question": "What makes Reet Foods & Giftings the best choice for corporate gifts in Pune?",
+        "answer": "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our quality, FSSAI certification, and dedicated B2B service make us the top choice for corporate gifting Pune.",
+        "tags": ["corporate gifting", "dry fruits", "Pune", "FSSAI"]
+      },
+      {
+        "id": "hp-faq-02",
+        "question": "What is the minimum order quantity for corporate gift boxes?",
+        "answer": "Our minimum order quantity for custom corporate gift boxes starts at just 25 units. For smaller bespoke orders or luxury hampers for executives, please contact our Pune office directly and we will accommodate your request.",
+        "tags": ["MOQ", "corporate gifts", "bulk order"]
+      },
+      {
+        "id": "hp-faq-03",
+        "question": "Can you customize the packaging for Diwali gifts and corporate hampers?",
+        "answer": "Absolutely. We offer full custom branding for Diwali gifts Pune and corporate hampers, including logo printing, foil stamping on boxes, personalized ribbon, branded note cards, and custom tissue paper.",
+        "tags": ["Diwali gifts", "custom packaging", "logo branding"]
+      },
+      {
+        "id": "hp-faq-04",
+        "question": "Do you deliver premium dry fruits and gift hampers PAN India?",
+        "answer": "Yes. While we are based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and wedding return gifts across all Indian states. Our delivery is insured, tracked, and temperature-managed.",
+        "tags": ["PAN India delivery", "dry fruits", "gift hampers"]
+      },
+      {
+        "id": "hp-faq-05",
+        "question": "What is the shelf life of your premium dry fruits and chocolates?",
+        "answer": "Our nitrogen-packed premium dry fruits have a shelf life of 6 to 12 months. Our chocolates have a 3 to 6-month shelf life and are temperature-controlled during transit.",
+        "tags": ["shelf life", "dry fruits", "chocolates"]
+      },
+      {
+        "id": "hp-faq-06",
+        "question": "Are your products FSSAI certified and hygienically packed?",
+        "answer": "Yes, Reet Foods & Giftings operates an FSSAI-certified facility (Licence No. 21526079003816). All our premium dry fruits and corporate gifts are packed in a strict, dust-free environment.",
+        "tags": ["FSSAI", "hygiene", "certification"]
+      },
+      {
+        "id": "hp-faq-07",
+        "question": "Do you offer vegan or sugar-free gift box options?",
+        "answer": "Yes. We offer a curated range of vegan-certified premium dry fruit hampers and sugar-free chocolate gift boxes. Please mention your specific dietary requirements when requesting a quote.",
+        "tags": ["vegan", "sugar-free", "dietary"]
+      },
+      {
+        "id": "hp-faq-08",
+        "question": "Can you handle multi-location delivery for corporate employee gifting?",
+        "answer": "Yes, we offer direct-to-employee shipping for corporate gifting Pune and PAN India. You just provide the addresses, and we manage individual dispatch, tracking, and delivery.",
+        "tags": ["multi-location", "employee gifting", "PAN India"]
+      },
+      {
+        "id": "hp-faq-09",
+        "question": "Do you provide customized employee joining kits and onboarding hampers?",
+        "answer": "Yes, we specialize in customized employee joining kits for IT companies in Pune and across India, including branded merchandise, premium dry fruits, coffee mugs, and welcome notes.",
+        "tags": ["joining kits", "onboarding", "IT companies"]
+      },
+      {
+        "id": "hp-faq-10",
+        "question": "How do I get a quote for bulk corporate gifts in Pune?",
+        "answer": "You can request a quote for bulk corporate gifts Pune by filling out the form on our Contact page, emailing reetfoodspune@gmail.com, or calling our Hinjewadi Phase I office directly.",
+        "tags": ["quote", "bulk order", "contact"]
+      }
+    ],
+    "corporate": [
+      {
+        "id": "corp-faq-01",
+        "question": "What is the minimum order quantity for custom corporate logo printing?",
+        "answer": "Custom logo printing on corporate gift boxes starts at just 25 units. We provide complimentary digital visual mock-ups before production for all Pune and PAN India clients.",
+        "tags": ["logo printing", "MOQ", "corporate"]
+      },
+      {
+        "id": "corp-faq-02",
+        "question": "Do you offer custom foil stamping on corporate gift boxes?",
+        "answer": "Yes, we specialize in luxury corporate gifting with custom gold and silver foil stamping of your company logo on premium magnetic hardtop boxes.",
+        "tags": ["foil stamping", "luxury", "branding"]
+      },
+      {
+        "id": "corp-faq-03",
+        "question": "Are your corporate gift hampers suitable for Diwali gifting?",
+        "answer": "Absolutely. We are Pune's leading provider of customized Diwali gifts for corporates, offering themed hampers packed with premium dry fruits, chocolates, and diyas.",
+        "tags": ["Diwali", "corporate hampers", "festive"]
+      },
+      {
+        "id": "corp-faq-04",
+        "question": "Do you provide employee joining kits or onboarding gifts?",
+        "answer": "Yes, we curate bespoke employee joining kits containing branded merchandise, premium dry fruits, coffee, and welcome notes for IT and tech firms.",
+        "tags": ["joining kits", "IT companies", "onboarding"]
+      },
+      {
+        "id": "corp-faq-05",
+        "question": "Is GST invoicing provided for bulk B2B gifting orders?",
+        "answer": "Yes, we provide 100% GST-compliant invoicing for all B2B corporate gifting orders, allowing your business to claim full input tax credit (ITC).",
+        "tags": ["GST", "B2B", "invoicing"]
+      }
+    ],
+    "products": [
+      {
+        "id": "prod-faq-01",
+        "question": "What types of premium dry fruits are included in corporate hampers?",
+        "answer": "Our corporate hampers feature premium graded almonds, cashews, pistachios, walnuts, raisins, and exotic dried fruits, ensuring top-tier quality for executive gifts.",
+        "tags": ["dry fruits", "almonds", "cashews", "pistachios"]
+      },
+      {
+        "id": "prod-faq-02",
+        "question": "What is the typical shelf life of Reet Foods gifting items?",
+        "answer": "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
+        "tags": ["shelf life", "freshness", "nitrogen packed"]
+      },
+      {
+        "id": "prod-faq-03",
+        "question": "Can we create a custom hamper with our choice of products?",
+        "answer": "Yes, our 'Build Your Own Hamper' service allows corporate clients to select their preferred dry fruits, chocolates, cold-pressed juices, and packaging style.",
+        "tags": ["custom hamper", "build your own", "personalization"]
+      }
+    ],
+    "shipping": [
+      {
+        "id": "ship-faq-01",
+        "question": "Do you offer PAN India delivery for corporate gift hampers?",
+        "answer": "Yes, we deliver premium dry fruits, corporate hampers, and custom gift boxes across all Indian states and over 19,000 pin codes.",
+        "tags": ["PAN India", "delivery", "shipping"]
+      },
+      {
+        "id": "ship-faq-02",
+        "question": "What is the typical delivery timeline for bulk corporate gifting orders?",
+        "answer": "Standard delivery for corporate gifting orders takes 3 to 5 business days after dispatch. Timelines are confirmed during order approval.",
+        "tags": ["delivery timeline", "bulk order", "dispatch"]
+      }
+    ]
+  },
+  "schemaTemplate": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": "GENERATED_FROM_CATEGORIES"
+  }
+}

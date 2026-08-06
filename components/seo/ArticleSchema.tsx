@@ -14,7 +14,7 @@ export function ArticleSchema({
   title,
   description,
   url,
-  image = "https://reetfoods.com/assets/images/blog-default.jpg",
+  image = "https://reetfoodsngiftings.com/assets/images/blog-default.jpg",
   datePublished = "2026-01-01",
   dateModified = "2026-08-01",
   authorName = "Reet Foods Editorial Team",
@@ -24,7 +24,7 @@ export function ArticleSchema({
     "@type": "BlogPosting",
     "headline": title,
     "description": description,
-    "url": url.startsWith("http") ? url : `https://reetfoods.com${url}`,
+    "url": url.startsWith("http") ? url : `https://reetfoodsngiftings.com${url}`,
     "image": [image],
     "datePublished": datePublished,
     "dateModified": dateModified,
@@ -37,7 +37,7 @@ export function ArticleSchema({
       "name": "Reet Foods & Gifting",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://reetfoods.com/assets/images/logo.png"
+        "url": "https://reetfoodsngiftings.com/assets/images/logo.png"
       }
     }
   };

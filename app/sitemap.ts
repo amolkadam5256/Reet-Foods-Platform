@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://reetfoods.com";
+const baseUrl = "https://reetfoodsngiftings.com";
 
 const pages = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },

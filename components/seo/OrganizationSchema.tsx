@@ -5,8 +5,8 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Reet Foods & Gifting",
-    "url": "https://reetfoods.com",
-    "logo": "https://reetfoods.com/assets/images/logo.png",
+    "url": "https://reetfoodsngiftings.com",
+    "logo": "https://reetfoodsngiftings.com/assets/images/logo.png",
     "description": "Pune's premier partner for premium dry fruits, chocolates, cold pressed juices, and custom corporate gift hampers.",
     "address": {
       "@type": "PostalAddress",

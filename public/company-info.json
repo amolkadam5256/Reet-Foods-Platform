@@ -1,0 +1,48 @@
+{
+  "companyName": "Reet Foods & Giftings",
+  "legalName": "Reet Foods & Giftings",
+  "website": "https://reetfoodsngiftings.com",
+  "description": "Premium dry fruits, luxury corporate gifting, wedding return gifts, and festive hampers in Pune with PAN India delivery.",
+  "emails": [
+    "reetfoodspune@gmail.com"
+  ],
+  "phones": [
+    "+91 9890609611",
+    "+91 8007518088"
+  ],
+  "fssaiLicense": "21526079003816",
+  "gstin": "27FHIPK0363N1ZX",
+  "addresses": [
+    {
+      "type": "Store & Office",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411057",
+      "streetAddress": "Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I",
+      "addressCountry": "IN"
+    },
+    {
+      "type": "Factory",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411027",
+      "streetAddress": "Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden",
+      "addressCountry": "IN"
+    }
+  ],
+  "socialProfiles": [
+    "https://www.facebook.com/reetfoodsngiftings",
+    "https://www.instagram.com/reetfoodsngiftings",
+    "https://www.linkedin.com/company/reet-foods-giftings"
+  ],
+  "specialties": [
+    "Corporate Gifting",
+    "Premium Dry Fruits",
+    "Gift Boxes",
+    "Luxury Hampers",
+    "Wedding Return Gifts",
+    "Diwali Gifts",
+    "Festive Hampers",
+    "Customized Gifting Solutions"
+  ]
+}

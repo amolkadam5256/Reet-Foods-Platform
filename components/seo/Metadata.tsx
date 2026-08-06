@@ -12,7 +12,7 @@ export interface ConstructMetadataProps {
 const DEFAULT_TITLE = "Reet Foods & Gifting | Premium Dry Fruits, Chocolates & Corporate Gifts Pune";
 const DEFAULT_DESCRIPTION = "Pune's premier choice for luxury dry fruits, artisanal chocolates, cold pressed juices, and custom corporate gifting hampers. Delivered with care across India.";
 const DEFAULT_IMAGE = "/assets/images/og-image.jpg";
-const SITE_URL = "https://reetfoods.com";
+const SITE_URL = "https://reetfoodsngiftings.com";
 
 export function constructMetadata({
   title = DEFAULT_TITLE,

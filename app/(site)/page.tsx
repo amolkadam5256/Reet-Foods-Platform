@@ -25,7 +25,7 @@ import { LatestBlogs } from "@/components/home/LatestBlogs";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { ManufacturingPreview } from "@/components/home/ManufacturingPreview";
-import { featuredProducts, heroGallery } from "../../data/home";
+import { featuredProducts, heroGallery, faqs } from "../../data/home";
 import { categories } from "../../data/categories";
 import { reetFoodImages } from "@/assets/reetFoodImages";
 
@@ -613,9 +613,9 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": ["Organization", "LocalBusiness", "FoodEstablishment"],
               "name": "Reet Foods & Gifting",
-              "url": "https://reetfoods.com",
-              "logo": "https://reetfoods.in/logo.png",
-              "image": "https://reetfoods.com/images/hero.jpg",
+              "url": "https://reetfoodsngiftings.com",
+              "logo": "https://reetfoodsngiftings.com/logo.png",
+              "image": "https://reetfoodsngiftings.com/images/hero.jpg",
               "description": "Pune's premier manufacturer of premium dry fruits, artisanal chocolates, and bespoke corporate gifting hampers. FSSAI certified, ISO quality standards, PAN India delivery.",
               "priceRange": "₹₹–₹₹₹",
               "servesCuisine": "Gifting, Dry Fruits, Artisanal Chocolates",
@@ -669,48 +669,14 @@ export default function Home() {
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "What products does Reet Foods offer for corporate gifting?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Reet Foods offers premium dry fruit boxes, hand-finished Belgian chocolate gift hampers, cold-pressed fruit juices, and custom-branded corporate gift boxes with laser logo printing."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do you deliver corporate gifting hampers pan-India?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, we provide insured temperature-controlled cold-chain delivery across all major cities and states in India."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is the minimum order quantity for corporate gifting?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our minimum order quantity for corporate gifting starts at 25 units. For smaller bespoke orders, please contact us directly."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Can you customise the packaging with a company logo?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. We offer full custom branding including logo printing, ribbon personalisation, branded note cards, and custom tissue paper. A proof is provided before production."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How do I contact Reet Foods for a bulk order quote?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "You can reach us at +91 9890609611, +91 8007518088, email reetfoodspune@gmail.com, or WhatsApp us at https://wa.me/919890609611. Our team responds within 24 hours."
-                  }
+              "mainEntity": faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.a
                 }
-              ]
+              }))
             }
           ])
         }}

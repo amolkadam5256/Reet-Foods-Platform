@@ -5,8 +5,8 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "FoodEstablishment",
     "name": "Reet Foods & Gifting",
-    "image": "https://reetfoods.com/assets/images/store-front.jpg",
-    "url": "https://reetfoods.com",
+    "image": "https://reetfoodsngiftings.com/assets/images/store-front.jpg",
+    "url": "https://reetfoodsngiftings.com",
     "telephone": "+91-9876543210",
     "priceRange": "₹₹",
     "address": {

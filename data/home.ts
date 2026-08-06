@@ -165,37 +165,65 @@ export const industries = [
 
 export const faqs = [
   {
-    q: "What is the minimum order quantity for corporate gifting?",
-    a: "Our minimum order quantity for corporate gifting starts at 25 units. For smaller bespoke orders, please contact us directly and we will do our best to accommodate.",
+    q: "What makes Reet Foods & Giftings the best choice for corporate gifts in Pune?",
+    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our quality, FSSAI certification, and dedicated B2B service make us the top choice for corporate gifting Pune.",
   },
   {
-    q: "Can you customise the packaging with our company logo?",
-    a: "Absolutely. We offer full custom branding including logo printing on boxes, ribbon personalisation, branded note cards, and custom tissue paper. Our team will provide a proof before production.",
+    q: "What is the minimum order quantity for corporate gift boxes?",
+    a: "Our minimum order quantity for custom corporate gift boxes starts at just 25 units. For smaller bespoke orders or luxury hampers for executives, please contact our Pune office directly and we will accommodate your request.",
   },
   {
-    q: "Do you deliver PAN India?",
-    a: "Yes. We deliver across all Indian states and union territories. Delivery is insured, tracked, and temperature-managed for perishable items.",
+    q: "Can you customize the packaging for Diwali gifts and corporate hampers?",
+    a: "Absolutely. We offer full custom branding for Diwali gifts Pune and corporate hampers, including logo printing, foil stamping on boxes, personalized ribbon, branded note cards, and custom tissue paper.",
+  },
+  {
+    q: "Do you deliver premium dry fruits and gift hampers PAN India?",
+    a: "Yes. While we are based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and wedding return gifts across all Indian states. Our delivery is insured, tracked, and temperature-managed.",
   },
   {
     q: "What is the shelf life of your premium dry fruits and chocolates?",
-    a: "Our nitrogen-packed dry fruits have a shelf life of 6 to 12 months depending on the variety. Our chocolates have a 3 to 6 month shelf life and are temperature-controlled during transit.",
+    a: "Our nitrogen-packed premium dry fruits have a shelf life of 6 to 12 months depending on the variety. Our chocolates have a 3 to 6-month shelf life and are temperature-controlled during transit to ensure freshness.",
   },
   {
-    q: "How much advance notice do you need for a large wedding or corporate order?",
-    a: "We recommend at least 10 to 14 business days for orders above 100 units, and 3 to 4 weeks for heavily customised orders requiring bespoke packaging or logo printing.",
+    q: "How much advance notice do you need for a large wedding return gifts order?",
+    a: "For bulk wedding return gifts Pune or large corporate orders above 100 units, we recommend at least 10 to 14 business days. For highly customized gift boxes requiring bespoke packaging or logo printing, please allow 3 to 4 weeks.",
   },
   {
-    q: "Are your chocolates safe during transit in warm weather?",
-    a: "Yes. We use temperature-controlled insulated packaging and refrigerated logistics partners for chocolate shipments, ensuring they arrive in perfect condition.",
+    q: "Are your luxury gift hampers safe during transit in warm weather?",
+    a: "Yes. We use temperature-controlled insulated packaging and refrigerated logistics partners for chocolate shipments and luxury hampers, ensuring they arrive in perfect condition anywhere in India.",
   },
   {
-    q: "Do you offer vegan or sugar-free options?",
-    a: "Yes. We offer a range of vegan-certified dry fruit hampers and sugar-free chocolate options. Please mention your dietary requirements during the inquiry stage.",
+    q: "Do you offer vegan or sugar-free gift box options?",
+    a: "Yes. We offer a curated range of vegan-certified premium dry fruit hampers and sugar-free chocolate gift boxes. Please mention your specific dietary requirements when requesting a quote.",
   },
   {
-    q: "Can I request a sample before placing a bulk order?",
-    a: "Yes, sample hampers can be arranged for corporate and bulk buyers. Please contact our team to request a sample kit. Charges may apply and are adjusted against the final order.",
+    q: "Can I request a sample of your dry fruit gift boxes before placing a bulk order?",
+    a: "Yes, sample dry fruit gift boxes and corporate hampers can be arranged for bulk B2B buyers. Contact our team to request a sample kit. Charges may apply but are adjusted against your final bulk order.",
   },
+  {
+    q: "Do you provide customized employee joining kits and onboarding hampers?",
+    a: "Yes, we specialize in customized employee joining kits for IT companies in Pune and across India. These include branded merchandise, premium dry fruits, coffee mugs, and welcome notes.",
+  },
+  {
+    q: "Are your products FSSAI certified and hygienically packed?",
+    a: "Yes, Reet Foods & Giftings operates an FSSAI-certified facility. All our premium dry fruits and corporate gifts Pune are packed in a strict, dust-free environment ensuring 100% hygiene and quality.",
+  },
+  {
+    q: "Do you cater to festive gifting beyond Diwali?",
+    a: "Yes, we provide curated festive hampers for Christmas, New Year, Holi, Eid, and Raksha Bandhan. Our festive gift boxes are themed and packed with premium dry fruits and gourmet treats.",
+  },
+  {
+    q: "Can you handle multi-location delivery for corporate employee gifting?",
+    a: "Yes, we offer direct-to-employee shipping for corporate gifting Pune and PAN India. You just provide the addresses, and we manage the individual dispatch, tracking, and delivery.",
+  },
+  {
+    q: "What are your top-selling luxury hampers for VIP clients?",
+    a: "Our top-selling luxury hampers Pune include the Grande Corporate Hamper and Royal Pistachio Gold Tin, featuring exotic dry fruits, premium chocolates, and elegant keepsake boxes.",
+  },
+  {
+    q: "How do I get a quote for bulk corporate gifts in Pune?",
+    a: "You can request a quote for bulk corporate gifts Pune by filling out the form on our Contact page, emailing reetfoodspune@gmail.com, or calling our Hinjewadi Phase I office directly.",
+  }
 ];
 
 export const certifications = [

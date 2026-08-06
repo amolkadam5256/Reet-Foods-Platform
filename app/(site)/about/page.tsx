@@ -1,6 +1,7 @@
 import { constructMetadata } from "@/components/seo/Metadata";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { CTA } from "@/components/common/CTA";
@@ -64,10 +65,54 @@ const process = [
   ["04", "Receive with confidence", "We prepare, check and coordinate delivery with care."],
 ];
 
+const faqs = [
+  {
+    question: "Where is Reet Foods & Giftings located in Pune?",
+    answer: "Our main store and corporate office is located at Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune. Our FSSAI-certified factory is in Vishwashanti Colony, Pune."
+  },
+  {
+    question: "Is Reet Foods & Giftings an FSSAI certified company?",
+    answer: "Yes, Reet Foods & Giftings operates under strict FSSAI guidelines (Licence No. 21526079003816) ensuring the highest hygiene standards for all our premium dry fruits and chocolates."
+  },
+  {
+    question: "What makes your premium dry fruits different?",
+    answer: "Our premium dry fruits are sourced directly from top growers, meticulously graded for size and flavor, and nitrogen-packed to retain freshness, ensuring the best quality for corporate gifting in Pune."
+  },
+  {
+    question: "Do you offer GST billing for corporate clients?",
+    answer: "Absolutely. We are fully registered (GSTIN: 27FHIPK0363N1ZX) and provide complete B2B GST billing for all corporate gift boxes and luxury hampers."
+  },
+  {
+    question: "How long has Reet Foods & Giftings been in the gifting industry?",
+    answer: "We have years of experience curating luxury hampers and corporate gifts in Pune, serving over 350 enterprise clients and delivering more than 50,000 gift boxes."
+  },
+  {
+    question: "Do you have an in-house packaging and customization team?",
+    answer: "Yes, all custom branding, logo printing, and hamper curation are handled by our dedicated in-house team at our Pune facility, ensuring flawless presentation."
+  },
+  {
+    question: "Can we visit your Hinjewadi store to see sample gift boxes?",
+    answer: "Yes! We welcome corporate clients and wedding planners to visit our Hinjewadi Phase I showroom to explore our premium dry fruits and luxury hamper samples."
+  },
+  {
+    question: "What is your mission as a corporate gifting brand?",
+    answer: "Our mission is to simplify luxury gifting by offering impeccably curated dry fruit boxes and hampers with reliable PAN India delivery and seamless B2B service."
+  },
+  {
+    question: "Do you offer eco-friendly packaging options?",
+    answer: "Yes, we offer a range of sustainable and eco-friendly packaging options for our corporate gifts Pune, including reusable wooden boxes, tin containers, and recyclable cardboard."
+  },
+  {
+    question: "How do you ensure the freshness of your products during delivery?",
+    answer: "We use temperature-controlled packaging for chocolates and nitrogen-sealed pouches for premium dry fruits, partnering with reliable logistics for safe PAN India delivery."
+  }
+];
+
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 py-8 sm:px-6 lg:px-8">
       <OrganizationSchema />
+      <FAQSchema faqs={faqs} />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
@@ -208,6 +253,23 @@ export default function AboutPage() {
               <span className="text-sm font-bold text-reef-burgundy">{num}</span>
               <h3 className="mt-2 font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">{stepTitle}</h3>
               <p className="mt-2 text-xs leading-relaxed text-reef-charcoal/70">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">
+        <SectionHeading
+          eyebrow="Learn More"
+          title="Frequently Asked Questions About Us"
+          description="Common questions about our company, quality standards, and operations."
+        />
+        <div className="mt-8 space-y-6">
+          {faqs.map((faq, idx) => (
+            <div key={idx} className="border-b border-reef-gold/15 pb-4 last:border-0 last:pb-0">
+              <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">{faq.question}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-reef-charcoal/70">{faq.answer}</p>
             </div>
           ))}
         </div>

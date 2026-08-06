@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ProductsClient } from "./ProductsClient";
+import { FAQSchema } from "@/components/seo/FAQSchema";
+import { SectionHeading } from "@/components/common/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
@@ -22,19 +24,19 @@ export const metadata: Metadata = {
     "nitrogen sealed dry fruits",
   ],
   alternates: {
-    canonical: "https://reetfoods.com/products",
+    canonical: "https://reetfoodsngiftings.com/products",
   },
   openGraph: {
     title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
     description:
       "Premium dry fruits, festive hampers and custom corporate gifts for teams, clients and celebrations. FSSAI certified with luxury packaging.",
-    url: "https://reetfoods.com/products",
+    url: "https://reetfoodsngiftings.com/products",
     siteName: "Reet Foods",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://reetfoods.in/products-og.jpg",
+        url: "https://reetfoodsngiftings.com/products-og.jpg",
         width: 1200,
         height: 630,
         alt: "Reet Foods luxury gifting collection — premium dry fruits, Belgian chocolates, and corporate hampers",
@@ -49,10 +51,94 @@ export const metadata: Metadata = {
   },
 };
 
+const faqs = [
+  {
+    question: "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
+    answer: "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery."
+  },
+  {
+    question: "Can we print our corporate logo and personalized message on the gift boxes?",
+    answer: "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards."
+  },
+  {
+    question: "How do you ensure freshness during transportation across India?",
+    answer: "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit."
+  },
+  {
+    question: "Can we request a sample box before committing to a bulk order?",
+    answer: "Absolutely. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample."
+  },
+  {
+    question: "What is the typical shelf life of Reet Foods gifting items?",
+    answer: "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions."
+  },
+  {
+    question: "Do you offer premium dry fruits in bulk packaging for weddings?",
+    answer: "Yes, we provide bulk dry fruits in premium packaging for wedding return gifts, trousseau packing, and luxury room hampers for guests."
+  },
+  {
+    question: "What types of chocolates are included in your hampers?",
+    answer: "Our luxury hampers feature artisanal Belgian truffles, hand-poured 70% dark chocolates, and nut pralines crafted by master chocolatiers."
+  },
+  {
+    question: "Are your gift boxes suitable for Diwali corporate gifting?",
+    answer: "Yes, we offer an exclusive range of Diwali gift boxes for corporates, featuring premium dry fruits, chocolates, and festive diyas in custom branded packaging."
+  },
+  {
+    question: "Do you provide FSSAI certified products for corporate distribution?",
+    answer: "Yes, all our food products, including premium dry fruits and chocolates, are 100% FSSAI certified and packed in our ISO-compliant facility."
+  },
+  {
+    question: "Can we create a custom hamper with our choice of products?",
+    answer: "Yes, our 'Build Your Own Hamper' service allows corporate clients to select their preferred dry fruits, chocolates, cold-pressed juices, and packaging style."
+  },
+  {
+    question: "What is the delivery timeline for PAN India corporate orders?",
+    answer: "Standard bulk corporate gifting orders are dispatched within 5-7 business days, with tracked PAN India delivery taking an additional 2-4 days."
+  },
+  {
+    question: "Do you offer eco-friendly or sustainable gift box options?",
+    answer: "Yes, we prioritize sustainability by offering reusable tin boxes, handcrafted wooden chests, and biodegradable cardboard packaging for our hampers."
+  },
+  {
+    question: "Is GST input tax credit available on corporate gifting orders?",
+    answer: "Yes, we provide a 100% compliant B2B GST invoice for all corporate gifting orders, allowing your business to claim full input tax credit (ITC)."
+  },
+  {
+    question: "Can you manage individual deliveries to remote employee addresses?",
+    answer: "Yes, our multi-address dispatch service covers over 19,000 pin codes in India, ensuring every employee receives their gift box directly at home."
+  },
+  {
+    question: "Do you offer tiered pricing for large-scale enterprise orders?",
+    answer: "Yes, we provide attractive tiered bulk discounts for large enterprise orders ranging from 50 to 50,000 units. Please request a quote for detailed pricing."
+  }
+];
+
 export default function ProductsPage() {
   return (
     <main className="min-h-screen">
+      <FAQSchema faqs={faqs} />
       <ProductsClient />
+      
+      <div className="bg-[#fbf7f1] pb-16">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+          <section className="mt-12 rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">
+            <SectionHeading
+              eyebrow="Learn More"
+              title="Products & Orders FAQ"
+              description="Common questions about our premium dry fruit boxes, luxury hampers, and ordering process."
+            />
+            <div className="mt-8 space-y-6">
+              {faqs.map((faq, idx) => (
+                <div key={idx} className="border-b border-reef-gold/15 pb-4 last:border-0 last:pb-0">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">{faq.question}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-reef-charcoal/70">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
 
       {/* SEO JSON-LD Structured Data Schemas */}
       <script
@@ -63,13 +149,13 @@ export default function ProductsPage() {
               "@context": "https://schema.org",
               "@type": "CollectionPage",
               name: "Premium Dry Fruits, Gift Boxes & Corporate Hampers",
-              url: "https://reetfoods.com/products",
+              url: "https://reetfoodsngiftings.com/products",
               description:
                 "Browse Reet Foods premium dry fruits, gift boxes, festive hampers and custom corporate gifting solutions.",
               publisher: {
                 "@type": "Organization",
                 name: "Reet Foods",
-                logo: "https://reetfoods.in/logo.png",
+                logo: "https://reetfoodsngiftings.com/logo.png",
               },
               hasPart: [
                 {
@@ -82,7 +168,7 @@ export default function ProductsPage() {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "1499",
-                    url: "https://reetfoods.com/products/premium-dry-fruits",
+                    url: "https://reetfoodsngiftings.com/products/premium-dry-fruits",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -96,7 +182,7 @@ export default function ProductsPage() {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "1299",
-                    url: "https://reetfoods.com/products/artisanal-chocolates",
+                    url: "https://reetfoodsngiftings.com/products/artisanal-chocolates",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -110,7 +196,7 @@ export default function ProductsPage() {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "3499",
-                    url: "https://reetfoods.com/products/celebration-hampers",
+                    url: "https://reetfoodsngiftings.com/products/celebration-hampers",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -132,13 +218,13 @@ export default function ProductsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://reetfoods.com",
+                  item: "https://reetfoodsngiftings.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Products",
-                  item: "https://reetfoods.com/products",
+                  item: "https://reetfoodsngiftings.com/products",
                 },
               ],
             },
@@ -146,8 +232,8 @@ export default function ProductsPage() {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Reet Foods",
-              url: "https://reetfoods.com",
-              logo: "https://reetfoods.in/logo.png",
+              url: "https://reetfoodsngiftings.com",
+              logo: "https://reetfoodsngiftings.com/logo.png",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Shop F14, Streets of Europe Mall, Hinjewadi Phase I",
@@ -170,53 +256,6 @@ export default function ProductsPage() {
                   contactType: "customer service",
                   areaServed: "IN",
                   availableLanguage: ["English", "Hindi"],
-                },
-              ],
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              name: "Reet Foods Products FAQ",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can we print our corporate logo and personalized message on the gift boxes?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How do you ensure freshness during transportation across India?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can we request a sample box before committing to a bulk order?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Absolutely. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What is the typical shelf life of Reet Foods gifting items?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
-                  },
                 },
               ],
             },

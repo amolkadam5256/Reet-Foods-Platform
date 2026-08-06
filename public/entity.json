@@ -1,0 +1,171 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Reet Foods & Giftings",
+  "legalName": "Reet Foods and Giftings",
+  "alternateName": ["Reet Foods", "Reet Gifting", "Reet Foods Pune"],
+  "brand": {
+    "@type": "Brand",
+    "name": "Reet Foods",
+    "logo": "https://reetfoodsngiftings.com/logo.png",
+    "slogan": "Premium Gifting. Crafted with Precision.",
+    "url": "https://reetfoodsngiftings.com"
+  },
+  "description": "Reet Foods & Giftings is Pune's premier boutique for premium dry fruits, artisanal chocolates, luxury corporate hampers, and custom gift boxes. FSSAI-certified and GST-registered, we serve 350+ enterprise clients with PAN India delivery.",
+  "url": "https://reetfoodsngiftings.com",
+  "logo": "https://reetfoodsngiftings.com/logo.png",
+  "image": "https://reetfoodsngiftings.com/og-image.jpg",
+  "foundingDate": "2016",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": "15" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle",
+    "addressLocality": "Hinjewadi Phase I",
+    "addressRegion": "Pune, Maharashtra",
+    "postalCode": "411057",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.5912,
+    "longitude": 73.7389
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "FSSAI Licence", "value": "21526079003816" },
+    { "@type": "PropertyValue", "name": "GSTIN", "value": "27FHIPK0363N1ZX" },
+    { "@type": "PropertyValue", "name": "Factory Address", "value": "Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune 411027" },
+    { "@type": "PropertyValue", "name": "Production Capacity", "value": "Up to 500 gifts per day" },
+    { "@type": "PropertyValue", "name": "Established", "value": "2016" }
+  ],
+  "telephone": ["+91-9890609611", "+91-8007518088"],
+  "email": "reetfoodspune@gmail.com",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-9890609611",
+      "contactType": "sales",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Marathi"],
+      "hoursAvailable": "Mo-Sa 09:00-19:00"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-8007518088",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi", "Marathi"]
+    },
+    {
+      "@type": "ContactPoint",
+      "url": "https://wa.me/919890609611",
+      "contactType": "sales",
+      "contactOption": "WhatsApp"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/reetfoods",
+    "https://www.facebook.com/reetfoods",
+    "https://www.linkedin.com/company/reetfoods",
+    "https://wa.me/919890609611",
+    "https://www.youtube.com/@reetfoods"
+  ],
+  "products": [
+    {
+      "name": "Premium Dry Fruits",
+      "category": "Dry Fruits",
+      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "description": "Iranian & Afghan origin almonds, pistachios, cashews, figs and raisins — nitrogen-packed for freshness."
+    },
+    {
+      "name": "Artisanal Chocolates",
+      "category": "Chocolates",
+      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+      "description": "Hand-poured Belgian chocolates, truffles, and pralines in luxurious custom-branded packaging."
+    },
+    {
+      "name": "Celebration Hampers",
+      "category": "Hampers",
+      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
+      "description": "Curated luxury hampers for Diwali, weddings, corporate events, and festive occasions."
+    },
+    {
+      "name": "Corporate Gift Boxes",
+      "category": "Corporate Gifting",
+      "url": "https://reetfoodsngiftings.com/corporate-gifting",
+      "description": "Custom logo-branded corporate gift boxes for IT firms, banks, pharma, and enterprise clients in Pune and PAN India."
+    },
+    {
+      "name": "Wedding Return Gifts",
+      "category": "Wedding Gifting",
+      "url": "https://reetfoodsngiftings.com/products",
+      "description": "Elegant wedding favors, trousseau packing, and custom return gifts for Indian weddings."
+    },
+    {
+      "name": "Cold Pressed Juices",
+      "category": "Beverages",
+      "url": "https://reetfoodsngiftings.com/products",
+      "description": "100% natural cold-pressed fruit and botanical juice blends, zero sugar, sourced from premium Indian farms."
+    }
+  ],
+  "services": [
+    "Corporate Gifting",
+    "Bulk Dry Fruit Supply",
+    "Custom Gift Box Manufacturing",
+    "PAN India Gift Delivery",
+    "Diwali Corporate Hampers",
+    "Wedding Return Gifts",
+    "Employee Joining Kits",
+    "Artisanal Chocolate Gifting",
+    "Festive Hamper Curation",
+    "B2B Gifting Programs"
+  ],
+  "categories": [
+    "Premium Dry Fruits",
+    "Artisanal Chocolates",
+    "Celebration Hampers",
+    "Corporate Gift Boxes",
+    "Wedding Return Gifts",
+    "Cold Pressed Juices",
+    "Custom Branded Packaging",
+    "Diwali Gift Hampers"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Pune" },
+    { "@type": "City", "name": "Mumbai" },
+    { "@type": "City", "name": "Bangalore" },
+    { "@type": "City", "name": "Delhi" },
+    { "@type": "City", "name": "Hyderabad" },
+    { "@type": "City", "name": "Chennai" },
+    { "@type": "Country", "name": "India" }
+  ],
+  "keywords": [
+    "premium dry fruits Pune",
+    "corporate gifting Pune",
+    "luxury hampers Pune",
+    "Diwali gifts corporate",
+    "wedding return gifts Pune",
+    "custom gift boxes Pune",
+    "bulk dry fruit supplier Pune",
+    "artisanal chocolates Pune",
+    "FSSAI certified dry fruits",
+    "employee joining kits Pune"
+  ],
+  "certification": [
+    { "name": "FSSAI Food Business Operator", "licenceNumber": "21526079003816" },
+    { "name": "GST Registered Business", "registrationNumber": "27FHIPK0363N1ZX" }
+  ],
+  "statistics": {
+    "giftBoxesDelivered": "50000+",
+    "enterpriseClients": "350+",
+    "clientSatisfaction": "4.9/5",
+    "deliveryPinCodes": "19000+"
+  }
+}

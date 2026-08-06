@@ -18,14 +18,14 @@ export function CollectionSchema({
     "@type": "CollectionPage",
     "name": name,
     "description": description,
-    "url": url.startsWith("http") ? url : `https://reetfoods.com${url}`,
+    "url": url.startsWith("http") ? url : `https://reetfoodsngiftings.com${url}`,
     "numberOfItems": itemCount,
     "publisher": {
       "@type": "Organization",
       "name": "Reet Foods & Gifting",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://reetfoods.com/assets/images/logo.png"
+        "url": "https://reetfoodsngiftings.com/assets/images/logo.png"
       }
     }
   };

@@ -1,0 +1,28 @@
+/* TEAM */
+
+Business: Reet Foods & Giftings
+Location: Hinjewadi Phase I, Pune, Maharashtra, India
+Email: reetfoodspune@gmail.com
+Phone: +91 9890609611
+Contact: https://reetfoodsngiftings.com/contact
+
+/* SITE */
+
+Website: https://reetfoodsngiftings.com
+Standards: HTML5, CSS3, Next.js App Router
+Components: React 19, TypeScript, Tailwind-free Vanilla CSS
+Doctype: HTML5
+IDE: VS Code
+Language: English (en-IN)
+
+/* LEGAL */
+
+FSSAI Licence: 21526079003816
+GSTIN: 27FHIPK0363N1ZX
+Founded: 2016
+Address: Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune 411057
+
+/* THANK YOU */
+
+Built with passion for premium gifting in India.
+Made with ❤️ in Pune.
