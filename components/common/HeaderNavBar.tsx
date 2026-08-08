@@ -177,10 +177,10 @@ export default function HeaderNavBar({
 
         <div className="ml-auto hidden items-stretch lg:flex">
           {[
-            { label: "Facebook", href: "https://facebook.com", icon: FaFacebookF },
-            { label: "Instagram", href: "https://instagram.com", icon: FaInstagram },
-            { label: "LinkedIn", href: "https://linkedin.com", icon: FaLinkedinIn },
-            { label: "X", href: "https://x.com", icon: FaXTwitter },
+            { label: "Facebook", href: "https://facebook.com/reetfoodsgifting", icon: FaFacebookF },
+            { label: "Instagram", href: "https://instagram.com/reetfoodsgifting", icon: FaInstagram },
+            { label: "LinkedIn", href: "https://linkedin.com/company/reetfoodsgifting", icon: FaLinkedinIn },
+            { label: "X", href: "https://x.com/reetfoods", icon: FaXTwitter },
           ].map((item) => {
             const Icon = item.icon;
             return (

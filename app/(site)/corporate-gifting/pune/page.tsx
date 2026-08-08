@@ -144,7 +144,7 @@ export default function PuneCorporateGiftingPage() {
         image={Images.sweetiesDesk}
         imageAlt="Corporate Gifts in Pune"
         primaryCta={{ label: "Request Pune Proposal", href: "/contact#quote" }}
-        secondaryCta={{ label: "WhatsApp Pune Desk", href: "https://wa.me/919876543210" }}
+        secondaryCta={{ label: "WhatsApp Pune Desk", href: "https://wa.me/919890609611" }}
         sideBadge="Serving Pune Since 2020"
       />
 
@@ -219,7 +219,7 @@ export default function PuneCorporateGiftingPage() {
             Why Pune Corporates Trust Reet Foods
           </h2>
           <p className="mt-2 text-xs text-white/75 sm:text-sm">
-            We understand the unique gifting culture of Pune's IT hubs, manufacturing zones, and corporate offices.
+            We understand the unique gifting culture of Pune&apos;s IT hubs, manufacturing zones, and corporate offices.
           </p>
         </div>
 

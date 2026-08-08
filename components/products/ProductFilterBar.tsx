@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 
 type SortOption = "featured" | "price-asc" | "price-desc" | "name";

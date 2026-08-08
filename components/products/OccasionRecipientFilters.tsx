@@ -46,7 +46,7 @@ const occasions = [
     title: "Festival Gifts",
     subtitle: "Diwali, New Year & Eid Curations",
     icon: FiGift,
-    href: "/products/categories/celebration-hampers",
+    href: "/products/categories/hampers",
   },
   {
     title: "Employee Onboarding",
@@ -64,7 +64,7 @@ const occasions = [
     title: "Personal Celebrations",
     subtitle: "Anniversaries & Special Days",
     icon: FiSmile,
-    href: "/products/categories/artisanal-chocolates",
+    href: "/products/categories/chocolates",
   },
 ];
 
@@ -155,7 +155,7 @@ export function OccasionRecipientFilters({
 
   return (
     <section
-      className="relative my-12 overflow-hidden border-y border-reef-gold/15 bg-gradient-to-b from-[#fdfbf7] via-white to-[#fdfbf7] py-20 sm:py-28"
+      className="relative my-12 overflow-hidden border-y border-reef-gold/15 bg-gradient-to-b from-[#fdfbf7] via-white to-[#fdfbf7] py-5 sm:py-5"
       aria-label="Shop by occasion and recipient"
     >
       {/* Decorative background blur shapes */}
@@ -170,11 +170,7 @@ export function OccasionRecipientFilters({
 
       <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-14 text-center">
-          <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a0019]">
-            <FiStar className="h-3.5 w-3.5 text-[#d4af37] fill-[#d4af37]" />
-            Curated for Every Moment
-          </div>
+        <div className="mb-14  text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight text-reef-charcoal sm:text-4xl lg:text-5xl">
             Shop by Occasion &amp; Recipient
           </h2>

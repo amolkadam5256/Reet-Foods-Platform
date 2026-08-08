@@ -37,7 +37,7 @@ Primary Objectives
 | ------------- | ----------------------------------- |
 | Business Name | Reet Foods & Gifting                 |
 | Website       | https://www.reetfoodsngiftings.com |
-| Business Type | Online Job Portal                   |
+| Business Type | Premium food gifting and corporate gifting |
 | Status        | Pending                             |
 | Verification  | Pending                             |
 
@@ -97,21 +97,19 @@ Business Category
 
 Primary Category
 
-Employment Agency
+Gift Shop
 
 Alternative Categories
 
-Recruiter
+Food Products Supplier
 
-Employment Consultant
+Chocolate Shop
 
-Career Guidance Service
+Dry Fruit Store
 
-Educational Website
+Corporate Gift Supplier
 
-Online Career Portal
-
-Recruitment Service
+Gourmet Grocery Store
 
 Choose the closest category available in Google.
 
@@ -127,9 +125,9 @@ Do customers visit your office?
 
 Recommended
 
-No
+Yes
 
-Because Reet Foods & Gifting is an online platform.
+Because Reet Foods & Gifting has a Pune store/showroom and serves local customers.
 
 If you later open a physical office, update this setting.
 
@@ -226,19 +224,15 @@ Maximum
 
 Include:
 
-- Government Jobs
-- corporate gifting Result
-- Latest Notifications
-- Admit Cards
-- Answer Keys
-- Results
-- Free Job Alerts
-- Central Government Jobs
-- State Government Jobs
-- PSU Jobs
-- Banking Jobs
-- Railway Jobs
-- Defence Jobs
+- Premium dry fruits
+- Corporate gifting
+- Festive hampers
+- Chocolate gift boxes
+- Custom gift packaging
+- Bulk gifting orders
+- Wedding return gifts
+- Pune delivery
+- PAN India dispatch
 
 Avoid keyword stuffing.
 
@@ -297,14 +291,14 @@ Services
 
 Examples:
 
-- Government Job Updates
-- corporate gifting Result
-- Admit Card Alerts
-- Free Job Notifications
-- Recruitment Updates
-- Career Guidance
-- Exam Information
-- Government Vacancy Listing
+- Corporate gifting
+- Premium dry fruit boxes
+- Chocolate gift boxes
+- Festive hampers
+- Wedding return gifts
+- Custom packaging
+- Bulk gifting supply
+- PAN India gifting dispatch
 
 ---
 
@@ -314,10 +308,13 @@ Products (Optional)
 
 Examples:
 
-- Premium Job Alerts
-- Resume Review
-- Career Consultation
-- Notification Services
+- Premium dry fruits
+- Dry fruit gift boxes
+- Artisanal chocolates
+- Chocolate gift boxes
+- Celebration hampers
+- Corporate gift hampers
+- Cold pressed juices
 
 ---
 
@@ -340,11 +337,11 @@ Questions & Answers
 
 Seed common FAQs such as:
 
-- How do I apply?
-- Is registration free?
-- How often are jobs updated?
-- Which states are covered?
-- Are private jobs listed?
+- Do you accept bulk corporate gifting orders?
+- Can gift boxes include our company logo?
+- What is the minimum order quantity?
+- Do you deliver across Pune and India?
+- Can we request samples before placing a bulk order?
 
 ---
 
@@ -370,12 +367,12 @@ Publish weekly.
 
 Examples:
 
-- Latest Government Jobs
-- Exam Notifications
-- Admit Card Released
-- Results Declared
-- Career Tips
-- Website Updates
+- New festive hamper collections
+- Corporate gifting order reminders
+- Dry fruit gift box highlights
+- Chocolate gifting updates
+- Wedding return gift ideas
+- Seasonal offers
 
 ---
 

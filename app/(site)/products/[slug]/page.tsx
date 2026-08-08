@@ -33,6 +33,8 @@ export async function generateStaticParams() {
   return [...categoryParams, ...itemParams];
 }
 
+export const dynamicParams = false;
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props) {
@@ -141,7 +143,7 @@ export default async function ProductDetailPage({ params }: Props) {
         image={mainImage}
         imageAlt={titleName}
         primaryCta={{ label: "Request Volume Quote", href: "/contact#quote" }}
-        secondaryCta={{ label: "WhatsApp Inquiry", href: "https://wa.me/919876543210" }}
+        secondaryCta={{ label: "WhatsApp Inquiry", href: "https://wa.me/919890609611" }}
         sideBadge="Grade-A Certified"
       />
 
@@ -227,7 +229,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 <span>Request Custom Quote</span>
               </Link>
               <a
-                href="https://wa.me/919876543210?text=Hi%20Reet%20Foods%2C%20I%20want%20details%20for%20product%20slug"
+                href={`https://wa.me/919890609611?text=${encodeURIComponent(`Hi Reet Foods, I want details for ${titleName}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-reef-gold/40 bg-white/10 px-5 py-3 text-xs font-semibold text-white transition hover:bg-white/20"

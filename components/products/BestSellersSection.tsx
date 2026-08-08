@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FiArrowRight, FiShare2 } from "react-icons/fi";
+import { FiShare2 } from "react-icons/fi";
 import { productCategories } from "@/data/products";
 
 type SortOption = "featured" | "price-asc" | "price-desc" | "name";

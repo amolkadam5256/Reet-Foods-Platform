@@ -195,17 +195,17 @@ export function Footer() {
             <div className="flex gap-2">
               {[
                 {
-                  href: "https://instagram.com",
+                  href: "https://instagram.com/reetfoodsgifting",
                   label: "Instagram",
                   icon: <FiInstagram className="h-4 w-4" />,
                 },
                 {
-                  href: "https://facebook.com",
+                  href: "https://facebook.com/reetfoodsgifting",
                   label: "Facebook",
                   icon: <FiFacebook className="h-4 w-4" />,
                 },
                 {
-                  href: "https://linkedin.com",
+                  href: "https://linkedin.com/company/reetfoodsgifting",
                   label: "LinkedIn",
                   icon: <FiLinkedin className="h-4 w-4" />,
                 },
@@ -341,6 +341,18 @@ export function Footer() {
               className="hover:text-reef-gold/70 transition"
             >
               Shipping
+            </Link>
+            <Link
+              href="/return-refund-policy"
+              className="hover:text-reef-gold/70 transition"
+            >
+              Returns
+            </Link>
+            <Link
+              href="/sitemap.xml"
+              className="hover:text-reef-gold/70 transition"
+            >
+              Sitemap
             </Link>
           </div>
         </div>

@@ -51,11 +51,11 @@ export function FinalCTA() {
               Get a Quote <FiArrowRight />
             </Link>
             <Link
-              href="/contact#catalog"
+              href="/contact#quote"
               style={{ color: "#7a0019" }}
               className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-bold shadow-md transition duration-200 hover:-translate-y-0.5 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
             >
-              Download Catalogue
+              Request Catalogue
             </Link>
             <a
               href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"

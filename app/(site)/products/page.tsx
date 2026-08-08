@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { ProductsClient } from "./ProductsClient";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { SectionHeading } from "@/components/common/SectionHeading";
+import { FAQList } from "@/components/common/FAQList";
 
 export const metadata: Metadata = {
   title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
@@ -53,65 +54,84 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
-    answer: "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery."
+    question:
+      "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
+    answer:
+      "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery.",
   },
   {
-    question: "Can we print our corporate logo and personalized message on the gift boxes?",
-    answer: "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards."
+    question:
+      "Can we print our corporate logo and personalized message on the gift boxes?",
+    answer:
+      "Yes! We specialize in custom corporate branding. Options include laser lid engraving, custom foil logo stamping, printed chocolate wrappers, branded satin ribbons, and custom greeting cards.",
   },
   {
     question: "How do you ensure freshness during transportation across India?",
-    answer: "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit."
+    answer:
+      "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit.",
   },
   {
     question: "Can we request a sample box before committing to a bulk order?",
-    answer: "Absolutely. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample."
+    answer:
+      "Absolutely. Corporate clients and event planners can request sample boxes delivered directly to their office address. Contact our sales team via WhatsApp or the quote form to request your sample.",
   },
   {
     question: "What is the typical shelf life of Reet Foods gifting items?",
-    answer: "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions."
+    answer:
+      "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
   },
   {
     question: "Do you offer premium dry fruits in bulk packaging for weddings?",
-    answer: "Yes, we provide bulk dry fruits in premium packaging for wedding return gifts, trousseau packing, and luxury room hampers for guests."
+    answer:
+      "Yes, we provide bulk dry fruits in premium packaging for wedding return gifts, trousseau packing, and luxury room hampers for guests.",
   },
   {
     question: "What types of chocolates are included in your hampers?",
-    answer: "Our luxury hampers feature artisanal Belgian truffles, hand-poured 70% dark chocolates, and nut pralines crafted by master chocolatiers."
+    answer:
+      "Our luxury hampers feature artisanal Belgian truffles, hand-poured 70% dark chocolates, and nut pralines crafted by master chocolatiers.",
   },
   {
     question: "Are your gift boxes suitable for Diwali corporate gifting?",
-    answer: "Yes, we offer an exclusive range of Diwali gift boxes for corporates, featuring premium dry fruits, chocolates, and festive diyas in custom branded packaging."
+    answer:
+      "Yes, we offer an exclusive range of Diwali gift boxes for corporates, featuring premium dry fruits, chocolates, and festive diyas in custom branded packaging.",
   },
   {
-    question: "Do you provide FSSAI certified products for corporate distribution?",
-    answer: "Yes, all our food products, including premium dry fruits and chocolates, are 100% FSSAI certified and packed in our ISO-compliant facility."
+    question:
+      "Do you provide FSSAI certified products for corporate distribution?",
+    answer:
+      "Yes, all our food products, including premium dry fruits and chocolates, are 100% FSSAI certified and packed in our ISO-compliant facility.",
   },
   {
     question: "Can we create a custom hamper with our choice of products?",
-    answer: "Yes, our 'Build Your Own Hamper' service allows corporate clients to select their preferred dry fruits, chocolates, cold-pressed juices, and packaging style."
+    answer:
+      "Yes, our 'Build Your Own Hamper' service allows corporate clients to select their preferred dry fruits, chocolates, cold-pressed juices, and packaging style.",
   },
   {
     question: "What is the delivery timeline for PAN India corporate orders?",
-    answer: "Standard bulk corporate gifting orders are dispatched within 5-7 business days, with tracked PAN India delivery taking an additional 2-4 days."
+    answer:
+      "Standard bulk corporate gifting orders are dispatched within 5-7 business days, with tracked PAN India delivery taking an additional 2-4 days.",
   },
   {
     question: "Do you offer eco-friendly or sustainable gift box options?",
-    answer: "Yes, we prioritize sustainability by offering reusable tin boxes, handcrafted wooden chests, and biodegradable cardboard packaging for our hampers."
+    answer:
+      "Yes, we prioritize sustainability by offering reusable tin boxes, handcrafted wooden chests, and biodegradable cardboard packaging for our hampers.",
   },
   {
     question: "Is GST input tax credit available on corporate gifting orders?",
-    answer: "Yes, we provide a 100% compliant B2B GST invoice for all corporate gifting orders, allowing your business to claim full input tax credit (ITC)."
+    answer:
+      "Yes, we provide a 100% compliant B2B GST invoice for all corporate gifting orders, allowing your business to claim full input tax credit (ITC).",
   },
   {
-    question: "Can you manage individual deliveries to remote employee addresses?",
-    answer: "Yes, our multi-address dispatch service covers over 19,000 pin codes in India, ensuring every employee receives their gift box directly at home."
+    question:
+      "Can you manage individual deliveries to remote employee addresses?",
+    answer:
+      "Yes, our multi-address dispatch service covers over 19,000 pin codes in India, ensuring every employee receives their gift box directly at home.",
   },
   {
     question: "Do you offer tiered pricing for large-scale enterprise orders?",
-    answer: "Yes, we provide attractive tiered bulk discounts for large enterprise orders ranging from 50 to 50,000 units. Please request a quote for detailed pricing."
-  }
+    answer:
+      "Yes, we provide attractive tiered bulk discounts for large enterprise orders ranging from 50 to 50,000 units. Please request a quote for detailed pricing.",
+  },
 ];
 
 export default function ProductsPage() {
@@ -119,7 +139,7 @@ export default function ProductsPage() {
     <main className="min-h-screen">
       <FAQSchema faqs={faqs} />
       <ProductsClient />
-      
+
       <div className="bg-[#fbf7f1] pb-16">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
           <section className="mt-12 rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">
@@ -128,14 +148,7 @@ export default function ProductsPage() {
               title="Products & Orders FAQ"
               description="Common questions about our premium dry fruit boxes, luxury hampers, and ordering process."
             />
-            <div className="mt-8 space-y-6">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="border-b border-reef-gold/15 pb-4 last:border-0 last:pb-0">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-reef-charcoal">{faq.question}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-reef-charcoal/70">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <FAQList faqs={faqs} />
           </section>
         </div>
       </div>
@@ -236,7 +249,8 @@ export default function ProductsPage() {
               logo: "https://reetfoodsngiftings.com/logo.png",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Shop F14, Streets of Europe Mall, Hinjewadi Phase I",
+                streetAddress:
+                  "Shop F14, Streets of Europe Mall, Hinjewadi Phase I",
                 addressLocality: "Pune",
                 postalCode: "411057",
                 addressRegion: "MH",
@@ -270,7 +284,7 @@ export default function ProductsPage() {
                 "Reet Foods delivered exceptional luxury gifting solutions for our 200+ employee recognition program. The nitrogen-sealed dry fruit tins and custom-engraved wooden boxes exceeded expectations. Highly recommended for premium corporate gifting.",
               reviewRating: {
                 "@type": "Rating",
-               ratingValue: "5",
+                ratingValue: "5",
                 bestRating: "5",
                 worstRating: "1",
               },

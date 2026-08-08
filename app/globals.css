@@ -22,7 +22,11 @@
 }
 
 body {
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    system-ui,
+    -apple-system,
+    sans-serif;
   margin: 0;
 }
 
@@ -111,8 +115,13 @@ a {
 }
 
 @keyframes reef-pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-  50%       { box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.18); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.18);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

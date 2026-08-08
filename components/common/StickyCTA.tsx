@@ -16,7 +16,7 @@ export function StickyCTA() {
       </Link>
       <div className="h-4 w-px bg-reef-gold/30" />
       <a
-        href="https://wa.me/919876543210?text=Hi%20Reet%20Foods%2C%20I%20want%20a%20quick%20quote"
+        href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20want%20a%20quick%20quote"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300"

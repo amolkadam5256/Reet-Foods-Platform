@@ -89,9 +89,9 @@ If multiple sitemaps exist, also submit:
 
 ```
 /sitemap-index.xml
-/jobs-sitemap.xml
+/products-sitemap.xml
 /pages-sitemap.xml
-/news-sitemap.xml
+/blog-sitemap.xml
 /images-sitemap.xml
 ```
 
@@ -116,11 +116,11 @@ Verify
 Verify
 
 - Homepage Indexed
-- Job Pages Indexed
+- Product Pages Indexed
 - Category Pages Indexed
 - Static Pages Indexed
 - Blog Pages Indexed
-- News Pages Indexed
+- Gallery Pages Indexed
 
 ---
 
@@ -164,12 +164,12 @@ Review
 Inspect important URLs
 
 - Homepage
-- Job Listing Pages
-- Job Detail Pages
-- Admit Card Pages
-- Result Pages
-- Answer Key Pages
-- Syllabus Pages
+- Products Page
+- Product Detail Pages
+- Product Category Pages
+- Corporate Gifting Pages
+- Gallery Pages
+- Blog Pages
 - Contact Page
 - About Page
 

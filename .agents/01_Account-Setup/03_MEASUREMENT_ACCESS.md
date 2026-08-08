@@ -2,15 +2,15 @@
 
 ## Conversion events for this site
 
-Track decisions, not every interaction. Initial candidate-value events should include:
+Track decisions, not every interaction. Initial customer-value events should include:
 
 | Event | Purpose | Minimum properties |
 | --- | --- | --- |
-| `apply_click` | Candidate reaches official application destination | job identifier/slug, destination domain, CTA location |
-| `official_notice_click` | Candidate opens an official notice | content identifier, destination domain |
-| `alert_signup` | Candidate opts into a job alert | channel, source page; no PII in analytics payload |
-| `eligibility_checker_completed` | Candidate completes the utility | result category only; no sensitive answers in analytics |
-| `site_search` | Candidate searches for a role/exam | sanitized query policy; do not transmit sensitive data |
+| `quote_click` | Visitor starts a quote request | product/category slug, CTA location |
+| `whatsapp_click` | Visitor opens WhatsApp for sales support | source page, CTA location |
+| `catalog_click` | Visitor requests or opens a catalog | product/category context, CTA location |
+| `form_submit` | Visitor submits a contact or quote form | form name, source page; no PII in analytics payload |
+| `site_search` | Visitor searches products, categories, or pages | sanitized query policy; do not transmit sensitive data |
 
 ## GTM and GA4 controls
 

@@ -197,17 +197,14 @@ After successful installation Microsoft Clarity will automatically provide
 Confirm Clarity is recording on
 
 - Home Page
-- Job Listing Pages
-- Job Detail Pages
-- Search Results
-- Admit Card Pages
-- Result Pages
-- Answer Key Pages
-- Syllabus Pages
+- Products Page
+- Product Detail Pages
+- Product Category Pages
+- Corporate Gifting Pages
+- Gallery Pages
+- Blog Pages
 - Contact Page
 - About Page
-- Login Page
-- Register Page
 
 ---
 
@@ -216,8 +213,8 @@ Confirm Clarity is recording on
 Developer must verify
 
 - Homepage Recording
-- Job Listing Recording
-- Job Detail Recording
+- Product Listing Recording
+- Product Detail Recording
 - Search Recording
 - Form Recording
 - Scroll Recording

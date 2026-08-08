@@ -46,25 +46,25 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
             </h1>
 
             <p className="mt-5 max-w-2xl text-sm leading-8 text-white/85 sm:text-base">
-              Discover our complete collection of handpicked origin dry
-              fruits, artisanal Belgian chocolates, and bespoke corporate gift
-              hampers. Packed in our FSSAI-certified facility in Pune with
-              nitrogen preservation, custom laser logo engraving, and insured
-              Pan-India delivery.
+              Discover our complete collection of handpicked origin dry fruits,
+              artisanal Belgian chocolates, and bespoke corporate gift hampers.
+              Packed in our FSSAI-certified facility in Pune with nitrogen
+              preservation, custom laser logo engraving, and insured Pan-India
+              delivery.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <Link
                 href="/contact#quote"
-                className="inline-flex items-center gap-2 border-2 border-[#d4af37] bg-[#d4af37] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c0c] shadow-md transition duration-200 hover:bg-white hover:border-white hover:text-[#1c1c0c]"
+                className="inline-flex items-center gap-2 border-2 border-[#d4af37] bg-[#d4af37] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c0c] shadow-md transition duration-200 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c0c]"
               >
                 Request Bulk Quote <FiArrowRight className="text-sm" />
               </Link>
               <Link
-                href="/contact#catalog"
-                className="inline-flex items-center gap-2 border-2 border-white bg-white px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c0c] shadow-md transition duration-200 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c0c]"
+                href="/contact#quote"
+                className="inline-flex items-center gap-2  bg-[#d4af37] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c0c] shadow-md transition duration-200 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-[#1c1c0c]"
               >
-                Download Catalogue
+                Request Catalogue
               </Link>
               <a
                 href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20product%20gifting%20help"
@@ -77,10 +77,12 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
-              {[{ value: "500K+", label: "Boxes Delivered" },
+              {[
+                { value: "500K+", label: "Boxes Delivered" },
                 { value: "FSSAI", label: "Certified Grade" },
                 { value: "24 Hours", label: "Quote Turnaround" },
-                { value: "100%", label: "Pan-India Shipping" }].map((stat) => (
+                { value: "100%", label: "Pan-India Shipping" },
+              ].map((stat) => (
                 <div key={stat.label} className="reef-fade-up">
                   <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">
                     {stat.value}

@@ -123,7 +123,7 @@ const searchEntries: SearchEntry[] = [
   },
   {
     label: "Cold-Pressed Juices",
-    href: "/products/cold-pressed-juices",
+    href: "/products/categories/juices",
     scope: "Categories",
     description: "Fresh, no-concentrate juices.",
   },
