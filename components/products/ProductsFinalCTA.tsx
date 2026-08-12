@@ -34,7 +34,7 @@ export function ProductsFinalCTA() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/contact#quote"
-            className="bg-[#d4af37] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] transition hover:bg-white hover:text-[#1c1c1c]"
+            className="inline-flex min-h-12 items-center justify-center border border-[#d4af37] bg-[#d4af37] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-[#1c1c1c] transition hover:bg-white hover:text-[#7a0019]"
           >
             Get Custom Quote
           </Link>
@@ -42,13 +42,13 @@ export function ProductsFinalCTA() {
             href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20custom%20gifting%20help"
             target="_blank"
             rel="noreferrer"
-            className="border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"
+            className="inline-flex min-h-12 items-center justify-center border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57] hover:text-white"
           >
             WhatsApp Specialist
           </a>
           <Link
             href="/contact#quote"
-            className="border-2 border-white bg-black px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
+            className="inline-flex min-h-12 items-center justify-center border-2 border-white bg-[#111111] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
           >
             Request Catalogue
           </Link>
@@ -69,13 +69,13 @@ export function ProductsFinalCTA() {
             <button
               type="button"
               onClick={handlePartnerShare}
-              className="inline-flex items-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"
+              className="inline-flex min-h-11 items-center justify-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57] hover:text-white"
             >
               <FiShare2 className="text-sm" /> Share Partnership on WhatsApp
             </button>
             <Link
               href="/contact#quote"
-              className="inline-flex items-center gap-2 border-2 border-white bg-black px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7a0019] transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
+              className="inline-flex min-h-11 items-center justify-center gap-2 border-2 border-white bg-[#111111] px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
             >
               Request Partner Kit
             </Link>

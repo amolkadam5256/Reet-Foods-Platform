@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiArrowRight, FiPhoneCall, FiMessageSquare } from "react-icons/fi";
+import { FiMessageSquare } from "react-icons/fi";
 
 export interface CTAProps {
   title?: string;
@@ -34,20 +34,23 @@ export function CTA({
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
             href={primaryButtonHref}
-            className="inline-flex items-center gap-2 bg-reef-gold px-7 py-3.5 text-sm font-semibold text-reef-charcoal shadow-lg transition-all hover:bg-white hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold"
+            style={{
+              backgroundColor: "#d4af37",
+              borderColor: "#d4af37",
+              color: "#1c1c1c",
+            }}
+            className="inline-flex min-h-12 min-w-[220px] items-center justify-center border px-7 py-3.5 text-center text-sm font-bold transition-all hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
           >
-            <FiPhoneCall className="h-4 w-4" />
-            <span>{primaryButtonText}</span>
-            <FiArrowRight className="h-4 w-4" />
+            {primaryButtonText || "Request a Custom Quote"}
           </Link>
 
           <a
             href={secondaryButtonHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-reef-gold/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-reef-gold hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold"
+            className="inline-flex min-h-12 items-center justify-center gap-2 border border-[#d4af37]/70 bg-[#2b2520] px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#d4af37] hover:bg-[#3a3028] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
           >
-            <FiMessageSquare className="h-4 w-4 text-reef-gold" />
+            <FiMessageSquare className="h-4 w-4 text-[#d4af37]" />
             <span>{secondaryButtonText}</span>
           </a>
         </div>

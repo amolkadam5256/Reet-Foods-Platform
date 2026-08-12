@@ -14,6 +14,11 @@ const DEFAULT_DESCRIPTION = "Pune's premier choice for luxury dry fruits, artisa
 const DEFAULT_IMAGE = "/assets/images/og-image.jpg";
 const SITE_URL = "https://reetfoodsngiftings.com";
 
+function absoluteUrl(url?: string) {
+  if (!url) return SITE_URL;
+  return url.startsWith("http") ? url : `${SITE_URL}${url}`;
+}
+
 export function constructMetadata({
   title = DEFAULT_TITLE,
   description = DEFAULT_DESCRIPTION,
@@ -37,12 +42,12 @@ export function constructMetadata({
     description,
     keywords,
     alternates: {
-      canonical: canonical ? `${SITE_URL}${canonical}` : SITE_URL,
+      canonical: absoluteUrl(canonical),
     },
     openGraph: {
       title: fullTitle,
       description,
-      url: canonical ? `${SITE_URL}${canonical}` : SITE_URL,
+      url: absoluteUrl(canonical),
       siteName: "Reet Foods & Gifting",
       images: [
         {

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/data/blog";
 
 const baseUrl = "https://reetfoodsngiftings.com";
 
@@ -27,9 +28,18 @@ const pages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map(({ path, priority, changeFrequency }) => ({
+  const staticPages = pages.map(({ path, priority, changeFrequency }) => ({
     url: `${baseUrl}${path}`,
     priority,
     changeFrequency,
   }));
+
+  const blogPages = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly" as const,
+    lastModified: post.dateModified,
+  }));
+
+  return [...staticPages, ...blogPages];
 }

@@ -52,7 +52,7 @@ export function BlogPostsGrid({ posts }: { posts: BlogPost[] }) {
                   href={`/blog/${post.slug}`}
                   className="font-semibold text-reef-burgundy hover:text-reef-charcoal"
                 >
-                  Read More →
+                  Read More
                 </Link>
               </div>
             </div>

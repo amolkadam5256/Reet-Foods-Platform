@@ -46,7 +46,7 @@ export function BlogFeaturedPost({ post }: { post: BlogPost }) {
               <FiClock className="h-3.5 w-3.5" />
               <span>{post.readTime}</span>
             </span>
-            <span>•</span>
+            <span aria-hidden="true">|</span>
             <span>{post.datePublished}</span>
           </div>
 

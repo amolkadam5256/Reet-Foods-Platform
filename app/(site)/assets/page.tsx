@@ -2,41 +2,28 @@
 
 import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
-  FiSearch,
-  FiGrid,
-  FiList,
   FiCopy,
   FiCheck,
   FiExternalLink,
-  FiRefreshCw,
   FiZoomIn,
   FiZoomOut,
   FiMaximize2,
   FiX,
   FiFolder,
   FiFileText,
-  FiHardDrive,
-  FiFilter,
   FiDownload,
   FiChevronLeft,
   FiChevronRight,
 } from "react-icons/fi";
-
-type MediaAsset = {
-  id: string;
-  fileName: string;
-  relativePath: string;
-  folder: string;
-  extension: string;
-  sizeBytes: number;
-  formattedSize: string;
-  mtime: string;
-  serveUrl: string;
-  width?: number;
-  height?: number;
-};
+import { AssetsHeader } from "@/components/assets/AssetsHeader";
+import { AssetsToolbar } from "@/components/assets/AssetsToolbar";
+import type {
+  AssetSortBy,
+  AssetSortOrder,
+  AssetViewMode,
+  MediaAsset,
+} from "@/components/assets/types";
 
 export default function MediaAssetsPage() {
   const [assets, setAssets] = useState<MediaAsset[]>([]);
@@ -45,17 +32,17 @@ export default function MediaAssetsPage() {
   const [search, setSearch] = useState("");
   const [selectedFolder, setSelectedFolder] = useState<string>("all");
   const [selectedExt, setSelectedExt] = useState<string>("all");
-  const [sortBy, setSortBy] = useState<"name" | "size" | "date">("name");
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [sortBy, setSortBy] = useState<AssetSortBy>("name");
+  const [sortOrder, setSortOrder] = useState<AssetSortOrder>("asc");
+  const [viewMode, setViewMode] = useState<AssetViewMode>("grid");
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [activeAsset, setActiveAsset] = useState<MediaAsset | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(24);
 
-  const fetchAssets = async () => {
-    setLoading(true);
+  const fetchAssets = async (showLoading = true) => {
+    if (showLoading) setLoading(true);
     setError(null);
     try {
       const res = await fetch("/api/assets/index");
@@ -73,7 +60,7 @@ export default function MediaAssetsPage() {
   };
 
   useEffect(() => {
-    fetchAssets();
+    void fetchAssets(false);
   }, []);
 
   // Compute unique folders and extensions
@@ -128,10 +115,9 @@ export default function MediaAssetsPage() {
     return list;
   }, [assets, search, selectedFolder, selectedExt, sortBy, sortOrder]);
 
-  // Reset pagination when filters change
-  useEffect(() => {
+  const resetPagination = () => {
     setCurrentPage(1);
-  }, [search, selectedFolder, selectedExt, sortBy, sortOrder, pageSize]);
+  };
 
   // Paginated items
   const totalPages = Math.ceil(filteredAssets.length / pageSize) || 1;

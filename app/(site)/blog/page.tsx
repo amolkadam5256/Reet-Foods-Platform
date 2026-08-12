@@ -1,6 +1,7 @@
 import { constructMetadata } from "@/components/seo/Metadata";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
+import { BlogListingSchema } from "@/components/seo/BlogListingSchema";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FAQList } from "@/components/common/FAQList";
@@ -84,6 +85,7 @@ export default function BlogIndexPage() {
         ]}
       />
       <FAQSchema faqs={faqs} />
+      <BlogListingSchema posts={blogPosts} />
 
       <PageHero
         eyebrow="Gifting Editorial"

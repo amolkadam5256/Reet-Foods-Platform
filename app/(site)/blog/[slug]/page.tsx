@@ -4,7 +4,7 @@ import Link from "next/link";
 import { constructMetadata } from "@/components/seo/Metadata";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
-import { PageHero } from "@/components/common/PageHero";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { CTA } from "@/components/common/CTA";
 import { blogPosts } from "@/data/blog";
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props) {
     title: post.title,
     description: post.excerpt,
     canonical: `/blog/${slug}`,
+    keywords: post.keywords || post.tags,
   });
 }
 
@@ -46,7 +47,9 @@ export default async function BlogPostDetailPage({ params }: Props) {
         url={`/blog/${post.slug}`}
         datePublished={post.datePublished}
         dateModified={post.dateModified}
+        authorName={post.author}
       />
+      {post.faqs ? <FAQSchema faqs={post.faqs} /> : null}
       <BreadcrumbSchema
         items={[
           { name: "Home", url: "/" },
@@ -78,12 +81,12 @@ export default async function BlogPostDetailPage({ params }: Props) {
               <FiUser className="h-3.5 w-3.5 text-reef-gold" />
               <span>{post.author}</span>
             </span>
-            <span>•</span>
+            <span aria-hidden="true">|</span>
             <span className="flex items-center gap-1">
               <FiCalendar className="h-3.5 w-3.5 text-reef-gold" />
               <span>{post.datePublished}</span>
             </span>
-            <span>•</span>
+            <span aria-hidden="true">|</span>
             <span className="flex items-center gap-1">
               <FiClock className="h-3.5 w-3.5 text-reef-gold" />
               <span>{post.readTime}</span>
@@ -112,11 +115,11 @@ export default async function BlogPostDetailPage({ params }: Props) {
                 .trim()
                 .split("\n\n")
                 .map((paragraph) => {
-                  if (paragraph.startsWith("##")) {
-                    return `<h2 class="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal pt-4 mt-6 border-b border-reef-gold/10 pb-2">${paragraph.replace("##", "").trim()}</h2>`;
-                  }
                   if (paragraph.startsWith("###")) {
                     return `<h3 class="font-[family-name:var(--font-playfair)] text-xl font-semibold text-reef-burgundy pt-2 mt-4">${paragraph.replace("###", "").trim()}</h3>`;
+                  }
+                  if (paragraph.startsWith("##")) {
+                    return `<h2 class="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal pt-4 mt-6 border-b border-reef-gold/10 pb-2">${paragraph.replace("##", "").trim()}</h2>`;
                   }
                   if (paragraph.startsWith("*")) {
                     const items = paragraph.split("\n").map(li => `<li class="ml-4 list-disc">${li.replace("*", "").trim()}</li>`).join("");
@@ -162,7 +165,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
                 <p className="line-clamp-2 text-xs text-reef-charcoal/70 leading-relaxed">{rPost.excerpt}</p>
                 <div className="pt-2 flex justify-between items-center text-[10px] text-reef-charcoal/50">
                   <span>{rPost.datePublished}</span>
-                  <Link href={`/blog/${rPost.slug}`} className="font-semibold text-reef-burgundy">Read →</Link>
+                  <Link href={`/blog/${rPost.slug}`} className="font-semibold text-reef-burgundy">Read more</Link>
                 </div>
               </div>
             </div>
