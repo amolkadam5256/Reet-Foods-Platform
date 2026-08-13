@@ -28,65 +28,87 @@ export function GalleryLightbox({
   showNext: () => void;
   toggleLike: (idx: number) => void;
 }) {
+  const imgSrc = typeof activePhoto.src === "string" ? activePhoto.src : activePhoto.src.src;
+
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8 animate-fade-in"
+      className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/95 p-4 sm:p-8 animate-fade-in"
       role="dialog"
       aria-modal="true"
       aria-label={`Viewing ${activePhoto.alt}`}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) close();
+      }}
     >
-      <button
-        type="button"
-        onClick={close}
-        className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-reef-burgundy hover:text-white"
-        aria-label="Close full screen image"
-      >
-        <FiX className="h-5 w-5" />
-      </button>
+      {/* Top Navigation Bar with Prominent Close Button */}
+      <div className="absolute left-0 right-0 top-0 z-30 flex items-center justify-between bg-gradient-to-b from-black/90 via-black/50 to-transparent px-4 py-4 sm:px-8">
+        <div className="flex items-center gap-3">
+          <span className="rounded-full bg-[#d4af37]/20 border border-[#d4af37]/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+            {activePhoto.type ?? "Reet Foods Collection"}
+          </span>
+          <span className="text-xs font-medium text-white/70 hidden sm:inline">
+            Image {activeIndex + 1} of {totalPhotos}
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={close}
+          className="flex items-center gap-2 rounded-full bg-[#7a0019] px-4 py-2 text-xs font-bold text-white shadow-lg transition-all duration-200 hover:bg-[#d4af37] hover:text-reef-charcoal focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Close image lightbox"
+        >
+          <span className="font-semibold uppercase tracking-wider">Close</span>
+          <FiX className="h-4 w-4" />
+        </button>
+      </div>
+
+      {/* Previous Button */}
       <button
         type="button"
         onClick={showPrevious}
-        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 p-3 text-white transition hover:text-reef-gold sm:left-6"
+        className="absolute left-3 top-1/2 z-30 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white backdrop-blur-xs transition hover:bg-[#d4af37] hover:text-reef-charcoal sm:left-6"
         aria-label="Previous image"
       >
-        <FiChevronLeft className="h-9 w-9" />
+        <FiChevronLeft className="h-8 w-8 sm:h-10 sm:w-10" />
       </button>
-      <figure className="relative flex h-full w-full max-w-6xl flex-col items-center justify-center">
-        <div className="relative h-[72vh] w-full">
+
+      {/* Main Content Area */}
+      <figure className="relative z-20 flex h-full w-full max-w-6xl flex-col items-center justify-center pt-16 pb-6">
+        <div className="relative h-[66vh] w-full sm:h-[72vh]">
           <Image
             src={activePhoto.src}
             alt={activePhoto.alt}
             fill
             sizes="100vw"
-            className="object-contain"
+            className="object-contain drop-shadow-2xl"
             priority
           />
         </div>
-        <figcaption className="mt-4 flex w-full max-w-4xl flex-wrap items-end justify-between gap-3 text-white">
+
+        {/* Bottom Caption & Action Bar */}
+        <figcaption className="mt-4 flex w-full max-w-4xl flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4 text-white">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-reef-gold">
-              {activePhoto.type ?? "Reet Foods collection"}
-            </p>
-            <p className="mt-1 text-sm font-medium sm:text-base">
+            <p className="text-sm font-bold sm:text-base text-white">
               {activePhoto.title ?? activePhoto.alt}{" "}
-              <span className="ml-2 text-white/50">
+              <span className="ml-2 text-xs text-[#d4af37] font-mono">
                 {activeIndex + 1} / {totalPhotos}
               </span>
             </p>
             {activePhoto.description ? (
-              <p className="mt-1.5 max-w-xl text-xs leading-5 text-white/65">
+              <p className="mt-1 max-w-xl text-xs leading-5 text-white/70 line-clamp-2">
                 {activePhoto.description}
               </p>
             ) : null}
           </div>
-          <div className="flex items-center gap-2">
+
+          <div className="flex items-center gap-3">
             <button
               type="button"
               onClick={() => toggleLike(activeIndex)}
-              className={`flex select-none items-center gap-2 rounded-md border px-3 py-2 text-xs font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
+              className={`flex select-none items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${
                 liked.has(activeIndex)
-                  ? "border-reef-burgundy bg-reef-burgundy text-white"
-                  : "border-white/25 text-white hover:bg-reef-burgundy/80"
+                  ? "border-[#7a0019] bg-[#7a0019] text-white"
+                  : "border-white/30 text-white hover:bg-[#7a0019]"
               }`}
             >
               <FiHeart
@@ -95,22 +117,31 @@ export function GalleryLightbox({
               Like
             </button>
             <a
-              href={activePhoto.src.src}
+              href={imgSrc}
               download
-              className="flex items-center gap-2 rounded-md bg-reef-gold px-4 py-2 text-xs font-bold text-reef-charcoal transition hover:bg-white"
+              className="flex items-center gap-2 rounded-full bg-[#d4af37] px-4 py-2 text-xs font-bold text-reef-charcoal transition hover:bg-white"
             >
               <FiDownload /> Download
             </a>
+            <button
+              type="button"
+              onClick={close}
+              className="flex items-center gap-1.5 rounded-full border border-white/40 bg-white/15 px-4 py-2 text-xs font-semibold text-white transition hover:bg-white hover:text-reef-charcoal"
+            >
+              <FiX className="h-4 w-4" /> Close
+            </button>
           </div>
         </figcaption>
       </figure>
+
+      {/* Next Button */}
       <button
         type="button"
         onClick={showNext}
-        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 p-3 text-white transition hover:text-reef-gold sm:right-6"
+        className="absolute right-3 top-1/2 z-30 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white backdrop-blur-xs transition hover:bg-[#d4af37] hover:text-reef-charcoal sm:right-6"
         aria-label="Next image"
       >
-        <FiChevronRight className="h-9 w-9" />
+        <FiChevronRight className="h-8 w-8 sm:h-10 sm:w-10" />
       </button>
     </div>
   );

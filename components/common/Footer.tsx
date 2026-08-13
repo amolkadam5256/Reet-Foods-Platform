@@ -85,12 +85,29 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function NewsletterInline() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error("Submission failed");
       setSubmitted(true);
       setEmail("");
+    } catch {
+      setError("Unable to submit. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -100,22 +117,30 @@ function NewsletterInline() {
       <span>You&apos;re in! Check your inbox for gifting inspiration.</span>
     </div>
   ) : (
-    <form onSubmit={handleSubmit} className="flex">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="your@email.com"
-        required
-        className="flex-1 border border-white/15 bg-white/5 px-4 py-2.5 text-xs text-white placeholder:text-white/30 outline-none transition focus:border-reef-gold/60 focus:bg-white/8"
-      />
-      <button
-        type="submit"
-        className="border border-reef-gold bg-reef-gold px-4 py-2.5 text-[11px] font-bold uppercase tracking-widest text-reef-charcoal transition hover:bg-reef-gold/80"
-      >
-        Join
-      </button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit} className="flex">
+        <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+        <input type="hidden" name="subject" value="New Footer Newsletter Subscriber from Reet Foods" />
+        <input type="hidden" name="from_name" value="Reet Foods Website" />
+        <input
+          name="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your@email.com"
+          required
+          className="flex-1 border border-white/15 bg-white/5 px-4 py-2.5 text-xs text-white placeholder:text-white/30 outline-none transition focus:border-reef-gold/60 focus:bg-white/8"
+        />
+        <button
+          type="submit"
+          disabled={submitting}
+          className="border border-reef-gold bg-reef-gold px-4 py-2.5 text-[11px] font-bold uppercase tracking-widest text-reef-charcoal transition hover:bg-reef-gold/80 disabled:opacity-50"
+        >
+          {submitting ? "..." : "Join"}
+        </button>
+      </form>
+      {error ? <p className="mt-1 text-[11px] text-red-400">{error}</p> : null}
+    </div>
   );
 }
 

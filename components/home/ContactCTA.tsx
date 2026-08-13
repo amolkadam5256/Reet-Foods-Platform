@@ -49,10 +49,14 @@ export function ContactCTA() {
               <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
               <input type="hidden" name="subject" value="New homepage gifting enquiry" />
               <input type="hidden" name="from_name" value="Reet Foods Website" />
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-3">
                 <label className="space-y-1.5 text-sm font-medium text-gray-700">
                   <span className="block">Name</span>
                   <Input name="name" type="text" placeholder="Your name" required />
+                </label>
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Email</span>
+                  <Input name="email" type="email" placeholder="you@example.com" required />
                 </label>
                 <label className="space-y-1.5 text-sm font-medium text-gray-700">
                   <span className="block">Mobile number</span>

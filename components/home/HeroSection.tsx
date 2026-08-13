@@ -54,8 +54,8 @@ const heroCategories: HeroCategory[] = [
   {
     label: "Dry Fruits & Nuts",
     children: [
-      { label: "Gift Boxes", href: "/products/dry-fruits" },
-      { label: "Bulk Tins", href: "/products/dry-fruits" },
+      { label: "Gift Boxes", href: "/products/categories/dry-fruit-box" },
+      { label: "Bulk Tins", href: "/products/categories/dry-fruits" },
     ],
   },
   {
@@ -68,12 +68,12 @@ const heroCategories: HeroCategory[] = [
   {
     label: "Custom Corporate Gifts",
     children: [
-      { label: "Logo Branding", href: "/contact#quote" },
+      { label: "Logo Branding", href: "/corporate-gifting" },
       { label: "Bulk Orders", href: "/contact#quote" },
     ],
   },
-  { label: "Celebration Hampers", href: "/products/dry-fruit-box" },
-  { label: "Corporate Gifting", href: "/contact#quote" },
+  { label: "Celebration Hampers", href: "/products/categories/hampers" },
+  { label: "Corporate Gifting", href: "/corporate-gifting" },
   { label: "Wedding Favours", href: "/contact#quote" },
 ];
 
@@ -196,9 +196,13 @@ export function HeroSection() {
                   </div>
                 );
               })}
-              <div className="px-4 py-4 text-sm text-reef-burgundy">
-                More Categories
-              </div>
+              <Link
+                href="/products"
+                className="flex items-center justify-between px-4 py-4 font-[family-name:var(--font-playfair)] text-sm font-semibold text-reef-burgundy transition duration-200 ease-out hover:bg-reef-cream hover:text-reef-gold"
+              >
+                <span>More Categories</span>
+                <FiArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </aside>

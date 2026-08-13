@@ -15,6 +15,17 @@ import {
   FiDownload,
   FiChevronLeft,
   FiChevronRight,
+  FiHardDrive,
+  FiRefreshCw,
+  FiSearch,
+  FiFilter,
+  FiGrid,
+  FiList,
+  FiImage,
+  FiSliders,
+  FiTrash2,
+  FiInfo,
+  FiEye,
 } from "react-icons/fi";
 import { AssetsHeader } from "@/components/assets/AssetsHeader";
 import { AssetsToolbar } from "@/components/assets/AssetsToolbar";
@@ -208,7 +219,7 @@ export default function MediaAssetsPage() {
               </div>
               <button
                 type="button"
-                onClick={fetchAssets}
+                onClick={() => fetchAssets()}
                 disabled={loading}
                 className="inline-flex h-11 items-center gap-2 rounded-full border border-reef-gold/30 bg-white px-5 text-sm font-semibold text-reef-charcoal shadow-sm transition hover:border-reef-gold hover:text-reef-burgundy disabled:opacity-50"
               >
@@ -347,7 +358,7 @@ export default function MediaAssetsPage() {
           <div className="rounded-2xl border border-red-200 bg-red-50 p-8 text-center text-red-700">
             <p className="text-lg font-semibold">{error}</p>
             <button
-              onClick={fetchAssets}
+              onClick={() => fetchAssets()}
               className="mt-4 inline-flex items-center gap-2 rounded-full bg-reef-burgundy px-5 py-2.5 text-sm font-semibold text-white hover:brightness-110"
             >
               Try Again

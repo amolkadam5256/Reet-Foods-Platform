@@ -7,12 +7,29 @@ import { Button } from "./Buttons";
 export function Newsletter() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error("Submission failed");
       setSubmitted(true);
       setEmail("");
+    } catch {
+      setError("Failed to subscribe. Please try again or contact us on WhatsApp.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -36,7 +53,11 @@ export function Newsletter() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row">
+            <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+            <input type="hidden" name="subject" value="New Catalog Subscription from Reet Foods" />
+            <input type="hidden" name="from_name" value="Reet Foods Website" />
             <input
+              name="email"
               type="email"
               required
               value={email}
@@ -44,11 +65,12 @@ export function Newsletter() {
               placeholder="Enter your corporate or personal email"
               className="flex-1 rounded-full border border-reef-gold/40 bg-white px-4 py-3 text-xs text-reef-charcoal placeholder-reef-charcoal/40 shadow-sm focus:border-reef-burgundy focus:outline-none focus:ring-2 focus:ring-reef-gold/30"
             />
-            <Button type="submit" variant="primary" size="sm">
-              Subscribe
+            <Button type="submit" variant="primary" size="sm" disabled={submitting}>
+              {submitting ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
         )}
+        {error ? <p className="mt-3 text-xs text-reef-burgundy">{error}</p> : null}
       </div>
     </div>
   );

@@ -23,14 +23,25 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 
+const categoryAliasMap: Record<string, string> = {
+  "dry-fruits": "premium-dry-fruits",
+  "dry-fruit-box": "premium-dry-fruits",
+  "chocolates": "artisanal-chocolates",
+  "chocolate-box": "artisanal-chocolates",
+  "hampers": "celebration-hampers",
+  "corporate-gifts": "celebration-hampers",
+  "juices": "premium-dry-fruits",
+};
+
 export async function generateStaticParams() {
   const categoryParams = productCategories.map((cat) => ({ slug: cat.slug }));
+  const aliasParams = Object.keys(categoryAliasMap).map((alias) => ({ slug: alias }));
   const itemParams = productCategories.flatMap((cat) =>
     cat.items.map((item) => ({
       slug: item.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
     }))
   );
-  return [...categoryParams, ...itemParams];
+  return [...categoryParams, ...aliasParams, ...itemParams];
 }
 
 export const dynamicParams = false;
@@ -39,7 +50,8 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const category = productCategories.find((c) => c.slug === slug);
+  const targetSlug = categoryAliasMap[slug] || slug;
+  const category = productCategories.find((c) => c.slug === targetSlug);
   
   // Search item match if slug is item
   let itemMatch: { name: string; detail: string } | undefined;
@@ -76,8 +88,9 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
+  const targetSlug = categoryAliasMap[slug] || slug;
   
-  let category = productCategories.find((c) => c.slug === slug);
+  let category = productCategories.find((c) => c.slug === targetSlug);
   let selectedItem = category ? category.items[0] : undefined;
 
   if (!category) {
