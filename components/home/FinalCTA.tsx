@@ -51,7 +51,7 @@ export function FinalCTA() {
               Get a Quote <FiArrowRight />
             </Link>
             <Link
-              href="/contact#quote"
+              href="/contact#catalog"
               style={{ color: "#7a0019" }}
               className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-bold shadow-md transition duration-200 hover:-translate-y-0.5 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
             >
@@ -74,7 +74,7 @@ export function FinalCTA() {
             </a>
             <a
               href="tel:+919890609611"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white/90 bg-transparent px-8 py-4 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-reef-gold hover:bg-reef-gold hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/90  px-8 py-4 text-sm font-bold text-reef-gold shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-reef-gold bg-reef-gold/90 hover:text-white"
             >
               <svg
                 className="h-5 w-5"
