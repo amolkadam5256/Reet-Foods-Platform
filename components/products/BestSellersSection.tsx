@@ -9,7 +9,7 @@ type SortOption = "featured" | "price-asc" | "price-desc" | "name";
 
 const bestSellers = [
   { title: "Royal Pistachio & Cashew Gold Tin", category: "Dry Fruits", price: "Rs.1,499 / Box", image: productCategories[0].image, badge: "Best Seller", desc: "Handpicked Iranian pistachios and Jumbo W240 cashews in a nitrogen-sealed metallic gold tin." },
-  { title: "Artisanal Belgian Truffle Assortment", category: "Chocolates", price: "Rs.1,299 / Box", image: productCategories[1].image, badge: "Most Loved", desc: "12 pieces of hand-poured 70% dark Belgian chocolates with nut pralines in a magnetic rigid box." },
+  { title: "Artisanal Truffle Assortment", category: "Chocolates", price: "Rs.1,299 / Box", image: productCategories[1].image, badge: "Most Loved", desc: "12 pieces of hand-poured dark chocolates with nut pralines in a magnetic rigid box." },
   { title: "Grande Corporate Executive Hamper", category: "Celebration Hampers", price: "Rs.3,499 / Box", image: productCategories[2].image, badge: "Corporate Choice", desc: "Dry fruit quartet, artisanal chocolate bark, cold-pressed elixir, and custom laser-engraved wooden box." },
   { title: "Kashmiri Saffron & Date Luxe Box", category: "Dry Fruits", price: "Rs.2,199 / Box", image: productCategories[0].image, badge: "Festive Exclusive", desc: "Organic Medjool dates stuffed with roasted almonds and organic Kashmiri saffron strands." },
 ];

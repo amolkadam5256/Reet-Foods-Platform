@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 
 export interface ProductSchemaProps {
   name: string;
@@ -14,7 +15,7 @@ export interface ProductSchemaProps {
 export function ProductSchema({
   name,
   description,
-  image = "https://reetfoodsngiftings.com/assets/images/product-default.jpg",
+  image = site.defaultImage,
   sku = "REET-FOOD-DEFAULT",
   price = "499",
   currency = "INR",
@@ -24,27 +25,30 @@ export function ProductSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": name,
-    "image": [image],
-    "description": description,
-    "sku": sku,
-    "brand": {
+    name,
+    image: [absoluteUrl(image)],
+    description,
+    sku,
+    brand: {
       "@type": "Brand",
-      "name": "Reet Foods & Gifting"
+      name: site.name,
     },
-    "category": category,
-    "offers": {
+    category,
+    offers: {
       "@type": "Offer",
-      "url": `https://reetfoodsngiftings.com/products`,
-      "priceCurrency": currency,
-      "price": price,
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      "seller": {
+      url: absoluteUrl("/products"),
+      priceCurrency: currency,
+      price,
+      itemCondition: "https://schema.org/NewCondition",
+      availability: inStock
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      seller: {
         "@type": "Organization",
-        "name": "Reet Foods & Gifting"
-      }
-    }
+        "@id": `${site.url}/#organization`,
+        name: site.name,
+      },
+    },
   };
 
   return (

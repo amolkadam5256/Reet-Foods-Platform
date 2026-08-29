@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "Where are these gift boxes and hampers packed?",
     answer:
-      "All our premium dry fruits and chocolate gift boxes are packed at our FSSAI-certified facility in Vishwashanti Colony, Pune.",
+      "Our premium dry fruits and chocolate gift boxes are packed with food-grade packaging and quality checks in Pune.",
   },
   {
     question:

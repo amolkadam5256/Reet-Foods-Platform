@@ -2,7 +2,6 @@
 
 import Image, { type StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
-import { FiChevronLeft, FiChevronRight, FiHeart, FiX } from "react-icons/fi";
 import { productCategories } from "@/data/products";
 import { reetFoodImages } from "@/assets/reetFoodImages";
 import { galleryImages } from "@/assets/images";

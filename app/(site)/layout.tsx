@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -119,7 +119,7 @@ const searchEntries: SearchEntry[] = [
     label: "Artisanal Chocolates",
     href: "/products/artisanal-chocolates",
     scope: "Categories",
-    description: "Hand-poured Belgian chocolates and pralines.",
+    description: "Hand-poured chocolates and pralines.",
   },
   {
     label: "Cold-Pressed Juices",
@@ -257,7 +257,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 aria-label="Close navigation"
                 className="text-reef-charcoal"
               >
-                Ã—
+                x
               </button>
             </div>
             <div className="space-y-2">
@@ -269,7 +269,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   onClick={() => setMobileOpen(false)}
                 >
                   <span>{item.label}</span>
-                  <span aria-hidden>âŒ„</span>
+                  <span aria-hidden>/</span>
                 </Link>
               ))}
             </div>
@@ -296,14 +296,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   className="inline-flex h-11 w-11 items-center justify-center border border-reef-gold/15 text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2"
                   aria-label="Close search"
                 >
-                  Ã—
+                  x
                 </button>
               </div>
               <div className="space-y-5 px-5 pb-6 pt-6 sm:px-6 sm:pb-7 sm:pt-7">
                 <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
                   <label className="flex items-center gap-3 border border-reef-gold/15 bg-[#faf8f3] px-4 py-3">
                     <span aria-hidden className="text-reef-gold">
-                      âŒ•
+                      Search
                     </span>
                     <input
                       autoFocus
@@ -414,3 +414,4 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
     </div>
   );
 }
+

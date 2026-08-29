@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import { Badge } from "./Badge";
 
 export interface ProductCardProps {
@@ -20,7 +20,6 @@ export interface ProductCardProps {
 export function ProductCard({
   name,
   category,
-  price,
   image,
   slug,
   description,

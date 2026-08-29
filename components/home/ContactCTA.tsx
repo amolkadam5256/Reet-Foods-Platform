@@ -6,11 +6,17 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 export function ContactCTA() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!web3FormsAccessKey) {
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
 
     try {
@@ -46,7 +52,7 @@ export function ContactCTA() {
               We will respond with a workable quote.
             </p>
             <form className="space-y-5" id="quote" onSubmit={handleSubmit}>
-              <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+              <input type="hidden" name="access_key" value={web3FormsAccessKey} />
               <input type="hidden" name="subject" value="New homepage gifting enquiry" />
               <input type="hidden" name="from_name" value="Reet Foods Website" />
               <div className="grid gap-5 md:grid-cols-3">
@@ -67,22 +73,59 @@ export function ContactCTA() {
                 <span className="block">Product requirement</span>
                 <Textarea
                   name="message"
-                  placeholder="Dry fruits, hampers, quantity, delivery date"
+                  placeholder="Dry fruits, hampers, city, packaging style, dietary preferences"
                   required
                 />
               </label>
-              <label className="space-y-1.5 text-sm font-medium text-gray-700">
-                <span className="block">Event type</span>
-                <select
-                  name="event_type"
-                  className="flex h-10 w-full rounded-sm border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:border-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy"
-                >
-                  <option>Corporate</option>
-                  <option>Wedding</option>
-                  <option>Festival</option>
-                  <option>Retail</option>
-                </select>
-              </label>
+              <div className="grid gap-5 md:grid-cols-3">
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Event type</span>
+                  <select
+                    name="event_type"
+                    className="flex h-10 w-full rounded-sm border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:border-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy"
+                  >
+                    <option>Corporate</option>
+                    <option>Wedding</option>
+                    <option>Festival</option>
+                    <option>Retail / wholesale</option>
+                    <option>Sample request</option>
+                  </select>
+                </label>
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Quantity</span>
+                  <Input name="quantity" type="number" min="1" placeholder="100" />
+                </label>
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Delivery date</span>
+                  <Input name="delivery_date" type="date" />
+                </label>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Budget range</span>
+                  <select
+                    name="budget_range"
+                    className="flex h-10 w-full rounded-sm border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:border-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy"
+                  >
+                    <option>Need guidance</option>
+                    <option>Under INR 500 per gift</option>
+                    <option>INR 500 - INR 1,000 per gift</option>
+                    <option>INR 1,000 - INR 2,500 per gift</option>
+                    <option>Above INR 2,500 per gift</option>
+                  </select>
+                </label>
+                <label className="space-y-1.5 text-sm font-medium text-gray-700">
+                  <span className="block">Branding</span>
+                  <select
+                    name="branding_needed"
+                    className="flex h-10 w-full rounded-sm border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm transition-colors focus-visible:border-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-burgundy"
+                  >
+                    <option>Logo branding required</option>
+                    <option>No branding required</option>
+                    <option>Need packaging suggestions</option>
+                  </select>
+                </label>
+              </div>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
                   {status === "sending" ? "Sending..." : "Submit enquiry"}

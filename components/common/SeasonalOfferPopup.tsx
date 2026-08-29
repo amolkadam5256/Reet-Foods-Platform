@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowRight, FiCheck, FiX } from "react-icons/fi";
 
 const DISMISS_KEY = "reet-foods-seasonal-offer-dismissed";
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 export default function SeasonalOfferPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,10 @@ export default function SeasonalOfferPopup() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!email.trim()) return;
+    if (!web3FormsAccessKey) {
+      setSubmitError("Offer signup is not configured. Please contact us on WhatsApp.");
+      return;
+    }
     setIsSubmitting(true);
     setSubmitError("");
 
@@ -105,7 +110,7 @@ export default function SeasonalOfferPopup() {
             </div>
           ) : (
             <form className="mt-7" onSubmit={handleSubmit}>
-              <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+              <input type="hidden" name="access_key" value={web3FormsAccessKey} />
               <input type="hidden" name="subject" value="New Reet Foods seasonal offer signup" />
               <input type="hidden" name="from_name" value="Reet Foods Website" />
               <label className="sr-only" htmlFor="seasonal-offer-email">

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Reet Foods Pune",
     "wedding favours Pune",
     "FSSAI certified dry fruits",
-    "Belgian chocolates gift box",
+    "premium chocolates gift box",
     "bulk gifting India",
     "corporate gifting solutions",
     "luxury gift hampers",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "https://reetfoodsngiftings.com/products-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Reet Foods luxury gifting collection — premium dry fruits, Belgian chocolates, and corporate hampers",
+        alt: "Reet Foods luxury gifting collection with premium dry fruits, chocolates, and corporate hampers",
       },
     ],
   },
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "How do you ensure freshness during transportation across India?",
     answer:
-      "All dry fruits are nitrogen-flushed to prevent oxidation. Chocolates are shipped in temperature-controlled, insulated cold-chain packaging with gel ice packs to ensure zero melting during transit.",
+      "Dry fruits are packed for freshness, and chocolate orders are planned with season-aware handling guidance and insulated packing options where suitable.",
   },
   {
     question: "Can we request a sample box before committing to a bulk order?",
@@ -78,7 +78,7 @@ const faqs = [
   {
     question: "What is the typical shelf life of Reet Foods gifting items?",
     answer:
-      "Our nitrogen-sealed dry fruit tins remain fresh for up to 12 months. Artisanal chocolates have a shelf life of 6 months when stored in cool conditions.",
+      "Shelf life depends on the product, batch, packaging, and storage conditions. The team confirms current shelf-life guidance before dispatch.",
   },
   {
     question: "Do you offer premium dry fruits in bulk packaging for weddings?",
@@ -88,7 +88,7 @@ const faqs = [
   {
     question: "What types of chocolates are included in your hampers?",
     answer:
-      "Our luxury hampers feature artisanal Belgian truffles, hand-poured 70% dark chocolates, and nut pralines crafted by master chocolatiers.",
+      "Our luxury hampers can feature artisanal truffles, hand-poured dark chocolates, nut pralines, and curated dry fruit assortments.",
   },
   {
     question: "Are your gift boxes suitable for Diwali corporate gifting?",
@@ -99,7 +99,7 @@ const faqs = [
     question:
       "Do you provide FSSAI certified products for corporate distribution?",
     answer:
-      "Yes, all our food products, including premium dry fruits and chocolates, are 100% FSSAI certified and packed in our ISO-compliant facility.",
+      "Yes, Reet Foods operates with FSSAI licensing. Products are handled with food-grade packaging and dispatch quality checks.",
   },
   {
     question: "Can we create a custom hamper with our choice of products?",
@@ -187,10 +187,10 @@ export default function ProductsPage() {
                 },
                 {
                   "@type": "Product",
-                  name: "Artisanal Belgian Truffle Assortment",
+                  name: "Artisanal Truffle Assortment",
                   category: "Chocolates",
                   description:
-                    "12 pieces of hand-poured 70% dark Belgian chocolates with nut pralines in a magnetic rigid box.",
+                    "12 pieces of hand-poured dark chocolates with nut pralines in a magnetic rigid box.",
                   offers: {
                     "@type": "Offer",
                     priceCurrency: "INR",
@@ -220,7 +220,7 @@ export default function ProductsPage() {
                 "Celebration Hampers",
                 "Corporate Gifting",
                 "FSSAI Certified",
-                "ISO 22000",
+                "Quality Checked",
               ],
             },
             {

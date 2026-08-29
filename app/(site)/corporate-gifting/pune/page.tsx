@@ -12,9 +12,7 @@ import {
   FiTruck,
   FiFileText,
   FiMapPin,
-  FiPackage,
   FiClock,
-  FiShield,
 } from "react-icons/fi";
 
 export const metadata = constructMetadata({

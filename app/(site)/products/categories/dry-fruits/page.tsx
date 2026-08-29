@@ -8,7 +8,6 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { Images } from "@/assets/images";
 import { products } from "@/data/products";
 import { FiCheckCircle, FiShield, FiPackage, FiTruck } from "react-icons/fi";
-import Link from "next/link";
 
 export const metadata = constructMetadata({
   title: "Premium Dry Fruits Online | Gourmet Almonds, Cashews, Walnuts Pune",

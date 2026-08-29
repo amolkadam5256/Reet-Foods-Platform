@@ -14,30 +14,30 @@ const certifications = [
     isFssai: true,
   },
   {
-    name: "ISO 22000",
-    desc: "International food safety management system certified.",
+    name: "Quality Process",
+    desc: "Food-grade packing, batch checks, and dispatch-ready presentation.",
     icon: FiAward,
   },
   {
-    name: "HACCP Compliant",
+    name: "Hygiene Focused",
     desc: "Hazard analysis and critical control points in production.",
     icon: FiCheckCircle,
   },
   {
-    name: "Vegetarian Society",
-    desc: "100% vegetarian certified with green dot emblem.",
+    name: "Dietary Options",
+    desc: "Vegetarian and preference-led assortments can be confirmed during quotation.",
     icon: FiStar,
   },
 ];
 
 const trustItems = [
-  "100% Vegetarian",
+  "Vegetarian Options",
   "Dust-Free Cleanroom",
   "Zero Artificial Preservatives",
   "Nitrogen Sealed Freshness",
   "Insured Cold-Chain Shipping",
   "FSSAI Certified",
-  "ISO 22000",
+  "Quality Checked",
 ];
 
 export function ProductsCertifications({

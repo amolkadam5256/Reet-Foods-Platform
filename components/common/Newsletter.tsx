@@ -4,6 +4,8 @@ import React, { useState, FormEvent } from "react";
 import { FiMail, FiCheck } from "react-icons/fi";
 import { Button } from "./Buttons";
 
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 export function Newsletter() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -13,6 +15,10 @@ export function Newsletter() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
+    if (!web3FormsAccessKey) {
+      setError("Newsletter signup is not configured. Please contact us on WhatsApp.");
+      return;
+    }
     setSubmitting(true);
     setError("");
 
@@ -53,7 +59,7 @@ export function Newsletter() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row">
-            <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+            <input type="hidden" name="access_key" value={web3FormsAccessKey} />
             <input type="hidden" name="subject" value="New Catalog Subscription from Reet Foods" />
             <input type="hidden" name="from_name" value="Reet Foods Website" />
             <input

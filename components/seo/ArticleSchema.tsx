@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 
 export interface ArticleSchemaProps {
   title: string;
@@ -14,7 +15,7 @@ export function ArticleSchema({
   title,
   description,
   url,
-  image = "https://reetfoodsngiftings.com/assets/images/blog-default.jpg",
+  image = site.defaultImage,
   datePublished = "2026-01-01",
   dateModified = "2026-08-01",
   authorName = "Reet Foods Editorial Team",
@@ -22,24 +23,25 @@ export function ArticleSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": title,
-    "description": description,
-    "url": url.startsWith("http") ? url : `https://reetfoodsngiftings.com${url}`,
-    "image": [image],
-    "datePublished": datePublished,
-    "dateModified": dateModified,
-    "author": {
-      "@type": "Person",
-      "name": authorName
-    },
-    "publisher": {
+    headline: title,
+    description,
+    url: absoluteUrl(url),
+    image: [absoluteUrl(image)],
+    datePublished,
+    dateModified,
+    author: {
       "@type": "Organization",
-      "name": "Reet Foods & Gifting",
-      "logo": {
+      name: authorName,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      logo: {
         "@type": "ImageObject",
-        "url": "https://reetfoodsngiftings.com/assets/images/logo.png"
-      }
-    }
+        url: absoluteUrl(site.defaultImage),
+      },
+    },
   };
 
   return (

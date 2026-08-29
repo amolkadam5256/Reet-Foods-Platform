@@ -1,33 +1,35 @@
 import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Reet Foods & Gifting",
-    "url": "https://reetfoodsngiftings.com",
-    "logo": "https://reetfoodsngiftings.com/assets/images/logo.png",
-    "description": "Pune's premier partner for premium dry fruits, chocolates, cold pressed juices, and custom corporate gift hampers.",
-    "address": {
+    "@id": `${site.url}/#organization`,
+    name: site.name,
+    legalName: site.legalName,
+    url: site.url,
+    logo: absoluteUrl(site.defaultImage),
+    image: absoluteUrl(site.defaultImage),
+    description: site.description,
+    taxID: site.gstNumber,
+    knowsAbout: site.keywords,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Shop F14, Streets of Europe Mall, Hinjewadi Phase I",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "postalCode": "411057",
-      "addressCountry": "IN"
+      streetAddress: site.officeAddress.street,
+      addressLocality: site.officeAddress.locality,
+      addressRegion: site.officeAddress.region,
+      postalCode: site.officeAddress.postalCode,
+      addressCountry: site.officeAddress.country,
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+91-9876543210",
-      "contactType": "customer service",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Marathi"]
+      telephone: site.phones[0],
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi", "Marathi"],
     },
-    "sameAs": [
-      "https://www.facebook.com/reetfoodsgifting",
-      "https://www.instagram.com/reetfoodsgifting",
-      "https://www.linkedin.com/company/reetfoodsgifting"
-    ]
+    sameAs: site.socialLinks,
   };
 
   return (

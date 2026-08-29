@@ -1,42 +1,41 @@
 import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 
 export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "FoodEstablishment",
-    "name": "Reet Foods & Gifting",
-    "image": "https://reetfoodsngiftings.com/assets/images/store-front.jpg",
-    "url": "https://reetfoodsngiftings.com",
-    "telephone": "+91-9876543210",
-    "priceRange": "₹₹",
-    "address": {
+    "@type": ["LocalBusiness", "FoodEstablishment", "Store"],
+    "@id": `${site.url}/#localbusiness`,
+    name: site.name,
+    image: absoluteUrl(site.defaultImage),
+    url: site.url,
+    telephone: site.phones[0],
+    email: site.email,
+    priceRange: site.priceRange,
+    description: site.description,
+    areaServed: site.areaServed,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Shop F14, Streets of Europe Mall, Hinjewadi Phase I",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "postalCode": "411057",
-      "addressCountry": "IN"
+      streetAddress: site.officeAddress.street,
+      addressLocality: site.officeAddress.locality,
+      addressRegion: site.officeAddress.region,
+      postalCode: site.officeAddress.postalCode,
+      addressCountry: site.officeAddress.country,
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 18.5912,
-      "longitude": 73.7389
+      latitude: site.geo.latitude,
+      longitude: site.geo.longitude,
     },
-    "openingHoursSpecification": [
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:30",
-        "closes": "20:00"
-      }
-    ]
+        dayOfWeek: site.openingHours.days,
+        opens: site.openingHours.opens,
+        closes: site.openingHours.closes,
+      },
+    ],
+    sameAs: site.socialLinks,
   };
 
   return (

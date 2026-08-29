@@ -35,6 +35,25 @@ export function SiteShell({
       <div className="relative mx-auto max-w-[1440px] px-4 pb-20 pt-8 sm:px-6 lg:px-8">
         <div className="grid items-start gap-6 xl:grid-cols-[1.2fr_0.38fr]">
           <section className="border border-reef-gold/20 bg-white/90 p-6 shadow-sm sm:p-8">
+            {breadcrumbs?.length ? (
+              <nav
+                aria-label="Breadcrumb"
+                className="mb-5 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-reef-charcoal/50"
+              >
+                {breadcrumbs.map((item, index) => (
+                  <span key={`${item.label}-${index}`} className="flex items-center gap-2">
+                    {item.href ? (
+                      <Link href={item.href} className="hover:text-reef-burgundy">
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <span className="text-reef-burgundy">{item.label}</span>
+                    )}
+                    {index < breadcrumbs.length - 1 ? <span>/</span> : null}
+                  </span>
+                ))}
+              </nav>
+            ) : null}
             {eyebrow ? (
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-reef-burgundy">
                 {eyebrow}

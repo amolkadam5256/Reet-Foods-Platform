@@ -69,7 +69,7 @@ const faqs = [
   {
     question: "How do you ensure the freshness of your products during delivery?",
     answer:
-      "We use temperature-controlled packaging for chocolates and nitrogen-sealed pouches for premium dry fruits, partnering with reliable logistics for safe PAN India delivery.",
+      "We use freshness-focused packing for dry fruits and season-aware handling guidance for chocolates, partnering with reliable logistics for PAN India delivery.",
   },
 ];
 

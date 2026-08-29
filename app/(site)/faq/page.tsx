@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "Do you specialize in corporate gifting in Pune?",
-    answer: "Yes, we are Pune's leading experts in corporate gifting, offering highly customizable B2B gift hampers, employee joining kits, and VIP client rewards."
+    answer: "Yes, we specialize in corporate gifting in Pune, offering customizable B2B gift hampers, employee joining kits, and VIP client rewards."
   },
   {
     question: "What is your minimum order quantity (MOQ)?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Do you deliver corporate gifts PAN India?",
-    answer: "Yes, we provide insured, temperature-controlled, and tracked PAN India delivery for all corporate gifting orders, straight to office hubs or employee homes."
+    answer: "Yes, we provide tracked PAN India delivery options for corporate gifting orders, straight to office hubs or employee homes. Special handling is confirmed by product and destination."
   },
   {
     question: "Are your dry fruits of premium quality?",
@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "Are your food products FSSAI certified?",
-    answer: "Yes, Reet Foods & Giftings is fully FSSAI certified. Our production facility follows strict ISO hygiene standards to ensure 100% quality and safety."
+    answer: "Yes, Reet Foods & Giftings operates with FSSAI licensing. Our team follows hygiene checks and food-grade packing practices before dispatch."
   },
   {
     question: "What are your most popular Diwali gifts for corporates?",

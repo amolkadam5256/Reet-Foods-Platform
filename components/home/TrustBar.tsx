@@ -10,7 +10,7 @@ export function TrustBar() {
           "✦ Custom Branding & Logo Printing",
           "✦ 24-Hour Quote Response",
           "✦ ISO Quality Standards",
-          "✦ 500+ Corporate Clients",
+          "✦ 500 Gifts/Day Capacity",
           "✦ Wedding & Festive Hampers",
           "✦ Temperature-Controlled Logistics",
           // Duplicate for seamless loop
@@ -21,7 +21,7 @@ export function TrustBar() {
           "✦ Custom Branding & Logo Printing",
           "✦ 24-Hour Quote Response",
           "✦ ISO Quality Standards",
-          "✦ 500+ Corporate Clients",
+          "✦ 500 Gifts/Day Capacity",
           "✦ Wedding & Festive Hampers",
           "✦ Temperature-Controlled Logistics",
         ].map((text, i) => (

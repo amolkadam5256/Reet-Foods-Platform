@@ -15,6 +15,8 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
 /* ─── Data ────────────────────────────────────────────────────────── */
 
 const productLinks = [
@@ -37,13 +39,6 @@ const quickLinks = [
   { label: "Corporate Gifting", href: "/corporate-gifting" },
   { label: "Contact Us", href: "/contact" },
   { label: "FAQs", href: "/faq" },
-];
-
-const certBadges = [
-  { text: "FSSAI Certified" },
-  { text: "Food-Grade Packaging" },
-  { text: "PAN India Delivery" },
-  { text: "Premium Quality" },
 ];
 
 /* ─── Sub-components ──────────────────────────────────────────────── */
@@ -91,6 +86,10 @@ function NewsletterInline() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
+    if (!web3FormsAccessKey) {
+      setError("Newsletter signup is not configured.");
+      return;
+    }
     setSubmitting(true);
     setError("");
 
@@ -119,7 +118,7 @@ function NewsletterInline() {
   ) : (
     <div>
       <form onSubmit={handleSubmit} className="flex">
-        <input type="hidden" name="access_key" value="396d5fbe-478d-410f-ba07-fc23570be37c" />
+        <input type="hidden" name="access_key" value={web3FormsAccessKey} />
         <input type="hidden" name="subject" value="New Footer Newsletter Subscriber from Reet Foods" />
         <input type="hidden" name="from_name" value="Reet Foods Website" />
         <input

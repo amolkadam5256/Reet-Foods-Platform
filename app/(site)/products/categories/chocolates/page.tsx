@@ -11,7 +11,7 @@ import { FiSmile, FiHeart, FiShield, FiPackage } from "react-icons/fi";
 
 export const metadata = constructMetadata({
   title: "Artisan Premium Chocolates Pune | Handcrafted Pralines & Truffles",
-  description: "Discover handcrafted artisan Belgian pralines, dark cocoa truffles, roasted almond rocks, and custom flavor chocolates from Reet Foods Pune.",
+  description: "Discover handcrafted artisan pralines, dark cocoa truffles, roasted almond rocks, and custom flavor chocolates from Reet Foods Pune.",
   canonical: "/products/categories/chocolates",
 });
 
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How do you dispatch chocolates safely during warm weather?",
-    answer: "All chocolate orders are packed with thermal insulation and re-freezable cool ice gel packs to guarantee zero melting during transit.",
+    answer: "Chocolate dispatch is planned according to season, delivery city, and transit time. Insulated packing options can be confirmed during quotation where suitable.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function ChocolatesCategoryPage() {
       <PageHero
         eyebrow="Category Catalog"
         title="Artisan Gourmet Chocolates"
-        description="Rich Belgian cocoa, creamy hazelnut pralines, salted caramel truffles, and crunchy almond rocks crafted fresh in Pune."
+        description="Rich cocoa, creamy hazelnut pralines, salted caramel truffles, and crunchy almond rocks crafted fresh in Pune."
         breadcrumbs={[
           { label: "Products", href: "/products" },
           { label: "Categories", href: "/products#categories" },

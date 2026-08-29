@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { constructMetadata } from "@/components/seo/Metadata";
 import { ProductSchema } from "@/components/seo/ProductSchema";
@@ -10,15 +9,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { ProductCard } from "@/components/common/Cards";
 import { CTA } from "@/components/common/CTA";
 import { productCategories } from "@/data/products";
-import { Images } from "@/assets/images";
 import {
-  FiCheck,
-  FiShield,
-  FiPackage,
-  FiTruck,
-  FiAward,
-  FiClock,
-  FiBox,
   FiPhoneCall,
   FiCheckCircle,
 } from "react-icons/fi";
@@ -132,7 +123,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <ProductSchema
         name={titleName}
         description={descriptionText}
-        image="https://reetfoodsngiftings.com/assets/images/logo.png"
+        image="/images/logo.png"
         category={category.name}
       />
       <BreadcrumbSchema

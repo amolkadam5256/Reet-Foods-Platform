@@ -53,7 +53,7 @@ const faqs = [
     question:
       "What is the shelf life of the dry fruits in your corporate gifts?",
     answer:
-      "Our premium dry fruits are nitrogen-packed for freshness and have a shelf life of 6 to 12 months, making them perfect for corporate distribution.",
+      "Shelf life depends on the product, batch, packaging, and storage conditions. Our team confirms the current shelf-life guidance during quotation and before dispatch.",
   },
   {
     question:

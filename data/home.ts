@@ -74,7 +74,7 @@ export const whyUs = [
   },
   {
     title: "PAN India Delivery",
-    desc: "Fast, insured, and temperature-managed delivery across every state in India.",
+    desc: "Tracked PAN India delivery planned by product type, destination, and timeline.",
     icon: "delivery",
   },
   {
@@ -138,7 +138,7 @@ export const processSteps = [
   {
     step: "04",
     title: "Production",
-    desc: "Every box is hand-assembled in our FSSAI-certified facility under strict quality supervision.",
+    desc: "Every box is hand-assembled with food-grade packaging and quality checks.",
   },
   {
     step: "05",
@@ -148,7 +148,7 @@ export const processSteps = [
   {
     step: "06",
     title: "Delivery",
-    desc: "Insured, tracked, and temperature-managed PAN India delivery — on your timeline.",
+    desc: "Tracked PAN India delivery planned around your order timeline.",
   },
 ];
 
@@ -166,7 +166,7 @@ export const industries = [
 export const faqs = [
   {
     q: "What makes Reet Foods & Giftings the best choice for corporate gifts in Pune?",
-    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our quality, FSSAI certification, and dedicated B2B service make us the top choice for corporate gifting Pune.",
+    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our FSSAI licensing, packaging options, and dedicated B2B support make us a strong choice for corporate gifting in Pune.",
   },
   {
     q: "What is the minimum order quantity for corporate gift boxes?",
@@ -178,11 +178,11 @@ export const faqs = [
   },
   {
     q: "Do you deliver premium dry fruits and gift hampers PAN India?",
-    a: "Yes. While we are based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and wedding return gifts across all Indian states. Our delivery is insured, tracked, and temperature-managed.",
+    a: "Yes. While we are based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and wedding return gifts across India. Delivery options are planned according to product type, destination, weather, and dispatch timeline.",
   },
   {
     q: "What is the shelf life of your premium dry fruits and chocolates?",
-    a: "Our nitrogen-packed premium dry fruits have a shelf life of 6 to 12 months depending on the variety. Our chocolates have a 3 to 6-month shelf life and are temperature-controlled during transit to ensure freshness.",
+    a: "Shelf life depends on the product, batch, packaging, and storage conditions. Dry fruits are packed for freshness, and chocolate dispatch is planned with suitable handling guidance for the season and destination.",
   },
   {
     q: "How much advance notice do you need for a large wedding return gifts order?",
@@ -190,11 +190,11 @@ export const faqs = [
   },
   {
     q: "Are your luxury gift hampers safe during transit in warm weather?",
-    a: "Yes. We use temperature-controlled insulated packaging and refrigerated logistics partners for chocolate shipments and luxury hampers, ensuring they arrive in perfect condition anywhere in India.",
+    a: "Warm-weather orders are planned by product type, destination, and transit time. For chocolates and sensitive hampers, our team confirms suitable packing and dispatch guidance during quotation.",
   },
   {
     q: "Do you offer vegan or sugar-free gift box options?",
-    a: "Yes. We offer a curated range of vegan-certified premium dry fruit hampers and sugar-free chocolate gift boxes. Please mention your specific dietary requirements when requesting a quote.",
+    a: "We can curate vegetarian, sugar-free, and preference-led gift boxes based on available products. Please mention dietary requirements when requesting a quote so the team can confirm suitable options.",
   },
   {
     q: "Can I request a sample of your dry fruit gift boxes before placing a bulk order?",
@@ -206,7 +206,7 @@ export const faqs = [
   },
   {
     q: "Are your products FSSAI certified and hygienically packed?",
-    a: "Yes, Reet Foods & Giftings operates an FSSAI-certified facility. All our premium dry fruits and corporate gifts Pune are packed in a strict, dust-free environment ensuring 100% hygiene and quality.",
+    a: "Yes, Reet Foods & Giftings operates with FSSAI licensing. Premium dry fruits and corporate gifts are handled with food-grade packaging and quality checks before dispatch.",
   },
   {
     q: "Do you cater to festive gifting beyond Diwali?",
@@ -228,7 +228,7 @@ export const faqs = [
 
 export const certifications = [
   { name: "FSSAI Certified", desc: "Licensed & regulated by the Food Safety and Standards Authority of India." },
-  { name: "ISO Quality", desc: "Adhering to international quality management standards across production." },
+  { name: "Quality Checked", desc: "Batch-aware packing, hygiene checks, and food-grade packaging standards." },
   { name: "100% Hygienic", desc: "Manufactured in a controlled, dust-free environment with daily hygiene audits." },
   { name: "Premium Grade", desc: "All products graded to premium standards before packaging and dispatch." },
 ];
@@ -271,7 +271,7 @@ export const galleryPreviewImages = [
 
 export const stats = [
   { value: "10+", label: "Years of Excellence" },
-  { value: "500+", label: "Corporate Clients" },
-  { value: "50K+", label: "Hampers Delivered" },
+  { value: "500/day", label: "Production Capacity" },
+  { value: "1,000+", label: "Largest Bulk Order" },
   { value: "100%", label: "Quality Assured" },
 ];

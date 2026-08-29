@@ -47,8 +47,8 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
 
             <p className="mt-5 max-w-2xl text-sm leading-8 text-white/85 sm:text-base">
               Discover our complete collection of handpicked origin dry fruits,
-              artisanal Belgian chocolates, and bespoke corporate gift hampers.
-              Packed in our FSSAI-certified facility in Pune with nitrogen
+              artisanal chocolates, and bespoke corporate gift hampers.
+              Packed by our FSSAI-licensed team in Pune with freshness-focused
               preservation, custom laser logo engraving, and insured Pan-India
               delivery.
             </p>
@@ -78,8 +78,8 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
 
             <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
               {[
-                { value: "500K+", label: "Boxes Delivered" },
-                { value: "FSSAI", label: "Certified Grade" },
+                { value: "500/day", label: "Gift Capacity" },
+                { value: "FSSAI", label: "Licensed" },
                 { value: "24 Hours", label: "Quote Turnaround" },
                 { value: "100%", label: "Pan-India Shipping" },
               ].map((stat) => (
@@ -119,7 +119,7 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
               </p>
               <p className="mt-1 text-xs text-white/80 line-clamp-1">
                 Nitrogen-flushed almond tin, cashew box, pistachio tin &amp;
-                Belgian dark truffles.
+                premium dark truffles.
               </p>
             </div>
           </div>

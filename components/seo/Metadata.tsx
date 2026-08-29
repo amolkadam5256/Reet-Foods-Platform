@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { absoluteUrl, site } from "@/lib/site";
 
 export interface ConstructMetadataProps {
   title?: string;
@@ -9,38 +10,32 @@ export interface ConstructMetadataProps {
   noIndex?: boolean;
 }
 
-const DEFAULT_TITLE = "Reet Foods & Gifting | Premium Dry Fruits, Chocolates & Corporate Gifts Pune";
-const DEFAULT_DESCRIPTION = "Pune's premier choice for luxury dry fruits, artisanal chocolates, cold pressed juices, and custom corporate gifting hampers. Delivered with care across India.";
-const DEFAULT_IMAGE = "/assets/images/og-image.jpg";
-const SITE_URL = "https://reetfoodsngiftings.com";
-
-function absoluteUrl(url?: string) {
-  if (!url) return SITE_URL;
-  return url.startsWith("http") ? url : `${SITE_URL}${url}`;
-}
+const DEFAULT_TITLE =
+  "Reet Foods & Gifting | Premium Dry Fruits, Chocolates & Corporate Gifts Pune";
+const DEFAULT_DESCRIPTION = site.description;
+const DEFAULT_IMAGE = site.defaultImage;
 
 export function constructMetadata({
   title = DEFAULT_TITLE,
   description = DEFAULT_DESCRIPTION,
   image = DEFAULT_IMAGE,
   canonical,
-  keywords = [
-    "Reet Foods",
-    "Corporate Gifting Pune",
-    "Premium Dry Fruits",
-    "Luxury Chocolate Gift Boxes",
-    "Cold Pressed Juices",
-    "Diwali Gifting",
-    "Festival Hampers Pune"
-  ],
+  keywords = [...site.keywords],
   noIndex = false,
 }: ConstructMetadataProps = {}): Metadata {
-  const fullTitle = title === DEFAULT_TITLE ? title : `${title} | Reet Foods & Gifting`;
+  const fullTitle =
+    title === DEFAULT_TITLE ? title : `${title} | Reet Foods & Gifting`;
 
   return {
+    metadataBase: new URL(site.url),
     title: fullTitle,
     description,
     keywords,
+    category: "Food gifting",
+    applicationName: site.brandName,
+    authors: [{ name: site.name, url: site.url }],
+    creator: site.name,
+    publisher: site.name,
     alternates: {
       canonical: absoluteUrl(canonical),
     },
@@ -48,10 +43,10 @@ export function constructMetadata({
       title: fullTitle,
       description,
       url: absoluteUrl(canonical),
-      siteName: "Reet Foods & Gifting",
+      siteName: site.name,
       images: [
         {
-          url: image.startsWith("http") ? image : `${SITE_URL}${image}`,
+          url: absoluteUrl(image),
           width: 1200,
           height: 630,
           alt: title,
@@ -64,7 +59,7 @@ export function constructMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [image.startsWith("http") ? image : `${SITE_URL}${image}`],
+      images: [absoluteUrl(image)],
     },
     robots: {
       index: !noIndex,

@@ -16,12 +16,12 @@ const benefits = [
   {
     icon: FiShield,
     title: "Quality Guarantee",
-    desc: "FSSAI-certified facility with nitrogen-sealed freshness assurance.",
+    desc: "FSSAI-licensed operations with freshness-focused packing.",
   },
   {
     icon: FiTruck,
     title: "Pan-India Delivery",
-    desc: "Temperature-controlled cold-chain with zero-melting guarantee.",
+    desc: "Season-aware chocolate handling guidance and insulated packing options.",
   },
 ];
 

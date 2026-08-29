@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { absoluteUrl, site } from "@/lib/site";
 
 export interface CollectionSchemaProps {
   name: string;
@@ -16,18 +17,19 @@ export function CollectionSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": name,
-    "description": description,
-    "url": url.startsWith("http") ? url : `https://reetfoodsngiftings.com${url}`,
-    "numberOfItems": itemCount,
-    "publisher": {
+    name,
+    description,
+    url: absoluteUrl(url),
+    numberOfItems: itemCount,
+    publisher: {
       "@type": "Organization",
-      "name": "Reet Foods & Gifting",
-      "logo": {
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      logo: {
         "@type": "ImageObject",
-        "url": "https://reetfoodsngiftings.com/assets/images/logo.png"
-      }
-    }
+        url: absoluteUrl(site.defaultImage),
+      },
+    },
   };
 
   return (

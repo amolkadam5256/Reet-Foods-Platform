@@ -49,14 +49,14 @@ export const productCategories: ProductCategory[] = [
     slug: "artisanal-chocolates",
     name: "Artisanal Chocolates",
     intro:
-      "Hand-poured Belgian chocolates, truffles, and pralines in luxurious packaging with custom branding.",
+      "Hand-poured chocolates, truffles, and pralines in luxurious packaging with custom branding.",
     image: product2Main,
     highlights: ["Temperature-controlled packing", "Custom logo foil", "Vegan options"],
     items: [
       { name: "Corporate Chocolate Gift Box", detail: "An elegant chocolate selection with space for your company logo, message card and event details.", badge: "Corporate", image: product2Main },
       { name: "Assorted Truffle Collection", detail: "A refined assortment of milk, dark and white truffles in a presentation-ready gift box.", image: product2Detail1 },
       { name: "Premium Chocolate Box", detail: "A curated selection of artisanal chocolates for thoughtful personal and professional gifting.", image: product2Detail2 },
-      { name: "Belgian Praline Selection", detail: "Smooth pralines and nut-centred bites selected for a memorable gourmet experience.", image: product2Detail3 },
+      { name: "Premium Praline Selection", detail: "Smooth pralines and nut-centred bites selected for a memorable gourmet experience.", image: product2Detail3 },
       { name: "Custom Chocolate Favour", detail: "Create a compact chocolate gift with branded sleeves, ribbons and personalised notes.", image: product2Detail4 },
     ],
   },

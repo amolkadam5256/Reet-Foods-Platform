@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "How do you ship perishable chocolates and temperature-sensitive gifts?",
-    answer: "Our artisanal chocolates and temperature-sensitive hampers are shipped in insulated cold-chain packaging with ice gel packs, ensuring they arrive fresh at any Indian destination."
+    answer: "Chocolate and temperature-sensitive hampers are planned according to season, destination, and transit time. Insulated packing options can be confirmed during quotation where suitable."
   },
   {
     question: "Can you manage individual employee deliveries for corporate gifting PAN India?",

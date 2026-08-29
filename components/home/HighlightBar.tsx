@@ -21,7 +21,7 @@ const highlights = [
   {
     icon: LuShieldCheck,
     title: "FSSAI Certified",
-    desc: "100% hygiene compliance",
+    desc: "Food-grade hygiene checks",
   },
   {
     icon: LuAward,

@@ -6,7 +6,7 @@ import { FiShare2 } from "react-icons/fi";
 export function ProductsFinalCTA() {
   const handlePartnerShare = () => {
     const text =
-      "Partner with Reet Foods for premium luxury gifting solutions. FSSAI certified, custom branding, Pan-India delivery.";
+      "Partner with Reet Foods for premium luxury gifting solutions. FSSAI licensed, custom branding, PAN India delivery.";
     window.open(
       `https://wa.me/919890609611?text=${encodeURIComponent(text)}`,
       "_blank",

@@ -65,7 +65,7 @@ export function Testimonials() {
             ))}
           </div>
           <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal">4.9 / 5</p>
-          <p className="text-[11px] text-reef-charcoal/55">From 500+ Client Reviews</p>
+          <p className="text-[11px] text-reef-charcoal/55">Feedback from corporate and retail gifting clients</p>
         </div>
       </div>
 
