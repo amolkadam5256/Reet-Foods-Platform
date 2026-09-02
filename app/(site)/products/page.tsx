@@ -3,6 +3,7 @@ import { ProductsClient } from "./ProductsClient";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FAQList } from "@/components/common/FAQList";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
@@ -259,8 +260,8 @@ export default function ProductsPage() {
               sameAs: [
                 "https://facebook.com/reetfoods",
                 "https://instagram.com/reetfoods",
-                "https://linkedin.com/company/reetfoods",
-                "https://wa.me/919890609611",
+                "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
+                generateWhatsAppUrl({ type: "generic" }),
               ],
               contactPoint: [
                 {

@@ -3,8 +3,7 @@
 import React, { useState, FormEvent } from "react";
 import { FiMail, FiCheck } from "react-icons/fi";
 import { Button } from "./Buttons";
-
-const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+import { isValidEmail, sendWhatsAppInquiry } from "@/lib/whatsapp";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -12,28 +11,26 @@ export function Newsletter() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
-    if (!web3FormsAccessKey) {
-      setError("Newsletter signup is not configured. Please contact us on WhatsApp.");
+    if (!isValidEmail(email)) {
+      setError("Please enter a valid email address.");
       return;
     }
     setSubmitting(true);
     setError("");
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+      sendWhatsAppInquiry({
+        type: "catalog",
+        data: { email },
+        sourcePage: "/",
+        formType: "newsletter_catalog",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Submission failed");
       setSubmitted(true);
-      setEmail("");
     } catch {
-      setError("Failed to subscribe. Please try again or contact us on WhatsApp.");
+      setError("We could not open WhatsApp. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -59,9 +56,6 @@ export function Newsletter() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row">
-            <input type="hidden" name="access_key" value={web3FormsAccessKey} />
-            <input type="hidden" name="subject" value="New Catalog Subscription from Reet Foods" />
-            <input type="hidden" name="from_name" value="Reet Foods Website" />
             <input
               name="email"
               type="email"
@@ -72,7 +66,7 @@ export function Newsletter() {
               className="flex-1 rounded-full border border-reef-gold/40 bg-white px-4 py-3 text-xs text-reef-charcoal placeholder-reef-charcoal/40 shadow-sm focus:border-reef-burgundy focus:outline-none focus:ring-2 focus:ring-reef-gold/30"
             />
             <Button type="submit" variant="primary" size="sm" disabled={submitting}>
-              {submitting ? "Subscribing..." : "Subscribe"}
+              {submitting ? "Opening..." : "Request Catalog on WhatsApp"}
             </Button>
           </form>
         )}

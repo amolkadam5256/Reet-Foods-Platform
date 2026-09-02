@@ -9,6 +9,7 @@ import { CorporateBranding } from "@/components/corporate/CorporateBranding";
 import { CorporateProcess } from "@/components/corporate/CorporateProcess";
 import { CorporateFAQ, corporateFaqs } from "@/components/corporate/CorporateFAQ";
 import { Images } from "@/assets/images";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata = constructMetadata({
   title:
@@ -42,7 +43,7 @@ export default function CorporateGiftingPage() {
         }}
         secondaryCta={{
           label: "WhatsApp Corporate Desk",
-          href: "https://wa.me/919890609611",
+          href: generateWhatsAppUrl({ type: "corporate", data: { requirement: "I need corporate gifting solutions." } }),
         }}
         sideBadge="Enterprise Preferred"
       />

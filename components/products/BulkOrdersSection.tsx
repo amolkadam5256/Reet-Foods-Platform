@@ -1,6 +1,7 @@
 "use client";
 
 import { FiBriefcase, FiShare2, FiShield, FiTrendingUp, FiTruck, FiZap } from "react-icons/fi";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 const benefits = [
   {
@@ -30,7 +31,7 @@ export function BulkOrdersSection() {
     const text =
       "Partner with Reet Foods for premium luxury gifting solutions. FSSAI certified, custom branding, Pan-India delivery.";
     window.open(
-      `https://wa.me/919890609611?text=${encodeURIComponent(text)}`,
+      generateWhatsAppUrl({ type: "partner", data: { requirement: text } }),
       "_blank",
       "noopener,noreferrer",
     );
@@ -93,7 +94,7 @@ export function BulkOrdersSection() {
             </p>
             <div className="mt-2 flex flex-col gap-3">
               <a
-                href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20becoming%20a%20gifting%20partner"
+                href={generateWhatsAppUrl({ type: "partner", data: { requirement: "Hi Reet Foods, I am interested in becoming a gifting partner." } })}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57]"

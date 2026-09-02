@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { faqs } from "@/data/home";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
@@ -30,7 +31,7 @@ export function FAQSection() {
             and delivery. Can&apos;t find an answer?
           </p>
           <a
-            href="https://wa.me/919890609611"
+            href={generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi, I have a question about Reet Foods products." } })}
             target="_blank"
             rel="noreferrer"
             className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-[#25d366] bg-[#25d366]/10 px-5 py-3 text-sm font-bold text-[#25d366] shadow-sm transition duration-200 hover:bg-[#25d366] hover:text-white"

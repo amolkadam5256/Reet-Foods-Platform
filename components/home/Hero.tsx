@@ -3,6 +3,7 @@ import Link from "next/link";
 import { heroGallery } from "../../data/home";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Hero() {
   return (
@@ -30,7 +31,7 @@ export function Hero() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+              href={generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need a quote." } })}
               target="_blank"
               rel="noreferrer"
             >

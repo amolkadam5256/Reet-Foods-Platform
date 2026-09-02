@@ -3,6 +3,14 @@ import { TrustBar } from "@/components/home/TrustBar";
 import { ContactStrip } from "@/components/home/ContactStrip";
 import { PromoCards } from "@/components/home/PromoCards";
 import { CategoryCards } from "@/components/home/CategoryCards";
+import { WhyReetFoods } from "@/components/home/WhyReetFoods";
+import { GiftingCategories } from "@/components/home/GiftingCategories";
+import { HampersBudgetBands } from "@/components/home/HampersBudgetBands";
+import { CustomizationSection } from "@/components/home/CustomizationSection";
+import { BulkOrderSection } from "@/components/home/BulkOrderSection";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { PreviousDesigns } from "@/components/home/PreviousDesigns";
+import { CorporateQuotationForm } from "@/components/home/CorporateQuotationForm";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { CorporateGifting } from "@/components/home/CorporateGifting";
@@ -17,12 +25,30 @@ import { LatestBlogs } from "@/components/home/LatestBlogs";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { faqs } from "@/data/home";
+import { getCampaignYear } from "@/lib/site";
 
 export default function Home() {
+  const year = getCampaignYear();
+
   return (
     <div className="bg-[#fbf7f1]">
+      {/* 1. Hero Section */}
       <HeroSection />
+      
+      {/* 2. Trust Bar */}
       <TrustBar />
+
+      {/* 3. Corporate Diwali Gifting 2026 Core Flow */}
+      <WhyReetFoods />
+      <GiftingCategories />
+      <HampersBudgetBands />
+      <CustomizationSection />
+      <BulkOrderSection />
+      <HowItWorks />
+      <PreviousDesigns />
+      <CorporateQuotationForm />
+
+      {/* 4. Supporting Brand & Product Showcase (Intact) */}
       <ContactStrip />
       <PromoCards />
       <CategoryCards />
@@ -52,10 +78,9 @@ export default function Home() {
               url: "https://reetfoodsngiftings.com",
               logo: "https://reetfoodsngiftings.com/logo.png",
               image: "https://reetfoodsngiftings.com/images/hero.jpg",
-              description:
-                "Pune's premier manufacturer of premium dry fruits, artisanal chocolates, and bespoke corporate gifting hampers. FSSAI certified, ISO quality standards, PAN India delivery.",
-              priceRange: "₹₹–₹₹₹",
-              servesCuisine: "Gifting, Dry Fruits, Artisanal Chocolates",
+              description: `Pune's premier manufacturer and partner for Corporate Diwali Gifting ${year}, dry fruits, artisanal chocolates, and bespoke corporate hampers. FSSAI certified, GST registered, PAN India delivery.`,
+              priceRange: "₹400–₹3,000+",
+              servesCuisine: "Corporate Gifting, Dry Fruits, Artisanal Chocolates, Diwali Hampers",
               address: {
                 "@type": "PostalAddress",
                 streetAddress:
@@ -71,29 +96,29 @@ export default function Home() {
                 longitude: "73.7380",
               },
               email: "reetfoodspune@gmail.com",
-              telephone: ["+91-9890609611", "+91-8007518088"],
+              telephone: ["+91-9225130732", "+91-9890609611"],
               contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+91-9225130732",
+                  contactType: "corporate sales and gifting desk",
+                  areaServed: "IN",
+                  availableLanguage: ["en", "hi", "mr"],
+                },
                 {
                   "@type": "ContactPoint",
                   telephone: "+91-9890609611",
                   contactType: "customer service",
                   areaServed: "IN",
                   availableLanguage: ["en", "hi"],
-                  contactOption: "TollFree",
-                },
-                {
-                  "@type": "ContactPoint",
-                  telephone: "+91-8007518088",
-                  contactType: "sales",
-                  areaServed: "IN",
-                  availableLanguage: ["en", "hi", "mr"],
                 },
               ],
               sameAs: [
-                "https://wa.me/919890609611",
-                "https://facebook.com/reetfoods",
-                "https://instagram.com/reetfoods",
-                "https://linkedin.com/company/reetfoods",
+                "https://wa.me/919225130732",
+                "https://facebook.com/reetfoodsngiftings",
+                "https://instagram.com/reetfoodsngiftings",
+                "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
+                "https://www.youtube.com/@ReetFoodsGiftings",
               ],
               openingHoursSpecification: [
                 {

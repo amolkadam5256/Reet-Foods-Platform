@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FiArrowRight, FiCheck, FiX } from "react-icons/fi";
+import { isValidEmail, sendWhatsAppInquiry } from "@/lib/whatsapp";
 
 const DISMISS_KEY = "reet-foods-seasonal-offer-dismissed";
-const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 export default function SeasonalOfferPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +17,24 @@ export default function SeasonalOfferPopup() {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const closePopup = () => {
-    sessionStorage.setItem(DISMISS_KEY, "true");
+    try {
+      if (typeof window !== "undefined" && window.sessionStorage) {
+        sessionStorage.setItem(DISMISS_KEY, "true");
+      }
+    } catch {
+      // Storage might be restricted in incognito/embedded frames
+    }
     setIsOpen(false);
   };
 
   useEffect(() => {
-    if (sessionStorage.getItem(DISMISS_KEY)) return;
+    try {
+      if (typeof window !== "undefined" && window.sessionStorage) {
+        if (sessionStorage.getItem(DISMISS_KEY)) return;
+      }
+    } catch {
+      // Storage might be restricted
+    }
 
     const timer = window.setTimeout(() => setIsOpen(true), 1200);
     return () => window.clearTimeout(timer);
@@ -41,27 +53,26 @@ export default function SeasonalOfferPopup() {
 
   if (!isOpen) return null;
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!email.trim()) return;
-    if (!web3FormsAccessKey) {
-      setSubmitError("Offer signup is not configured. Please contact us on WhatsApp.");
+    if (!isValidEmail(email)) {
+      setSubmitError("Please enter a valid email address.");
       return;
     }
     setIsSubmitting(true);
     setSubmitError("");
 
     try {
-      const formData = new FormData(event.currentTarget);
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+      sendWhatsAppInquiry({
+        type: "offer",
+        data: { email },
+        sourcePage: window.location.pathname,
+        formType: "seasonal_offer_popup",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Submission failed");
       setIsSubscribed(true);
     } catch {
-      setSubmitError("We could not submit your request. Please try again or contact us on WhatsApp.");
+      setSubmitError("We could not open WhatsApp. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -110,9 +121,6 @@ export default function SeasonalOfferPopup() {
             </div>
           ) : (
             <form className="mt-7" onSubmit={handleSubmit}>
-              <input type="hidden" name="access_key" value={web3FormsAccessKey} />
-              <input type="hidden" name="subject" value="New Reet Foods seasonal offer signup" />
-              <input type="hidden" name="from_name" value="Reet Foods Website" />
               <label className="sr-only" htmlFor="seasonal-offer-email">
                 Email address
               </label>
@@ -132,7 +140,7 @@ export default function SeasonalOfferPopup() {
                   disabled={isSubmitting}
                   className="inline-flex min-h-12 items-center justify-center gap-2 bg-reef-burgundy px-5 text-sm font-semibold text-white transition hover:bg-[#5d0013] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2"
                 >
-                  {isSubmitting ? "Submitting…" : "Claim my offer"} <FiArrowRight />
+                  {isSubmitting ? "Opening..." : "Claim on WhatsApp"} <FiArrowRight />
                 </button>
               </div>
               <p className="mt-3 text-xs leading-5 text-reef-charcoal/50">

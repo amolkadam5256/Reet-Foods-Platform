@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 import { ProductCard } from "@/components/common/Cards";
 import { CTA } from "@/components/common/CTA";
 import { productCategories } from "@/data/products";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 import {
   FiPhoneCall,
   FiCheckCircle,
@@ -147,7 +148,7 @@ export default async function ProductDetailPage({ params }: Props) {
         image={mainImage}
         imageAlt={titleName}
         primaryCta={{ label: "Request Volume Quote", href: "/contact#quote" }}
-        secondaryCta={{ label: "WhatsApp Inquiry", href: "https://wa.me/919890609611" }}
+        secondaryCta={{ label: "WhatsApp Inquiry", href: generateWhatsAppUrl({ type: "product", data: { productName: titleName } }) }}
         sideBadge="Grade-A Certified"
       />
 
@@ -233,7 +234,7 @@ export default async function ProductDetailPage({ params }: Props) {
                 <span>Request Custom Quote</span>
               </Link>
               <a
-                href={`https://wa.me/919890609611?text=${encodeURIComponent(`Hi Reet Foods, I want details for ${titleName}`)}`}
+                href={generateWhatsAppUrl({ type: "product", data: { productName: titleName, requirement: `Hi Reet Foods, I want details for ${titleName}` } })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-reef-gold/40 bg-white/10 px-5 py-3 text-xs font-semibold text-white transition hover:bg-white/20"

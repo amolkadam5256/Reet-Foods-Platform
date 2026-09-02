@@ -5,8 +5,12 @@ const baseUrl = "https://reetfoodsngiftings.com";
 
 const pages = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },
-  { path: "/products", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/corporate-diwali-gifting-pune", priority: 1.0, changeFrequency: "weekly" as const },
   { path: "/corporate-gifting", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/hampers", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/bulk-orders", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/customization", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/products", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/products/premium-dry-fruits", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/products/celebration-hampers", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/products/artisanal-chocolates", priority: 0.8, changeFrequency: "weekly" as const },

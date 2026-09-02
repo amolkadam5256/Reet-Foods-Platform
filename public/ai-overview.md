@@ -71,7 +71,7 @@
 ## Social Media Presence
 - Instagram: https://www.instagram.com/reetfoods
 - Facebook: https://www.facebook.com/reetfoods
-- LinkedIn: https://www.linkedin.com/company/reetfoods
+- LinkedIn: https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true
 
 ## Content Topics (Blog & SEO)
 - Corporate gifting trends in Pune

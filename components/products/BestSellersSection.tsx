@@ -1,9 +1,10 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { FiShare2 } from "react-icons/fi";
 import { productCategories } from "@/data/products";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 type SortOption = "featured" | "price-asc" | "price-desc" | "name";
 
@@ -35,7 +36,7 @@ export function BestSellersSection({ sortBy, setSortBy, animVisible }: BestSelle
 
   const handleWhatsAppShare = (product: string) => {
     const text = `Hi Reet Foods, I'm interested in "${product}" for gifting. Can you share details and pricing?`;
-    window.open(`https://wa.me/919890609611?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    window.open(generateWhatsAppUrl({ type: "product", data: { productName: product, requirement: text } }), "_blank", "noopener,noreferrer");
   };
 
   return (

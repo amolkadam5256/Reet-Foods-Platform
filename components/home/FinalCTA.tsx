@@ -36,32 +36,31 @@ export function FinalCTA() {
             id="cta-heading"
             className="mx-auto mt-5 max-w-2xl font-[family-name:var(--font-playfair)] text-3xl text-white sm:text-5xl"
           >
-            Ready to Elevate Your Gifting?
+            Ready to Plan Your Corporate Diwali Gifting?
           </h2>
           <p className="mx-auto mt-6 max-w-lg text-sm leading-7 text-white/65">
-            Connect with our gifting experts today to design the perfect hampers
-            for your next corporate event, wedding, or festive celebration.
+            Share your quantity, budget and delivery requirement. Our team will
+            suggest suitable hamper options for Diwali 2026.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/contact#quote"
+              href="/#corporate-quotation"
               className="inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-8 py-4 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-[#1c1c1c]"
             >
-              Get a Quote <FiArrowRight />
+              Get Corporate Quotation <FiArrowRight />
             </Link>
             <Link
               href="/contact#catalog"
-              style={{ color: "#7a0019" }}
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-bold shadow-md transition duration-200 hover:-translate-y-0.5 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-8 py-4 text-sm font-bold text-reef-burgundy shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
             >
               Request Catalogue
             </Link>
             <a
-              href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+              href="https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20Corporate%20Diwali%20Gifting%202026.%20Please%20share%20suitable%20hamper%20options."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-sm font-bold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-[#20ba57] hover:border-[#20ba57]"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-sm font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#20ba57] hover:border-[#20ba57]"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -73,8 +72,8 @@ export function FinalCTA() {
               Chat on WhatsApp
             </a>
             <a
-              href="tel:+919890609611"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white/90  px-8 py-4 text-sm font-bold text-reef-gold shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:border-reef-gold bg-reef-gold/90 hover:text-white"
+              href="tel:+919225130732"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-sm font-bold text-white shadow-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-reef-gold hover:bg-reef-gold hover:text-[#1c1c1c]"
             >
               <svg
                 className="h-5 w-5"
@@ -90,7 +89,7 @@ export function FinalCTA() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>Call: +91 98906 09611</span>
+              <span>Call: +91 92251 30732</span>
             </a>
           </div>
 

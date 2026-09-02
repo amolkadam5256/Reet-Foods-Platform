@@ -26,6 +26,9 @@ export function PageHero({
   secondaryCta,
   sideBadge,
 }: PageHeroProps) {
+  const primaryIsExternal = primaryCta?.href.startsWith("http");
+  const secondaryIsExternal = secondaryCta?.href.startsWith("http");
+
   return (
     <section className="relative overflow-hidden border border-reef-gold/15 bg-gradient-to-br from-reef-cream/60 via-white to-reef-cream/30 p-6 shadow-sm sm:p-10 lg:p-12">
       {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
@@ -51,6 +54,8 @@ export function PageHero({
               {primaryCta && (
                 <Link
                   href={primaryCta.href}
+                  target={primaryIsExternal ? "_blank" : undefined}
+                  rel={primaryIsExternal ? "noreferrer" : undefined}
                   className="inline-flex items-center gap-2 bg-reef-gold px-6 py-3.5 text-sm font-semibold text-reef-charcoal shadow-md transition-all duration-300 hover:bg-reef-burgundy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold"
                 >
                   <span>{primaryCta.label}</span>
@@ -60,6 +65,8 @@ export function PageHero({
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
+                  target={secondaryIsExternal ? "_blank" : undefined}
+                  rel={secondaryIsExternal ? "noreferrer" : undefined}
                   className="inline-flex items-center gap-2 border border-reef-gold/40 bg-white/80 px-6 py-3.5 text-sm font-medium text-reef-charcoal shadow-sm transition-all duration-300 hover:border-reef-burgundy hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold"
                 >
                   <span>{secondaryCta.label}</span>

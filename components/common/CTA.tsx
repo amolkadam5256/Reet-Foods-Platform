@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FiMessageSquare } from "react-icons/fi";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export interface CTAProps {
   title?: string;
@@ -13,11 +14,25 @@ export interface CTAProps {
 export function CTA({
   title = "Ready to elevate your gifting experience?",
   description = "Connect with our Pune concierge team for custom packaging, bulk discounts, and personalized branding options.",
-  primaryButtonText = "Request a Custom Quote",
-  primaryButtonHref = "/contact#quote",
-  secondaryButtonText = "WhatsApp Us Direct",
-  secondaryButtonHref = "https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20would%20like%20to%20inquire%20about%20custom%20gifting",
+  primaryButtonText = "Request Quote on WhatsApp",
+  primaryButtonHref = generateWhatsAppUrl({
+    type: "generic",
+    data: {
+      requirement: "I would like to inquire about custom gifting.",
+      source: "reusable_cta",
+    },
+  }),
+  secondaryButtonText = "Contact on WhatsApp",
+  secondaryButtonHref = generateWhatsAppUrl({
+    type: "generic",
+    data: {
+      requirement: "I would like to talk to Reet Foods about gifting options.",
+      source: "reusable_cta_secondary",
+    },
+  }),
 }: CTAProps) {
+  const primaryIsExternal = primaryButtonHref.startsWith("http");
+
   return (
     <section className="my-12 overflow-hidden border border-reef-gold/30 bg-gradient-to-r from-reef-charcoal via-[#1a1412] to-reef-charcoal p-8 text-white shadow-xl sm:p-12">
       <div className="mx-auto max-w-3xl text-center">
@@ -34,12 +49,9 @@ export function CTA({
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
             href={primaryButtonHref}
-            style={{
-              backgroundColor: "#d4af37",
-              borderColor: "#d4af37",
-              color: "#1c1c1c",
-            }}
-            className="inline-flex min-h-12 min-w-[220px] items-center justify-center border px-7 py-3.5 text-center text-sm font-bold transition-all hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
+            target={primaryIsExternal ? "_blank" : undefined}
+            rel={primaryIsExternal ? "noreferrer" : undefined}
+            className="inline-flex min-h-12 min-w-[220px] items-center justify-center rounded-full bg-reef-gold px-8 py-3.5 text-center text-sm font-bold uppercase tracking-wider text-[#1c1c1c] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-reef-charcoal hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
           >
             {primaryButtonText || "Request a Custom Quote"}
           </Link>
@@ -48,9 +60,9 @@ export function CTA({
             href={secondaryButtonHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center justify-center gap-2 border border-[#d4af37]/70 bg-[#2b2520] px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#d4af37] hover:bg-[#3a3028] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
+            className="group/cta inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-reef-gold/60 bg-[#2b2520] px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:border-reef-gold hover:bg-reef-gold hover:text-[#1c1c1c] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]"
           >
-            <FiMessageSquare className="h-4 w-4 text-[#d4af37]" />
+            <FiMessageSquare className="h-4 w-4 text-[#d4af37] transition-colors duration-200 group-hover/cta:text-[#1c1c1c]" />
             <span>{secondaryButtonText}</span>
           </a>
         </div>

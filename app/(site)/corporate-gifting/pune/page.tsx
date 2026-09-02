@@ -6,6 +6,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { CTA } from "@/components/common/CTA";
 import { Images } from "@/assets/images";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 import {
   FiBriefcase,
   FiAward,
@@ -142,7 +143,7 @@ export default function PuneCorporateGiftingPage() {
         image={Images.sweetiesDesk}
         imageAlt="Corporate Gifts in Pune"
         primaryCta={{ label: "Request Pune Proposal", href: "/contact#quote" }}
-        secondaryCta={{ label: "WhatsApp Pune Desk", href: "https://wa.me/919890609611" }}
+        secondaryCta={{ label: "WhatsApp Pune Desk", href: generateWhatsAppUrl({ type: "corporate", data: { location: "Pune", requirement: "I need corporate gifting in Pune." } }) }}
         sideBadge="Serving Pune Since 2020"
       />
 

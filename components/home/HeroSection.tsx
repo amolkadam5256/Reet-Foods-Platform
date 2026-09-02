@@ -22,13 +22,16 @@ type HeroCategory = {
 
 const centerSlides = [
   {
-    title: "Premium Dry Fruits & Custom Corporate Gift Hampers",
-    subtitle: "Premium Dry Fruits • Corporate Gifting • PAN India",
+    title: "Corporate Diwali Gifting 2026",
+    subtitle: "Customized Hampers · From ₹400 · Bulk Orders · GST Billing",
     price: "",
     image: heroGallery[0],
     description:
-      "Premium dry fruits and custom gift hampers for corporate gifting, festive celebrations and events. Choose packaging, logo branding and message cards to fit your budget.",
-    cta: "Explore Premium Hampers",
+      "Thoughtfully curated and customized Diwali hampers for Employees, Clients & Business Partners in Pune. Company branding, bulk quantities, GST billing.",
+    cta: "GET CORPORATE QUOTATION",
+    ctaHref: "/#corporate-quotation",
+    waHref:
+      "https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20Corporate%20Diwali%20Gifting%202026.%20Please%20share%20suitable%20hamper%20options.",
   },
   {
     title: "Seamless Corporate & Bulk Gifting",
@@ -38,6 +41,8 @@ const centerSlides = [
     description:
       "Make your next client, team, or event gifting moment feel distinctly considered with our premium corporate curation.",
     cta: "Request Corporate Quote",
+    ctaHref: "/contact#quote",
+    waHref: null,
   },
   {
     title: "Celebrate The Season Beautifully",
@@ -47,6 +52,8 @@ const centerSlides = [
     description:
       "Beautifully presented flavours for festivals, weddings and every celebration in between. Nitrogen-packed freshness in every box.",
     cta: "Shop The Collection",
+    ctaHref: "/products",
+    waHref: null,
   },
 ];
 
@@ -255,11 +262,21 @@ export function HeroSection() {
                 </p>
               )}
               <Link
-                href={activeSlide === 1 ? "/contact#quote" : "/products"}
+                href={slide.ctaHref ?? (activeSlide === 1 ? "/contact#quote" : "/products")}
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-[#1c1c1c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#2a1c15]"
               >
                 {slide.cta} <FiArrowRight className="text-base" />
               </Link>
+              {slide.waHref ? (
+                <a
+                  href={slide.waHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 rounded-full border-2 border-[#25D366] bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-md transition hover:bg-[#1da851] ml-0 sm:ml-3"
+                >
+                  WHATSAPP US
+                </a>
+              ) : null}
             </div>
           </div>
 

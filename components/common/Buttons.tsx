@@ -21,7 +21,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 disabled:opacity-60 disabled:pointer-events-none";
+    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-4 disabled:opacity-60 disabled:pointer-events-none";
 
   const sizeStyles = {
     sm: "px-4 py-2 text-xs gap-1.5",
@@ -31,11 +31,11 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-reef-gold text-reef-charcoal shadow-md hover:bg-reef-burgundy hover:text-white hover:shadow-lg focus-visible:ring-reef-gold/40",
+      "bg-reef-gold text-[#1c1c1c] shadow-md hover:bg-reef-burgundy hover:text-white hover:shadow-lg focus-visible:ring-reef-gold/40",
     secondary:
-      "bg-reef-burgundy text-white shadow-md hover:bg-reef-charcoal focus-visible:ring-reef-burgundy/40",
+      "bg-reef-burgundy text-white shadow-md hover:bg-[#5d0013] hover:shadow-lg focus-visible:ring-reef-burgundy/40",
     outline:
-      "border border-reef-gold/40 bg-white text-reef-charcoal hover:border-reef-burgundy hover:text-reef-burgundy focus-visible:ring-reef-gold/30",
+      "border-2 border-reef-gold/50 bg-white text-reef-charcoal hover:border-reef-burgundy hover:bg-reef-burgundy hover:text-white hover:shadow-md focus-visible:ring-reef-gold/30",
     ghost:
       "text-reef-charcoal hover:bg-reef-cream hover:text-reef-burgundy focus-visible:ring-reef-gold/20",
   };

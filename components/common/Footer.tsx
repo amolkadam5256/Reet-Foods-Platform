@@ -11,11 +11,11 @@ import {
   FiInstagram,
   FiFacebook,
   FiLinkedin,
+  FiYoutube,
   FiArrowRight,
   FiCheckCircle,
 } from "react-icons/fi";
-
-const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+import { isValidEmail, sendWhatsAppInquiry } from "@/lib/whatsapp";
 
 /* ─── Data ────────────────────────────────────────────────────────── */
 
@@ -83,28 +83,26 @@ function NewsletterInline() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email) return;
-    if (!web3FormsAccessKey) {
-      setError("Newsletter signup is not configured.");
+    if (!isValidEmail(email)) {
+      setError("Please enter a valid email address.");
       return;
     }
     setSubmitting(true);
     setError("");
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+      sendWhatsAppInquiry({
+        type: "catalog",
+        data: { email },
+        sourcePage: "/",
+        formType: "footer_newsletter",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Submission failed");
       setSubmitted(true);
-      setEmail("");
     } catch {
-      setError("Unable to submit. Please try again.");
+      setError("Unable to open WhatsApp. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -118,9 +116,6 @@ function NewsletterInline() {
   ) : (
     <div>
       <form onSubmit={handleSubmit} className="flex">
-        <input type="hidden" name="access_key" value={web3FormsAccessKey} />
-        <input type="hidden" name="subject" value="New Footer Newsletter Subscriber from Reet Foods" />
-        <input type="hidden" name="from_name" value="Reet Foods Website" />
         <input
           name="email"
           type="email"
@@ -133,9 +128,9 @@ function NewsletterInline() {
         <button
           type="submit"
           disabled={submitting}
-          className="border border-reef-gold bg-reef-gold px-4 py-2.5 text-[11px] font-bold uppercase tracking-widest text-reef-charcoal transition hover:bg-reef-gold/80 disabled:opacity-50"
+          className="border border-reef-gold bg-reef-gold px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest text-[#1c1c1c] transition-all duration-200 hover:bg-white hover:border-white hover:text-reef-charcoal hover:-translate-y-0.5 disabled:opacity-50"
         >
-          {submitting ? "..." : "Join"}
+          {submitting ? "..." : "WhatsApp"}
         </button>
       </form>
       {error ? <p className="mt-1 text-[11px] text-red-400">{error}</p> : null}
@@ -188,6 +183,9 @@ export function Footer() {
               <p className="text-sm tracking-widest text-reef-gold/80">
                 &amp; Gifting · Pune
               </p>
+              <p className="mt-1 text-xs font-semibold text-reef-gold/60 tracking-wide">
+                Corporate Diwali Gifting 2026
+              </p>
             </div>
           </div>
 
@@ -229,7 +227,12 @@ export function Footer() {
                   icon: <FiFacebook className="h-4 w-4" />,
                 },
                 {
-                  href: "https://linkedin.com/company/reetfoodsgifting",
+                  href: "https://www.youtube.com/@ReetFoodsGiftings",
+                  label: "YouTube",
+                  icon: <FiYoutube className="h-4 w-4" />,
+                },
+                {
+                  href: "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
                   label: "LinkedIn",
                   icon: <FiLinkedin className="h-4 w-4" />,
                 },
@@ -291,13 +294,16 @@ export function Footer() {
                   </span>
                 </a>
               </li>
+              <li className="text-white/55 text-[13px]">
+                <span className="font-semibold text-white/70">Shraddha & Harshad Kharate</span>
+              </li>
               <li>
                 <a
-                  href="tel:+919890609611"
+                  href="tel:+919225130732"
                   className="flex items-center gap-3 transition hover:text-reef-gold"
                 >
                   <FiPhone className="h-4 w-4 shrink-0 text-reef-gold/70" />
-                  +91 98906 09611
+                  +91 9225130732
                 </a>
               </li>
               <li>
@@ -312,6 +318,9 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <FiClock className="h-4 w-4 shrink-0 text-reef-gold/70" />
                 Mon – Sat: 9:30 AM – 8:00 PM
+              </li>
+              <li className="text-[11px] text-white/35">
+                GST: 27FHIPK0363N1ZX
               </li>
             </ul>
 
@@ -330,7 +339,17 @@ export function Footer() {
         </div>
 
         {/* ── Bottom bar ────────────────────────────────────────── */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/8 py-6 text-center sm:flex-row sm:text-left">
+        {/* Corporate Quotation CTA */}
+        <div className="mt-8 flex justify-center border-t border-white/8 pt-8 pb-4">
+          <Link
+            href="/#corporate-quotation"
+            className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-[#1c1c1c] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-reef-charcoal hover:shadow-lg"
+          >
+            <FiArrowRight className="h-4 w-4" />
+            GET CORPORATE QUOTATION
+          </Link>
+        </div>
+        <div className="mt-4 flex flex-col items-center justify-between gap-3 border-t border-white/8 py-6 text-center sm:flex-row sm:text-left">
           <p className="text-[11px] text-white/30">
             © {new Date().getFullYear()} Reet Foods &amp; Gifting. All rights
             reserved.

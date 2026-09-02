@@ -34,7 +34,8 @@ export const site = {
   socialLinks: [
     "https://www.facebook.com/reetfoodsngiftings",
     "https://www.instagram.com/reetfoodsngiftings",
-    "https://www.linkedin.com/company/reet-foods-giftings",
+    "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
+    "https://www.youtube.com/@ReetFoodsGiftings",
   ],
   defaultImage: "/images/logo.png",
   keywords: [
@@ -49,7 +50,29 @@ export const site = {
     "bulk gifting supplier Pune",
     "FSSAI certified food gifting",
   ],
+
+  // ── Corporate Diwali Gifting 2026 Campaign ────────────────────────
+  campaign: {
+    name: "Corporate Diwali Gifting 2026",
+    // Primary WhatsApp for corporate Diwali campaign (Shraddha & Harshad Kharate)
+    whatsappPrimary: "919225130732",
+    whatsappDisplay: "9225130732",
+    contacts: "Shraddha Kharate & Harshad Kharate",
+    budgetBands: [
+      { label: "₹400–₹600", desc: "For large employee orders" },
+      { label: "₹700–₹1,000", desc: "Employee & standard corporate gifting" },
+      { label: "₹1,200–₹1,500", desc: "Premium employee/client gifting" },
+      { label: "₹2,000–₹3,000+", desc: "Premium/VIP corporate gifting" },
+    ],
+    whatsappMessage:
+      "Hi Reet Foods, I am interested in Corporate Diwali Gifting 2026. Please share suitable hamper options.",
+  },
 } as const;
+
+export function getCampaignYear() {
+  const current = new Date().getFullYear();
+  return current < 2026 ? 2026 : current;
+}
 
 export function absoluteUrl(path = "") {
   if (path.startsWith("http")) return path;

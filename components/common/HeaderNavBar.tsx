@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { Images } from "@/assets/images";
 import type { StaticImageData } from "next/image";
 
@@ -162,8 +162,7 @@ export default function HeaderNavBar({
                       </div>
                       <Link
                         href="/contact#quote"
-                        style={{ color: "#1c1c1c", backgroundColor: "#d4af37" }}
-                        className="mt-4 inline-flex items-center justify-center gap-2 py-2.5 text-xs font-bold uppercase tracking-[0.14em] transition hover:opacity-90"
+                        className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-reef-gold px-4 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1c1c] shadow-sm transition-all duration-200 hover:bg-reef-burgundy hover:text-white hover:shadow hover:-translate-y-0.5"
                       >
                         Request Quote <FiArrowRight />
                       </Link>
@@ -179,7 +178,8 @@ export default function HeaderNavBar({
           {[
             { label: "Facebook", href: "https://facebook.com/reetfoodsgifting", icon: FaFacebookF },
             { label: "Instagram", href: "https://instagram.com/reetfoodsgifting", icon: FaInstagram },
-            { label: "LinkedIn", href: "https://linkedin.com/company/reetfoodsgifting", icon: FaLinkedinIn },
+            { label: "YouTube", href: "https://www.youtube.com/@ReetFoodsGiftings", icon: FaYoutube },
+            { label: "LinkedIn", href: "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true", icon: FaLinkedinIn },
             { label: "X", href: "https://x.com/reetfoods", icon: FaXTwitter },
           ].map((item) => {
             const Icon = item.icon;

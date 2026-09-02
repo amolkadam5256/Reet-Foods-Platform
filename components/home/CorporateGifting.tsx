@@ -79,20 +79,19 @@ export function CorporateGifting() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
               href="/contact#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-[#d4af37] px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-[#b8952b] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-6 py-3.5 text-sm font-bold text-[#1c1c1c] shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-reef-burgundy hover:text-white"
             >
               Request Catalogue <FiArrowRight />
             </Link>
             <Link
               href="/contact#quote"
-              style={{ color: "#7a0019" }}
-              className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-reef-burgundy bg-transparent px-6 py-3.5 text-sm font-bold text-reef-burgundy shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-reef-burgundy hover:text-white"
             >
               Get a Quote
             </Link>
             <a
-              href="tel:+919890609611"
-              className="inline-flex items-center gap-2 rounded-full border border-reef-charcoal/15 bg-white px-6 py-3.5 text-sm font-bold text-reef-charcoal shadow-sm transition duration-200 hover:border-reef-gold hover:text-reef-burgundy"
+              href="tel:+919225130732"
+              className="inline-flex items-center gap-2 rounded-full border border-reef-charcoal/15 bg-white px-6 py-3.5 text-sm font-bold text-reef-charcoal shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-reef-gold hover:text-reef-burgundy"
             >
               <svg
                 className="h-4 w-4"

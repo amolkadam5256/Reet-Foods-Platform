@@ -6,6 +6,7 @@ import { ContactWhatToInclude } from "@/components/contact/ContactWhatToInclude"
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FAQList } from "@/components/common/FAQList";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata = {
   title: "Contact Reet Foods | Get Best Quote",
@@ -82,7 +83,7 @@ export default function ContactPage() {
         { label: "Call +91 8007518088", href: "tel:+918007518088" },
         {
           label: "WhatsApp us",
-          href: "https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote",
+          href: generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need a quote." } }),
         },
       ]}
       image={Images.sweetiesDesk}

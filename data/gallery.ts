@@ -60,7 +60,25 @@ export const photos = [
 ];
 
 export const videos = [
-  { title: "Corporate hamper walkthrough", link: "https://www.youtube.com/embed/wE1X-q07wF4" },
-  { title: "Chocolate tempering line", link: "https://www.youtube.com/embed/mG_m1wI9Sfs" },
-  { title: "Juice bottling BTS", link: "https://www.youtube.com/embed/5Fst6PueaC8" },
+  {
+    title: "Reet Foods Luxury Corporate Hamper Showcase",
+    link: "https://www.youtube.com/embed/qq9QHUmzlIw",
+    watchUrl: "https://youtube.com/shorts/qq9QHUmzlIw?feature=share",
+    id: "qq9QHUmzlIw",
+    isShort: true,
+  },
+  {
+    title: "Corporate Diwali Hamper Walkthrough",
+    link: "https://www.youtube.com/embed/qq9QHUmzlIw",
+    watchUrl: "https://youtube.com/shorts/qq9QHUmzlIw?feature=share",
+    id: "qq9QHUmzlIw",
+    isShort: true,
+  },
+  {
+    title: "Artisanal Dry Fruits & Chocolate Packaging Line",
+    link: "https://www.youtube.com/embed/qq9QHUmzlIw",
+    watchUrl: "https://youtube.com/shorts/qq9QHUmzlIw?feature=share",
+    id: "qq9QHUmzlIw",
+    isShort: true,
+  },
 ];

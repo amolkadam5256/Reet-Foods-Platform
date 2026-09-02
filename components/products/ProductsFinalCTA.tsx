@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { FiShare2 } from "react-icons/fi";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export function ProductsFinalCTA() {
   const handlePartnerShare = () => {
     const text =
       "Partner with Reet Foods for premium luxury gifting solutions. FSSAI licensed, custom branding, PAN India delivery.";
     window.open(
-      `https://wa.me/919890609611?text=${encodeURIComponent(text)}`,
+      generateWhatsAppUrl({ type: "partner", data: { requirement: text } }),
       "_blank",
       "noopener,noreferrer",
     );
@@ -39,7 +40,7 @@ export function ProductsFinalCTA() {
             Get Custom Quote
           </Link>
           <a
-            href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20custom%20gifting%20help"
+            href={generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need custom gifting help." } })}
             target="_blank"
             rel="noreferrer"
             className="inline-flex min-h-12 items-center justify-center border-2 border-[#25d366] bg-[#25d366] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-[#20ba57] hover:text-white"

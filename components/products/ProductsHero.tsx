@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import { Images } from "@/assets/images";
+import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 interface ProductsHeroProps {
   animVisible: boolean;
@@ -67,7 +68,7 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
                 Request Catalogue
               </Link>
               <a
-                href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20product%20gifting%20help"
+                href={generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need product gifting help." } })}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 border-2 border-[#25d366] bg-[#25d366] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-md transition duration-200 hover:bg-[#20ba57] hover:border-[#20ba57]"

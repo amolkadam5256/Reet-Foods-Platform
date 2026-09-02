@@ -5,28 +5,57 @@ import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-
-const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+import {
+  formDataToInquiryData,
+  generateWhatsAppUrl,
+  isValidEmail,
+  isValidMobileNumber,
+  sendWhatsAppInquiry,
+} from "@/lib/whatsapp";
 
 export function ContactCTA() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const instantChatUrl = generateWhatsAppUrl({
+    type: "generic",
+    data: {
+      requirement: "I need a custom gifting quote.",
+      source: "homepage_contact_cta",
+    },
+  });
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!web3FormsAccessKey) {
+
+    const form = event.currentTarget;
+    const data = formDataToInquiryData(new FormData(form), {
+      name: "name",
+      email: "email",
+      phone: "phone",
+      message: "requirement",
+      event_type: "occasion",
+      quantity: "quantity",
+      delivery_date: "deliveryDate",
+      budget_range: "budget",
+      branding_needed: "brandingNeeded",
+    });
+
+    if (!data.name || !data.email || !data.phone || !data.requirement) {
       setStatus("error");
       return;
     }
-    setStatus("sending");
+    if (!isValidEmail(data.email) || !isValidMobileNumber(data.phone)) {
+      setStatus("error");
+      return;
+    }
 
+    setStatus("sending");
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: new FormData(event.currentTarget),
+      sendWhatsAppInquiry({
+        type: data.occasion?.toLowerCase().includes("corporate") ? "corporate" : "generic",
+        data,
+        sourcePage: "/",
+        formType: "homepage_quote",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Submission failed");
-      event.currentTarget.reset();
       setStatus("success");
     } catch {
       setStatus("error");
@@ -52,9 +81,6 @@ export function ContactCTA() {
               We will respond with a workable quote.
             </p>
             <form className="space-y-5" id="quote" onSubmit={handleSubmit}>
-              <input type="hidden" name="access_key" value={web3FormsAccessKey} />
-              <input type="hidden" name="subject" value="New homepage gifting enquiry" />
-              <input type="hidden" name="from_name" value="Reet Foods Website" />
               <div className="grid gap-5 md:grid-cols-3">
                 <label className="space-y-1.5 text-sm font-medium text-gray-700">
                   <span className="block">Name</span>
@@ -128,10 +154,10 @@ export function ContactCTA() {
               </div>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
-                  {status === "sending" ? "Sending..." : "Submit enquiry"}
+                  {status === "sending" ? "Opening WhatsApp..." : "Send Inquiry on WhatsApp"}
                 </Button>
                 <a
-                  href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
+                  href={instantChatUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto"
@@ -181,10 +207,10 @@ export function ContactCTA() {
         <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/45 px-4" role="dialog" aria-modal="true">
           <div className="w-full max-w-sm bg-white p-6 text-center shadow-2xl">
             <p className="text-lg font-semibold text-reef-charcoal">
-              {status === "sending" ? "Sending your enquiry..." : status === "success" ? "Enquiry sent successfully" : "We could not send your enquiry"}
+              {status === "sending" ? "Opening WhatsApp..." : status === "success" ? "WhatsApp inquiry ready" : "Please check the form"}
             </p>
             <p className="mt-2 text-sm text-reef-charcoal/70">
-              {status === "sending" ? "Please wait a moment." : status === "success" ? "Thank you for reaching out. We'll get back to you soon." : "Please try again or contact us on WhatsApp."}
+              {status === "sending" ? "Please wait a moment." : status === "success" ? "Your details were formatted for WhatsApp. If WhatsApp did not open, please try again." : "Required fields, email, and mobile number must be valid before opening WhatsApp."}
             </p>
             {status !== "sending" ? (
               <Button type="button" className="mt-5" onClick={() => setStatus("idle")}>

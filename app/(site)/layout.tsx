@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,11 +10,11 @@ import HeaderNavBar from "@/components/common/HeaderNavBar";
 import SeasonalOfferPopup from "@/components/common/SeasonalOfferPopup";
 import { Footer } from "@/components/common/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
-import { StickyCTA } from "@/components/common/StickyCTA";
 import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
 import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { categories } from "@/data/categories";
 import { productCategories } from "@/data/products";
+import { FaWhatsapp } from "react-icons/fa";
 
 type MenuGroup = {
   title: string;
@@ -155,6 +155,12 @@ const searchEntries: SearchEntry[] = [
   ]),
 ];
 
+// Campaign WhatsApp constants
+const CAMPAIGN_WA = "919225130732";
+const CAMPAIGN_WA_MSG = encodeURIComponent(
+  "Hi Reet Foods, I am interested in Corporate Diwali Gifting 2026. Please share suitable hamper options."
+);
+
 export default function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -219,6 +225,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         onOpenSearch={() => setSearchOpen(true)}
         onOpenMobile={() => setMobileOpen(true)}
       />
+
       <HeaderNavBar
         isActive={isActive}
         isScrolled={isScrolled}
@@ -257,7 +264,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 aria-label="Close navigation"
                 className="text-reef-charcoal"
               >
-                x
+                ✕
               </button>
             </div>
             <div className="space-y-2">
@@ -269,9 +276,26 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   onClick={() => setMobileOpen(false)}
                 >
                   <span>{item.label}</span>
-                  <span aria-hidden>/</span>
+                  <span aria-hidden>›</span>
                 </Link>
               ))}
+              {/* Mobile campaign CTAs */}
+              <a
+                href={`https://wa.me/${CAMPAIGN_WA}?text=${CAMPAIGN_WA_MSG}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3 text-sm font-bold text-white mt-4"
+                onClick={() => setMobileOpen(false)}
+              >
+                <FaWhatsapp className="h-4 w-4" /> WhatsApp Us
+              </a>
+              <Link
+                href="/#corporate-quotation"
+                className="flex w-full items-center justify-center rounded-full bg-reef-gold py-3 text-sm font-bold text-[#1c1c1c] mt-2"
+                onClick={() => setMobileOpen(false)}
+              >
+                Get Quotation
+              </Link>
             </div>
           </aside>
         </div>
@@ -296,14 +320,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                   className="inline-flex h-11 w-11 items-center justify-center border border-reef-gold/15 text-reef-charcoal transition duration-200 ease-out hover:border-reef-gold hover:text-reef-burgundy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reef-gold focus-visible:ring-offset-2"
                   aria-label="Close search"
                 >
-                  x
+                  ✕
                 </button>
               </div>
               <div className="space-y-5 px-5 pb-6 pt-6 sm:px-6 sm:pb-7 sm:pt-7">
                 <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
                   <label className="flex items-center gap-3 border border-reef-gold/15 bg-[#faf8f3] px-4 py-3">
                     <span aria-hidden className="text-reef-gold">
-                      Search
+                      🔍
                     </span>
                     <input
                       autoFocus
@@ -407,11 +431,27 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
 
       <Footer />
       <WhatsAppButton
-        href="https://wa.me/919890609611?text=Hi%20Reet%20Foods%2C%20I%20need%20a%20quote"
-        label="Chat with Reet Foods on WhatsApp"
+        href={`https://wa.me/${CAMPAIGN_WA}?text=${CAMPAIGN_WA_MSG}`}
+        label="Chat with Reet Foods on WhatsApp – Corporate Diwali Gifting 2026"
       />
-      <StickyCTA />
+
+      {/* Mobile sticky CTA bar — Corporate Diwali Gifting 2026 */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 flex lg:hidden border-t border-reef-gold/30 bg-[#0d0d0d] shadow-2xl">
+        <a
+          href={`https://wa.me/${CAMPAIGN_WA}?text=${CAMPAIGN_WA_MSG}`}
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-1 items-center justify-center gap-2 bg-[#25D366] py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1da851]"
+        >
+          <FaWhatsapp className="h-4 w-4" /> WhatsApp Us
+        </a>
+        <Link
+          href="/#corporate-quotation"
+          className="flex flex-1 items-center justify-center gap-2 bg-reef-gold py-3.5 text-sm font-bold text-[#1c1c1c] transition-colors duration-200 hover:bg-[#c59e2b]"
+        >
+          Get Quote
+        </Link>
+      </div>
     </div>
   );
 }
-

@@ -1,143 +1,292 @@
 "use client";
 
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import { isValidEmail, isValidMobileNumber, sendWhatsAppInquiry } from "@/lib/whatsapp";
 
-const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 const fieldClass =
-  "w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 text-sm outline-none focus:border-reef-gold";
+  "w-full border border-reef-gold/15 bg-[#faf8f3] px-4 py-3 text-sm outline-none transition focus:border-reef-gold focus:bg-white";
 
 export function ContactEnquiryForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    company_or_event: "",
+    email: "",
+    phone: "",
+    enquiry_type: "Corporate gifting",
+    quantity: "100",
+    delivery_date: "",
+    budget_range: "Need guidance",
+    branding_needed: "Yes, logo branding required",
+    message: "",
+  });
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!accessKey) {
-      setStatus("error");
+
+    if (!formData.name.trim()) {
+      alert("Please enter your name.");
       return;
     }
+    if (!formData.phone.trim()) {
+      alert("Please enter your phone/WhatsApp number.");
+      return;
+    }
+    if (!isValidMobileNumber(formData.phone)) {
+      alert("Please enter a valid mobile or WhatsApp number.");
+      return;
+    }
+    if (!formData.email.trim()) {
+      alert("Please enter your email.");
+      return;
+    }
+    if (!isValidEmail(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (!formData.message.trim()) {
+      alert("Please enter your requirement.");
+      return;
+    }
+
     setStatus("sending");
 
+    const inquiryType = formData.enquiry_type.toLowerCase().includes("corporate")
+      ? "corporate"
+      : "generic";
+
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: new FormData(event.currentTarget),
+      sendWhatsAppInquiry({
+        type: inquiryType,
+        data: {
+          name: formData.name,
+          company: formData.company_or_event,
+          email: formData.email,
+          phone: formData.phone,
+          giftingType: formData.enquiry_type,
+          quantity: formData.quantity,
+          deliveryDate: formData.delivery_date,
+          budget: formData.budget_range,
+          brandingNeeded: formData.branding_needed,
+          requirement: formData.message,
+        },
+        sourcePage: "/contact",
+        formType: "contact_enquiry",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) throw new Error("Submission failed");
-      event.currentTarget.reset();
       setStatus("success");
     } catch {
       setStatus("error");
+      alert("We could not open WhatsApp. Please try again.");
     }
   }
 
   return (
     <>
       <form className="space-y-4" onSubmit={handleSubmit}>
-        <input type="hidden" name="access_key" value={accessKey} />
-        <input type="hidden" name="subject" value="New Reet Foods website enquiry" />
-        <input type="hidden" name="from_name" value="Reet Foods Website" />
-
         <div className="grid gap-4 md:grid-cols-2">
           <label className="space-y-2 text-sm text-reef-charcoal/75">
-            Full name
-            <input name="name" className={fieldClass} type="text" placeholder="Your name" required />
+            Full name <span className="text-reef-burgundy">*</span>
+            <input
+              name="name"
+              className={fieldClass}
+              type="text"
+              placeholder="Your name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
           </label>
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Company / Event
-            <input name="company_or_event" className={fieldClass} type="text" placeholder="Company / Event" />
+            <input
+              name="company_or_event"
+              className={fieldClass}
+              type="text"
+              placeholder="Company / Event name"
+              value={formData.company_or_event}
+              onChange={handleChange}
+            />
           </label>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
           <label className="space-y-2 text-sm text-reef-charcoal/75">
-            Email
-            <input name="email" className={fieldClass} type="email" placeholder="you@example.com" required />
+            Email <span className="text-reef-burgundy">*</span>
+            <input
+              name="email"
+              className={fieldClass}
+              type="email"
+              placeholder="you@example.com"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
           </label>
           <label className="space-y-2 text-sm text-reef-charcoal/75">
-            Phone
-            <input name="phone" className={fieldClass} type="tel" placeholder="+91..." required />
+            Phone / WhatsApp <span className="text-reef-burgundy">*</span>
+            <input
+              name="phone"
+              className={fieldClass}
+              type="tel"
+              placeholder="+91..."
+              required
+              value={formData.phone}
+              onChange={handleChange}
+            />
           </label>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Enquiry type
-            <select name="enquiry_type" className={fieldClass}>
-              <option>Corporate gifting</option>
-              <option>Wedding return gifts</option>
-              <option>Festival hampers</option>
-              <option>Retail / wholesale</option>
-              <option>Sample request</option>
+            <select
+              name="enquiry_type"
+              className={fieldClass}
+              value={formData.enquiry_type}
+              onChange={handleChange}
+            >
+              <option value="Corporate gifting">Corporate gifting</option>
+              <option value="Wedding return gifts">Wedding return gifts</option>
+              <option value="Festival hampers">Festival hampers</option>
+              <option value="Retail / wholesale">Retail / wholesale</option>
+              <option value="Sample request">Sample request</option>
             </select>
           </label>
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Quantity
-            <input name="quantity" className={fieldClass} type="number" min="1" placeholder="100" />
+            <input
+              name="quantity"
+              className={fieldClass}
+              type="number"
+              min="1"
+              placeholder="100"
+              value={formData.quantity}
+              onChange={handleChange}
+            />
           </label>
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Delivery date
-            <input name="delivery_date" className={fieldClass} type="date" />
+            <input
+              name="delivery_date"
+              className={fieldClass}
+              type="date"
+              value={formData.delivery_date}
+              onChange={handleChange}
+            />
           </label>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Budget range
-            <select name="budget_range" className={fieldClass}>
-              <option>Need guidance</option>
-              <option>Under INR 500 per gift</option>
-              <option>INR 500 - INR 1,000 per gift</option>
-              <option>INR 1,000 - INR 2,500 per gift</option>
-              <option>Above INR 2,500 per gift</option>
+            <select
+              name="budget_range"
+              className={fieldClass}
+              value={formData.budget_range}
+              onChange={handleChange}
+            >
+              <option value="Need guidance">Need guidance</option>
+              <option value="Under INR 500 per gift">Under INR 500 per gift</option>
+              <option value="INR 500 - INR 1,000 per gift">INR 500 - INR 1,000 per gift</option>
+              <option value="INR 1,000 - INR 2,500 per gift">INR 1,000 - INR 2,500 per gift</option>
+              <option value="Above INR 2,500 per gift">Above INR 2,500 per gift</option>
             </select>
           </label>
           <label className="space-y-2 text-sm text-reef-charcoal/75">
             Branding needed?
-            <select name="branding_needed" className={fieldClass}>
-              <option>Yes, logo branding required</option>
-              <option>No branding required</option>
-              <option>Need packaging suggestions</option>
+            <select
+              name="branding_needed"
+              className={fieldClass}
+              value={formData.branding_needed}
+              onChange={handleChange}
+            >
+              <option value="Yes, logo branding required">Yes, logo branding required</option>
+              <option value="No branding required">No branding required</option>
+              <option value="Need packaging suggestions">Need packaging suggestions</option>
             </select>
           </label>
         </div>
 
         <label className="space-y-2 text-sm text-reef-charcoal/75">
-          Requirement
+          Requirement <span className="text-reef-burgundy">*</span>
           <textarea
             name="message"
             className={`${fieldClass} h-32`}
-            placeholder="Product, city, packaging style, dietary preferences, delivery addresses..."
+            placeholder="Product preferences, city, packaging style, dietary notes, delivery addresses..."
             required
+            value={formData.message}
+            onChange={handleChange}
           />
         </label>
 
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center gap-2 bg-reef-gold px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95 disabled:cursor-wait disabled:opacity-70"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-4 text-sm font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1da851] hover:shadow-lg disabled:cursor-wait disabled:opacity-70 w-full sm:w-auto"
         >
-          {status === "sending" ? "Sending..." : "Send Inquiry"}
+          <FaWhatsapp className="text-lg" />
+          <span>{status === "sending" ? "Connecting to WhatsApp..." : "Send Inquiry on WhatsApp"}</span>
         </button>
       </form>
 
-      {status !== "idle" ? (
-        <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/45 px-4" role="dialog" aria-modal="true">
-          <div className="w-full max-w-sm bg-white p-6 text-center shadow-2xl">
-            <p className="text-lg font-semibold text-reef-charcoal">
-              {status === "sending" ? "Sending your enquiry..." : status === "success" ? "Enquiry sent successfully" : "We could not send your enquiry"}
+      {status === "success" && (
+        <div
+          className="fixed inset-0 z-[110] flex items-center justify-center bg-black/45 px-4"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-2xl">
+            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-[#25D366]">
+              <FaWhatsapp className="h-6 w-6" />
+            </div>
+            <p className="text-lg font-bold text-reef-charcoal">
+              Connecting to WhatsApp
             </p>
-            <p className="mt-2 text-sm leading-6 text-reef-charcoal/70">
-              {status === "sending" ? "Please wait a moment." : status === "success" ? "Thank you for reaching out. We'll review your enquiry and get back to you soon." : "Please try again or contact us on WhatsApp."}
+            <p className="mt-2 text-xs leading-5 text-reef-charcoal/70">
+              Your inquiry details have been formatted and WhatsApp has been opened. If it didn&apos;t open automatically, please click below.
             </p>
-            {status !== "sending" ? (
-              <button type="button" onClick={() => setStatus("idle")} className="mt-5 bg-reef-gold px-4 py-2 text-sm font-semibold text-white">
+            <div className="mt-5 space-y-2">
+              <button
+                type="button"
+                onClick={() => {
+                  sendWhatsAppInquiry({
+                    type: "corporate",
+                    data: {
+                      name: formData.name,
+                      company: formData.company_or_event,
+                      email: formData.email,
+                      phone: formData.phone,
+                      giftingType: formData.enquiry_type,
+                      quantity: formData.quantity,
+                      deliveryDate: formData.delivery_date,
+                      budget: formData.budget_range,
+                      brandingNeeded: formData.branding_needed,
+                      requirement: formData.message,
+                    },
+                  });
+                }}
+                className="w-full rounded-full bg-[#25D366] py-3 text-xs font-bold text-white shadow transition hover:bg-[#1da851]"
+              >
+                Open WhatsApp Again
+              </button>
+              <button
+                type="button"
+                onClick={() => setStatus("idle")}
+                className="w-full rounded-full border border-reef-gold/30 py-2.5 text-xs font-semibold text-reef-charcoal hover:bg-reef-cream"
+              >
                 Close
               </button>
-            ) : null}
+            </div>
           </div>
         </div>
-      ) : null}
+      )}
     </>
   );
 }
