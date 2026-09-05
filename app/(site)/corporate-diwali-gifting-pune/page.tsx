@@ -18,7 +18,6 @@ import {
   FiPhone,
   FiMail,
   FiClock,
-  FiCheckCircle,
   FiTruck,
   FiFileText,
 } from "react-icons/fi";

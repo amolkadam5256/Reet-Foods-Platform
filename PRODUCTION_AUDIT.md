@@ -17,6 +17,10 @@ The project is a Next.js 16 App Router marketing and lead-generation website. It
 | `/products/categories/*` | Static | Yes | Page metadata | Matching category path | Present | Collection, FAQ | Good. |
 | `/corporate-gifting` | Static | Yes | Page metadata | `/corporate-gifting` | Present | FAQ/Breadcrumb content | Good. |
 | `/corporate-gifting/pune` | Static | Yes | Page metadata | `/corporate-gifting/pune` | Present | LocalBusiness, FAQ, Breadcrumb | Verify exact map embed/place. |
+| `/corporate-diwali-gifting-pune` | Static | Yes | Page metadata | `/corporate-diwali-gifting-pune` | Present | LocalBusiness, FAQ, Breadcrumb | High-converting local landing page. |
+| `/hampers` | Static | Yes | Page metadata | `/hampers` | Present | Collection, Breadcrumb | Dedicated Diwali hampers collection page. |
+| `/bulk-orders` | Static | Yes | Page metadata | `/bulk-orders` | Present | FAQ, Breadcrumb | Enterprise bulk ordering & concierge. |
+| `/customization` | Static | Yes | Page metadata | `/customization` | Present | FAQ, Breadcrumb | Custom logo stamping & bespoke packaging. |
 | `/blog` | Static | Yes | Page metadata | `/blog` | Present | Blog listing | Blog dates should be reviewed before publish. |
 | `/blog/[slug]` | SSG | Yes | Generated metadata | `/blog/[slug]` | Present | Article, FAQ where present | Review future dates/content proof. |
 | `/gallery` | Static | Yes | Page metadata | Inherited | Present | FAQ | Gallery claims made conservative. |
@@ -87,11 +91,13 @@ Forms have visible labels. The modal/popup uses dialog semantics. Further browse
 
 ## Final Validation
 
-Run on 2026-08-29:
+Run on 2026-09-05:
 
-- `npm.cmd run lint`: pass.
-- `npm.cmd run build`: pass.
-- `npm.cmd audit --omit=dev`: 0 vulnerabilities.
+- `npm run lint`: pass (0 errors, 0 warnings).
+- `npm run build`: pass (64 static/SSG pages generated with Next.js Turbopack).
+- `npm audit --omit=dev`: 0 vulnerabilities.
+- Sitemap: 64 URLs dynamically enumerated including all categories, routes, and individual product SKUs.
+- WhatsApp Integration: Centralised via `lib/whatsapp.ts` across all forms and CTAs.
 
 ## Remaining Work Requiring Human Verification
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiCheck, FiArrowRight } from "react-icons/fi";
 import { getCampaignYear } from "@/lib/site";
@@ -110,12 +111,12 @@ export function CustomizationSection() {
                 >
                   <FaWhatsapp className="text-base" /> DISCUSS YOUR CUSTOM HAMPER
                 </a>
-                <a
+                <Link
                   href="/#corporate-quotation"
                   className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-6 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#1c1c1c] shadow-md transition-all duration-200 hover:bg-white hover:text-reef-charcoal hover:shadow-lg hover:-translate-y-0.5"
                 >
                   REQUEST PROPOSAL <FiArrowRight />
-                </a>
+                </Link>
               </div>
             </div>
 
