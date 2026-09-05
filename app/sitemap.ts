@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
 import { productCategories } from "@/data/products";
 
-const baseUrl = "https://reetfoodsngiftings.com";
+const baseUrl = "https://www.reetfoodsngiftiings.com";
 
 const pages = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },

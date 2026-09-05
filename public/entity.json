@@ -7,16 +7,15 @@
   "brand": {
     "@type": "Brand",
     "name": "Reet Foods",
-    "logo": "https://reetfoodsngiftings.com/logo.png",
-    "slogan": "Premium Gifting. Crafted with Precision.",
-    "url": "https://reetfoodsngiftings.com"
+    "logo": "https://www.reetfoodsngiftiings.com/logo.png",
+    "slogan": "Corporate Diwali Gifting 2026. Thoughtfully Curated Hampers.",
+    "url": "https://www.reetfoodsngiftiings.com"
   },
-  "description": "Reet Foods & Giftings is Pune's premier boutique for premium dry fruits, artisanal chocolates, luxury corporate hampers, and custom gift boxes. FSSAI-certified and GST-registered, we serve 350+ enterprise clients with PAN India delivery.",
-  "url": "https://reetfoodsngiftings.com",
-  "logo": "https://reetfoodsngiftings.com/logo.png",
-  "image": "https://reetfoodsngiftings.com/og-image.jpg",
-  "foundingDate": "2016",
-  "numberOfEmployees": { "@type": "QuantitativeValue", "value": "15" },
+  "description": "Reet Foods is Pune's boutique partner for premium dry fruits, artisanal chocolates, luxury corporate hampers, and custom gift boxes. FSSAI-licensed and GST-registered with PAN India delivery.",
+  "url": "https://www.reetfoodsngiftiings.com",
+  "logo": "https://www.reetfoodsngiftiings.com/logo.png",
+  "image": "https://www.reetfoodsngiftiings.com/og-image.jpg",
+  "foundingDate": "2019",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle",
@@ -31,34 +30,27 @@
     "longitude": 73.7389
   },
   "additionalProperty": [
-    { "@type": "PropertyValue", "name": "FSSAI Licence", "value": "21526079003816" },
+    { "@type": "PropertyValue", "name": "FSSAI Licence", "value": "21525083009881" },
+
     { "@type": "PropertyValue", "name": "GSTIN", "value": "27FHIPK0363N1ZX" },
     { "@type": "PropertyValue", "name": "Factory Address", "value": "Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune 411027" },
-    { "@type": "PropertyValue", "name": "Production Capacity", "value": "Up to 500 gifts per day" },
-    { "@type": "PropertyValue", "name": "Established", "value": "2016" }
+    { "@type": "PropertyValue", "name": "Bulk Orders", "value": "Bulk corporate orders welcome. Quantity-based pricing available." }
   ],
-  "telephone": ["+91-9890609611", "+91-8007518088"],
+  "telephone": ["+91-9225130732"],
   "email": "reetfoodspune@gmail.com",
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+91-9890609611",
-      "contactType": "sales",
+      "telephone": "+91-9225130732",
+      "contactType": "corporate sales and gifting desk",
       "areaServed": "IN",
       "availableLanguage": ["English", "Hindi", "Marathi"],
-      "hoursAvailable": "Mo-Sa 09:00-19:00"
+      "hoursAvailable": "Mo-Sa 09:30-20:00"
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+91-8007518088",
-      "contactType": "customer service",
-      "areaServed": "IN",
-      "availableLanguage": ["English", "Hindi", "Marathi"]
-    },
-    {
-      "@type": "ContactPoint",
-      "url": "https://wa.me/919890609611",
-      "contactType": "sales",
+      "url": "https://wa.me/919225130732",
+      "contactType": "corporate gifting support",
       "contactOption": "WhatsApp"
     }
   ],
@@ -66,66 +58,66 @@
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "19:00"
+      "opens": "09:30",
+      "closes": "20:00"
     }
   ],
   "sameAs": [
-    "https://www.instagram.com/reetfoods",
-    "https://www.facebook.com/reetfoods",
+    "https://www.instagram.com/reetfoodsgifting",
+    "https://www.facebook.com/reetfoodsgifting",
     "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
-    "https://wa.me/919890609611",
-    "https://www.youtube.com/@reetfoods"
+    "https://wa.me/919225130732",
+    "https://www.youtube.com/@ReetFoodsGiftings"
   ],
   "products": [
     {
       "name": "Premium Dry Fruits",
       "category": "Dry Fruits",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
-      "description": "Iranian & Afghan origin almonds, pistachios, cashews, figs and raisins — nitrogen-packed for freshness."
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
+      "description": "Handpicked almonds, pistachios, cashews, figs and raisins — food-grade sealed for freshness."
     },
     {
       "name": "Artisanal Chocolates",
       "category": "Chocolates",
-      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
-      "description": "Hand-poured Belgian chocolates, truffles, and pralines in luxurious custom-branded packaging."
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/chocolates",
+      "description": "Artisanal chocolates, truffles, and nut pralines in custom-branded packaging."
     },
     {
       "name": "Celebration Hampers",
       "category": "Hampers",
-      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
-      "description": "Curated luxury hampers for Diwali, weddings, corporate events, and festive occasions."
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/hampers",
+      "description": "Curated hampers for Corporate Diwali Gifting 2026, weddings, and business milestones."
     },
     {
       "name": "Corporate Gift Boxes",
       "category": "Corporate Gifting",
-      "url": "https://reetfoodsngiftings.com/corporate-gifting",
-      "description": "Custom logo-branded corporate gift boxes for IT firms, banks, pharma, and enterprise clients in Pune and PAN India."
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
+      "description": "Custom logo-branded corporate gift boxes for teams, clients, and business partners in Pune and PAN India."
     },
     {
       "name": "Wedding Return Gifts",
       "category": "Wedding Gifting",
-      "url": "https://reetfoodsngiftings.com/products",
-      "description": "Elegant wedding favors, trousseau packing, and custom return gifts for Indian weddings."
+      "url": "https://www.reetfoodsngiftiings.com/products",
+      "description": "Elegant wedding favors, trousseau packing, and custom return gifts."
     },
     {
       "name": "Cold Pressed Juices",
       "category": "Beverages",
-      "url": "https://reetfoodsngiftings.com/products",
-      "description": "100% natural cold-pressed fruit and botanical juice blends, zero sugar, sourced from premium Indian farms."
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/juices",
+      "description": "Cold-pressed fruit and botanical juice blends."
     }
   ],
   "services": [
     "Corporate Gifting",
     "Bulk Dry Fruit Supply",
-    "Custom Gift Box Manufacturing",
+    "Custom Gift Box Packaging",
     "PAN India Gift Delivery",
     "Diwali Corporate Hampers",
     "Wedding Return Gifts",
-    "Employee Joining Kits",
-    "Artisanal Chocolate Gifting",
+    "Employee Gifting",
+    "Client Gifting Programs",
     "Festive Hamper Curation",
-    "B2B Gifting Programs"
+    "B2B Gifting Invoicing"
   ],
   "categories": [
     "Premium Dry Fruits",
@@ -147,25 +139,23 @@
     { "@type": "Country", "name": "India" }
   ],
   "keywords": [
-    "premium dry fruits Pune",
+    "Corporate Diwali Gifting 2026",
     "corporate gifting Pune",
     "luxury hampers Pune",
     "Diwali gifts corporate",
     "wedding return gifts Pune",
     "custom gift boxes Pune",
-    "bulk dry fruit supplier Pune",
+    "bulk dry fruits Pune",
     "artisanal chocolates Pune",
-    "FSSAI certified dry fruits",
-    "employee joining kits Pune"
+    "FSSAI licensed corporate gifts"
   ],
   "certification": [
-    { "name": "FSSAI Food Business Operator", "licenceNumber": "21526079003816" },
+    { "name": "FSSAI Food Business Operator", "licenceNumber": "21525083009881" },
     { "name": "GST Registered Business", "registrationNumber": "27FHIPK0363N1ZX" }
   ],
+
   "statistics": {
-    "giftBoxesDelivered": "50000+",
-    "enterpriseClients": "350+",
-    "clientSatisfaction": "4.9/5",
-    "deliveryPinCodes": "19000+"
+    "startingPrice": "₹400 Onwards",
+    "compliance": "100% GST & FSSAI Licensed"
   }
 }

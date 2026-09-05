@@ -1,8 +1,8 @@
 const statistics = [
-  { value: "50,000+", label: "Gift Boxes Delivered" },
-  { value: "350+", label: "Enterprise Corporate Clients" },
-  { value: "100%", label: "FSSAI & Hygiene Compliant" },
-  { value: "4.9/5", label: "Client Satisfaction Rating" },
+  { value: "Bespoke", label: "Custom Hampers & Branding" },
+  { value: "₹400+", label: "Starting Budget Range" },
+  { value: "100%", label: "GST Billing & Compliance" },
+  { value: "FSSAI", label: "Licensed Operations" },
 ];
 
 export function AboutStatsBar() {

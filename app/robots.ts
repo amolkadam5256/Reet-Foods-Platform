@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/assets/"],
     },
-    sitemap: "https://reetfoodsngiftings.com/sitemap.xml",
+    sitemap: "https://www.reetfoodsngiftiings.com/sitemap.xml",
   };
 }

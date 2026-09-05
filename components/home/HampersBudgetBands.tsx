@@ -15,7 +15,7 @@ export function HampersBudgetBands() {
       suitableFor: "Large employee teams, staff appreciation & bulk distribution",
       image: "/images/category_dry_fruits.png",
       popularItems: "California Almonds, Roasted Cashews, Festive Packaging, Custom Ribbon",
-      minQty: "50+ units",
+      orderPolicy: "Bulk corporate orders welcome. Quantity-based pricing available.",
       badge: "Best for Scale",
       waMsg: `Hi Reet Foods, I am interested in Corporate Diwali ${year} hampers in the ₹400–₹600 budget range. Please share suitable options.`,
     },
@@ -25,7 +25,7 @@ export function HampersBudgetBands() {
       suitableFor: "Mid-level staff, corporate associates & vendor relations",
       image: "/images/category_chocolates.png",
       popularItems: "Dry Fruits Quad Box, Artisanal Chocolates, Metallic Logo Tag, Greeting Card",
-      minQty: "25+ units",
+      orderPolicy: "Bulk corporate orders welcome. Quantity-based pricing available.",
       badge: "Most Ordered",
       waMsg: `Hi Reet Foods, I am interested in Corporate Diwali ${year} hampers in the ₹700–₹1,000 budget range. Please share suitable options.`,
     },
@@ -35,7 +35,7 @@ export function HampersBudgetBands() {
       suitableFor: "Key clients, senior executives & business partner appreciation",
       image: "/images/category_juices.png",
       popularItems: "Afghani Anjeer, Iranian Pistachios, Premium Truffles, Rigid Branded Box",
-      minQty: "15+ units",
+      orderPolicy: "Bulk corporate orders welcome. Quantity-based pricing available.",
       badge: "Client Favourite",
       waMsg: `Hi Reet Foods, I am interested in Corporate Diwali ${year} hampers in the ₹1,200–₹1,500 budget range. Please share suitable options.`,
     },
@@ -45,7 +45,7 @@ export function HampersBudgetBands() {
       suitableFor: "CXOs, Board Members, VIP Clients & Premium Relations",
       image: "/images/category_dry_fruits.png",
       popularItems: "Handcrafted Wooden Casket, Jumbo Dry Fruits, Gold-foiled Artisanal Sweets, Bespoke Letter",
-      minQty: "10+ units",
+      orderPolicy: "Bulk corporate orders welcome. Quantity-based pricing available.",
       badge: "VIP Luxury",
       waMsg: `Hi Reet Foods, I am interested in Corporate Diwali ${year} VIP Luxury hampers in the ₹2,000–₹3,000+ range. Please share suitable options.`,
     },
@@ -109,8 +109,8 @@ export function HampersBudgetBands() {
                     </p>
                   </div>
 
-                  <p className="mt-3 text-[11px] text-reef-charcoal/60 font-medium">
-                    Min Order: <span className="font-bold text-reef-charcoal">{band.minQty}</span> | Custom Branding Included
+                  <p className="mt-3 text-[11px] text-reef-charcoal/75 font-medium">
+                    {band.orderPolicy}
                   </p>
                 </div>
               </div>
@@ -137,9 +137,9 @@ export function HampersBudgetBands() {
         </div>
 
         {/* Commercial disclaimer per brief */}
-        <div className="mt-8 rounded-xl border border-reef-gold/20 bg-reef-cream/40 p-4 text-center text-xs text-reef-charcoal/70">
+        <div className="mt-8 rounded-xl border border-reef-gold/20 bg-reef-cream/40 p-4 text-center text-xs text-reef-charcoal/80">
           <p>
-            ℹ️ <strong>Note for Procurement & HR:</strong> Displayed hampers are indicative. Actual product mixes, weights, packaging finishes, and final landed prices are confirmed based on your quantity, required dispatch date, and landed delivery location in Pune / PAN India.
+            ℹ️ <strong>Note for Procurement & HR:</strong> Final contents and pricing depend on quantity, customization and delivery requirements. Actual product mixes, weights, packaging finishes, and landed prices are confirmed during quotation based on your specific requirements.
           </p>
         </div>
       </div>

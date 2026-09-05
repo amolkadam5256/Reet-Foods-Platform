@@ -18,10 +18,10 @@ export const heroGallery = [
 ];
 
 export const highlightBar = [
-  "24-hour quote response",
+  "Prompt quotation support",
   "Premium packaging options",
   "Corporate bulk orders",
-  "Wedding and festive gifting",
+  "Festive and Diwali gifting",
 ];
 
 export const featuredProducts = [
@@ -69,7 +69,7 @@ export const whyUs = [
   },
   {
     title: "Seamless Bulk Orders",
-    desc: "Reliable bulk supply with consistent quality, tiered pricing, and on-time delivery.",
+    desc: "Reliable bulk corporate orders with consistent quality, quantity-based pricing, and professional coordination.",
     icon: "bulk",
   },
   {
@@ -79,42 +79,56 @@ export const whyUs = [
   },
   {
     title: "Dedicated Support",
-    desc: "A dedicated concierge from the first inquiry to doorstep delivery — always.",
+    desc: "Attentive requirement support and order coordination from initial inquiry to doorstep delivery.",
     icon: "support",
+  },
+];
+
+export const corporateGiftingReasons = [
+  {
+    title: "Customized Hampers",
+    desc: "Thoughtfully curated hampers tailored to your specific budget, taste preferences, and occasion.",
+    icon: "sliders",
+  },
+  {
+    title: "Employee, Client & Partner Gifting",
+    desc: "Purpose-designed gift solutions for large teams, valued clients, vendors, and business associates.",
+    icon: "users",
+  },
+  {
+    title: "Company Logo & Branding",
+    desc: "Metallic gold and silver foil logo stamping, branded ribbon sleeves, and personalized greeting cards.",
+    icon: "award",
+  },
+  {
+    title: "Multiple Packaging Styles",
+    desc: "Rigid magnetic boxes, velvet-lined trays, handcrafted wooden caskets, and festive tins.",
+    icon: "package",
+  },
+  {
+    title: "Bulk Corporate Orders",
+    desc: "Bulk corporate orders welcome with tiered quantity-based pricing and seamless fulfillment.",
+    icon: "briefcase",
+  },
+  {
+    title: "100% GST Invoicing",
+    desc: "Full B2B tax invoicing with GST input tax credit (ITC) compliance on all corporate consignments.",
+    icon: "file",
+  },
+  {
+    title: "Personalized Support",
+    desc: "Prompt quotation, requirement support, and dedicated coordination from inquiry to dispatch.",
+    icon: "headphones",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "The packaging looked premium enough for our leadership gifting without any extra styling. Reet Foods truly understands corporate expectations.",
-    name: "Anjali Mehta",
-    role: "HR Lead",
-    company: "TechCorp India",
-    rating: 5,
-  },
-  {
-    quote:
-      "They handled custom branding smoothly and delivered a polished bulk order on time. Our clients were genuinely impressed.",
-    name: "Vikram Sharma",
-    role: "Event Director",
-    company: "Occasions & Co.",
-    rating: 5,
-  },
-  {
-    quote:
-      "The dry fruit quality and hamper presentation were exactly what our team needed for a 300-person wedding. Flawless execution.",
-    name: "Rhea Patel",
-    role: "Wedding Buyer",
-    company: "Patel Celebrations",
-    rating: 5,
-  },
-  {
-    quote:
-      "Outstanding quality control and packaging. We have made Reet Foods our exclusive corporate gifting partner for Diwali for three consecutive years.",
-    name: "Saurabh Jain",
-    role: "Procurement Manager",
-    company: "Globex Solutions",
+      "Why Choose Reet Foods for Corporate Diwali Gifting? Thoughtfully customized hampers, company logo branding, multiple packaging styles, bulk order handling, 100% GST invoicing, and personalized support.",
+    name: "Corporate Diwali Gifting 2026",
+    role: "Reet Foods & Gifting",
+    company: "Pune",
     rating: 5,
   },
 ];
@@ -123,7 +137,7 @@ export const processSteps = [
   {
     step: "01",
     title: "Inquiry & Consultation",
-    desc: "Reach out via WhatsApp, email, or our enquiry form. Our team responds within 24 hours.",
+    desc: "Reach out via WhatsApp, email, or our quotation form. Our team provides prompt requirement support.",
   },
   {
     step: "02",
@@ -166,31 +180,31 @@ export const industries = [
 export const faqs = [
   {
     q: "What makes Reet Foods & Giftings the best choice for corporate gifts in Pune?",
-    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our FSSAI licensing, packaging options, and dedicated B2B support make us a strong choice for corporate gifting in Pune.",
+    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our FSSAI licensing (Lic. 21525083009881), diverse packaging options, and dedicated B2B support make us a trusted partner for corporate gifting in Pune.",
   },
   {
     q: "What is the minimum order quantity for corporate gift boxes?",
-    a: "Our minimum order quantity for custom corporate gift boxes starts at just 25 units. For smaller bespoke orders or luxury hampers for executives, please contact our Pune office directly and we will accommodate your request.",
+    a: "Bulk corporate orders are welcome. Quantity-based pricing is available for all order sizes, from executive VIP hampers to large team distributions. Contact our Pune corporate desk for tailored options.",
   },
   {
     q: "Can you customize the packaging for Diwali gifts and corporate hampers?",
-    a: "Absolutely. We offer full custom branding for Diwali gifts Pune and corporate hampers, including logo printing, foil stamping on boxes, personalized ribbon, branded note cards, and custom tissue paper.",
+    a: "Absolutely. We offer custom branding for Diwali gifts and corporate hampers, including metallic foil logo stamping on boxes, personalized ribbon, branded note cards, and custom packaging sleeves.",
   },
   {
     q: "Do you deliver premium dry fruits and gift hampers PAN India?",
-    a: "Yes. While we are based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and wedding return gifts across India. Delivery options are planned according to product type, destination, weather, and dispatch timeline.",
+    a: "Yes. While our corporate studio is based in Pune (Hinjewadi), we deliver premium dry fruits, gift boxes, and festive hampers across India with tracked dispatch planned around your timeline.",
   },
   {
     q: "What is the shelf life of your premium dry fruits and chocolates?",
-    a: "Shelf life depends on the product, batch, packaging, and storage conditions. Dry fruits are packed for freshness, and chocolate dispatch is planned with suitable handling guidance for the season and destination.",
+    a: "Shelf life depends on the product, batch, packaging, and storage conditions. Dry fruits are packed for freshness in food-grade packaging, and chocolate dispatch is planned with season-appropriate handling guidance.",
   },
   {
-    q: "How much advance notice do you need for a large wedding return gifts order?",
-    a: "For bulk wedding return gifts Pune or large corporate orders above 100 units, we recommend at least 10 to 14 business days. For highly customized gift boxes requiring bespoke packaging or logo printing, please allow 3 to 4 weeks.",
+    q: "How much advance notice do you need for a large corporate order?",
+    a: "For bulk festive orders and corporate gifting, we recommend sharing requirements 1 to 2 weeks in advance. For bespoke boxes requiring custom logo die-making or custom packaging, 2 to 3 weeks is recommended.",
   },
   {
     q: "Are your luxury gift hampers safe during transit in warm weather?",
-    a: "Warm-weather orders are planned by product type, destination, and transit time. For chocolates and sensitive hampers, our team confirms suitable packing and dispatch guidance during quotation.",
+    a: "Orders are planned by product type, destination, and transit time. For chocolates and sensitive hampers, our team confirms suitable insulated packing and dispatch guidance during quotation.",
   },
   {
     q: "Do you offer vegan or sugar-free gift box options?",
@@ -198,39 +212,39 @@ export const faqs = [
   },
   {
     q: "Can I request a sample of your dry fruit gift boxes before placing a bulk order?",
-    a: "Yes, sample dry fruit gift boxes and corporate hampers can be arranged for bulk B2B buyers. Contact our team to request a sample kit. Charges may apply but are adjusted against your final bulk order.",
+    a: "Yes, sample dry fruit gift boxes and corporate hampers can be arranged for corporate buyers in Pune and across India. Contact our team to coordinate sample requirements.",
   },
   {
     q: "Do you provide customized employee joining kits and onboarding hampers?",
-    a: "Yes, we specialize in customized employee joining kits for IT companies in Pune and across India. These include branded merchandise, premium dry fruits, coffee mugs, and welcome notes.",
+    a: "Yes, we specialize in customized employee joining kits for IT companies in Pune and across India, featuring branded boxes, premium dry fruits, and welcome notes.",
   },
   {
     q: "Are your products FSSAI certified and hygienically packed?",
-    a: "Yes, Reet Foods & Giftings operates with FSSAI licensing. Premium dry fruits and corporate gifts are handled with food-grade packaging and quality checks before dispatch.",
+    a: "Yes, Reet Foods operates with valid FSSAI licensing (Licence No. 21525083009881). Premium dry fruits and corporate gifts are handled with food-grade packaging and rigorous quality checks before dispatch.",
   },
   {
     q: "Do you cater to festive gifting beyond Diwali?",
-    a: "Yes, we provide curated festive hampers for Christmas, New Year, Holi, Eid, and Raksha Bandhan. Our festive gift boxes are themed and packed with premium dry fruits and gourmet treats.",
+    a: "Yes, we provide curated festive hampers for New Year, Holi, Eid, and year-round corporate celebrations. All festive gift boxes are themed and packed with premium dry fruits and treats.",
   },
   {
     q: "Can you handle multi-location delivery for corporate employee gifting?",
-    a: "Yes, we offer direct-to-employee shipping for corporate gifting Pune and PAN India. You just provide the addresses, and we manage the individual dispatch, tracking, and delivery.",
+    a: "Yes, we offer direct-to-employee shipping for corporate gifting across Pune and PAN India. Provide the recipient address sheet, and our team coordinates individual dispatch and tracking.",
   },
   {
     q: "What are your top-selling luxury hampers for VIP clients?",
-    a: "Our top-selling luxury hampers Pune include the Grande Corporate Hamper and Royal Pistachio Gold Tin, featuring exotic dry fruits, premium chocolates, and elegant keepsake boxes.",
+    a: "Our popular luxury hampers include the Grande Corporate Hamper and Royal Pistachio Gold Tin, featuring graded dry fruits, artisanal chocolates, and elegant keepsake gift boxes.",
   },
   {
     q: "How do I get a quote for bulk corporate gifts in Pune?",
-    a: "You can request a quote for bulk corporate gifts Pune by filling out the form on our Contact page, emailing reetfoodspune@gmail.com, or calling our Hinjewadi Phase I office directly.",
+    a: "You can request a quote for Corporate Diwali Gifting 2026 by filling out the form on our website, messaging WhatsApp at +91 9225130732, emailing reetfoodspune@gmail.com, or visiting our Hinjewadi Phase I office.",
   }
 ];
 
 export const certifications = [
-  { name: "FSSAI Certified", desc: "Licensed & regulated by the Food Safety and Standards Authority of India." },
+  { name: "FSSAI Licensed", desc: "Licence No. 21525083009881 - Regulated by the Food Safety and Standards Authority of India." },
   { name: "Quality Checked", desc: "Batch-aware packing, hygiene checks, and food-grade packaging standards." },
-  { name: "100% Hygienic", desc: "Manufactured in a controlled, dust-free environment with daily hygiene audits." },
-  { name: "Premium Grade", desc: "All products graded to premium standards before packaging and dispatch." },
+  { name: "Hygienic Handling", desc: "Assembled in a clean, food-grade environment with quality control at every stage." },
+  { name: "Premium Grade", desc: "All dry fruits and chocolates graded to premium standards before dispatch." },
 ];
 
 export const blogPosts = [
@@ -270,8 +284,8 @@ export const galleryPreviewImages = [
 ];
 
 export const stats = [
-  { value: "10+", label: "Years of Excellence" },
-  { value: "500/day", label: "Production Capacity" },
-  { value: "1,000+", label: "Largest Bulk Order" },
-  { value: "100%", label: "Quality Assured" },
+  { value: "Bespoke", label: "Custom Hampers & Branding" },
+  { value: "₹400+", label: "Budgets for Every Scale" },
+  { value: "100%", label: "GST Compliant Invoicing" },
+  { value: "FSSAI", label: "Lic. 21525083009881" },
 ];

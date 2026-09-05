@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "What is the process for raising a return or refund request?",
-    answer: "Contact our Pune team by calling +91 9890609611 or emailing reetfoodspune@gmail.com with your order ID, photos of the issue, and a description of the problem."
+    answer: "Contact our Pune team by calling +91 9225130732 or emailing reetfoodspune@gmail.com with your order ID, photos of the issue, and a description of the problem."
   },
   {
     question: "Are customized corporate gift boxes returnable?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "Are premium dry fruits eligible for a return if found stale?",
-    answer: "Our nitrogen-packed premium dry fruits are guaranteed fresh at the time of dispatch. If you find an issue upon receipt, contact us within 24 hours with proof for review."
+    answer: "Our premium dry fruits are checked for quality and sealed in food-grade packaging at the time of dispatch. If you find an issue upon receipt, contact us within 24 hours with proof for review."
   },
   {
     question: "Can I cancel an order before production starts?",
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "What if my Diwali corporate gift boxes arrive after the event?",
-    answer: "We guarantee dispatch within the agreed timelines. However, courier delays beyond our control are not eligible for refunds. We recommend placing Diwali gifting orders at least 3 weeks in advance."
+    answer: "We aim for timely dispatch within agreed timelines. However, courier delays beyond our control are not eligible for refunds. We recommend placing Diwali gifting orders in advance."
   }
 ];
 

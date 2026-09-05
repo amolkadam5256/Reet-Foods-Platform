@@ -1,4 +1,4 @@
-﻿import { FiLock, FiPackage, FiLayers, FiGift, FiFileText } from "react-icons/fi";
+import { FiLock, FiPackage, FiLayers, FiGift, FiFileText } from "react-icons/fi";
 
 interface PackagingOptionsProps {
   animVisible: boolean;
@@ -6,7 +6,7 @@ interface PackagingOptionsProps {
 
 export function PackagingOptions({ animVisible }: PackagingOptionsProps) {
   const packagingTypes = [
-    { title: "Metallic Gold Tin", desc: "Air-tight nitrogen sealed metal tins for maximum shelf life.", tag: "Airtight", icon: FiLock },
+    { title: "Metallic Gold Tin", desc: "Airtight sealed food-grade metal tins to preserve freshness.", tag: "Airtight", icon: FiLock },
     { title: "Handcrafted Wooden Box", desc: "Sustainable pine wood with brass latch and custom laser engraving.", tag: "Eco Luxury", icon: FiPackage },
     { title: "Rigid Magnetic Box", desc: "High-density rigid cardboard with magnetic flap and velvet insert.", tag: "Premium", icon: FiLayers },
     { title: "Satin Ribbon Gift Box", desc: "Classic rigid box finished with hand-tied satin ribbons and cards.", tag: "Festive", icon: FiGift },

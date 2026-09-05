@@ -67,10 +67,10 @@ export function BulkOrderSection() {
             Enterprise Volume Desk
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl sm:text-5xl font-bold text-white">
-            Planning 50, 100, 500 or 1,000+ Gifts?
+            Planning Corporate Diwali Gifts?
           </h2>
           <p className="mt-4 text-sm sm:text-base text-white/75 leading-relaxed">
-            Tell us your quantity, target budget, and delivery requirement. Your details open directly in WhatsApp for our Pune corporate desk.
+            Bulk corporate orders welcome. Quantity-based pricing available. Tell us your quantity, target budget, and delivery requirement.
           </p>
         </div>
 
@@ -112,6 +112,7 @@ export function BulkOrderSection() {
                     className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3.5 text-sm text-white outline-none focus:border-reef-gold focus:bg-white/10"
                     required
                   >
+                    <option value="25 - 50 units" className="bg-[#1c1614]">25 - 50 gifts</option>
                     <option value="50 - 100 units" className="bg-[#1c1614]">50 - 100 gifts</option>
                     <option value="100 - 250 units" className="bg-[#1c1614]">100 - 250 gifts</option>
                     <option value="250 - 500 units" className="bg-[#1c1614]">250 - 500 gifts</option>

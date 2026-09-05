@@ -1,10 +1,10 @@
-contact: security@reetfoodsngiftings.com
+contact: mailto:reetfoodspune@gmail.com
 expires: 2027-08-06T00:00:00.000Z
-encryption: https://reetfoodsngiftings.com/.well-known/pgp-key.txt
+encryption: https://www.reetfoodsngiftiings.com/.well-known/pgp-key.txt
 preferred-languages: en, hi
-canonical: https://reetfoodsngiftings.com/.well-known/security.txt
-policy: https://reetfoodsngiftings.com/privcontinueacy-policy
-acknowledgments: https://reetfoodsngiftings.com/humans.txt
+canonical: https://www.reetfoodsngiftiings.com/.well-known/security.txt
+policy: https://www.reetfoodsngiftiings.com/privacy-policy
+acknowledgments: https://www.reetfoodsngiftiings.com/humans.txt
 
 # Reet Foods & Giftings Security Contact
 # If you discover a security vulnerability, please disclose it responsibly.

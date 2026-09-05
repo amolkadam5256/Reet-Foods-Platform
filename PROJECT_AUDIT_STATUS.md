@@ -32,7 +32,9 @@ Updated: 2026-09-05
 - Brand: Reet Foods.
 - Legal name: Reet Foods and Giftings.
 - GST: 27FHIPK0363N1ZX.
-- FSSAI licence: 21526079003816.
+- FSSAI registration: 21525083009881.
+- Established: 2019.
+
 - Office: Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune - 411057.
 - Factory: Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune - 411027.
 - Production capacity: up to 500 gifts per day.

@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-08-06",
-  "brand": "Reet Foods & Giftings",
-  "baseUrl": "https://reetfoodsngiftings.com",
+  "lastUpdated": "2026-09-05",
+  "brand": "Reet Foods & Gifting",
+  "baseUrl": "https://www.reetfoodsngiftiings.com",
   "currency": "INR",
   "products": [
     {
@@ -13,20 +13,20 @@
       "category": "Premium Dry Fruits",
       "categorySlug": "premium-dry-fruits",
       "shortDescription": "A generous assortment of premium almonds, cashews and pistachios, presented for effortless gifting.",
-      "description": "Carefully sourced Iranian & Afghan almonds, cashews, and pistachios — nitrogen-packed to retain freshness for up to 12 months. Perfect for corporate gifting and festive occasions.",
+      "description": "Carefully sourced almonds, cashews, and pistachios — sealed in food-grade packaging to retain freshness. Perfect for corporate gifting and festive occasions.",
       "price": 499,
       "priceRange": "499-2499",
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
-      "image": "https://reetfoodsngiftings.com/products/signature-dry-fruit-box.jpg",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
+      "image": "https://www.reetfoodsngiftiings.com/products/signature-dry-fruit-box.jpg",
       "availability": "InStock",
       "badge": "Best Seller",
       "tags": ["dry fruits", "almonds", "cashews", "pistachios", "gifting", "corporate"],
       "nutritional": {
         "type": "Dry Fruit Assortment",
         "certifications": ["FSSAI"],
-        "packaging": "Nitrogen-sealed",
-        "shelfLife": "12 months"
+        "packaging": "Food-grade sealed",
+        "shelfLife": "Freshness guidance provided upon order"
       }
     },
     {
@@ -38,8 +38,8 @@
       "categorySlug": "premium-dry-fruits",
       "shortDescription": "A balanced everyday selection of roasted nuts packed to preserve natural flavour and crunch.",
       "price": 649,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
       "availability": "InStock",
       "tags": ["nuts", "roasted", "daily snacking"]
     },
@@ -52,8 +52,8 @@
       "categorySlug": "premium-dry-fruits",
       "shortDescription": "A celebratory dry-fruit curation suited to Diwali, client appreciation and family occasions.",
       "price": 799,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
       "availability": "InStock",
       "badge": "Diwali Special",
       "tags": ["Diwali", "festive", "tin box", "corporate"]
@@ -67,8 +67,8 @@
       "categorySlug": "dry-fruit-box",
       "shortDescription": "An elegant compartment box that keeps every dry fruit neat, fresh and ready to share.",
       "price": 949,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruit-box",
       "availability": "InStock",
       "tags": ["partition box", "luxury", "gifting"]
     },
@@ -81,8 +81,8 @@
       "categorySlug": "dry-fruit-box",
       "shortDescription": "Personalise the box with a greeting card, ribbon or branding for your event or company.",
       "price": 1099,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruit-box",
       "availability": "InStock",
       "badge": "Customizable",
       "tags": ["custom", "branding", "personalized", "corporate"]
@@ -96,16 +96,16 @@
       "categorySlug": "chocolate-box",
       "shortDescription": "An elegant chocolate selection with space for your company logo, message card and event details.",
       "price": 799,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/chocolate-box",
       "availability": "InStock",
       "badge": "Corporate",
       "tags": ["chocolate", "corporate", "logo branding", "gifting"],
       "nutritional": {
-        "type": "Artisanal Belgian Chocolate",
+        "type": "Artisanal Chocolate",
         "certifications": ["FSSAI"],
-        "packaging": "Temperature-controlled",
-        "shelfLife": "6 months"
+        "packaging": "Sealed food-grade",
+        "shelfLife": "Freshness guidance provided upon order"
       }
     },
     {
@@ -117,8 +117,8 @@
       "categorySlug": "chocolates",
       "shortDescription": "A refined assortment of milk, dark and white truffles in a presentation-ready gift box.",
       "price": 949,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/chocolates",
       "availability": "InStock",
       "tags": ["truffle", "milk chocolate", "dark chocolate", "white chocolate"]
     },
@@ -131,8 +131,8 @@
       "categorySlug": "chocolates",
       "shortDescription": "Smooth pralines and nut-centred bites selected for a memorable gourmet experience.",
       "price": 1099,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/chocolates",
       "availability": "InStock",
       "tags": ["praline", "Belgian", "gourmet", "luxury"]
     },
@@ -145,8 +145,8 @@
       "categorySlug": "hampers",
       "shortDescription": "A complete gifting experience combining premium treats, a presentation box and a personal note.",
       "price": 1999,
-      "moq": "10 Units",
-      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/hampers",
       "availability": "InStock",
       "badge": "Premium",
       "tags": ["hamper", "luxury", "celebration", "premium gifting"]
@@ -160,8 +160,8 @@
       "categorySlug": "hampers",
       "shortDescription": "A graceful wedding favour with gourmet contents and custom messaging for every guest.",
       "price": 1499,
-      "moq": "50 Units",
-      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/hampers",
       "availability": "InStock",
       "tags": ["wedding", "favour", "return gift", "custom"]
     },
@@ -174,8 +174,8 @@
       "categorySlug": "corporate-gifts",
       "shortDescription": "A polished client or employee gift that can be tailored to your budget and branding.",
       "price": 2499,
-      "moq": "25 Units",
-      "url": "https://reetfoodsngiftings.com/products/celebration-hampers",
+      "moq": "Bulk orders welcome",
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
       "availability": "InStock",
       "badge": "B2B Favourite",
       "tags": ["corporate", "appreciation", "client gift", "employee"]

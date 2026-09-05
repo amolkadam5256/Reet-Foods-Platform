@@ -26,7 +26,7 @@ export function CustomizationSection() {
     {
       num: "4",
       title: "Selected Products",
-      desc: "Curate your mix of vacuum-sealed California dry fruits, Belgian-recipe chocolates & sweets.",
+      desc: "Curate your mix of premium graded dry fruits, artisanal chocolates, and festive treats.",
     },
     {
       num: "5",
@@ -38,10 +38,10 @@ export function CustomizationSection() {
   const features = [
     "Metallic Gold & Silver Logo Foil Stamping",
     "Custom Branded Sleeves & Butter Paper",
-    "Personalized CEO / Founder Message Cards",
+    "Personalized Message Cards",
     "Custom Product Combinations & Weights",
-    "FSSAI Certified Nitrogen Fresh Packing",
-    "Customizable for Quantities from 25 to 5,000+",
+    "FSSAI-Licensed Operations & Food-Grade Packing",
+    "Bulk corporate orders welcome. Quantity-based pricing available.",
   ];
 
   return (

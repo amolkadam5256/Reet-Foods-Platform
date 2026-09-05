@@ -1,7 +1,7 @@
 import Script from "next/script";
 import type { BlogPost } from "@/data/blog";
 
-const SITE_URL = "https://reetfoodsngiftings.com";
+const SITE_URL = "https://www.reetfoodsngiftiings.com";
 
 export function BlogListingSchema({ posts }: { posts: BlogPost[] }) {
   const schema = {

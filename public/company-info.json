@@ -1,16 +1,26 @@
 {
   "companyName": "Reet Foods & Giftings",
   "legalName": "Reet Foods & Giftings",
-  "website": "https://reetfoodsngiftings.com",
+  "website": "https://www.reetfoodsngiftiings.com",
+  "founders": [
+    "Shraddha Kharate",
+    "Harshad Kharate"
+  ],
   "description": "Premium dry fruits, luxury corporate gifting, wedding return gifts, and festive hampers in Pune with PAN India delivery.",
   "emails": [
     "reetfoodspune@gmail.com"
   ],
   "phones": [
-    "+91 9890609611",
-    "+91 8007518088"
+    "+91 9225130732"
   ],
-  "fssaiLicense": "21526079003816",
+  "fssaiLicense": "21525083009881",
+  "fssaiRegistrationNumber": "21525083009881",
+  "fssaiOperator": "Shraddha Harshad Kharate / REET FOODS",
+  "fssaiPremisesAddress": "Streets of Europe Mall, Hinjawadi Phase 1, Near Infosys Circle, Maan Road, Pune, Hinjawadi, Mulshi, Pune, Maharashtra – 411057",
+  "fssaiIssuedOn": "20-09-2025",
+  "fssaiValidUpTo": "19-09-2026",
+  "fssaiAuthority": "Food Safety and Standards Authority of India / Food & Drug Administration, Maharashtra",
+  "established": "2019",
   "gstin": "27FHIPK0363N1ZX",
   "addresses": [
     {

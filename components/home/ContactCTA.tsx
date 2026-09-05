@@ -194,7 +194,7 @@ export function ContactCTA() {
             </div>
             <div className="rounded-sm border border-gray-100 bg-gray-50 p-4">
               <p className="text-sm font-medium leading-relaxed text-gray-900">
-                <span className="text-gray-500">Call / WhatsApp:</span> +91 9890609611 / +91 8007518088
+                <span className="text-gray-500">Call / WhatsApp:</span> +91 9225130732
                 <br />
                 <span className="text-gray-500">Email:</span> reetfoodspune@gmail.com
               </p>

@@ -26,7 +26,7 @@ export function GalleryHero({
       <div className="relative z-10 grid gap-10 lg:grid-cols-2 lg:items-center">
         <div>
           <span className="inline-block bg-[#7a0019] text-[#d4af37] border border-[#d4af37]/35 text-[9px] font-extrabold uppercase tracking-[0.24em] px-3.5 py-1.5 rounded-full shadow-sm mb-5">
-            ESTD. 2015 · Pune
+            ESTD. 2019 · Pune
           </span>
           <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.1]">
             Reet Foods <br />

@@ -41,11 +41,11 @@ export function PreviousDesigns() {
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl sm:text-4xl font-bold text-reef-charcoal">
             Previous Diwali Designs
           </h2>
-          <p className="mt-2 text-sm font-semibold text-reef-gold">
-            Previous Diwali Designs – {year} Hampers Can Be Fully Customized.
-          </p>
-          <p className="mt-2 text-xs sm:text-sm text-reef-charcoal/70 leading-relaxed max-w-2xl mx-auto">
-            Explore concepts crafted for corporate clients across Pune. All {year} collections feature refreshed packaging styles, new gourmet combinations, and updated custom branding options.
+          <div className="mt-3 inline-block rounded-xl border border-reef-gold/30 bg-reef-cream/70 px-4 py-2 text-xs font-semibold text-reef-burgundy">
+            Images shown are for reference only. 2026 hamper designs, contents, packaging and branding can be customized according to requirement.
+          </div>
+          <p className="mt-3 text-xs sm:text-sm text-reef-charcoal/70 leading-relaxed max-w-2xl mx-auto">
+            Explore concepts crafted for corporate clients across Pune. All {year} collections feature refreshed packaging styles, gourmet combinations, and custom company branding options.
           </p>
         </div>
 

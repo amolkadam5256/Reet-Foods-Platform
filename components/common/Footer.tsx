@@ -181,10 +181,10 @@ export function Footer() {
                 Reet Foods
               </p>
               <p className="text-sm tracking-widest text-reef-gold/80">
-                &amp; Gifting · Pune
+                Corporate Diwali Gifting | Pune
               </p>
               <p className="mt-1 text-xs font-semibold text-reef-gold/60 tracking-wide">
-                Corporate Diwali Gifting 2026
+                Shraddha Kharate &amp; Harshad Kharate
               </p>
             </div>
           </div>
@@ -208,9 +208,8 @@ export function Footer() {
           <div>
             <SectionLabel>Our Story</SectionLabel>
             <p className="mb-6 text-[13px] leading-7 text-white/55">
-              Pune&apos;s premier boutique partner for artisan dry fruits,
-              luxury chocolate boxes, cold pressed juices, and handcrafted
-              corporate gifting hampers.
+              Pune&apos;s premier partner for artisan dry fruits,
+              custom corporate hampers, and festive celebration gifts with bespoke company branding.
             </p>
 
             {/* Social icons */}
@@ -277,25 +276,10 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <SectionLabel>Concierge Studio</SectionLabel>
-            <ul className="space-y-4 text-[13px] text-white/55">
-              <li>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 transition hover:text-reef-gold"
-                >
-                  <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-reef-gold/70" />
-                  <span className="leading-6">
-                    Shop F14, Streets of Europe Mall,
-                    <br />
-                    Hinjewadi Phase I, Pune 411057
-                  </span>
-                </a>
-              </li>
-              <li className="text-white/55 text-[13px]">
-                <span className="font-semibold text-white/70">Shraddha & Harshad Kharate</span>
+            <SectionLabel>Corporate Office &amp; Studio</SectionLabel>
+            <ul className="space-y-3.5 text-[13px] text-white/70">
+              <li className="font-semibold text-reef-gold">
+                Shraddha Kharate &amp; Harshad Kharate
               </li>
               <li>
                 <a
@@ -315,24 +299,47 @@ export function Footer() {
                   reetfoodspune@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <FiClock className="h-4 w-4 shrink-0 text-reef-gold/70" />
-                Mon – Sat: 9:30 AM – 8:00 PM
+              <li>
+                <a
+                  href="https://www.reetfoodsngiftiings.com"
+                  className="flex items-center gap-3 transition hover:text-reef-gold"
+                >
+                  <span className="text-xs text-reef-gold/70">🌐</span>
+                  www.reetfoodsngiftiings.com
+                </a>
               </li>
-              <li className="text-[11px] text-white/35">
+              <li>
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/55 transition hover:text-reef-gold"
+                >
+                  <FiMapPin className="mt-0.5 h-4 w-4 shrink-0 text-reef-gold/70" />
+                  <span className="leading-5 text-xs">
+                    Shop F14, Streets of Europe Mall,
+                    <br />
+                    Maan Road, near Infosys Circle, Hinjewadi Phase I, Pune 411057
+                  </span>
+                </a>
+              </li>
+              <li className="text-xs text-reef-gold/90 font-medium">
                 GST: 27FHIPK0363N1ZX
               </li>
+              <li className="text-[11px] text-white/45">
+                FSSAI Lic. #21525083009881
+              </li>
+
             </ul>
 
             {/* Quality badge */}
             <div className="mt-6 rounded-sm border border-reef-gold/20 bg-white/3 p-4 backdrop-blur-sm">
               <div className="mb-1.5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-reef-gold">
                 <FiCheckCircle className="h-3.5 w-3.5" />
-                100% Quality Guarantee
+                FSSAI-Licensed Operations
               </div>
               <p className="text-[11px] leading-5 text-white/45">
-                FSSAI certified · Food-grade airtight packaging · Prompt
-                dispatch
+                Food-grade packaging · Prompt corporate quotation &amp; fulfillment
               </p>
             </div>
           </div>

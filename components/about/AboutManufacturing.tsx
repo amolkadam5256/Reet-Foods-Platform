@@ -26,7 +26,7 @@ export function AboutManufacturing() {
           Hinjewadi Phase I. We manage everything under one roof.
         </p>
         <div className="mt-6 rounded-lg border-l-2 border-reef-gold bg-white/5 p-4 text-xs font-medium text-reef-gold">
-          Dedicated account concierge for product selection, branding details,
+          Dedicated order coordination for product selection, branding details,
           and delivery follow-through.
         </div>
       </div>

@@ -1,14 +1,15 @@
 /* TEAM */
 
-Business: Reet Foods & Giftings
+Business: Reet Foods & Gifting
+Proprietors: Shraddha Kharate & Harshad Kharate
 Location: Hinjewadi Phase I, Pune, Maharashtra, India
 Email: reetfoodspune@gmail.com
-Phone: +91 9890609611
-Contact: https://reetfoodsngiftings.com/contact
+Phone: +91 9225130732
+Contact: https://www.reetfoodsngiftiings.com/contact
 
 /* SITE */
 
-Website: https://reetfoodsngiftings.com
+Website: https://www.reetfoodsngiftiings.com
 Standards: HTML5, CSS3, Next.js App Router
 Components: React 19, TypeScript, Tailwind-free Vanilla CSS
 Doctype: HTML5
@@ -17,9 +18,9 @@ Language: English (en-IN)
 
 /* LEGAL */
 
-FSSAI Licence: 21526079003816
+FSSAI Licence: 21525083009881
 GSTIN: 27FHIPK0363N1ZX
-Founded: 2016
+Founded: 2019
 Address: Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune 411057
 
 /* THANK YOU */

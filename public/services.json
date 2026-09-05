@@ -1,130 +1,127 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-08-06",
-  "brand": "Reet Foods & Giftings",
-  "website": "https://reetfoodsngiftings.com",
+  "lastUpdated": "2026-09-05",
+  "brand": "Reet Foods Corporate Diwali Gifting",
+  "website": "https://www.reetfoodsngiftiings.com",
   "services": [
     {
       "id": "SVC-001",
       "name": "Corporate Gifting",
       "slug": "corporate-gifting",
-      "url": "https://reetfoodsngiftings.com/corporate-gifting",
-      "description": "End-to-end corporate gifting solutions for enterprises in Pune and PAN India. Includes custom logo branding, bulk dry fruit boxes, luxury hampers, and multi-address employee delivery.",
-      "targetAudience": ["HR Managers", "Procurement Teams", "CXOs", "Marketing Heads"],
-      "industries": ["IT & Tech", "Banking & Finance", "Real Estate", "Pharma & Healthcare", "Manufacturing", "FMCG"],
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
+      "description": "End-to-end corporate gifting solutions for businesses in Pune and PAN India. Includes custom logo branding, bulk dry fruit boxes, luxury hampers, and organized corporate delivery.",
+      "targetAudience": ["HR Managers", "Procurement Teams", "Leadership Teams", "Corporate Offices"],
+      "industries": ["IT & Tech", "Banking & Finance", "Real Estate", "Pharma & Healthcare", "Manufacturing", "Professional Services"],
       "features": [
-        "Custom logo printing and foil stamping",
-        "MOQ from 25 to 50,000 units",
-        "PAN India multi-address dispatch",
+        "Custom company logo printing and foil stamping",
+        "Bulk corporate orders welcome",
+        "PAN India corporate dispatch",
         "100% GST-compliant B2B invoicing",
-        "Tiered bulk volume discounts",
+        "Tiered quantity-based pricing",
         "Digital mock-ups before production",
-        "Dedicated account concierge"
+        "Dedicated order coordination"
       ],
       "deliveryArea": "PAN India",
       "leadTime": "5-14 business days depending on customization",
-      "priceRange": "₹299 to ₹9999 per unit"
+      "priceRange": "₹400 to ₹3,000+ per unit"
     },
     {
       "id": "SVC-002",
-      "name": "Diwali Corporate Hampers",
+      "name": "Corporate Diwali Gifting 2026",
       "slug": "diwali-corporate-gifting",
-      "url": "https://reetfoodsngiftings.com/corporate-gifting",
-      "description": "Premium Diwali gift hampers for corporates featuring dry fruits, artisanal sweets, diyas, and custom-branded packaging. Trusted by 350+ enterprise clients across Pune.",
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
+      "description": "Thoughtfully curated Corporate Diwali Gifting 2026 hampers for employees, clients, and business partners. Customized hampers from ₹400 onwards with company logo branding.",
       "targetAudience": ["Corporate HR", "Business Owners", "Event Planners"],
       "features": [
         "Themed festive hampers",
         "Custom branded boxes",
-        "Early bird bulk discounts",
+        "Quantity-based pricing",
         "Advance booking available",
-        "Delivery across India"
+        "PAN India delivery"
       ],
-      "seasonality": "October-November (Diwali)",
-      "priceRange": "₹599 to ₹4999 per hamper"
+      "seasonality": "Diwali Season",
+      "priceRange": "₹400 to ₹3,000+ per hamper"
     },
     {
       "id": "SVC-003",
       "name": "Wedding Return Gifts",
       "slug": "wedding-return-gifts",
-      "url": "https://reetfoodsngiftings.com/products",
-      "description": "Elegant wedding favours, trousseau packing, and return gift hampers for Indian weddings. Custom messaging, premium dry fruits, and luxury presentation available.",
+      "url": "https://www.reetfoodsngiftiings.com/products",
+      "description": "Elegant wedding favours, trousseau packing, and return gift hampers. Custom messaging, premium dry fruits, and luxury presentation.",
       "targetAudience": ["Wedding Planners", "Families", "Event Managers"],
       "features": [
-        "Custom name cards for every guest",
+        "Custom name cards for guests",
         "Bulk wedding favour pricing",
         "Traditional packaging options",
         "Premium dry fruit return gifts",
-        "Same-day sampling available"
+        "Sample options available upon request"
       ],
-      "moq": "50 units",
-      "priceRange": "₹199 to ₹1999 per gift"
+      "moq": "Bulk orders welcome",
+      "priceRange": "₹400 onwards"
     },
     {
       "id": "SVC-004",
-      "name": "Custom Gift Box Manufacturing",
+      "name": "Custom Gift Box Packaging",
       "slug": "custom-packaging",
-      "url": "https://reetfoodsngiftings.com/corporate-gifting",
-      "description": "In-house custom gift box design and manufacturing for brands and enterprises. Services include laser engraving, gold/silver foil stamping, full-color sleeve printing, and ribbon customization.",
-      "targetAudience": ["Brands", "Agencies", "Enterprises"],
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
+      "description": "Custom gift box packaging and branding. Services include company logo foil stamping, custom sleeves, and branded ribbons.",
+      "targetAudience": ["Brands", "Corporates", "Enterprises"],
       "features": [
-        "Gold & silver foil stamping",
-        "Laser engraved wooden lids",
+        "Company logo foil stamping & embossing",
         "Full-color printed sleeves",
         "Custom ribbon wrapping",
-        "Personalized inserts and note cards",
-        "3D digital mock-ups provided"
+        "Personalized greeting cards",
+        "Digital mock-ups provided"
       ],
-      "minimumOrder": "25 units",
+      "minimumOrder": "Bulk orders welcome",
       "turnaround": "7-14 business days"
     },
     {
       "id": "SVC-005",
       "name": "Bulk Dry Fruit Supply",
       "slug": "bulk-dry-fruits",
-      "url": "https://reetfoodsngiftings.com/products",
-      "description": "Premium-grade bulk dry fruit supply for retailers, businesses, and events. Sourced directly from Iranian and Afghan farms, nitrogen-packed for freshness.",
-      "targetAudience": ["Retailers", "Hotels", "Caterers", "Corporates"],
+      "url": "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
+      "description": "Premium-grade bulk dry fruits for businesses, festive hampers, and events. Sealed fresh in food-grade packaging.",
+      "targetAudience": ["Corporates", "Institutions", "Event Planners"],
       "features": [
-        "Direct sourcing from Iranian & Afghan farms",
-        "Nitrogen-sealed packaging",
-        "FSSAI certified",
-        "Custom grading available",
-        "Bulk pricing for large volumes"
+        "Origin-sourced premium dry fruits",
+        "Food-grade sealed packaging",
+        "FSSAI licensed operations",
+        "Bespoke assortments available",
+        "Quantity-based pricing"
       ],
-      "minimumOrder": "10 kg",
-      "priceRange": "Contact for wholesale pricing"
+      "minimumOrder": "Bulk orders welcome",
+      "priceRange": "Quantity-based pricing"
     },
     {
       "id": "SVC-006",
-      "name": "Employee Joining Kits",
-      "slug": "employee-joining-kits",
-      "url": "https://reetfoodsngiftings.com/corporate-gifting",
-      "description": "Custom employee onboarding kits and welcome hampers for new joinees. Includes branded merchandise, premium dry fruits, notebooks, pens, and personalized welcome notes.",
-      "targetAudience": ["HR Teams", "Startups", "IT Companies"],
+      "name": "Employee Gifting Programs",
+      "slug": "employee-gifting",
+      "url": "https://www.reetfoodsngiftiings.com/corporate-gifting",
+      "description": "Thoughtfully curated hampers for employee recognition, Diwali celebrations, and team milestones.",
+      "targetAudience": ["HR Teams", "Operations", "Corporate Offices"],
       "features": [
-        "Fully customizable kit contents",
-        "Corporate logo on all items",
-        "PAN India delivery to employee homes",
-        "Same-day Pune delivery available",
-        "GST invoice provided"
+        "Customizable hamper assortments",
+        "Company logo branding",
+        "PAN India corporate delivery",
+        "100% GST invoice provided"
       ],
-      "priceRange": "₹499 to ₹2999 per kit"
+      "priceRange": "₹400 to ₹3,000+ per hamper"
     },
     {
       "id": "SVC-007",
-      "name": "PAN India Multi-Address Delivery",
+      "name": "PAN India Corporate Delivery",
       "slug": "pan-india-delivery",
-      "url": "https://reetfoodsngiftings.com/contact",
-      "description": "Managed multi-address corporate gift dispatch across 19,000+ pin codes in India. Client provides recipient Excel sheet; Reet Foods manages individual dispatch and tracking.",
-      "targetAudience": ["Large Enterprises", "MNCs", "Growing Startups"],
+      "url": "https://www.reetfoodsngiftiings.com/contact",
+      "description": "Managed consignment dispatch across Indian cities for corporate gifting programs.",
+      "targetAudience": ["Enterprises", "Growing Companies"],
       "features": [
-        "Cover 19,000+ pin codes",
-        "Individual tracking per recipient",
-        "Master tracking dashboard",
-        "Insured shipments",
-        "Temperature-controlled for chocolates"
+        "PAN India courier dispatch",
+        "Dispatch tracking updates",
+        "Careful consignment packing",
+        "Food-grade packaging integrity"
       ],
-      "deliveryTime": "3-5 business days post-dispatch"
+      "deliveryTime": "3-7 business days post-dispatch"
     }
   ]
 }

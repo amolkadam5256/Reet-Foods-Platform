@@ -1,144 +1,138 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { testimonials } from "@/data/home";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import {
+  FiArrowRight,
+  FiSliders,
+  FiUsers,
+  FiAward,
+  FiPackage,
+  FiBriefcase,
+  FiFileText,
+  FiHeadphones,
+} from "react-icons/fi";
 
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex gap-1" aria-label={`${count} out of 5 stars`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <svg
-          key={i}
-          className="h-4.5 w-4.5 text-[#d4af37]"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          aria-hidden="true"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+const reasons = [
+  {
+    icon: FiSliders,
+    title: "Customized Hampers",
+    desc: "Thoughtfully curated combinations tailored to your specific budget, dietary preferences, and gifting objective.",
+  },
+  {
+    icon: FiUsers,
+    title: "Employee, Client & Partner Gifting",
+    desc: "Targeted assortments designed for large employee teams, valued clients, vendors, and business associates.",
+  },
+  {
+    icon: FiAward,
+    title: "Company Logo & Branding",
+    desc: "Custom metallic gold or silver logo foil stamping, branded gift sleeves, and personalized message cards.",
+  },
+  {
+    icon: FiPackage,
+    title: "Multiple Packaging Styles",
+    desc: "Rigid magnetic keepsake boxes, handcrafted wooden trunks, embossed festive tins, and elegant tray platters.",
+  },
+  {
+    icon: FiBriefcase,
+    title: "Bulk Corporate Orders",
+    desc: "Bulk corporate orders welcome with tiered quantity-based pricing, batch consistency, and disciplined fulfillment.",
+  },
+  {
+    icon: FiFileText,
+    title: "100% GST Invoicing",
+    desc: "Fully compliant B2B GST billing with Input Tax Credit (ITC) support for seamless corporate accounting.",
+  },
+  {
+    icon: FiHeadphones,
+    title: "Personalized Support",
+    desc: "Prompt quotation and requirement support with professional order coordination from sampling to final delivery.",
+  },
+];
 
 export function Testimonials() {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const prev = () => setActive((a) => (a - 1 + testimonials.length) % testimonials.length);
-  const next = () => setActive((a) => (a + 1) % testimonials.length);
-
-  useEffect(() => {
-    if (paused) return;
-    const timer = window.setInterval(next, 5000);
-    return () => window.clearInterval(timer);
-  }, [active, paused]);
-
   return (
     <section
       className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-8"
-      aria-labelledby="testimonials-heading"
+      aria-labelledby="why-choose-diwali-heading"
+      id="why-choose-diwali"
     >
-      <div className="mb-10 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-reef-gold">
-            Client Testimonials
+      <div className="border border-reef-gold/20 bg-white p-8 sm:p-12 lg:p-14 shadow-sm">
+        <div className="mx-auto max-w-3xl text-center mb-12">
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-reef-burgundy">
+            Corporate Gifting Advantage
           </p>
           <h2
-            id="testimonials-heading"
-            className="mt-4 font-[family-name:var(--font-playfair)] text-3xl text-reef-charcoal sm:text-4xl"
+            id="why-choose-diwali-heading"
+            className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl"
           >
-            What Our Clients Say
+            Why Choose Reet Foods for Corporate Diwali Gifting?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-reef-charcoal/70 sm:mx-0">
-            Hear from the HR leaders, event planners, and retail partners who trust us for
-            premium gifting across India.
+          <p className="mt-4 text-sm leading-relaxed text-reef-charcoal/75 sm:text-base">
+            We partner with corporate procurement, HR managers, and business leaders to deliver thoughtfully curated hampers with dependable service and transparent pricing.
           </p>
         </div>
-        {/* Aggregate score badge */}
-        <div className="flex shrink-0 flex-col items-center gap-1 border border-reef-gold/20 bg-white px-6 py-4">
-          <div className="flex items-center gap-1">
-            {[1,2,3,4,5].map((s) => (
-              <svg key={s} className={`h-4 w-4 ${s <= 4 ? "text-[#d4af37]" : "text-[#d4af37]"}`} fill="currentColor" viewBox="0 0 20 20" aria-hidden>
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-reef-charcoal">4.9 / 5</p>
-          <p className="text-[11px] text-reef-charcoal/55">Feedback from corporate and retail gifting clients</p>
-        </div>
-      </div>
 
-      {/* Large featured card + 2 mini cards */}
-      <div
-        className="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
-        {/* Featured */}
-        <div className="col-span-1 flex flex-col justify-between border border-reef-gold/20 bg-[#111111] p-8 text-white md:col-span-2 lg:col-span-2">
-          <div>
-            {/* Decorative opening quote */}
-            <span aria-hidden="true" className="block font-[family-name:var(--font-playfair)] text-6xl leading-none text-reef-gold/30 select-none">&ldquo;</span>
-            <div className="mt-2">
-              <StarRating count={testimonials[active].rating} />
-            </div>
-            <blockquote className="mt-6 font-[family-name:var(--font-playfair)] text-xl leading-8 text-white/90">
-              &ldquo;{testimonials[active].quote}&rdquo;
-            </blockquote>
-          </div>
-          <div className="mt-8 flex items-center justify-between">
-            <div>
-              <p className="text-lg font-bold text-[#d4af37]">{testimonials[active].name}</p>
-              <p className="mt-1 text-sm font-medium text-white/80">
-                {testimonials[active].role} · {testimonials[active].company}
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="flex h-11 w-11 items-center justify-center border border-white/30 text-white transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
-              >
-                <FiChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                aria-label="Next testimonial"
-                className="flex h-11 w-11 items-center justify-center border border-white/30 text-white transition hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#1c1c1c]"
-              >
-                <FiChevronRight className="h-5 w-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Side cards */}
-        <div className="flex flex-col gap-5">
-          {testimonials
-            .filter((_, i) => i !== active)
-            .slice(0, 2)
-            .map((t) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {reasons.map((item, idx) => {
+            const Icon = item.icon;
+            return (
               <div
-                key={t.name}
-                className="flex flex-1 flex-col justify-between border border-reef-gold/15 bg-white p-6"
+                key={item.title}
+                className={`group flex flex-col justify-between border border-reef-gold/15 bg-[#fcfbf8] p-6 transition duration-300 hover:border-reef-gold hover:bg-white hover:shadow-md ${
+                  idx === 6 ? "sm:col-span-2 lg:col-span-3 xl:col-span-1" : ""
+                }`}
               >
                 <div>
-                  <StarRating count={t.rating} />
-                  <p className="mt-4 text-[13px] leading-6 text-reef-charcoal/70 line-clamp-3">
-                    &ldquo;{t.quote}&rdquo;
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f7efe1] text-[#7a0019] transition duration-300 group-hover:bg-reef-gold group-hover:text-[#1c1c1c] mb-4">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-base font-bold text-reef-charcoal group-hover:text-reef-burgundy transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-reef-charcoal/70">
+                    {item.desc}
                   </p>
                 </div>
-                <div className="mt-5">
-                  <p className="text-sm font-semibold text-reef-charcoal">{t.name}</p>
-                  <p className="mt-0.5 text-xs text-reef-charcoal/50">
-                    {t.role} · {t.company}
-                  </p>
+                <div className="mt-5 pt-3 border-t border-reef-gold/10 flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-reef-gold">
+                  <span>Pillar {idx + 1}</span>
+                  <span className="text-reef-charcoal/40">Reet Foods</span>
                 </div>
               </div>
-            ))}
+            );
+          })}
+        </div>
+
+        {/* CTA Banner */}
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-2xl bg-[#111111] p-6 text-white sm:flex-row sm:p-8">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-reef-gold">
+              Plan Corporate Diwali Gifting 2026
+            </p>
+            <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-bold">
+              Ready to explore tailored hamper options?
+            </h3>
+            <p className="mt-1 text-xs text-white/70">
+              Bulk corporate orders welcome. Quantity-based pricing &amp; prompt quotation available.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <Link
+              href="/#corporate-quotation"
+              className="inline-flex items-center gap-2 rounded-full bg-reef-gold px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#1c1c1c] shadow-md transition hover:bg-white hover:text-reef-charcoal"
+            >
+              Get Diwali Quotation <FiArrowRight />
+            </Link>
+            <a
+              href="https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20Corporate%20Diwali%20Gifting%202026.%20Please%20share%20suitable%20hamper%20options."
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-[#25D366] bg-[#25D366] px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-[#1da851]"
+            >
+              <FaWhatsapp className="h-4 w-4" /> WhatsApp Us
+            </a>
+          </div>
         </div>
       </div>
     </section>

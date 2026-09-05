@@ -3,6 +3,7 @@ import { Images } from "@/assets/images";
 import { ContactEnquiryForm } from "@/components/common/ContactEnquiryForm";
 import { ContactDetails } from "@/components/contact/ContactDetails";
 import { ContactWhatToInclude } from "@/components/contact/ContactWhatToInclude";
+import { PuneLocalShopSection } from "@/components/common/PuneLocalShopSection";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { FAQList } from "@/components/common/FAQList";
@@ -19,7 +20,7 @@ const faqs = [
     question:
       "How quickly do you respond to corporate gifting inquiries in Pune?",
     answer:
-      "Our Hinjewadi Phase I corporate desk responds to all gifting inquiries within 2 hours during business hours. For urgent bulk orders, please call us directly.",
+      "Our Hinjewadi Phase I corporate desk provides prompt quotation and requirement support during business hours. For urgent bulk orders, please reach out directly on WhatsApp or phone.",
   },
   {
     question: "What information should I include in my contact inquiry?",
@@ -34,27 +35,27 @@ const faqs = [
   {
     question: "Do you have a dedicated WhatsApp number for corporate orders?",
     answer:
-      "Yes, you can reach our corporate gifting team directly via WhatsApp at +91 9890609611 for quick catalogs, quotes, and sample requests.",
+      "Yes, you can reach our corporate gifting team directly via WhatsApp at +91 9225130732 for quick catalogs, quotes, and customization options.",
   },
   {
     question: "Can I request a sample gift box before placing a bulk order?",
     answer:
-      "Yes, we encourage corporate clients to request sample boxes. We can dispatch samples to your Pune office on the same day for evaluation.",
+      "Yes, we can arrange sample boxes for corporate clients upon request so your team can evaluate quality and finish.",
   },
   {
     question: "Do you offer consultations for custom wedding return gifts?",
     answer:
-      "Yes, our gifting concierges provide free consultations for wedding return gifts and trousseau packing. You can schedule a visit to our Hinjewadi studio.",
+      "Yes, our team provides personalized consultations for custom gifting hampers. You can schedule a visit to our Hinjewadi studio.",
   },
   {
     question: "How can I track my bulk corporate gifting order?",
     answer:
-      "Once dispatched, you will receive a master tracking sheet. For multi-address PAN India deliveries, we provide live status updates for every single recipient.",
+      "Once dispatched, we coordinate delivery updates and provide dispatch information for your corporate consignments.",
   },
   {
     question: "What are your business hours for the Pune office?",
     answer:
-      "Our Hinjewadi, Pune office is open Monday to Saturday from 9:00 AM to 7:00 PM. We are closed on Sundays and major public holidays.",
+      "Our Hinjewadi, Pune office is open Monday to Saturday from 9:30 AM to 8:00 PM. We are closed on Sundays and major public holidays.",
   },
   {
     question: "Do you entertain walk-in customers at your Hinjewadi store?",
@@ -79,11 +80,10 @@ export default function ContactPage() {
       sidePanelTitle="Plan your order"
       sidePanelBody="For the quickest reply, include the product category, order size, and preferred delivery window."
       sideLinks={[
-        { label: "Call +91 9890609611", href: "tel:+919890609611" },
-        { label: "Call +91 8007518088", href: "tel:+918007518088" },
+        { label: "Call +91 9225130732", href: "tel:+919225130732" },
         {
           label: "WhatsApp us",
-          href: generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need a quote." } }),
+          href: generateWhatsAppUrl({ type: "generic", data: { requirement: "Hi Reet Foods, I need a corporate gifting quote." } }),
         },
       ]}
       image={Images.sweetiesDesk}
@@ -100,6 +100,9 @@ export default function ContactPage() {
           <ContactWhatToInclude />
         </div>
       </div>
+
+      {/* Local Shop in Hinjewadi, Pune */}
+      <PuneLocalShopSection className="mt-12" />
 
       {/* FAQ Section */}
       <section className="mt-12 rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">

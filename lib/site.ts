@@ -1,16 +1,22 @@
 export const site = {
-  url: "https://reetfoodsngiftings.com",
+  url: "https://www.reetfoodsngiftiings.com",
   name: "Reet Foods & Gifting",
   brandName: "Reet Foods",
   legalName: "Reet Foods and Giftings",
   description:
-    "Premium dry fruits, artisanal chocolates, cold pressed juices, wedding return gifts, festive hampers, and custom corporate gifting from Pune with PAN India delivery.",
+    "Corporate Diwali Gifting 2026, premium dry fruits, artisanal chocolates, festive hampers, and custom corporate gifting from Pune with PAN India delivery.",
   email: "reetfoodspune@gmail.com",
-  phones: ["+91 9890609611", "+91 8007518088"],
-  whatsapp: "919890609611",
+  phones: ["+91 9225130732"],
+  whatsapp: "919225130732",
   gstNumber: "27FHIPK0363N1ZX",
-  fssaiLicense: "21526079003816",
+  fssaiLicense: "21525083009881",
+  fssaiRegistrationNumber: "21525083009881",
+  fssaiOperator: "Shraddha Harshad Kharate / REET FOODS",
+  fssaiValidUpTo: "19-09-2026",
+  fssaiIssuedOn: "20-09-2025",
+  established: "2019",
   priceRange: "INR 299 - INR 9,999",
+
   areaServed: ["Pune", "Maharashtra", "India"],
   officeAddress: {
     street:
@@ -48,7 +54,7 @@ export const site = {
     "Diwali hampers Pune",
     "custom corporate gifts India",
     "bulk gifting supplier Pune",
-    "FSSAI certified food gifting",
+    "FSSAI licensed food gifting",
   ],
 
   // ── Corporate Diwali Gifting 2026 Campaign ────────────────────────

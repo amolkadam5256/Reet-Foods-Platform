@@ -8,8 +8,8 @@ interface ProductsCertificationsProps {
 
 const certifications = [
   {
-    name: "FSSAI Certified",
-    desc: "License #11521034000123 - Full food safety compliance.",
+    name: "FSSAI Licensed",
+    desc: "Registration #21525083009881 - Food hygiene and safety compliance.",
     icon: FiShield,
     isFssai: true,
   },
@@ -20,7 +20,7 @@ const certifications = [
   },
   {
     name: "Hygiene Focused",
-    desc: "Hazard analysis and critical control points in production.",
+    desc: "High standards of hygiene and care in preparation and packing.",
     icon: FiCheckCircle,
   },
   {
@@ -31,13 +31,12 @@ const certifications = [
 ];
 
 const trustItems = [
-  "Vegetarian Options",
-  "Dust-Free Cleanroom",
+  "100% Vegetarian Options",
+  "FSSAI Licensed Operations",
+  "Food-Grade Packaging",
   "Zero Artificial Preservatives",
-  "Nitrogen Sealed Freshness",
-  "Insured Cold-Chain Shipping",
-  "FSSAI Certified",
   "Quality Checked",
+  "PAN-India Delivery",
 ];
 
 export function ProductsCertifications({
@@ -57,8 +56,8 @@ export function ProductsCertifications({
             Certified Excellence
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-            Adhering to the highest global standards in food safety,
-            manufacturing, and quality assurance.
+            Adhering to high standards in food hygiene,
+            packaging integrity, and quality assurance.
           </p>
         </div>
 
@@ -80,7 +79,7 @@ export function ProductsCertifications({
                   </h3>
                   {cert.isFssai && (
                     <span className="mt-1 inline-block rounded bg-reef-burgundy/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#7a0019]">
-                      Lic. #11521034000123
+                      Lic. #21525083009881
                     </span>
                   )}
                   <p className="mt-1.5 text-[12px] leading-5 text-reef-charcoal/70">

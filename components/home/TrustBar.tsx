@@ -3,27 +3,23 @@ export function TrustBar() {
     <div className="overflow-hidden border-y border-reef-gold/15 bg-white py-3" aria-hidden="true">
       <div className="reef-marquee flex items-center gap-0 whitespace-nowrap">
         {[
-          "✦ FSSAI Certified Facility",
-          "✦ Nitrogen-Sealed Freshness",
-          "✦ PAN India Cold-Chain Delivery",
-          "✦ Bulk Orders from 25 Units",
-          "✦ Custom Branding & Logo Printing",
-          "✦ 24-Hour Quote Response",
-          "✦ ISO Quality Standards",
-          "✦ 500 Gifts/Day Capacity",
-          "✦ Wedding & Festive Hampers",
-          "✦ Temperature-Controlled Logistics",
+          "✦ FSSAI Licensed (Lic: 21525083009881)",
+          "✦ Corporate Diwali Gifting 2026",
+          "✦ Customized Hampers From ₹400",
+          "✦ Company Logo & Branding",
+          "✦ Bulk Corporate Orders Welcome",
+          "✦ 100% GST Invoicing",
+          "✦ PAN India Delivery",
+          "✦ Prompt Quotation Support",
           // Duplicate for seamless loop
-          "✦ FSSAI Certified Facility",
-          "✦ Nitrogen-Sealed Freshness",
-          "✦ PAN India Cold-Chain Delivery",
-          "✦ Bulk Orders from 25 Units",
-          "✦ Custom Branding & Logo Printing",
-          "✦ 24-Hour Quote Response",
-          "✦ ISO Quality Standards",
-          "✦ 500 Gifts/Day Capacity",
-          "✦ Wedding & Festive Hampers",
-          "✦ Temperature-Controlled Logistics",
+          "✦ FSSAI Licensed (Lic: 21525083009881)",
+          "✦ Corporate Diwali Gifting 2026",
+          "✦ Customized Hampers From ₹400",
+          "✦ Company Logo & Branding",
+          "✦ Bulk Corporate Orders Welcome",
+          "✦ 100% GST Invoicing",
+          "✦ PAN India Delivery",
+          "✦ Prompt Quotation Support",
         ].map((text, i) => (
           <span
             key={i}

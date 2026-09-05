@@ -11,6 +11,7 @@ import { AboutBrandStory } from "@/components/about/AboutBrandStory";
 import { AboutCoreValues } from "@/components/about/AboutCoreValues";
 import { AboutManufacturing } from "@/components/about/AboutManufacturing";
 import { AboutProcessFlow } from "@/components/about/AboutProcessFlow";
+import { PuneLocalShopSection } from "@/components/common/PuneLocalShopSection";
 import { Images } from "@/assets/images";
 
 export const metadata = constructMetadata({
@@ -24,17 +25,18 @@ const faqs = [
   {
     question: "Where is Reet Foods & Giftings located in Pune?",
     answer:
-      "Our main store and corporate office is located at Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune. Our FSSAI-certified factory is in Vishwashanti Colony, Pune.",
+      "Our main store and corporate office is located at Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune. Our FSSAI-licensed facility is in Vishwashanti Colony, Pune.",
   },
   {
-    question: "Is Reet Foods & Giftings an FSSAI certified company?",
+    question: "Is Reet Foods & Giftings an FSSAI licensed company?",
     answer:
-      "Yes, Reet Foods & Giftings operates under strict FSSAI guidelines (Licence No. 21526079003816) ensuring the highest hygiene standards for all our premium dry fruits and chocolates.",
+      "Yes, Reet Foods & Giftings operates under valid FSSAI registration (Registration No. 21525083009881) ensuring high hygiene standards for all our dry fruits, chocolates, and festive hampers.",
+
   },
   {
     question: "What makes your premium dry fruits different?",
     answer:
-      "Our premium dry fruits are sourced directly from top growers, meticulously graded for size and flavor, and nitrogen-packed to retain freshness, ensuring the best quality for corporate gifting in Pune.",
+      "Our premium dry fruits are sourced from reputable growers, meticulously graded for size and crunch, and sealed in food-grade packaging to retain freshness, ensuring the best presentation for corporate gifting.",
   },
   {
     question: "Do you offer GST billing for corporate clients?",
@@ -42,9 +44,10 @@ const faqs = [
       "Absolutely. We are fully registered (GSTIN: 27FHIPK0363N1ZX) and provide complete B2B GST billing for all corporate gift boxes and luxury hampers.",
   },
   {
-    question: "How long has Reet Foods & Giftings been in the gifting industry?",
+    question:
+      "How long has Reet Foods & Giftings been in the gifting industry?",
     answer:
-      "We have years of experience curating luxury hampers and corporate gifts in Pune, serving over 350 enterprise clients and delivering more than 50,000 gift boxes.",
+      "We have extensive hands-on experience curating festive hampers and corporate gifts in Pune, fulfilling bespoke orders for companies, professionals, and corporate gifting programs.",
   },
   {
     question: "Do you have an in-house packaging and customization team?",
@@ -67,7 +70,8 @@ const faqs = [
       "Yes, we offer a range of sustainable and eco-friendly packaging options for our corporate gifts Pune, including reusable wooden boxes, tin containers, and recyclable cardboard.",
   },
   {
-    question: "How do you ensure the freshness of your products during delivery?",
+    question:
+      "How do you ensure the freshness of your products during delivery?",
     answer:
       "We use freshness-focused packing for dry fruits and season-aware handling guidance for chocolates, partnering with reliable logistics for PAN India delivery.",
   },
@@ -102,6 +106,9 @@ export default function AboutPage() {
       <AboutCoreValues />
       <AboutManufacturing />
       <AboutProcessFlow />
+
+      {/* Local Shop in Hinjewadi, Pune */}
+      <PuneLocalShopSection />
 
       {/* FAQ */}
       <section className="rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">

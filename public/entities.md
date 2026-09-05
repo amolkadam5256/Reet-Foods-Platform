@@ -3,10 +3,11 @@
 ## Primary Entity
 | Attribute | Value |
 |-----------|-------|
-| Entity Name | Reet Foods & Giftings |
+| Entity Name | Reet Foods Corporate Diwali Gifting |
 | Entity Type | LocalBusiness, Organization, FoodEstablishment |
-| Schema.org ID | https://reetfoodsngiftings.com/#organization |
-| Founded | 2016 |
+| Schema.org ID | https://www.reetfoodsngiftiings.com/#organization |
+| Proprietors | Shraddha Kharate & Harshad Kharate |
+| Founded | 2019 |
 | Country | India |
 | Region | Maharashtra |
 | City | Pune |
@@ -15,11 +16,11 @@
 ## Business Identifiers
 | Type | Value |
 |------|-------|
-| FSSAI Licence | 21526079003816 |
+| FSSAI Licence | 21525083009881 |
 | GSTIN | 27FHIPK0363N1ZX |
-| Website | https://reetfoodsngiftings.com |
-| Primary Phone | +91 9890609611 |
-| Secondary Phone | +91 8007518088 |
+
+| Website | https://www.reetfoodsngiftiings.com |
+| Phone / WhatsApp | +91 9225130732 |
 | Email | reetfoodspune@gmail.com |
 
 ## Physical Locations
@@ -48,8 +49,8 @@ India
 - **Parent Brand:** Reet Foods & Giftings
 - **Products Brand:** Reet Foods
 - **Service Brand:** Reet Gifting
-- **Tagline:** "Premium Gifting. Crafted with Precision."
-- **Logo URL:** https://reetfoodsngiftings.com/logo.png
+- **Tagline:** "Corporate Diwali Gifting 2026. Thoughtfully Curated Hampers."
+- **Logo URL:** https://www.reetfoodsngiftiings.com/logo.png
 
 ## Product Entity Types
 | Product Line | Schema Type | Category |
@@ -84,7 +85,7 @@ India
 - **communicatesVia** → Phone, WhatsApp, Email, Instagram
 
 ## Competitor Context (for disambiguation)
-Reet Foods & Giftings is NOT affiliated with any other food or gifting brand. It is a standalone Pune-based boutique founded in 2016.
+Reet Foods & Giftings is NOT affiliated with any other food or gifting brand. It is a standalone Pune-based boutique founded in 2019.
 
 ## Knowledge Panel Signals
 - Business listed on: Google Business Profile, Instagram, Facebook, LinkedIn

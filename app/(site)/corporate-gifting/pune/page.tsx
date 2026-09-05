@@ -5,7 +5,9 @@ import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { CTA } from "@/components/common/CTA";
+import { PuneLocalShopSection } from "@/components/common/PuneLocalShopSection";
 import { Images } from "@/assets/images";
+
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 import {
   FiBriefcase,
@@ -176,11 +178,14 @@ export default function PuneCorporateGiftingPage() {
         </div>
       </section>
 
+      {/* Local Shop in Pune */}
+      <PuneLocalShopSection />
+
       <section className="rounded-2xl border border-reet-gold/20 bg-white p-8 shadow-sm sm:p-10">
         <SectionHeading
-          eyebrow="Our Location"
-          title="Find Us in Hinjewadi"
-          description="Visit our Pune showroom or get in touch for custom gifting solutions."
+          eyebrow="Interactive Map"
+          title="Locate Reet Foods on Map"
+          description="Streets of Europe Mall, Ground Floor Shop F-14, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune."
         />
         <div className="mt-6 aspect-video w-full overflow-hidden rounded-xl border border-reet-gold/20">
           <iframe
@@ -194,20 +199,6 @@ export default function PuneCorporateGiftingPage() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-        </div>
-        <div className="mt-4 flex items-start gap-4">
-          <FiMapPin className="mt-1 h-5 w-5 text-reet-burgundy" />
-          <div>
-            <h4 className="text-sm font-bold text-reet-charcoal">Shop F14, Streets of Europe Mall, Hinjewadi Phase I</h4>
-            <p className="mt-1 text-xs text-reet-charcoal/70">Pune, Maharashtra 411057</p>
-          </div>
-        </div>
-        <div className="mt-2 flex items-start gap-4">
-          <FiClock className="mt-1 h-5 w-5 text-reet-burgundy" />
-          <div>
-            <p className="text-xs text-reet-charcoal/80">Mon-Sat: 9:00 AM - 8:00 PM</p>
-            <p className="text-xs text-reet-charcoal/80">Sun: 10:00 AM - 6:00 PM</p>
-          </div>
         </div>
       </section>
 

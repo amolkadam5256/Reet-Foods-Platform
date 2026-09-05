@@ -7,29 +7,29 @@ const benefits = [
   {
     icon: FiTrendingUp,
     title: "Volume Discounts",
-    desc: "Up to 35% off on orders of 500+ units with tiered pricing.",
+    desc: "Attractive quantity-based discounts with tiered corporate pricing.",
   },
   {
     icon: FiZap,
-    title: "Fast Turnaround",
-    desc: "24-hour quote turnaround with sample delivery in 3-5 days.",
+    title: "Prompt Support",
+    desc: "Prompt quotation and requirement support with sample options upon request.",
   },
   {
     icon: FiShield,
     title: "Quality Guarantee",
-    desc: "FSSAI-licensed operations with freshness-focused packing.",
+    desc: "FSSAI-licensed operations with food-grade freshness packing.",
   },
   {
     icon: FiTruck,
     title: "Pan-India Delivery",
-    desc: "Season-aware chocolate handling guidance and insulated packing options.",
+    desc: "Careful consignment packing and multi-city delivery coordination.",
   },
 ];
 
 export function BulkOrdersSection() {
   const handlePartnerShare = () => {
     const text =
-      "Partner with Reet Foods for premium luxury gifting solutions. FSSAI certified, custom branding, Pan-India delivery.";
+      "Partner with Reet Foods for premium corporate gifting solutions. FSSAI licensed, custom branding, Pan-India delivery.";
     window.open(
       generateWhatsAppUrl({ type: "partner", data: { requirement: text } }),
       "_blank",
@@ -46,14 +46,14 @@ export function BulkOrdersSection() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-              Bulk Orders &amp; Corporate Concierge
+              Bulk Orders &amp; Corporate Desk
             </p>
             <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
-              Need 50+ Custom Gift Boxes?
+              Planning Bulk Corporate Gifts?
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80">
-              Get direct factory pricing, dedicated account management, custom
-              logo mockups, and doorstep Pan-India dispatch.
+              Bulk corporate orders welcome. Enjoy quantity-based pricing, dedicated order
+              coordination, custom company logo branding, and doorstep Pan-India dispatch.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -90,7 +90,7 @@ export function BulkOrdersSection() {
             </h3>
             <p className="text-sm leading-6 text-white/70">
               Become a preferred gifting partner. Enjoy exclusive pricing,
-              priority production, and dedicated concierge support.
+              priority production, and dedicated order coordination support.
             </p>
             <div className="mt-2 flex flex-col gap-3">
               <a

@@ -56,7 +56,7 @@ export default function CorporateGiftingPage() {
 
       <CTA
         title="Ready to Request a Corporate Gift Proposal?"
-        description="Share your brand guidelines and target budget. Our Pune executive concierge will send a customized proposal within 2 hours."
+        description="Share your brand guidelines and target budget. Our Pune team will provide prompt quotation and requirement support."
         primaryButtonText="Request Corporate Proposal"
         primaryButtonHref="/contact#quote"
       />

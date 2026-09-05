@@ -23,12 +23,12 @@ type HeroCategory = {
 const centerSlides = [
   {
     title: "Corporate Diwali Gifting 2026",
-    subtitle: "Customized Hampers · From ₹400 · Bulk Orders · GST Billing",
+    subtitle: "Thoughtfully Curated Hampers for Employees, Clients & Business Partners",
     price: "",
     image: heroGallery[0],
     description:
-      "Thoughtfully curated and customized Diwali hampers for Employees, Clients & Business Partners in Pune. Company branding, bulk quantities, GST billing.",
-    cta: "GET CORPORATE QUOTATION",
+      "Customized Hampers | ₹400 Onwards | Logo Branding | Bulk Orders | GST Billing",
+    cta: "GET DIWALI QUOTATION",
     ctaHref: "/#corporate-quotation",
     waHref:
       "https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20am%20interested%20in%20Corporate%20Diwali%20Gifting%202026.%20Please%20share%20suitable%20hamper%20options.",
@@ -50,7 +50,7 @@ const centerSlides = [
     price: "",
     image: heroGallery[2],
     description:
-      "Beautifully presented flavours for festivals, weddings and every celebration in between. Nitrogen-packed freshness in every box.",
+      "Beautifully presented flavours for corporate celebrations, festivals, and milestones. Freshness-focused packaging in every box.",
     cta: "Shop The Collection",
     ctaHref: "/products",
     waHref: null,

@@ -10,7 +10,7 @@ export function BreadcrumbSchema({ items }: { items: BreadcrumbItem[] }) {
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": item.url.startsWith("http") ? item.url : `https://reetfoodsngiftings.com${item.url}`
+    "item": item.url.startsWith("http") ? item.url : `https://www.reetfoodsngiftiings.com${item.url}`
   }));
 
   const schema = {

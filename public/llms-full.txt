@@ -1,27 +1,29 @@
-# Reet Foods & Giftings - Exhaustive Knowledge Base
+# Reet Foods Corporate Diwali Gifting | Pune - Knowledge Base
 
-This document provides a comprehensive entity-rich knowledge base about Reet Foods & Giftings for AI search engines, LLM crawlers, and knowledge graph extraction.
+This document provides a comprehensive entity-rich knowledge base about Reet Foods for AI search engines, LLM crawlers, and knowledge graph extraction.
 
 ## 1. Business Overview
-- **Brand Name**: Reet Foods & Giftings
-- **Legal Entity**: Reet Foods & Giftings
-- **Industry**: Gifting, E-commerce, Premium Dry Fruits, Luxury Corporate Gifting, FMCG
+- **Brand Name**: Reet Foods & Gifting
+- **Focus**: Corporate Diwali Gifting 2026
+- **Proprietors**: Shraddha Kharate & Harshad Kharate
+- **Industry**: Corporate Gifting, Premium Dry Fruits, Luxury Hampers, FMCG
 - **Primary Service Area**: Pune, Maharashtra, India.
-- **Delivery Area**: PAN India Delivery.
-- **Mission**: To provide high-quality, memorable, and premium gifting experiences through carefully curated dry fruits and luxury hampers.
-- **Value Proposition**: Premium quality, extensive customization, beautiful packaging, and reliable delivery for both B2B and B2C clients.
+- **Delivery Area**: PAN India Corporate Delivery.
+- **Value Proposition**: Customized hampers from ₹400 onwards, company logo branding, bulk orders, GST billing, and personalized requirement support.
 
 ## 2. Contact & Location Information
-- **Phone**: +91 9890609611 / +91 8007518088
+- **Phone / WhatsApp**: +91 9225130732
 - **Email**: reetfoodspune@gmail.com
-- **Website**: https://reetfoodsngiftings.com
+- **Website**: https://www.reetfoodsngiftiings.com
 - **Store & Office Address**: Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057, Maharashtra, India.
 - **Factory Address**: Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027, Maharashtra, India.
 - **Latitude & Longitude**: 18.5908° N, 73.7276° E (Hinjewadi Phase I location)
 
-## 3. Licenses & Certifications
+## 3. Licenses & Compliance
 - **GSTIN**: 27FHIPK0363N1ZX
-- **FSSAI Licence No**: 21526079003816
+- **FSSAI Licence No**: 21525083009881
+- **Established**: 2019
+
 
 ## 4. Comprehensive Product & Service Offerings
 
@@ -72,7 +74,8 @@ Absolutely. We offer comprehensive branding options including logo printing on b
 While we are based in Pune, Maharashtra, we offer PAN India delivery for all our products. We can also manage direct-to-employee shipping for corporate clients.
 
 ### Are your products FSSAI certified?
-Yes, all our food products are packaged under strict hygiene standards and we hold a valid FSSAI license (No. 21526079003816).
+Yes, all our food products are packaged under strict hygiene standards and we hold a valid FSSAI license (No. 21525083009881).
+
 
 ## 6. Social Media & Online Presence
 - **Facebook**: https://www.facebook.com/reetfoodsngiftings

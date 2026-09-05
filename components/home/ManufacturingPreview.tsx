@@ -8,10 +8,10 @@ import {
   FiCheckCircle,
   FiPackage,
   FiTruck,
+  FiMapPin,
 } from "react-icons/fi";
-import { reetFoodImages } from "@/assets/reetFoodImages";
+import { storeFrontImg, mallLocationImg } from "@/assets/images";
 
-const topViewPistachios = reetFoodImages[4];
 
 export function ManufacturingPreview() {
   return (
@@ -24,18 +24,18 @@ export function ManufacturingPreview() {
           {/* Left: Content */}
           <div className="p-8 sm:p-12 lg:p-14">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]">
-              FSSAI Certified Manufacturing Facility
+              FSSAI-Licensed Operations
             </p>
             <h2
               id="manufacturing-heading"
               className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-reef-charcoal sm:text-4xl"
             >
-              State-of-the-Art Production & Cold Storage
+              Hygienic Packing &amp; Quality Preparation
             </h2>
             <p className="mt-4 text-sm leading-7 text-reef-charcoal/80 sm:text-base">
               Reet Foods prepares premium dry fruit boxes, festive hampers and
               custom corporate gifts at its FSSAI-licensed Pune facility. Every
-              order is checked for product, packaging and branding details
+              order is checked for product quality, packaging integrity and custom branding
               before dispatch.
             </p>
 
@@ -44,10 +44,10 @@ export function ManufacturingPreview() {
                 <FiShield className="h-5 w-5 shrink-0 text-[#7a0019]" />
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-reef-charcoal">
-                    Nitrogen Sealed
+                    Freshness Assured
                   </h3>
                   <p className="mt-1 text-[11px] leading-4 text-reef-charcoal/70">
-                    Locks in natural crunch & nutrients for 12+ months.
+                    Premium handpicked dry fruits sealed in food-grade packaging.
                   </p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export function ManufacturingPreview() {
                     Bespoke Branding
                   </h3>
                   <p className="mt-1 text-[11px] leading-4 text-reef-charcoal/70">
-                    Custom logo embossing & laser-cut magnetic box finishing.
+                    Custom company logo embossing, sleeve printing &amp; gift cards.
                   </p>
                 </div>
               </div>
@@ -68,10 +68,10 @@ export function ManufacturingPreview() {
                 <FiCheckCircle className="h-5 w-5 shrink-0 text-[#7a0019]" />
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-reef-charcoal">
-                    Zero Contact Packaging
+                    Hygienic Handling
                   </h3>
                   <p className="mt-1 text-[11px] leading-4 text-reef-charcoal/70">
-                    Strict hygiene protocols & automated quality screening.
+                    Strict hygiene standards and meticulous quality checks.
                   </p>
                 </div>
               </div>
@@ -80,10 +80,10 @@ export function ManufacturingPreview() {
                 <FiTruck className="h-5 w-5 shrink-0 text-[#7a0019]" />
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-reef-charcoal">
-                    Insured Cold-Chain
+                    Pan-India Delivery
                   </h3>
                   <p className="mt-1 text-[11px] leading-4 text-reef-charcoal/70">
-                    Temperature-controlled shipping across all states in India.
+                    Carefully packed consignments delivered across Indian cities.
                   </p>
                 </div>
               </div>
@@ -101,45 +101,56 @@ export function ManufacturingPreview() {
                 style={{ color: "#7a0019" }}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#d4af37] bg-white px-6 py-3.5 text-sm font-bold shadow-sm transition duration-200 hover:text-white"
               >
-                Request Facility Audit Report
+                Request Corporate Quote
               </Link>
             </div>
           </div>
 
-          {/* Right: Image showcase */}
-          <div className="relative min-h-[380px] overflow-hidden lg:min-h-[520px]">
+          {/* Right: Real Store & Facility Showcase */}
+          <div className="relative min-h-[420px] overflow-hidden lg:min-h-[540px]">
             <Image
-              src={topViewPistachios}
-              alt="FSSAI certified food manufacturing and nitrogen sealing facility by Reet Foods"
+              src={storeFrontImg}
+              alt="Reet Foods local shop storefront in Streets of Europe Mall Hinjewadi Pune"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
 
-            {/* Top Address Overlay */}
-            <div className="absolute top-6 left-6 right-6 rounded-xl border border-white/20 bg-black/65 p-4 backdrop-blur-md text-white sm:max-w-[280px] transform hover:scale-[1.02] transition-transform duration-300">
-              <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#d4af37]">
-                Facility Location
-              </p>
-              <p className="mt-1.5 text-[11px] leading-relaxed text-white/85 font-medium">
-                Shop no F14 Ground floor, Streets of Europe Mall, Maan Road near
-                Infosys Circle, Hinjewadi Phase I, Pune 411057
-              </p>
+            {/* Top Store Badge */}
+            <div className="absolute top-5 left-5 right-5 flex items-center justify-between gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-reef-gold px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-reef-charcoal shadow">
+                <FiMapPin className="h-3 w-3" /> Retail Shop &amp; Showroom
+              </span>
+              <span className="rounded-full bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow">
+                FSSAI Lic. #21525083009881
+              </span>
+
             </div>
 
-            <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/20 bg-black/50 p-4 backdrop-blur-md">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d4af37]">
-                  Annual Capacity
-                </p>
-                <p className="font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
-                  500,000+ Units / Year
-                </p>
+            {/* Bottom Card: Inset Mall Photo & Address */}
+            <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/20 bg-black/75 p-4 backdrop-blur-md text-white">
+              <div className="flex items-center gap-3">
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/30">
+                  <Image
+                    src={mallLocationImg}
+                    alt="Streets of Europe Mall Hinjewadi Phase 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#d4af37]">
+                    Streets of Europe Mall • Hinjewadi
+                  </p>
+                  <p className="mt-0.5 text-xs font-semibold text-white truncate">
+                    Shop F-14, Ground Floor, Maan Road
+                  </p>
+                  <p className="text-[11px] text-white/70">
+                    Near Infosys Circle, Hinjewadi Phase 1, Pune
+                  </p>
+                </div>
               </div>
-              <span className="rounded-full bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
-                FSSAI Lic. #21526079003816
-              </span>
             </div>
           </div>
         </div>

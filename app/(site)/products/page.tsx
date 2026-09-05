@@ -17,28 +17,27 @@ export const metadata: Metadata = {
     "custom logo corporate gifts",
     "Reet Foods Pune",
     "wedding favours Pune",
-    "FSSAI certified dry fruits",
+    "FSSAI licensed dry fruits",
     "premium chocolates gift box",
     "bulk gifting India",
     "corporate gifting solutions",
     "luxury gift hampers",
     "handcrafted gifts Pune",
-    "nitrogen sealed dry fruits",
   ],
   alternates: {
-    canonical: "https://reetfoodsngiftings.com/products",
+    canonical: "https://www.reetfoodsngiftiings.com/products",
   },
   openGraph: {
     title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
     description:
-      "Premium dry fruits, festive hampers and custom corporate gifts for teams, clients and celebrations. FSSAI certified with luxury packaging.",
-    url: "https://reetfoodsngiftings.com/products",
+      "Premium dry fruits, festive hampers and custom corporate gifts for teams, clients and celebrations. FSSAI licensed with luxury packaging.",
+    url: "https://www.reetfoodsngiftiings.com/products",
     siteName: "Reet Foods",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://reetfoodsngiftings.com/products-og.jpg",
+        url: "https://www.reetfoodsngiftiings.com/products-og.jpg",
         width: 1200,
         height: 630,
         alt: "Reet Foods luxury gifting collection with premium dry fruits, chocolates, and corporate hampers",
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
     description:
-      "Curated luxury gifting assortment for corporate events, weddings, and festive celebrations. FSSAI certified.",
+      "Curated luxury gifting assortment for corporate events, weddings, and festive celebrations. FSSAI licensed.",
   },
 };
 
@@ -58,7 +57,7 @@ const faqs = [
     question:
       "What is the Minimum Order Quantity (MOQ) for corporate bulk orders?",
     answer:
-      "Our standard bulk ordering MOQ starts at just 10 units for dry fruit boxes and 15 units for custom branded corporate hampers. We also handle large-scale orders up to 50,000 units with Pan-India doorstep delivery.",
+      "Bulk corporate orders are welcome. Quantity-based pricing is available for employee, client, and executive gifting programs. Final contents and pricing depend on quantity, customization and delivery requirements.",
   },
   {
     question:
@@ -131,7 +130,7 @@ const faqs = [
   {
     question: "Do you offer tiered pricing for large-scale enterprise orders?",
     answer:
-      "Yes, we provide attractive tiered bulk discounts for large enterprise orders ranging from 50 to 50,000 units. Please request a quote for detailed pricing.",
+      "Yes, we provide attractive tiered bulk discounts for corporate gifting orders. Final contents and pricing depend on quantity, customization, and delivery requirements.",
   },
 ];
 
@@ -163,13 +162,13 @@ export default function ProductsPage() {
               "@context": "https://schema.org",
               "@type": "CollectionPage",
               name: "Premium Dry Fruits, Gift Boxes & Corporate Hampers",
-              url: "https://reetfoodsngiftings.com/products",
+              url: "https://www.reetfoodsngiftiings.com/products",
               description:
                 "Browse Reet Foods premium dry fruits, gift boxes, festive hampers and custom corporate gifting solutions.",
               publisher: {
                 "@type": "Organization",
                 name: "Reet Foods",
-                logo: "https://reetfoodsngiftings.com/logo.png",
+                logo: "https://www.reetfoodsngiftiings.com/logo.png",
               },
               hasPart: [
                 {
@@ -177,12 +176,12 @@ export default function ProductsPage() {
                   name: "Royal Pistachio & Cashew Gold Tin",
                   category: "Dry Fruits",
                   description:
-                    "Handpicked Iranian pistachios and Jumbo W240 cashews in a nitrogen-sealed metallic gold tin.",
+                    "Handpicked pistachios and Jumbo W240 cashews in an airtight metallic gold tin.",
                   offers: {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "1499",
-                    url: "https://reetfoodsngiftings.com/products/premium-dry-fruits",
+                    url: "https://www.reetfoodsngiftiings.com/products/categories/dry-fruits",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -196,7 +195,7 @@ export default function ProductsPage() {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "1299",
-                    url: "https://reetfoodsngiftings.com/products/artisanal-chocolates",
+                    url: "https://www.reetfoodsngiftiings.com/products/categories/chocolates",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -205,12 +204,12 @@ export default function ProductsPage() {
                   name: "Grande Corporate Executive Hamper",
                   category: "Celebration Hampers",
                   description:
-                    "Dry fruit quartet, artisanal chocolate bark, cold-pressed elixir, and custom laser-engraved wooden box.",
+                    "Dry fruit quartet, artisanal chocolate bark, and custom branded packaging.",
                   offers: {
                     "@type": "Offer",
                     priceCurrency: "INR",
                     price: "3499",
-                    url: "https://reetfoodsngiftings.com/products/celebration-hampers",
+                    url: "https://www.reetfoodsngiftiings.com/products/categories/hampers",
                     availability: "https://schema.org/InStock",
                   },
                 },
@@ -220,7 +219,7 @@ export default function ProductsPage() {
                 "Artisanal Chocolates",
                 "Celebration Hampers",
                 "Corporate Gifting",
-                "FSSAI Certified",
+                "FSSAI Licensed",
                 "Quality Checked",
               ],
             },
@@ -232,13 +231,13 @@ export default function ProductsPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://reetfoodsngiftings.com",
+                  item: "https://www.reetfoodsngiftiings.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Products",
-                  item: "https://reetfoodsngiftings.com/products",
+                  item: "https://www.reetfoodsngiftiings.com/products",
                 },
               ],
             },
@@ -246,8 +245,8 @@ export default function ProductsPage() {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Reet Foods",
-              url: "https://reetfoodsngiftings.com",
-              logo: "https://reetfoodsngiftings.com/logo.png",
+              url: "https://www.reetfoodsngiftiings.com",
+              logo: "https://www.reetfoodsngiftiings.com/logo.png",
               address: {
                 "@type": "PostalAddress",
                 streetAddress:
@@ -258,37 +257,21 @@ export default function ProductsPage() {
                 addressCountry: "IN",
               },
               sameAs: [
-                "https://facebook.com/reetfoods",
-                "https://instagram.com/reetfoods",
+                "https://facebook.com/reetfoodsgifting",
+                "https://instagram.com/reetfoodsgifting",
                 "https://www.linkedin.com/company/reet-foods-pune/?viewAsMember=true",
                 generateWhatsAppUrl({ type: "generic" }),
               ],
               contactPoint: [
                 {
                   "@type": "ContactPoint",
-                  telephone: "+91-9890609611",
+                  telephone: "+91-9225130732",
                   email: "reetfoodspune@gmail.com",
                   contactType: "customer service",
                   areaServed: "IN",
                   availableLanguage: ["English", "Hindi"],
                 },
               ],
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "Review",
-              author: {
-                "@type": "Person",
-                name: "Corporate Gifting Manager",
-              },
-              reviewBody:
-                "Reet Foods delivered exceptional luxury gifting solutions for our 200+ employee recognition program. The nitrogen-sealed dry fruit tins and custom-engraved wooden boxes exceeded expectations. Highly recommended for premium corporate gifting.",
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5",
-                worstRating: "1",
-              },
             },
           ]),
         }}

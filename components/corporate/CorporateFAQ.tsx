@@ -6,19 +6,19 @@ const faqs = [
     question:
       "What is the minimum order quantity for custom corporate logo printing?",
     answer:
-      "Custom logo printing on corporate gift boxes starts at just 25 units. We provide complimentary digital visual mock-ups before production for all our Pune and PAN India clients.",
+      "Bulk corporate orders are welcome. Quantity-based pricing and custom company logo branding are available depending on your packaging format and order volume.",
   },
   {
     question:
       "How do you handle multi-location employee and client shipping?",
     answer:
-      "Simply provide an Excel sheet of recipient addresses. We manage individual door-to-door courier dispatch of corporate gifts across 19,000+ pin codes in India with tracking updates.",
+      "Simply provide a recipient list. We coordinate organized dispatch of corporate gifts across Indian cities with courier tracking updates.",
   },
   {
     question:
       "Can we get sample corporate gift boxes before finalizing a bulk order?",
     answer:
-      "Yes, sample dry fruit gift boxes and luxury hampers can be dispatched to your Pune office or corporate location within 24 hours for evaluation.",
+      "Yes, sample dry fruit gift boxes and luxury hampers can be arranged promptly for your Pune office or corporate location for evaluation.",
   },
   {
     question:
@@ -76,7 +76,7 @@ const faqs = [
     question:
       "Do you offer tiered volume discounts for large enterprise orders?",
     answer:
-      "Yes, we offer attractive tiered bulk discounts for corporate gifting orders ranging from 25 units to 5000+ units.",
+      "Yes, we offer attractive tiered bulk discounts for corporate gifting orders. Final contents and pricing depend on quantity, customization and delivery requirements.",
   },
   {
     question:

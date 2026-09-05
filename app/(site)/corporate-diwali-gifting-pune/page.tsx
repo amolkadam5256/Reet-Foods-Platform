@@ -12,7 +12,9 @@ import { BulkOrderSection } from "@/components/home/BulkOrderSection";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { PreviousDesigns } from "@/components/home/PreviousDesigns";
 import { CorporateQuotationForm } from "@/components/home/CorporateQuotationForm";
+import { PuneLocalShopSection } from "@/components/common/PuneLocalShopSection";
 import { Images } from "@/assets/images";
+
 import {
   FiMapPin,
   FiPhone,
@@ -214,6 +216,11 @@ export default function PuneCorporateDiwaliPage() {
 
       {/* Corporate Quotation Form */}
       <CorporateQuotationForm />
+
+      {/* Local Shop in Hinjewadi, Pune */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <PuneLocalShopSection />
+      </div>
 
       {/* Trust & Business Contact Card */}
       <section className="bg-[#111111] py-14 text-white border-t border-reef-gold/20">

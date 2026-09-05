@@ -119,7 +119,7 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
                 Signature Origin Nut Quartet &amp; Truffle Set
               </p>
               <p className="mt-1 text-xs text-white/80 line-clamp-1">
-                Nitrogen-flushed almond tin, cashew box, pistachio tin &amp;
+                Airtight sealed almond tin, cashew box, pistachio tin &amp;
                 premium dark truffles.
               </p>
             </div>

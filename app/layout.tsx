@@ -102,7 +102,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased bg-white text-black`}
     >
       <head>
+        {/* Search Engine Verification */}
+        <meta name="msvalidate.01" content="67F3216EA312D76D6A20E765AEA31CC4" />
+        <meta
+          name="google-site-verification"
+          content="DPxYyQPNikU9BiIBScyDNBoP0iQVCV8_Epnfr9ktfss"
+        />
+
         {gaMeasurementId ? (
+
           <>
             <Script
               async

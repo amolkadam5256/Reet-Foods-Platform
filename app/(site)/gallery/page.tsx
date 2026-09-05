@@ -65,7 +65,7 @@ const faqs = [
   {
     question: "How can I order a specific hamper from the gallery?",
     answer:
-      "Simply note the name of the hamper or take a screenshot and share it with our corporate gifting team via WhatsApp at +91 9890609611.",
+      "Simply note the name of the hamper or take a screenshot and share it with our corporate gifting team via WhatsApp at +91 9225130732.",
   },
 ];
 

@@ -33,7 +33,7 @@ export function Certifications() {
             Certified Excellence
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-            Adhering to the highest global standards in food safety, manufacturing, and quality assurance.
+            Adhering to high standards in food hygiene, packaging integrity, and quality assurance.
           </p>
         </div>
 
@@ -56,8 +56,9 @@ export function Certifications() {
                   <h3 className="text-sm font-bold text-reef-charcoal">{cert.name}</h3>
                   {isFssai && (
                     <span className="mt-1 inline-block bg-reef-burgundy/10 text-[#7a0019] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-                      Lic. #11521034000123
+                      Lic. #21525083009881
                     </span>
+
                   )}
                   <p className="mt-1.5 text-[12px] leading-5 text-reef-charcoal/70">{cert.desc}</p>
                 </div>
@@ -71,17 +72,17 @@ export function Certifications() {
           <div className="flex gap-16 reef-marquee whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.2em] text-[#d4af37]">
             <div className="flex shrink-0 gap-16 justify-around min-w-full">
               <span>· 100% Vegetarian</span>
-              <span>· Dust-Free Cleanroom</span>
+              <span>· FSSAI Licensed</span>
               <span>· Zero Artificial Preservatives</span>
-              <span>· Nitrogen Sealed Freshness</span>
-              <span>· Insured Cold-Chain Shipping</span>
+              <span>· Food-Grade Packaging</span>
+              <span>· PAN-India Corporate Delivery</span>
             </div>
             <div className="flex shrink-0 gap-16 justify-around min-w-full" aria-hidden="true">
               <span>· 100% Vegetarian</span>
-              <span>· Dust-Free Cleanroom</span>
+              <span>· FSSAI Licensed</span>
               <span>· Zero Artificial Preservatives</span>
-              <span>· Nitrogen Sealed Freshness</span>
-              <span>· Insured Cold-Chain Shipping</span>
+              <span>· Food-Grade Packaging</span>
+              <span>· PAN-India Corporate Delivery</span>
             </div>
           </div>
         </div>

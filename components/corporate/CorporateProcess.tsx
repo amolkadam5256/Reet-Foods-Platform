@@ -11,7 +11,7 @@ const steps = [
   ],
   [
     "3. Production & Packing",
-    "Hygienic packing and nitrogen sealing at our Pune facility.",
+    "Hygienic packing and food-grade sealing at our FSSAI-licensed Pune facility.",
   ],
   [
     "4. Dispatch & Tracking",

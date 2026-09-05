@@ -20,7 +20,7 @@ export function HowItWorks() {
     },
     {
       num: "03",
-      title: "Customize Branding",
+      title: "Customize",
       desc: "Select packaging materials, box colors, metallic logo foil placement, and custom greeting message cards.",
       icon: <FiEdit3 className="h-5 w-5 text-reef-gold" />,
     },
@@ -33,7 +33,7 @@ export function HowItWorks() {
     {
       num: "05",
       title: "Preparation & Delivery",
-      desc: "Reet Foods freshly packs, nitrogen-seals, and safely dispatches bulk consignments with on-time delivery assurance.",
+      desc: "Reet Foods freshly packs, quality-checks, and dispatches consignments with professional order coordination.",
       icon: <FiTruck className="h-5 w-5 text-reef-gold" />,
     },
   ];

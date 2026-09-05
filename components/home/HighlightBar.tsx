@@ -11,22 +11,22 @@ const highlights = [
   {
     icon: LuTruck,
     title: "PAN India Delivery",
-    desc: "Insured doorstep dispatch",
+    desc: "Reliable corporate dispatch",
   },
   {
     icon: LuLeaf,
-    title: "Fresh Ingredients",
-    desc: "Origin-sourced, nitrogen-sealed",
+    title: "Handpicked Quality",
+    desc: "Origin-sourced, sealed fresh",
   },
   {
     icon: LuShieldCheck,
-    title: "FSSAI Certified",
-    desc: "Food-grade hygiene checks",
+    title: "FSSAI Licensed",
+    desc: "Food-grade hygiene standards",
   },
   {
     icon: LuAward,
     title: "Premium Grade",
-    desc: "Luxury gift-ready quality",
+    desc: "Luxury gift-ready finish",
   },
 ];
 

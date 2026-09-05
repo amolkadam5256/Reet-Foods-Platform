@@ -33,9 +33,9 @@ export const productCategories: ProductCategory[] = [
       "Premium origin almonds, pistachios, cashews, figs and raisins curated for gifting and daily nourishment.",
     image: product1Main,
     highlights: [
-      "Iranian & Afghan sourcing",
-      "Nitrogen-packed freshness",
-      "Festive-ready tins",
+      "Origin-sourced dry fruits",
+      "Food-grade sealed freshness",
+      "Festive-ready packaging",
     ],
     items: [
       { name: "Signature Dry Fruit Box", detail: "A generous assortment of premium almonds, cashews and pistachios, presented for effortless gifting.", badge: "Best Seller", image: product1Main },

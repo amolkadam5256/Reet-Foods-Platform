@@ -10,10 +10,10 @@ const topViewPistachios = reetFoodImages[4];
 const highlights = [
   "Employee & Client Gifts",
   "Festival & Diwali Hampers",
-  "Wedding Guest Favours",
   "Custom Branding & Logo Printing",
-  "Seamless Bulk Orders from 25 units",
-  "Tiered Pricing for Volume Buyers",
+  "Multiple Packaging Styles",
+  "Bulk Corporate Orders Welcome",
+  "Tiered Quantity-Based Pricing",
 ];
 
 export function CorporateGifting() {
@@ -53,11 +53,11 @@ export function CorporateGifting() {
               Elevate Your Corporate Gifting
             </h2>
             <span className="shrink-0 rounded-full border border-reef-gold/30 bg-reef-cream px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.16em] text-reef-burgundy">
-              Min 25 Units
+              Bulk Orders Welcome
             </span>
           </div>
           <p className="mt-5 text-sm leading-7 text-reef-charcoal/70">
-            Leave a lasting impression on clients and employees with
+            Leave a lasting impression on clients, partners and employees with
             custom-branded luxury hampers. From concept to doorstep — managed
             with precision and elegance.
           </p>
@@ -107,7 +107,7 @@ export function CorporateGifting() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              Call: +91 98906 09611
+              Call: +91 92251 30732
             </a>
           </div>
         </div>

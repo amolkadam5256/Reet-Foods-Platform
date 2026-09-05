@@ -83,7 +83,7 @@ export function SiteShell({
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="border border-reef-gold/15 bg-reef-cream px-4 py-4">
-                <p className="text-2xl font-semibold text-reef-charcoal">24h</p>
+                <p className="text-2xl font-semibold text-reef-charcoal">Prompt</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.18em] text-reef-charcoal/55">
                   Enquiry response
                 </p>
@@ -103,9 +103,9 @@ export function SiteShell({
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3 border-t border-reef-gold/15 pt-6 text-sm text-reef-charcoal/75">
-              <a href="tel:+919890609611" className="inline-flex items-center gap-2 border border-reef-gold/20 bg-reef-cream px-3 py-2 transition hover:text-reef-burgundy">
+              <a href="tel:+919225130732" className="inline-flex items-center gap-2 border border-reef-gold/20 bg-reef-cream px-3 py-2 transition hover:text-reef-burgundy">
                 <FiPhone className="text-reef-burgundy" />
-                +91 9890609611 / +91 8007518088
+                +91 9225130732
               </a>
               <span className="inline-flex items-center gap-2 border border-reef-gold/20 bg-reef-cream px-3 py-2">
                 <FiMapPin className="text-reef-burgundy" />
