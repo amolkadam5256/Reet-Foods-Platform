@@ -59,10 +59,10 @@ export function GalleryHero({
             <div className="w-px h-8 bg-white/15 self-center hidden sm:block" />
             <div>
               <p className="text-sm sm:text-base font-bold font-[family-name:var(--font-playfair)] text-[#d4af37]">
-                Premium Gifting
+                Premium Gifting Collection
               </p>
               <p className="text-[9px] font-bold uppercase tracking-wider text-white/45">
-                FSSAI Licensed
+                FSSAI-Licensed Operations
               </p>
             </div>
           </div>

@@ -21,7 +21,7 @@ const faqs = [
     question:
       "Can we request a custom gift box design similar to the ones in the gallery?",
     answer:
-      "Absolutely. If you see a luxury corporate hamper or Diwali gift box design you like, we can replicate it and customize it with your corporate branding.",
+      "We can customize selected designs or suggest similar alternatives, subject to current packaging availability, quantity and budget. Our team can also incorporate your corporate branding on available packaging.",
   },
   {
     question: "Where are these gift boxes and hampers packed?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question:
-      "Do you offer the same wooden chests shown in the gallery for bulk orders?",
+      "Do you offer the wooden chests shown in the gallery for bulk orders?",
     answer:
       "Selected wooden chests and premium boxes shown in our gallery may be available for bulk corporate gifting, subject to current vendor availability. Our team can also suggest similar alternatives based on your budget and requirement.",
   },
@@ -49,13 +49,13 @@ const faqs = [
   {
     question: "What is the quality of the packaging materials used?",
     answer:
-      "We use premium quality rigid boxes, imported tin containers, and handcrafted wooden chests, ensuring your corporate gifts Pune leave a lasting impression.",
+      "We work with quality packaging options including rigid gift boxes, tin containers, and wooden chests, ensuring your corporate gifts leave an elegant impression, subject to current catalogue availability.",
   },
   {
     question:
       "Do you offer the ribbon wrapping and floral decor seen in the gallery?",
     answer:
-      "Yes, custom ribbon wrapping, floral accents, and personalized note cards are complimentary services provided with our luxury corporate hampers.",
+      "Custom ribbon wrapping, decorative accents, and personalized cards can be arranged for selected hampers, subject to current packaging availability, quantity and budget.",
   },
   {
     question: "Can we visit your showroom to see these hampers in person?",
