@@ -44,7 +44,7 @@ Stage 3: FRICTION REMOVAL & TRUST
 Reviews Client Logo Wall / Clicks WhatsApp for Instant Sample Inquiry
                                  │
 Stage 4: INQUIRY & CONVERSION
-Submits Quote Form (+91 9890609611) OR Completes Online Checkout
+Submits Quote Form (+91 9225130732) OR Completes Online Checkout
                                  │
 Stage 5: RETENTION & REPEAT
 Receives Follow-up WhatsApp / Annual Festival Pre-Order Reminder

@@ -12,7 +12,7 @@
         ┌───────────────────┬────────────┴───────┬───────────────────┐
         ▼                   ▼                    ▼                   ▼
  [ B2B Quote Form ]   [ Phone Leads ]   [ WhatsApp Leads ]   [ Catalogue Download ]
- (Modal / Page)    (+91 9890609611)      (+91 9890609611)         (PDF Lead Gate)
+ (Modal / Page)    (+91 9225130732)      (+91 9225130732)         (PDF Lead Gate)
         │                   │                    │                   │
         └───────────────────┴────────────┬───────┴───────────────────┘
                                          ▼
@@ -33,15 +33,15 @@
 - **Form Fields (4 Required):**
   1. Full Name
   2. Corporate Email Address (`company@domain.com`)
-  3. Phone / WhatsApp Number (`+91 9890609611`)
+  3. Phone / WhatsApp Number (`+91 9225130732`)
   4. Estimated Quantity (Dropdown: 50–100, 100–500, 500–1000, 1000+)
 - **Micro-copy Under Submit:** _"📄 GST Invoice Provided | 🌿 FSSAI Licensed: 21525083009881 | 🚚 Same-Day Delivery in Pune"_.
 
 ### 2. Click-to-Call Phone Lead Generation
 
-- **Target Number:** `+91 9890609611` / `+91 8007518088`.
+- **Target Number:** `+91 9225130732` / `+91 8007518088`.
 - **Placement:** Header top bar, contact page, mobile sticky bottom bar.
-- **Conversion Trigger:** Click on `tel:+919890609611` link.
+- **Conversion Trigger:** Click on `tel:+919225130732` link.
 
 ### 3. Corporate Gifting Catalogue PDF Gate
 

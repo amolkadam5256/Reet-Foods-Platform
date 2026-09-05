@@ -80,7 +80,7 @@
 | #   | Issue                                                                                                 | Impact                                |
 | --- | ----------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | 1   | **Dual GA4 Measurement IDs in use** — `G-CNBH2V6Y6T` in layout.tsx vs `G-GGE1EC2V8F` in documentation | Data loss, split tracking             |
-| 2   | **Placeholder phone number in OrganizationSchema** — `+91-9876543210` instead of `+91-9890609611`     | Incorrect NAP, schema penalties       |
+| 2   | **Placeholder phone number in OrganizationSchema** — `+91-9876543210` instead of `+91-9225130732`     | Incorrect NAP, schema penalties       |
 | 3   | **LocalBusinessSchema uses wrong type** — `FoodEstablishment` instead of `Store` / `LocalBusiness`    | Wrong entity classification           |
 | 4   | **FAQ page missing FAQPage schema** — Uses `<details>` but no JSON-LD FAQPage markup                  | Missing rich result eligibility       |
 | 5   | **Contact page uses basic `metadata` object** — not `constructMetadata()` — no canonical, no OG image | Duplicate meta, no canonical control  |

@@ -1,4 +1,5 @@
 ﻿# 15_Sales_Funnel.md
+
 # End-to-End Sales Funnel Optimization — Reet Foods & Giftings
 
 ---
@@ -21,7 +22,7 @@ Reet Foods tracks and recovers drop-offs across 3 primary sales funnels.
  Completes Form Submission (`generate_lead`)
                           │  (65% completion -> 13% overall)
                           ▼
- Sales Team Outbound WhatsApp / Call (+91 9890609611) within 15 Min
+ Sales Team Outbound WhatsApp / Call (+91 9225130732) within 15 Min
                           │  (90% contact rate)
                           ▼
  Sample Delivery / Digital Proof Approval ──> Final Invoice Payment
@@ -36,4 +37,4 @@ Reet Foods tracks and recovers drop-offs across 3 primary sales funnels.
 
 ---
 
-*References: 04_Lead_Generation.md, 10_WhatsApp_Funnel.md, 19_KPI_Dashboard.md*
+_References: 04_Lead_Generation.md, 10_WhatsApp_Funnel.md, 19_KPI_Dashboard.md_

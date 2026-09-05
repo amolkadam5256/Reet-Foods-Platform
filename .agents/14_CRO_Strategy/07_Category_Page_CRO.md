@@ -26,7 +26,7 @@
 ## SECTION 2 — Category CRO Elements
 
 1. **Quick-View Modal:** Allows corporate buyers to view specs, bulk discount tiers, and request a quote without leaving the grid.
-2. **Category B2B Callout Banner:** Placed after row 2 of products: _"Need 100+ Gift Boxes for Diwali? Talk to our Hinjewadi Store Specialist: Call +91 9890609611"_.
+2. **Category B2B Callout Banner:** Placed after row 2 of products: _"Need 100+ Gift Boxes for Diwali? Talk to our Hinjewadi Store Specialist: Call +91 9225130732"_.
 3. **Buying Guide Accordion:** Collapsible guide at bottom of category page answering _"How to choose dry fruit hampers for corporate gifting"_.
 
 ---

@@ -11,7 +11,7 @@
 **Core Offerings:** Corporate Gifting, Premium Dry Fruits, Luxury Hampers, Wedding Return Gifts, Festival Gift Boxes, Bulk Orders  
 **Store Address:** Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057  
 **Factory Address:** Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027  
-**Phone:** +91 9890609611 / +91 8007518088 | **Email:** reetfoodspune@gmail.com  
+**Phone:** +91 9225130732 / +91 8007518088 | **Email:** reetfoodspune@gmail.com  
 **FSSAI Licence No.:** 21525083009881 | **GSTIN:** 27FHIPK0363N1ZX
 
 This document serves as the master blueprint for Phase 13 — Enterprise Conversion Rate Optimization (CRO), User Experience (UX), User Interface (UI), Customer Journey Mapping, and Lead Generation Architecture for Reet Foods & Giftings.
@@ -26,7 +26,7 @@ Reet Foods operates a dual conversion model: **B2B High-Ticket Corporate Procure
 | ------------------- | ---------------------------------- | ------------------------------------------- | ------------------------------------ | ----------------------------- |
 | **P1 (Macro)**      | B2B Corporate Quote Request Form   | HR Managers, Procurement Heads, Admin Leads | High-Ticket Bulk Orders (₹50k–₹10L+) | 12% of Landing Page Visitors  |
 | **P1 (Macro)**      | E-Commerce Direct Purchase         | Individual & Festive Buyers                 | Direct Online Revenue                | 3.5% of Product Page Visitors |
-| **P1 (Macro)**      | Direct Phone Call (+91 9890609611) | High-Intent Local Buyers (Hinjewadi/Pune)   | Immediate Phone Closure              | 8% of Local Search Traffic    |
+| **P1 (Macro)**      | Direct Phone Call (+91 9225130732) | High-Intent Local Buyers (Hinjewadi/Pune)   | Immediate Phone Closure              | 8% of Local Search Traffic    |
 | **P1 (Macro)**      | Direct WhatsApp Inquiry            | Mobile Users, Local Businesses              | Fast Lead Conversion                 | 15% of Mobile Visitors        |
 | **P2 (Micro)**      | Corporate Catalogue PDF Download   | Top-of-Funnel Procurement Researchers       | Lead Capture & Nurture               | 25% of B2B Visitors           |
 | **P2 (Micro)**      | Add to Cart / Checkout Start       | E-Commerce Shoppers                         | Retargeting & Email Recovery         | 15% of Product Visitors       |

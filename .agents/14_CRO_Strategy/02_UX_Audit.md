@@ -29,7 +29,7 @@ A heuristic UX evaluation of `https://reetfoodsngiftings.com` identified key fri
 ### 2. City Landing Pages (`/corporate-gifts/hinjewadi/`)
 
 - **Friction:** Text-heavy layout without quick contact options for mobile users on Maan Road / Hinjewadi IT park.
-- **Fix:** Add a top banner: _"Serving Hinjewadi IT Companies | Same-Day Pune Delivery | Call +91 9890609611"_.
+- **Fix:** Add a top banner: _"Serving Hinjewadi IT Companies | Same-Day Pune Delivery | Call +91 9225130732"_.
 
 ### 3. Product Pages (`/products/luxury-diwali-hamper/`)
 

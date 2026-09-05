@@ -24,8 +24,8 @@
 ## SECTION 2 — CTA Copy Matrix
 
 - **Primary B2B Form CTA:** `Get Custom Corporate Quote` / `Request Bulk Pricing`
-- **WhatsApp CTA:** `Chat on WhatsApp (+91 9890609611)`
-- **Phone CTA:** `Call Store Specialist (+91 9890609611)`
+- **WhatsApp CTA:** `Chat on WhatsApp (+91 9225130732)`
+- **Phone CTA:** `Call Store Specialist (+91 9225130732)`
 - **Catalogue CTA:** `Download 2025 Corporate Catalogue (PDF)`
 
 ---

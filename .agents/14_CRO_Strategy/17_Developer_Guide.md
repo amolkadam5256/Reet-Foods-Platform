@@ -24,25 +24,25 @@ export default function StickyBottomBar() {
     if (typeof window !== "undefined" && window.dataLayer) {
       window.dataLayer.push({
         event: "whatsapp_click",
-        whatsapp_number: "+919890609611",
+        whatsapp_number: "+919225130732",
         click_location: "sticky_mobile_bottom_bar",
       });
     }
     const message = encodeURIComponent(
       "Hi Reet Foods, I am looking for Corporate Gifting in Hinjewadi Pune. Please share details.",
     );
-    window.open(`https://wa.me/919890609611?text=${message}`, "_blank");
+    window.open(`https://wa.me/919225130732?text=${message}`, "_blank");
   };
 
   const handleCallClick = () => {
     if (typeof window !== "undefined" && window.dataLayer) {
       window.dataLayer.push({
         event: "phone_call_click",
-        phone_number: "+919890609611",
+        phone_number: "+919225130732",
         click_location: "sticky_mobile_bottom_bar",
       });
     }
-    window.location.href = "tel:+919890609611";
+    window.location.href = "tel:+919225130732";
   };
 
   return (

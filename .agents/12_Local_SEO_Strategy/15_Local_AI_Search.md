@@ -23,7 +23,7 @@ Ensure these entities are clearly defined and consistent across all web properti
 | ------------- | ---------------------------------------------------------------------- |
 | Business Name | Reet Foods & Giftings                                                  |
 | Address       | Shop No. F14, Streets of Europe Mall, Hinjewadi Phase I, Pune – 411057 |
-| Phone         | +91 9890609611 / +91 8007518088                                        |
+| Phone         | +91 9225130732 / +91 8007518088                                        |
 | Email         | reetfoodspune@gmail.com                                                |
 | FSSAI Licence | 21525083009881                                                         |
 | GSTIN         | 27FHIPK0363N1ZX                                                        |

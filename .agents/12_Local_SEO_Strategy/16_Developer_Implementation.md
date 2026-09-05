@@ -37,7 +37,7 @@ export default function LocalSchema({
     "@id": pageUrl ?? "https://reetfoodsngiftings.com/#organization",
     name: "Reet Foods & Giftings",
     url: "https://reetfoodsngiftings.com",
-    telephone: ["+91-9890609611", "+91-8007518088"],
+    telephone: ["+91-9225130732", "+91-8007518088"],
     email: "reetfoodspune@gmail.com",
     description:
       description ??
@@ -130,7 +130,7 @@ export async function generateMetadata({
   if (!city) return {};
   return {
     title: `Best Corporate Gifts in ${city.name} – Reet Foods & Giftings`,
-    description: `Order premium corporate gift hampers, dry fruit boxes & luxury gifts in ${city.name}. Custom branding, bulk orders & PAN-India delivery. Call +91 9890609611.`,
+    description: `Order premium corporate gift hampers, dry fruit boxes & luxury gifts in ${city.name}. Custom branding, bulk orders & PAN-India delivery. Call +91 9225130732.`,
     alternates: {
       canonical: `https://reetfoodsngiftings.com/corporate-gifts/${city.slug}/`,
     },
@@ -162,7 +162,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           <p>
             Reet Foods & Giftings delivers premium corporate gift hampers, dry
             fruit boxes, and luxury gifts to businesses in {city.name}. Call us
-            at <a href="tel:+919890609611">+91 9890609611</a> or email{" "}
+            at <a href="tel:+919225130732">+91 9225130732</a> or email{" "}
             <a href="mailto:reetfoodspune@gmail.com">reetfoodspune@gmail.com</a>
             .
           </p>
@@ -204,7 +204,7 @@ Create `data/cities.json`:
     "faqs": [
       {
         "question": "Do you deliver corporate gifts in Hinjewadi same day?",
-        "answer": "Yes, same-day delivery in Hinjewadi for orders placed before 12 PM. Call +91 9890609611."
+        "answer": "Yes, same-day delivery in Hinjewadi for orders placed before 12 PM. Call +91 9225130732."
       },
       {
         "question": "Where is Reet Foods store near Hinjewadi?",
@@ -273,7 +273,7 @@ Update `components/layout/Footer.tsx`:
   <br />
   Pune – 411057, Maharashtra, India
   <br />
-  <a href="tel:+919890609611">+91 9890609611</a> /{" "}
+  <a href="tel:+919225130732">+91 9225130732</a> /{" "}
   <a href="tel:+918007518088">+91 8007518088</a>
   <br />
   <a href="mailto:reetfoodspune@gmail.com">reetfoodspune@gmail.com</a>
