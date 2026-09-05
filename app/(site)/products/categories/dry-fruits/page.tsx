@@ -11,7 +11,7 @@ import { FiCheckCircle, FiShield, FiPackage, FiTruck } from "react-icons/fi";
 
 export const metadata = constructMetadata({
   title: "Premium Dry Fruits Online | Gourmet Almonds, Cashews, Walnuts Pune",
-  description: "Shop handpicked premium jumbo almonds, W240 cashews, Chilean walnuts, and Iranian pistachios. Nitrogen-sealed packaging for peak freshness from Reet Foods Pune.",
+  description: "Shop handpicked premium jumbo almonds, W240 cashews, Chilean walnuts, and Iranian pistachios. Food-grade packaging for peak freshness from Reet Foods Pune.",
   canonical: "/products/categories/dry-fruits",
 });
 
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How do you maintain freshness during transit?",
-    answer: "Our dry fruits are nitrogen-flushed and sealed in food-grade pouching or airtight metallic tins to preserve natural oils and crunchiness for up to 12 months.",
+    answer: "Our dry fruits are packed in food-grade pouches or airtight metallic tins to preserve natural oils and crunchiness during transit and storage.",
   },
   {
     question: "Can I order custom dry fruit mix assortments for corporate events?",
@@ -48,7 +48,7 @@ export default function DryFruitsCategoryPage() {
       <PageHero
         eyebrow="Category Catalog"
         title="Gourmet Premium Dry Fruits"
-        description="Discover California Mamra almonds, rich Goa cashews, organic Afghan figs, and Iranian pistachios. Carefully graded and nitrogen-packed for unmatched crunch and nutrition."
+        description="Discover California Mamra almonds, rich Goa cashews, organic Afghan figs, and Iranian pistachios. Carefully graded and hygienically packed for freshness and nutrition."
         breadcrumbs={[
           { label: "Products", href: "/products" },
           { label: "Categories", href: "/products#categories" },
@@ -65,9 +65,9 @@ export default function DryFruitsCategoryPage() {
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { icon: <FiShield className="h-6 w-6" />, title: "Grade-A Quality", desc: "Uniform size, zero broken pieces" },
-          { icon: <FiPackage className="h-6 w-6" />, title: "Nitrogen Sealed", desc: "Maximum shelf life & crunch" },
-          { icon: <FiCheckCircle className="h-6 w-6" />, title: "FSSAI Certified", desc: "Strict hygiene & lab testing" },
-          { icon: <FiTruck className="h-6 w-6" />, title: "PAN India Express", desc: "Safe temperature controlled transit" },
+          { icon: <FiPackage className="h-6 w-6" />, title: "Food-Grade Packed", desc: "Airtight packaging for freshness" },
+          { icon: <FiCheckCircle className="h-6 w-6" />, title: "FSSAI Licensed", desc: "Strict hygiene & quality checks" },
+          { icon: <FiTruck className="h-6 w-6" />, title: "PAN India Delivery", desc: "Reliable dispatch across India" },
         ].map((item, idx) => (
           <div key={idx} className="flex items-start gap-4 rounded-xl border border-reef-gold/20 bg-white p-5 shadow-sm">
             <div className="rounded-lg bg-reef-cream p-3 text-reef-burgundy">{item.icon}</div>
@@ -120,7 +120,7 @@ export default function DryFruitsCategoryPage() {
 
       <CTA
         title="Need Bulk Dry Fruits for Festive or Corporate Gifting?"
-        description="Share your required quantities and budget. Our Pune concierge will send a customized proposal within 2 hours."
+        description="Share your required quantities and budget. Our Pune corporate gifting team will send a customized proposal promptly."
         primaryButtonText="Request Bulk Quote"
         primaryButtonHref="/contact#quote"
       />

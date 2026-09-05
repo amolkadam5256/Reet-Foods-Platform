@@ -62,7 +62,7 @@ export default function JuicesCategoryPage() {
           { icon: <FiHeart className="h-6 w-6" />, title: "Zero Added Sugar", desc: "Only natural fruit fructose" },
           { icon: <FiShield className="h-6 w-6" />, title: "Cold Extraction", desc: "Retains 98% vital enzymes & vitamins" },
           { icon: <FiCheckCircle className="h-6 w-6" />, title: "No Preservatives", desc: "Freshly made daily in Pune" },
-          { icon: <FiTruck className="h-6 w-6" />, title: "Cold-Chain Logistics", desc: "Chilled delivery in insulated packs" },
+          { icon: <FiTruck className="h-6 w-6" />, title: "Careful Handling", desc: "Packed with care for safe delivery" },
         ].map((item, idx) => (
           <div key={idx} className="flex items-start gap-4 rounded-xl border border-reef-gold/20 bg-white p-5 shadow-sm">
             <div className="rounded-lg bg-reef-cream p-3 text-reef-burgundy">{item.icon}</div>

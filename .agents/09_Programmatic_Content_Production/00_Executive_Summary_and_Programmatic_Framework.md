@@ -2,19 +2,20 @@
 
 **Website:** https://reetfoodsngiftings.com  
 **Purpose:** Scalable, production-ready framework for programmatic SEO, automated landing pages, city-based expansion, and content production SOPs.  
-**Date:** August 2026  
+**Date:** August 2026
 
 ---
 
 ## 1. Executive Summary
 
-This manual serves as the operational blueprint for generating **hundreds of search-optimized, high-converting, and AI-ready pages** for **Reet Foods & Gifting**. 
+This manual serves as the operational blueprint for generating **hundreds of search-optimized, high-converting, and AI-ready pages** for **Reet Foods & Gifting**.
 
 ### Strategic Pillars:
+
 1. **Programmatic City & Industry Pages:** Automated generation of hyper-local landing pages targeting 100+ Indian cities and key industry verticals (IT, Pharma, Banking, Real Estate).
 2. **Modular Content Production Engine:** Standardized writing SOPs, editorial checklists, and JSON-LD schema integration for writers and developers.
 3. **AI & LLM Search Optimization:** Content structured in QA, table, and bulleted formats for immediate retrieval by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews.
-4. **E-E-A-T & Conversion Architecture:** Integrating verified FSSAI credentials (`21526079003816`), GSTIN details (`27FHIPK0363N1ZX`), sticky mobile CTAs, and bulk quote lead magnets.
+4. **E-E-A-T & Conversion Architecture:** Integrating verified FSSAI credentials (`21525083009881`), GSTIN details (`27FHIPK0363N1ZX`), sticky mobile CTAs, and bulk quote lead magnets.
 
 ---
 

@@ -46,7 +46,7 @@ export function AboutBrand() {
             <p className="mt-6 text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
               Founded with a singular vision — to redefine luxury gifting in
               India — Reet Foods merges artisanal craftsmanship with
-              unparalleled concierge service. From handpicked dry fruits to
+              unparalleled dedicated service. From handpicked dry fruits to
               bespoke chocolate boxes, every product carries a story of care.
             </p>
             <p className="mt-4 text-sm leading-7 text-white/85 sm:text-base sm:leading-8">

@@ -51,7 +51,7 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Hand-poured chocolates, truffles, and pralines in luxurious packaging with custom branding.",
     image: product2Main,
-    highlights: ["Temperature-controlled packing", "Custom logo foil", "Vegan options"],
+    highlights: ["Food-grade packing", "Custom logo foil", "Vegan options"],
     items: [
       { name: "Corporate Chocolate Gift Box", detail: "An elegant chocolate selection with space for your company logo, message card and event details.", badge: "Corporate", image: product2Main },
       { name: "Assorted Truffle Collection", detail: "A refined assortment of milk, dark and white truffles in a presentation-ready gift box.", image: product2Detail1 },
@@ -66,7 +66,7 @@ export const productCategories: ProductCategory[] = [
     intro:
       "Curated red and gold hampers with cards, ribbons and custom brand storytelling for every occasion.",
     image: product4Main,
-    highlights: ["Concierge delivery", "Handwritten cards", "Tiered pricing for volume"],
+    highlights: ["Dedicated dispatch support", "Handwritten cards", "Tiered pricing for volume"],
     items: [
       { name: "Grande Celebration Hamper", detail: "A complete gifting experience combining premium treats, a presentation box and a personal note.", image: product4Main },
       { name: "Festive Duo", detail: "Two carefully paired gift selections, finished with ribbon and ready for seasonal celebrations.", image: product4Detail1 },

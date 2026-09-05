@@ -180,7 +180,7 @@ export const industries = [
 export const faqs = [
   {
     q: "What makes Reet Foods & Giftings the best choice for corporate gifts in Pune?",
-    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our FSSAI licensing (Lic. 21525083009881), diverse packaging options, and dedicated B2B support make us a trusted partner for corporate gifting in Pune.",
+    a: "We offer premium corporate gifts in Pune, combining luxury dry fruit boxes, artisanal chocolates, and custom-branded hampers with reliable PAN India delivery. Our FSSAI registration (FSSAI No. 21525083009881), diverse packaging options, and dedicated B2B support make us a trusted partner for corporate gifting in Pune.",
   },
   {
     q: "What is the minimum order quantity for corporate gift boxes?",
@@ -220,7 +220,7 @@ export const faqs = [
   },
   {
     q: "Are your products FSSAI certified and hygienically packed?",
-    a: "Yes, Reet Foods operates with valid FSSAI licensing (Licence No. 21525083009881). Premium dry fruits and corporate gifts are handled with food-grade packaging and rigorous quality checks before dispatch.",
+    a: "Yes, Reet Foods operates with valid FSSAI registration (FSSAI No. 21525083009881). Premium dry fruits and corporate gifts are handled with food-grade packaging and rigorous quality checks before dispatch.",
   },
   {
     q: "Do you cater to festive gifting beyond Diwali?",
@@ -241,7 +241,7 @@ export const faqs = [
 ];
 
 export const certifications = [
-  { name: "FSSAI Licensed", desc: "Licence No. 21525083009881 - Regulated by the Food Safety and Standards Authority of India." },
+  { name: "FSSAI Licensed", desc: "FSSAI No. 21525083009881 — Regulated by the Food Safety and Standards Authority of India." },
   { name: "Quality Checked", desc: "Batch-aware packing, hygiene checks, and food-grade packaging standards." },
   { name: "Hygienic Handling", desc: "Assembled in a clean, food-grade environment with quality control at every stage." },
   { name: "Premium Grade", desc: "All dry fruits and chocolates graded to premium standards before dispatch." },
@@ -287,5 +287,5 @@ export const stats = [
   { value: "Bespoke", label: "Custom Hampers & Branding" },
   { value: "₹400+", label: "Budgets for Every Scale" },
   { value: "100%", label: "GST Compliant Invoicing" },
-  { value: "FSSAI", label: "Lic. 21525083009881" },
+  { value: "FSSAI", label: "No. 21525083009881" },
 ];

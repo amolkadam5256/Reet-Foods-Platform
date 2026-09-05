@@ -1,30 +1,31 @@
 # 01_Google_Business_Profile.md
+
 # Google Business Profile Optimization Guide — Reet Foods & Giftings
 
 ---
 
 ## STEP 1 — Business Profile Analysis
 
-| Field | Current (Audit) | Recommended Optimized Value |
-|-------|----------------|-----------------------------|
-| Business Name | Reet Foods & Giftings | Reet Foods & Giftings |
-| Legal Name | Reet Foods Pvt Ltd | Reet Foods Pvt Ltd |
-| Brand Name | Reet Foods | Reet Foods |
-| Store Address | Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057 | Same (must match exactly across all citations) |
-| Factory Address | Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027 | Secondary location in GBP (if added as separate listing) |
-| Phone 1 | +91 9890609611 | +91 9890609611 (Primary) |
-| Phone 2 | +91 8007518088 | +91 8007518088 (Additional) |
-| Email | reetfoodspune@gmail.com | reetfoodspune@gmail.com |
-| FSSAI Licence No. | 21526079003816 | Display in GBP description and website footer |
-| GSTIN | 27FHIPK0363N1ZX | Display in GBP description and website footer |
-| Website | https://reetfoodsngiftings.com | https://reetfoodsngiftings.com?utm_source=gbp&utm_medium=profile&utm_campaign=local |
-| Working Hours | Mon–Sat 9:00 AM – 7:00 PM | Mon–Sat 9:00 AM – 7:00 PM (update holiday hours seasonally) |
-| Primary Category | Gift Shop | Gift Shop |
-| Secondary Categories | — | Corporate Gift Supplier, Food & Beverage Store, Event Planner |
-| Products | — | Add 10+ SKUs with images and URLs |
-| Services | — | Corporate Gifting, Bulk Orders, Custom Packaging |
-| Service Areas | Pune | Pune, Mumbai, Bangalore, Delhi, Hyderabad, PAN‑India |
-| Business Description | — | See optimized description below |
+| Field                | Current (Audit)                                                                                                     | Recommended Optimized Value                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Business Name        | Reet Foods & Giftings                                                                                               | Reet Foods & Giftings                                                               |
+| Legal Name           | Reet Foods Pvt Ltd                                                                                                  | Reet Foods Pvt Ltd                                                                  |
+| Brand Name           | Reet Foods                                                                                                          | Reet Foods                                                                          |
+| Store Address        | Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057 | Same (must match exactly across all citations)                                      |
+| Factory Address      | Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027                         | Secondary location in GBP (if added as separate listing)                            |
+| Phone 1              | +91 9890609611                                                                                                      | +91 9890609611 (Primary)                                                            |
+| Phone 2              | +91 8007518088                                                                                                      | +91 8007518088 (Additional)                                                         |
+| Email                | reetfoodspune@gmail.com                                                                                             | reetfoodspune@gmail.com                                                             |
+| FSSAI Licence No.    | 21525083009881                                                                                                      | Display in GBP description and website footer                                       |
+| GSTIN                | 27FHIPK0363N1ZX                                                                                                     | Display in GBP description and website footer                                       |
+| Website              | https://reetfoodsngiftings.com                                                                                      | https://reetfoodsngiftings.com?utm_source=gbp&utm_medium=profile&utm_campaign=local |
+| Working Hours        | Mon–Sat 9:00 AM – 7:00 PM                                                                                           | Mon–Sat 9:00 AM – 7:00 PM (update holiday hours seasonally)                         |
+| Primary Category     | Gift Shop                                                                                                           | Gift Shop                                                                           |
+| Secondary Categories | —                                                                                                                   | Corporate Gift Supplier, Food & Beverage Store, Event Planner                       |
+| Products             | —                                                                                                                   | Add 10+ SKUs with images and URLs                                                   |
+| Services             | —                                                                                                                   | Corporate Gifting, Bulk Orders, Custom Packaging                                    |
+| Service Areas        | Pune                                                                                                                | Pune, Mumbai, Bangalore, Delhi, Hyderabad, PAN‑India                                |
+| Business Description | —                                                                                                                   | See optimized description below                                                     |
 
 ---
 
@@ -36,44 +37,44 @@
 
 ## STEP 3 — Category Strategy
 
-| Category Type | Category | Priority |
-|--------------|----------|----------|
-| Primary | Gift Shop | P1 |
-| Secondary | Corporate Gift Supplier | P1 |
-| Secondary | Food & Beverage Store | P2 |
-| Secondary | Event Planner | P2 |
-| Secondary | Online Shopping Website | P3 |
+| Category Type | Category                | Priority |
+| ------------- | ----------------------- | -------- |
+| Primary       | Gift Shop               | P1       |
+| Secondary     | Corporate Gift Supplier | P1       |
+| Secondary     | Food & Beverage Store   | P2       |
+| Secondary     | Event Planner           | P2       |
+| Secondary     | Online Shopping Website | P3       |
 
 ---
 
 ## STEP 4 — Products to Add (GBP Product Catalog)
 
-| Product Name | Price Range | Image | URL |
-|-------------|------------|-------|-----|
-| Luxury Diwali Hamper | ₹999–₹4,999 | Required | /products/luxury-diwali-hamper/ |
-| Premium Dry Fruit Box | ₹499–₹2,499 | Required | /products/premium-dry-fruit-box/ |
-| Corporate Gift Box | ₹799–₹3,999 | Required | /products/corporate-gift-box/ |
-| Wedding Return Gift | ₹299–₹1,499 | Required | /products/wedding-return-gift/ |
-| Custom Branded Hamper | ₹1,499–₹9,999 | Required | /products/custom-branded-hamper/ |
-| Festival Gift Box | ₹499–₹2,999 | Required | /products/festival-gift-box/ |
-| Chocolate Gift Box | ₹399–₹1,999 | Required | /products/chocolate-gift-box/ |
-| Healthy Snack Hamper | ₹599–₹2,499 | Required | /products/healthy-snack-hamper/ |
-| Bulk Order Pack (100+) | Custom | Required | /bulk-orders/ |
-| Cold Pressed Juice Gift | ₹699–₹2,999 | Required | /products/cold-pressed-juice-gift/ |
+| Product Name            | Price Range   | Image    | URL                                |
+| ----------------------- | ------------- | -------- | ---------------------------------- |
+| Luxury Diwali Hamper    | ₹999–₹4,999   | Required | /products/luxury-diwali-hamper/    |
+| Premium Dry Fruit Box   | ₹499–₹2,499   | Required | /products/premium-dry-fruit-box/   |
+| Corporate Gift Box      | ₹799–₹3,999   | Required | /products/corporate-gift-box/      |
+| Wedding Return Gift     | ₹299–₹1,499   | Required | /products/wedding-return-gift/     |
+| Custom Branded Hamper   | ₹1,499–₹9,999 | Required | /products/custom-branded-hamper/   |
+| Festival Gift Box       | ₹499–₹2,999   | Required | /products/festival-gift-box/       |
+| Chocolate Gift Box      | ₹399–₹1,999   | Required | /products/chocolate-gift-box/      |
+| Healthy Snack Hamper    | ₹599–₹2,499   | Required | /products/healthy-snack-hamper/    |
+| Bulk Order Pack (100+)  | Custom        | Required | /bulk-orders/                      |
+| Cold Pressed Juice Gift | ₹699–₹2,999   | Required | /products/cold-pressed-juice-gift/ |
 
 ---
 
 ## STEP 5 — Services to Add
 
-| Service | Description |
-|---------|-------------|
-| Corporate Gifting | Customized bulk corporate gift solutions for all company sizes |
-| Bulk Orders | Minimum 50 units; custom branding; PAN‑India delivery |
-| Custom Packaging | Logo printing, ribbon, personalized messaging on all gift boxes |
-| Wedding Gifts | Return gifts and gifting solutions for weddings of all scales |
-| Festival Gifting | Seasonal gift packages for Diwali, Holi, Christmas, Eid, and more |
-| Same‑Day Delivery | Available in Pune city limits |
-| Nationwide Shipping | 2–5 business days across India |
+| Service             | Description                                                       |
+| ------------------- | ----------------------------------------------------------------- |
+| Corporate Gifting   | Customized bulk corporate gift solutions for all company sizes    |
+| Bulk Orders         | Minimum 50 units; custom branding; PAN‑India delivery             |
+| Custom Packaging    | Logo printing, ribbon, personalized messaging on all gift boxes   |
+| Wedding Gifts       | Return gifts and gifting solutions for weddings of all scales     |
+| Festival Gifting    | Seasonal gift packages for Diwali, Holi, Christmas, Eid, and more |
+| Same‑Day Delivery   | Available in Pune city limits                                     |
+| Nationwide Shipping | 2–5 business days across India                                    |
 
 ---
 
@@ -127,16 +128,16 @@
 
 ## STEP 8 — Photo & Video Strategy
 
-| Content Type | Quantity | Content Focus |
-|-------------|----------|--------------|
-| Exterior photo | 3 | Office/warehouse entrance, signage |
-| Interior photo | 5 | Packaging area, product display |
-| Product photos | 20+ | Close‑ups of each SKU |
-| Team photos | 5 | Staff at work, packing gifts |
-| Event photos | 10+ | Diwali hamper packaging, corporate delivery |
-| Customer/delivery | 5 | Delivery team, happy client photos |
-| Cover photo | 1 | Brand hero image |
-| Video (30–60 sec) | 1 | Product showcase / behind‑the‑scenes |
+| Content Type      | Quantity | Content Focus                               |
+| ----------------- | -------- | ------------------------------------------- |
+| Exterior photo    | 3        | Office/warehouse entrance, signage          |
+| Interior photo    | 5        | Packaging area, product display             |
+| Product photos    | 20+      | Close‑ups of each SKU                       |
+| Team photos       | 5        | Staff at work, packing gifts                |
+| Event photos      | 10+      | Diwali hamper packaging, corporate delivery |
+| Customer/delivery | 5        | Delivery team, happy client photos          |
+| Cover photo       | 1        | Brand hero image                            |
+| Video (30–60 sec) | 1        | Product showcase / behind‑the‑scenes        |
 
 **Geo‑tag all photos** with Pune GPS coordinates before uploading.
 
@@ -144,12 +145,12 @@
 
 ## STEP 9 — Posts Strategy (Weekly Cadence)
 
-| Post Type | Frequency | Content Example |
-|-----------|-----------|----------------|
-| What's New | Weekly | New product launch, seasonal hamper |
-| Offer | Bi‑weekly | Bulk order discount, early bird Diwali |
-| Event | Monthly | Upcoming festival gifting deadlines |
-| Product | Weekly | Product spotlight with link to page |
+| Post Type  | Frequency | Content Example                        |
+| ---------- | --------- | -------------------------------------- |
+| What's New | Weekly    | New product launch, seasonal hamper    |
+| Offer      | Bi‑weekly | Bulk order discount, early bird Diwali |
+| Event      | Monthly   | Upcoming festival gifting deadlines    |
+| Product    | Weekly    | Product spotlight with link to page    |
 
 **UTM for all GBP post links:**
 `?utm_source=google&utm_medium=gbp_post&utm_campaign=local`
@@ -158,12 +159,12 @@
 
 ## STEP 10 — UTM Tracking Template
 
-| Source | Medium | Campaign | Content | Term |
-|--------|--------|----------|---------|------|
-| google | gbp | local | website_button | — |
-| google | gbp_post | diwali_2025 | offer_post | — |
-| google | gbp_call | — | — | — |
-| google | gbp_direction | — | — | — |
+| Source | Medium        | Campaign    | Content        | Term |
+| ------ | ------------- | ----------- | -------------- | ---- |
+| google | gbp           | local       | website_button | —    |
+| google | gbp_post      | diwali_2025 | offer_post     | —    |
+| google | gbp_call      | —           | —              | —    |
+| google | gbp_direction | —           | —              | —    |
 
 ---
 
@@ -180,4 +181,4 @@
 
 ---
 
-*References: 00_Local_SEO_Master.md, 07_Local_Schema.md, 09_Review_Strategy.md*
+_References: 00_Local_SEO_Master.md, 07_Local_Schema.md, 09_Review_Strategy.md_

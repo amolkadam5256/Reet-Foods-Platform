@@ -56,13 +56,13 @@ export function HampersBudgetBands() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-reef-burgundy">
-            Budget-Friendly To Luxury VIP
+            Indicative Budget Ranges
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl sm:text-4xl font-bold text-reef-charcoal">
             Corporate Diwali Hampers for Every Budget
           </h2>
           <p className="mt-3 text-sm sm:text-base text-reef-charcoal/75 leading-relaxed">
-            Choose from our indicative budget bands. Every hamper is customized with your company branding, preferred products, and packaging styles.
+            Choose from our indicative budget ranges below. Final pricing depends on quantity, contents, packaging, branding and current availability. Every hamper is customized to your requirement.
           </p>
         </div>
 

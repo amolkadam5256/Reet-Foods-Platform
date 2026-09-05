@@ -13,7 +13,7 @@ export interface CTAProps {
 
 export function CTA({
   title = "Ready to elevate your gifting experience?",
-  description = "Connect with our Pune concierge team for custom packaging, bulk discounts, and personalized branding options.",
+  description = "Connect with our Pune corporate gifting team for custom packaging, bulk discounts, and personalized branding options.",
   primaryButtonText = "Request Quote on WhatsApp",
   primaryButtonHref = generateWhatsAppUrl({
     type: "generic",
@@ -37,7 +37,7 @@ export function CTA({
     <section className="my-12 overflow-hidden border border-reef-gold/30 bg-gradient-to-r from-reef-charcoal via-[#1a1412] to-reef-charcoal p-8 text-white shadow-xl sm:p-12">
       <div className="mx-auto max-w-3xl text-center">
         <span className="inline-block border border-reef-gold/30 bg-reef-gold/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-reef-gold">
-          Concierge Assistance
+          Corporate Gifting Support
         </span>
         <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
           {title}

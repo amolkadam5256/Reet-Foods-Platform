@@ -103,7 +103,7 @@ const puneHubs = [
   {
     area: "Koregaon Park & Bund Garden",
     desc: "Executive suites, law firms, banking & VIP client suites.",
-    tag: "White-Glove VIP Service",
+    tag: "Premium Corporate Service",
   },
 ];
 

@@ -123,7 +123,7 @@ export function ManufacturingPreview() {
                 <FiMapPin className="h-3 w-3" /> Retail Shop &amp; Showroom
               </span>
               <span className="rounded-full bg-[#7a0019] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white shadow">
-                FSSAI Lic. #21525083009881
+                FSSAI No. 21525083009881
               </span>
 
             </div>

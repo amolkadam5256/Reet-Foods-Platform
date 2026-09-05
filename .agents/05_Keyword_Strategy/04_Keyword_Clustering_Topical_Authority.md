@@ -1,7 +1,7 @@
 # 04 — Keyword Clustering & Topical Authority Architecture
 
 **Website:** https://reetfoodsngiftings.com  
-**Purpose:** Establish complete topical authority and semantic entity architecture for Google Search and AI Knowledge Graphs.  
+**Purpose:** Establish complete topical authority and semantic entity architecture for Google Search and AI Knowledge Graphs.
 
 ---
 
@@ -31,6 +31,7 @@
 ## 2. Cluster Breakdown & Semantic Nodes
 
 ### Cluster 1: B2B Corporate Gifting Architecture
+
 - **Pillar Page:** `/corporate-gifting`
 - **Sub-topic Nodes:**
   1. `/corporate-gifting/employee-appreciation` (Employee welcome kits & recognition)
@@ -41,6 +42,7 @@
   6. `/corporate-gifting/eco-friendly` (Sustainable hampers)
 
 ### Cluster 2: Festive & Occasion Gifting Architecture
+
 - **Pillar Page:** `/festive-hampers`
 - **Sub-topic Nodes:**
   1. `/corporate-diwali-gifts` (Diwali corporate bulk hampers)
@@ -49,6 +51,7 @@
   4. `/festive-hampers/rakhi` (Raksha Bandhan dry fruit boxes)
 
 ### Cluster 3: Single Nuts & Dried Fruits Architecture
+
 - **Pillar Page:** `/products`
 - **Sub-topic Nodes:**
   1. `/products/cashews` (W240, W320, Flavored cashews)
@@ -64,15 +67,15 @@
 
 Entities to define and reinforce across site content:
 
-| Entity Type | Entity Name | Schema Mapping |
-|-------------|-------------|----------------|
-| **Brand Entity** | Reet Foods & Gifting | `Organization` |
-| **Product Entity** | Premium Cashew Nuts (W240) | `Product` |
-| **Product Entity** | Mamra Almonds | `Product` |
-| **Service Entity** | Custom Logo Corporate Gifting | `Service` |
-| **Location Entity** | Hinjewadi Phase 1, Pune | `PostalAddress` / `Place` |
-| **Credential Entity** | FSSAI License `21526079003816` | `EducationalOccupationalCredential` |
-| **Occasion Entity** | Diwali Corporate Gifting | `Event` / `OfferCatalog` |
+| Entity Type           | Entity Name                    | Schema Mapping                      |
+| --------------------- | ------------------------------ | ----------------------------------- |
+| **Brand Entity**      | Reet Foods & Gifting           | `Organization`                      |
+| **Product Entity**    | Premium Cashew Nuts (W240)     | `Product`                           |
+| **Product Entity**    | Mamra Almonds                  | `Product`                           |
+| **Service Entity**    | Custom Logo Corporate Gifting  | `Service`                           |
+| **Location Entity**   | Hinjewadi Phase 1, Pune        | `PostalAddress` / `Place`           |
+| **Credential Entity** | FSSAI License `21525083009881` | `EducationalOccupationalCredential` |
+| **Occasion Entity**   | Diwali Corporate Gifting       | `Event` / `OfferCatalog`            |
 
 ```json
 {
@@ -91,7 +94,7 @@ Entities to define and reinforce across site content:
   "hasCredential": {
     "@type": "EducationalOccupationalCredential",
     "credentialCategory": "FSSAI Food License",
-    "identifier": "21526079003816"
+    "identifier": "21525083009881"
   }
 }
 ```

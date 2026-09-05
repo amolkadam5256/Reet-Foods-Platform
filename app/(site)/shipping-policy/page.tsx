@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     question: "What happens if a gift box is damaged during transit?",
-    answer: "All our corporate gifting shipments are insured. If any box is damaged during transit, please contact us with photos within 48 hours and we will arrange an immediate replacement."
+    answer: "If any box is damaged during transit, please contact us with clear photos within 48 hours of delivery and our team will review and assist with a suitable resolution."
   }
 ];
 

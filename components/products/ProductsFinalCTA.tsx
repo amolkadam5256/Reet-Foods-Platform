@@ -22,7 +22,7 @@ export function ProductsFinalCTA() {
     >
       <div className="border border-reef-gold/30 bg-[#111111] p-8 text-center text-white sm:p-14">
         <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#d4af37]">
-          Concierge Assistance
+          Corporate Gifting Support
         </p>
         <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-bold text-white sm:text-4xl">
           Can&apos;t Find the Perfect Gift?

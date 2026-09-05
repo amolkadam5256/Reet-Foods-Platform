@@ -9,7 +9,7 @@ interface ProductsCertificationsProps {
 const certifications = [
   {
     name: "FSSAI Licensed",
-    desc: "Registration #21525083009881 - Food hygiene and safety compliance.",
+    desc: "FSSAI No. 21525083009881 - Food hygiene and safety compliance.",
     icon: FiShield,
     isFssai: true,
   },
@@ -79,7 +79,7 @@ export function ProductsCertifications({
                   </h3>
                   {cert.isFssai && (
                     <span className="mt-1 inline-block rounded bg-reef-burgundy/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#7a0019]">
-                      Lic. #21525083009881
+                      FSSAI No. 21525083009881
                     </span>
                   )}
                   <p className="mt-1.5 text-[12px] leading-5 text-reef-charcoal/70">

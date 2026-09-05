@@ -20,7 +20,7 @@
 | **Service** | Corporate Gifting Solutions | `https://reetfoodsngiftings.com/corporate-gifting#service` | `Service`, `OfferCatalog` |
 | **Service** | Employee Welcome Kits | `https://reetfoodsngiftings.com/employee-onboarding-kits#service` | `Service`, `Product` |
 | **Person** | Founder & CEO | `https://reetfoodsngiftings.com/#person-founder` | `Person` |
-| **Credential** | FSSAI License | `21526079003816` | `EducationalOccupationalCredential` |
+| **Credential** | FSSAI License | `21525083009881` | `EducationalOccupationalCredential` |
 
 ---
 

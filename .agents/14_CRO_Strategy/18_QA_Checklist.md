@@ -1,4 +1,5 @@
 ﻿# 18_QA_Checklist.md
+
 # CRO & UX Verification QA Checklist — Reet Foods & Giftings
 
 ---
@@ -23,7 +24,7 @@
 
 ## SECTION 3 — CTAs, Trust Signals & Copy Verification
 
-- [ ] FSSAI licence number `21526079003816` displayed near product buy-boxes and quote forms.
+- [ ] FSSAI licence number `21525083009881` displayed near product buy-boxes and quote forms.
 - [ ] GST invoice availability explicitly stated on all B2B quote components.
 - [ ] Phone click on `tel:+919890609611` triggers custom `phone_call_click` event.
 - [ ] WhatsApp click opens WhatsApp app/web with pre-filled context string.
@@ -38,4 +39,4 @@
 
 ---
 
-*Sign-off required by Lead UX Researcher and Lead Developer prior to release.*
+_Sign-off required by Lead UX Researcher and Lead Developer prior to release._

@@ -49,8 +49,8 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
             <p className="mt-5 max-w-2xl text-sm leading-8 text-white/85 sm:text-base">
               Discover our complete collection of handpicked origin dry fruits,
               artisanal chocolates, and bespoke corporate gift hampers.
-              Packed by our FSSAI-licensed team in Pune with freshness-focused
-              preservation, custom laser logo engraving, and insured Pan-India
+              Packed by our FSSAI-licensed team in Pune with food-grade
+              freshness packing, custom logo branding, and reliable Pan-India
               delivery.
             </p>
 
@@ -79,10 +79,10 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
 
             <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
               {[
-                { value: "500/day", label: "Gift Capacity" },
-                { value: "FSSAI", label: "Licensed" },
-                { value: "24 Hours", label: "Quote Turnaround" },
-                { value: "100%", label: "Pan-India Shipping" },
+                { value: "FSSAI", label: "No. 21525083009881" },
+                { value: "GST", label: "Compliant Invoicing" },
+                { value: "Bulk", label: "Corporate Orders" },
+                { value: "PAN", label: "India Delivery" },
               ].map((stat) => (
                 <div key={stat.label} className="reef-fade-up">
                   <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#d4af37]">

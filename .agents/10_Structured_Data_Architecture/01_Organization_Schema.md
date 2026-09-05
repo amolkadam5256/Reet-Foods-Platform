@@ -38,7 +38,7 @@
         {
           "@type": "EducationalOccupationalCredential",
           "credentialCategory": "FSSAI Food License",
-          "identifier": "21526079003816"
+          "identifier": "21525083009881"
         }
       ],
       "sameAs": [

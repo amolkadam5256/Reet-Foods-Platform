@@ -327,7 +327,7 @@ export function Footer() {
                 GST: 27FHIPK0363N1ZX
               </li>
               <li className="text-[11px] text-white/45">
-                FSSAI Lic. #21525083009881
+                FSSAI No. 21525083009881
               </li>
 
             </ul>

@@ -1,4 +1,5 @@
 ﻿# 09_Form_Optimization.md
+
 # Form Optimization & Friction Reduction SOP — Reet Foods & Giftings
 
 ---
@@ -8,10 +9,11 @@
 Forms are the single largest friction point in B2B lead generation. Reet Foods enforces a strict 4-field rule for initial quote capture.
 
 ### 1. Corporate Quote Request Form Schema
-- **Field 1:** Full Name *(Text input, `autocomplete="name"`, Required)*
-- **Field 2:** Corporate Email *(Email input, `autocomplete="email"`, Required - inline domain check)*
-- **Field 3:** Mobile / WhatsApp Number *(Tel input, `autocomplete="tel"`, Required - prefixed `+91`)*
-- **Field 4:** Estimated Quantity *(Select dropdown: `50-100 units`, `100-500 units`, `500-1000 units`, `1000+ units`)*
+
+- **Field 1:** Full Name _(Text input, `autocomplete="name"`, Required)_
+- **Field 2:** Corporate Email _(Email input, `autocomplete="email"`, Required - inline domain check)_
+- **Field 3:** Mobile / WhatsApp Number _(Tel input, `autocomplete="tel"`, Required - prefixed `+91`)_
+- **Field 4:** Estimated Quantity _(Select dropdown: `50-100 units`, `100-500 units`, `500-1000 units`, `1000+ units`)_
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -32,7 +34,7 @@ Forms are the single largest friction point in B2B lead generation. Reet Foods e
 │  [ 💼 SUBMIT QUOTE REQUEST ]                           │
 │                                                        │
 │  🔒 Privacy Guaranteed | 📄 GST Invoice Provided       │
-│  🌿 FSSAI Licensed: 21526079003816                     │
+│  🌿 FSSAI Licensed: 21525083009881                     │
 └────────────────────────────────────────────────────────┘
 ```
 
@@ -46,4 +48,4 @@ Forms are the single largest friction point in B2B lead generation. Reet Foods e
 
 ---
 
-*References: 04_Lead_Generation.md, 08_CTA_Strategy.md, 17_Developer_Guide.md*
+_References: 04_Lead_Generation.md, 08_CTA_Strategy.md, 17_Developer_Guide.md_

@@ -1,7 +1,7 @@
 # 07 — Content Production Workflow, Master Tables & 6-Month Roadmap
 
 **Website:** https://reetfoodsngiftings.com  
-**Purpose:** Provide operational editorial checklists, programmatic tracking tables, and a 6-month content production roadmap.  
+**Purpose:** Provide operational editorial checklists, programmatic tracking tables, and a 6-month content production roadmap.
 
 ---
 
@@ -11,7 +11,7 @@ Every writer, editor, developer, and QA specialist must verify this checklist be
 
 - [ ] **Keyword & Intent Matching:** Target keyword placed in URL, Title (<60 chars), Meta Description (<155 chars), H1, opening 100 words, and key H2s.
 - [ ] **Helpful Content & Originality:** Free from fluff; includes unique comparison data, tables, or industry insights.
-- [ ] **E-E-A-T Badges:** Author attribution block, FSSAI license (`21526079003816`), and facility location (Hinjewadi Pune) included.
+- [ ] **E-E-A-T Badges:** Author attribution block, FSSAI license (`21525083009881`), and facility location (Hinjewadi Pune) included.
 - [ ] **Structured Data:** Validated `Article`, `FAQPage`, `Product`, or `LocalBusiness` JSON-LD schema embedded in server JSX.
 - [ ] **Image SEO:** WebP/AVIF format, explicit width/height, lazy loading, and descriptive alt text.
 - [ ] **Internal Links:** Minimum 3-5 contextual SILO links pointing to parent category or commercial product pages.
@@ -21,13 +21,13 @@ Every writer, editor, developer, and QA specialist must verify this checklist be
 
 ## 2. Programmatic Production Tracking Matrix
 
-| Programmatic Pattern | Total Target Pages | Target URL Pattern | Schema Applied | Launch Status |
-|----------------------|--------------------|--------------------|----------------|---------------|
-| **City + Service (Metros)** | 20 Pages | `/corporate-gifting-[city]` | `LocalBusiness` / `Service` | Phase 1 (Month 1-2) |
-| **City + Service (Tier 2)** | 80 Pages | `/corporate-gifting-[city]` | `LocalBusiness` / `Service` | Phase 2 (Month 3-4) |
-| **Industry + Product** | 15 Pages | `/corporate-gifts-[industry]` | `Service` / `Product` | Phase 1 (Month 2) |
-| **Budget + Product** | 5 Pages | `/corporate-gifting/[budget]` | `OfferCatalog` / `Product` | Phase 1 (Month 1) |
-| **Festival + City** | 20 Pages | `/corporate-diwali-[city]` | `Event` / `OfferCatalog` | Phase 2 (Month 4-5) |
+| Programmatic Pattern        | Total Target Pages | Target URL Pattern            | Schema Applied              | Launch Status       |
+| --------------------------- | ------------------ | ----------------------------- | --------------------------- | ------------------- |
+| **City + Service (Metros)** | 20 Pages           | `/corporate-gifting-[city]`   | `LocalBusiness` / `Service` | Phase 1 (Month 1-2) |
+| **City + Service (Tier 2)** | 80 Pages           | `/corporate-gifting-[city]`   | `LocalBusiness` / `Service` | Phase 2 (Month 3-4) |
+| **Industry + Product**      | 15 Pages           | `/corporate-gifts-[industry]` | `Service` / `Product`       | Phase 1 (Month 2)   |
+| **Budget + Product**        | 5 Pages            | `/corporate-gifting/[budget]` | `OfferCatalog` / `Product`  | Phase 1 (Month 1)   |
+| **Festival + City**         | 20 Pages           | `/corporate-diwali-[city]`    | `Event` / `OfferCatalog`    | Phase 2 (Month 4-5) |
 
 ---
 

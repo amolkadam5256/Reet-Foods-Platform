@@ -1,4 +1,5 @@
 ﻿# 05_Landing_Page_CRO.md
+
 # City & Campaign Landing Page CRO Blueprint — Reet Foods & Giftings
 
 ---
@@ -13,7 +14,7 @@
 │ H1: Premium Corporate Gifts in Hinjewadi, Pune                         │
 │ H2: Custom Branded Dry Fruit Hampers & Gift Boxes for IT Companies     │
 │ [ Bullet 1: 500+ Corporate Clients Trusted ]                           │
-│ [ Bullet 2: FSSAI Lic. 21526079003816 | GST Billing Provided ]          │
+│ [ Bullet 2: FSSAI Lic. 21525083009881 | GST Billing Provided ]          │
 │ [ Bullet 3: Same-Day Delivery to Hinjewadi Phase I, II, III ]          │
 │                                                                        │
 │ CTA Primary: [ Request Bulk Corporate Quote ]  [ 💬 Chat on WhatsApp ] │
@@ -37,9 +38,9 @@
 ## SECTION 2 — Key Landing Page CRO Rules
 
 1. **Above-the-Fold Clarity:** Visitors must understand within 3 seconds that Reet Foods provides bulk corporate gifting in Hinjewadi/Pune with custom branding.
-2. **Local Proximity Trust:** Mention store location: *"Shop No. F14, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I"*.
+2. **Local Proximity Trust:** Mention store location: _"Shop No. F14, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I"_.
 3. **Exit-Intent Capture:** If user moves cursor toward browser close button, trigger a modal offering a 5% early-bird discount on bulk corporate pre-orders.
 
 ---
 
-*References: 03_UI_Optimization.md, 04_Lead_Generation.md, 08_CTA_Strategy.md*
+_References: 03_UI_Optimization.md, 04_Lead_Generation.md, 08_CTA_Strategy.md_

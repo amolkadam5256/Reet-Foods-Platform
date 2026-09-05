@@ -27,7 +27,7 @@ export function AboutProcessFlow() {
   return (
     <section className="rounded-2xl border border-reef-gold/20 bg-white p-8 shadow-sm sm:p-10">
       <SectionHeading
-        eyebrow="Concierge Promise"
+        eyebrow="Our Process"
         title="Clear Guidance from Brief to Doorstep"
         description="How we work with individuals and organizations to deliver seamless gifts."
       />

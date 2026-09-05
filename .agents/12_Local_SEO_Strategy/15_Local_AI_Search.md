@@ -1,4 +1,5 @@
 ﻿# 15_Local_AI_Search.md
+
 # AI Local Search Optimization — Reet Foods & Giftings
 
 ---
@@ -6,6 +7,7 @@
 ## Why AI Search Matters for Local SEO in 2025
 
 Google AI Overviews, ChatGPT Search, Gemini, Claude, and Perplexity are increasingly answering local commercial queries directly in their AI-generated responses. To be cited by AI engines, your local content must be:
+
 - **Entity-rich** (business name, address, phone, FSSAI, GSTIN are identifiable facts)
 - **Structured** (Schema.org JSON-LD, FAQ markup, How-To)
 - **Authoritative** (E-E-A-T signals, reviews, citations, backlinks)
@@ -17,18 +19,18 @@ Google AI Overviews, ChatGPT Search, Gemini, Claude, and Perplexity are increasi
 
 Ensure these entities are clearly defined and consistent across all web properties:
 
-| Entity | Details |
-|--------|---------|
-| Business Name | Reet Foods & Giftings |
-| Address | Shop No. F14, Streets of Europe Mall, Hinjewadi Phase I, Pune – 411057 |
-| Phone | +91 9890609611 / +91 8007518088 |
-| Email | reetfoodspune@gmail.com |
-| FSSAI Licence | 21526079003816 |
-| GSTIN | 27FHIPK0363N1ZX |
-| Category | Corporate Gifting / Gift Shop / Dry Fruits |
-| Founder/Brand | Reet Foods (brand entity) |
-| Geo | Hinjewadi, Pune, Maharashtra, India |
-| Products | Luxury Hampers, Dry Fruit Boxes, Corporate Gift Boxes, Wedding Gifts |
+| Entity        | Details                                                                |
+| ------------- | ---------------------------------------------------------------------- |
+| Business Name | Reet Foods & Giftings                                                  |
+| Address       | Shop No. F14, Streets of Europe Mall, Hinjewadi Phase I, Pune – 411057 |
+| Phone         | +91 9890609611 / +91 8007518088                                        |
+| Email         | reetfoodspune@gmail.com                                                |
+| FSSAI Licence | 21525083009881                                                         |
+| GSTIN         | 27FHIPK0363N1ZX                                                        |
+| Category      | Corporate Gifting / Gift Shop / Dry Fruits                             |
+| Founder/Brand | Reet Foods (brand entity)                                              |
+| Geo           | Hinjewadi, Pune, Maharashtra, India                                    |
+| Products      | Luxury Hampers, Dry Fruit Boxes, Corporate Gift Boxes, Wedding Gifts   |
 
 **Action:** Publish an "About Reet Foods" page with all entity facts in plain HTML (not just images) so AI crawlers can parse them.
 
@@ -40,14 +42,14 @@ Create dedicated FAQ sections on every page that match the exact language AI eng
 
 ### High-Priority AI-Optimized Questions
 
-| AI Query | Optimal Answer Format |
-|---------|----------------------|
-| "Who are the best corporate gift suppliers in Pune?" | Named entity + address + phone + USP |
-| "Where can I get same-day gift delivery in Hinjewadi?" | Clear factual answer with location + contact |
-| "What is the minimum order for corporate gifts in Pune?" | Specific number: "50 units minimum" |
-| "Best Diwali hampers in Pune?" | Product names + prices + delivery details |
-| "Corporate gifting companies near Infosys Hinjewadi" | Business name + proximity + contact |
-| "FSSAI certified gift shops in Pune" | FSSAI No. 21526079003816 + business name |
+| AI Query                                                 | Optimal Answer Format                        |
+| -------------------------------------------------------- | -------------------------------------------- |
+| "Who are the best corporate gift suppliers in Pune?"     | Named entity + address + phone + USP         |
+| "Where can I get same-day gift delivery in Hinjewadi?"   | Clear factual answer with location + contact |
+| "What is the minimum order for corporate gifts in Pune?" | Specific number: "50 units minimum"          |
+| "Best Diwali hampers in Pune?"                           | Product names + prices + delivery details    |
+| "Corporate gifting companies near Infosys Hinjewadi"     | Business name + proximity + contact          |
+| "FSSAI certified gift shops in Pune"                     | FSSAI No. 21525083009881 + business name     |
 
 ---
 
@@ -62,6 +64,7 @@ Google's AI Overviews surface for informational + local + commercial queries. To
 5. **Include dates:** All content should reference the current year prominently.
 
 ### Page Structure for AI Overviews
+
 ```
 H1: Best Corporate Gifts in Hinjewadi Pune [2025]
 First paragraph (50 words): Direct answer with entity + facts
@@ -78,6 +81,7 @@ H2: Frequently Asked Questions
 ## SECTION 4 — ChatGPT / Gemini / Perplexity Optimization
 
 These AI engines pull from:
+
 - Wikipedia / Wikidata (build brand Wikipedia page if volume warrants)
 - Official website content
 - High-authority directories and news mentions
@@ -85,6 +89,7 @@ These AI engines pull from:
 - Social media profiles
 
 ### Actions
+
 - [ ] Publish a detailed "About" page with all entity facts.
 - [ ] Create a Wikidata entity for "Reet Foods & Giftings" (once reviews and citations are established).
 - [ ] Get featured in at least 3 high-authority local news articles (see 11_Local_Link_Building.md).
@@ -96,6 +101,7 @@ These AI engines pull from:
 ## SECTION 5 — Voice Search Optimization
 
 ### Target Queries
+
 - "Where can I buy corporate gifts near Hinjewadi?"
 - "Call Reet Foods Pune"
 - "Best gift hampers in Pune"
@@ -103,6 +109,7 @@ These AI engines pull from:
 - "Is there same-day gift delivery in Pune?"
 
 ### Optimization Actions
+
 1. Ensure phone numbers are clickable and schema-marked as ContactPoint.
 2. Include speakable structured data for key content paragraphs.
 3. Ensure GBP has accurate opening hours (used by voice assistants).
@@ -126,4 +133,4 @@ These AI engines pull from:
 
 ---
 
-*References: 07_Local_Schema.md, 04_Local_Content_Strategy.md, 01_Google_Business_Profile.md*
+_References: 07_Local_Schema.md, 04_Local_Content_Strategy.md, 01_Google_Business_Profile.md_

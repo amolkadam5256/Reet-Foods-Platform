@@ -30,7 +30,7 @@ export function ContactDetails() {
           <strong className="mb-1 block text-white">Factory Address:</strong>
           {business.factoryAddress}
         </div>
-        <p>FSSAI Registration No. {business.fssaiLicense}</p>
+        <p>FSSAI No. {business.fssaiLicense}</p>
         <p>GSTIN: {business.gstNumber}</p>
 
       </div>

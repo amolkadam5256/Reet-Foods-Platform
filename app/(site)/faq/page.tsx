@@ -26,7 +26,8 @@ const faqs = [
   },
   {
     question: "Are your dry fruits of premium quality?",
-    answer: "Yes, we source the finest graded almonds, cashews, pistachios, and walnuts. All dry fruits are nitrogen-packed for maximum freshness and flavor."
+    answer: "Yes, we source the finest graded almonds, cashews, pistachios, and walnuts. All dry fruits are sealed in food-grade packaging for maximum freshness and flavor."
+
   },
   {
     question: "Do you offer wedding return gifts in bulk?",

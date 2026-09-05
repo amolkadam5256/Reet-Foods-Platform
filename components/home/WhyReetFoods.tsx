@@ -41,7 +41,7 @@ export function WhyReetFoods() {
     {
       icon: <FiHeadphones className="h-6 w-6 text-reef-gold" />,
       title: "Personalized Support",
-      desc: "Dedicated gifting concierge support in Pune from hamper sampling through multi-location delivery.",
+      desc: "Dedicated corporate gifting support in Pune from hamper selection through multi-location delivery.",
     },
   ];
 

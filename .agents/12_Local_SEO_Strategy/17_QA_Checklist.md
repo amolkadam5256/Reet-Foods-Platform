@@ -1,9 +1,11 @@
 ﻿# 17_QA_Checklist.md
+
 # Local SEO QA & Verification Checklist — Reet Foods & Giftings
 
 ---
 
 ## Overview
+
 This QA Checklist validates all 17 components of the Enterprise Local SEO Strategy for **Reet Foods & Giftings**. Every item must pass before marking the Local SEO deployment complete.
 
 ---
@@ -19,7 +21,7 @@ This QA Checklist validates all 17 components of the Enterprise Local SEO Strate
 - [ ] **Email:** reetfoodspune@gmail.com.
 - [ ] **Website Link:** `https://reetfoodsngiftings.com?utm_source=gbp&utm_medium=profile&utm_campaign=local`.
 - [ ] **Hours:** Mon–Sat 9:00 AM – 7:00 PM.
-- [ ] **FSSAI & GSTIN:** Displayed in description (FSSAI: 21526079003816 | GSTIN: 27FHIPK0363N1ZX).
+- [ ] **FSSAI & GSTIN:** Displayed in description (FSSAI: 21525083009881 | GSTIN: 27FHIPK0363N1ZX).
 - [ ] **Media:** 30+ geo-tagged high-res photos (cover, exterior, interior, products, team).
 - [ ] **Products:** 10+ SKUs added with images, price ranges, and website links.
 - [ ] **Services:** Corporate Gifting, Bulk Orders, Custom Packaging, Wedding Gifts added.
@@ -107,15 +109,15 @@ This QA Checklist validates all 17 components of the Enterprise Local SEO Strate
 
 ## Sign-Off Matrix
 
-| Area | Lead | Status | Date Verified |
-|------|------|--------|---------------|
-| GBP & NAP | SEO Lead | [ ] Pass | |
-| Local Schema | Dev Lead | [ ] Pass | |
-| City Landing Pages | Content Lead | [ ] Pass | |
-| Review Engine | CS Lead | [ ] Pass | |
-| Technical SEO | Dev Lead | [ ] Pass | |
-| Final Approval | Project Manager | [ ] Approved | |
+| Area               | Lead            | Status       | Date Verified |
+| ------------------ | --------------- | ------------ | ------------- |
+| GBP & NAP          | SEO Lead        | [ ] Pass     |               |
+| Local Schema       | Dev Lead        | [ ] Pass     |               |
+| City Landing Pages | Content Lead    | [ ] Pass     |               |
+| Review Engine      | CS Lead         | [ ] Pass     |               |
+| Technical SEO      | Dev Lead        | [ ] Pass     |               |
+| Final Approval     | Project Manager | [ ] Approved |               |
 
 ---
 
-*End of QA Checklist.*
+_End of QA Checklist._

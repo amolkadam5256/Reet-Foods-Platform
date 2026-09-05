@@ -1,4 +1,5 @@
 ﻿# 06_Product_Page_CRO.md
+
 # Product Detail Page CRO Specification — Reet Foods & Giftings
 
 ---
@@ -20,7 +21,7 @@
 │                                      │ CTA 3: [ 💬 CHAT ON WHATSAPP ]         │
 │                                      │                                        │
 │                                      │ TRUST BADGES:                          │
-│                                      │ ✓ FSSAI Certified: 21526079003816      │
+│                                      │ ✓ FSSAI Certified: 21525083009881      │
 │                                      │ ✓ GST Invoice Provided (GSTIN: 27FH...│
 │                                      │ ✓ Same-Day Pune Delivery               │
 └──────────────────────────────────────┴────────────────────────────────────────┘
@@ -31,9 +32,9 @@
 ## SECTION 2 — Key Conversion Enhancers
 
 1. **Custom Branding Option Selector:** Add a checkbox: `[ ] Add Company Logo & Custom Message Card (+₹50/box)`.
-2. **Delivery Date Estimator:** User enters Pune PIN (e.g. `411057`), UI displays *"🚚 Order in 2 hrs for Same-Day Delivery in Hinjewadi"*.
+2. **Delivery Date Estimator:** User enters Pune PIN (e.g. `411057`), UI displays _"🚚 Order in 2 hrs for Same-Day Delivery in Hinjewadi"_.
 3. **Cross-Sell & Upsell Block:** Recommend "Add Cold-Pressed Juice Pack (+₹299)" or "Upgrade to Wooden Box (+₹499)".
 
 ---
 
-*References: 03_UI_Optimization.md, 08_CTA_Strategy.md, 14_Trust_Signals.md*
+_References: 03_UI_Optimization.md, 08_CTA_Strategy.md, 14_Trust_Signals.md_

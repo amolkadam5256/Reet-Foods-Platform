@@ -1,7 +1,7 @@
 # 04 — 200 Blog Briefs & Editorial Production SOPs
 
 **Website:** https://reetfoodsngiftings.com  
-**Purpose:** Provide production-ready briefs and editorial Standard Operating Procedures (SOPs) for content writers, editors, and SEO specialists.  
+**Purpose:** Provide production-ready briefs and editorial Standard Operating Procedures (SOPs) for content writers, editors, and SEO specialists.
 
 ---
 
@@ -28,11 +28,12 @@
 ## 2. Content Writer Guidelines & Quality Control Checklist
 
 ### Mandatory Writing Rules:
+
 1. **Length:** Minimum 1,500 words for standard posts; 2,500+ words for pillar guides.
 2. **First Paragraph:** Include primary keyword within the first 100 words and establish entity relevance.
 3. **Paragraph Length:** Maximum 2-3 sentences per paragraph for high mobile readability.
 4. **Tone & Style:** Authoritative, professional, helpful, and warm. Avoid fluff or generic marketing jargon.
-5. **E-E-A-T Elements:** Always include author attribution (e.g. "Written by Quality Control Team / Founder") and cite FSSAI certification (`21526079003816`).
+5. **E-E-A-T Elements:** Always include author attribution (e.g. "Written by Quality Control Team / Founder") and cite FSSAI certification (`21525083009881`).
 6. **Data & Tables:** Include at least one comparison table or bulleted summary list in every article.
 7. **FAQ Section:** Conclude with 4-5 direct Q&A blocks using natural language questions for Google AI Overviews and LLM retrieval.
 
@@ -41,6 +42,7 @@
 ## 3. Sample Detailed Content Briefs (from 200 Directory)
 
 ### Brief #1: The Ultimate Guide to Corporate Gifting in India (2026 Edition)
+
 - **Primary Keyword:** `corporate gifting guide india`
 - **Secondary Keywords:** `corporate gift hampers`, `employee welcome kits`, `B2B gifting trends india`
 - **Word Count:** 2,800 Words | **Funnel:** TOFU / MOFU
@@ -58,6 +60,7 @@
 ---
 
 ### Brief #2: Mamra vs California Almonds: Origin, Nutrition & Price Comparison
+
 - **Primary Keyword:** `mamra vs california almonds`
 - **Secondary Keywords:** `mamra almonds health benefits`, `kashmiri almonds buy online`
 - **Word Count:** 2,200 Words | **Funnel:** MOFU

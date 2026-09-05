@@ -56,7 +56,7 @@ export function Certifications() {
                   <h3 className="text-sm font-bold text-reef-charcoal">{cert.name}</h3>
                   {isFssai && (
                     <span className="mt-1 inline-block bg-reef-burgundy/10 text-[#7a0019] text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-                      Lic. #21525083009881
+                      FSSAI No. 21525083009881
                     </span>
 
                   )}

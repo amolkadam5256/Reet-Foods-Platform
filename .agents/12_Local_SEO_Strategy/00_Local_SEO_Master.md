@@ -30,7 +30,7 @@ This document is the master reference for the complete Enterprise Local SEO Stra
 | Email                | reetfoodspune@gmail.com                                                                                             |
 | Website              | https://reetfoodsngiftings.com                                                                                      |
 | Working Hours        | Mon–Sat 9:00 AM – 7:00 PM                                                                                           |
-| FSSAI Licence No.    | 21526079003816                                                                                                      |
+| FSSAI Licence No.    | 21525083009881                                                                                                      |
 | GSTIN                | 27FHIPK0363N1ZX                                                                                                     |
 | Primary GBP Category | Gift Shop                                                                                                           |
 | Secondary Categories | Corporate Gift Supplier, Food & Beverage Store, Event Planner                                                       |

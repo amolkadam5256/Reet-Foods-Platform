@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     question: "How do I place a bulk corporate gift order in Pune?",
-    answer: "Place bulk corporate gift orders for Pune by contacting our dedicated gifting desk via phone or WhatsApp. We respond within 2 hours during business hours.",
+    answer: "Place bulk corporate gift orders for Pune by contacting our dedicated gifting desk via phone or WhatsApp. We respond promptly during business hours.",
   },
   {
     question: "What packaging options are available for corporate gifts in Pune?",
@@ -146,7 +146,7 @@ export default function PuneCorporateGiftingPage() {
         imageAlt="Corporate Gifts in Pune"
         primaryCta={{ label: "Request Pune Proposal", href: "/contact#quote" }}
         secondaryCta={{ label: "WhatsApp Pune Desk", href: generateWhatsAppUrl({ type: "corporate", data: { location: "Pune", requirement: "I need corporate gifting in Pune." } }) }}
-        sideBadge="Serving Pune Since 2020"
+        sideBadge="Serving Pune Since 2019"
       />
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -243,7 +243,7 @@ export default function PuneCorporateGiftingPage() {
 
       <CTA
         title="Ready to Elevate Your Pune Corporate Gifting?"
-        description="Share your requirements with our Pune gifting experts. We'll craft a custom proposal within 2 hours."
+        description="Share your requirements with our Pune corporate gifting team. We'll craft a custom proposal promptly."
         primaryButtonText="Request Pune Gift Proposal"
         primaryButtonHref="/contact#quote"
       />
