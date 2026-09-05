@@ -1,4 +1,5 @@
 ﻿# 18_QA_Checklist.md
+
 # Analytics QA & Verification Checklist — Reet Foods & Giftings
 
 ---
@@ -20,7 +21,7 @@
 
 - [ ] `purchase` marked as Key Event in GA4; verified with test transaction.
 - [ ] `generate_lead` marked as Key Event; verified on B2B quote modal and contact form.
-- [ ] `phone_call_click` marked as Key Event; fires on `tel:+919890609611` & `+918007518088`.
+- [ ] `phone_call_click` marked as Key Event; fires on `tel:+919225130732` & `+918007518088`.
 - [ ] `whatsapp_click` marked as Key Event; fires on WhatsApp buttons.
 - [ ] `catalogue_download` marked as Key Event; fires on PDF download link.
 - [ ] Full E-commerce dataLayer lifecycle (`view_item_list` -> `view_item` -> `add_to_cart` -> `begin_checkout` -> `purchase`) verified with numerical prices.
@@ -55,4 +56,4 @@
 
 ---
 
-*Sign-off required by Analytics Lead and Lead Developer before production launch.*
+_Sign-off required by Analytics Lead and Lead Developer before production launch._

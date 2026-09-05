@@ -16,7 +16,7 @@ This QA Checklist validates all 17 components of the Enterprise Local SEO Strate
 - [ ] **Primary Category:** Set to "Gift Shop".
 - [ ] **Secondary Categories:** Added "Corporate Gift Supplier", "Food & Beverage Store", "Event Planner".
 - [ ] **Store Address:** Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057.
-- [ ] **Primary Phone:** +91 9890609611.
+- [ ] **Primary Phone:** +91 9225130732.
 - [ ] **Secondary Phone:** +91 8007518088.
 - [ ] **Email:** reetfoodspune@gmail.com.
 - [ ] **Website Link:** `https://reetfoodsngiftings.com?utm_source=gbp&utm_medium=profile&utm_campaign=local`.
@@ -45,7 +45,7 @@ This QA Checklist validates all 17 components of the Enterprise Local SEO Strate
 
 - [ ] **LocalBusiness Schema:** Live on homepage & contact page; passes Google Rich Results Test.
 - [ ] **GeoCoordinates:** Set to 18.5908° N, 73.7276° E.
-- [ ] **Telephone Array:** Includes +91-9890609611 and +91-8007518088.
+- [ ] **Telephone Array:** Includes +91-9225130732 and +91-8007518088.
 - [ ] **areaServed:** Includes Pune, Mumbai, Delhi, Bangalore, Hyderabad, Maharashtra, India.
 - [ ] **FAQPage Schema:** Present on city pages & FAQ pages; 0 syntax errors.
 - [ ] **BreadcrumbList Schema:** Present on all inner and city pages.
@@ -59,7 +59,7 @@ This QA Checklist validates all 17 components of the Enterprise Local SEO Strate
 - [ ] **URL Structure:** `/corporate-gifts/{city-slug}/` format verified.
 - [ ] **Page Count:** 10 pilot city pages live (Pune, Hinjewadi, Mumbai, Delhi, Bangalore, etc.).
 - [ ] **SEO Title & H1:** Custom per city, contains targeted city keyword.
-- [ ] **Meta Description:** Custom, includes phone (+91 9890609611) and USP.
+- [ ] **Meta Description:** Custom, includes phone (+91 9225130732) and USP.
 - [ ] **Word Count:** Each city page contains 800–1,200 words of unique content.
 - [ ] **FAQs:** 3–5 FAQs per page with FAQPage schema.
 - [ ] **Internal Links:** Links to Home, Corporate Gifts hub, Bulk Orders, Contact, Product pages.

@@ -13,7 +13,7 @@ Each page follows a consistent SEO template with city-specific content customiza
 
 - **Business Name:** Reet Foods & Giftings
 - **Store Address:** Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057
-- **Phone 1:** +91 9890609611 | **Phone 2:** +91 8007518088
+- **Phone 1:** +91 9225130732 | **Phone 2:** +91 8007518088
 - **Email:** reetfoodspune@gmail.com
 - **FSSAI:** 21525083009881 | **GSTIN:** 27FHIPK0363N1ZX
 
@@ -27,7 +27,7 @@ Each page follows a consistent SEO template with city-specific content customiza
 | **Canonical**        | `https://reetfoodsngiftings.com/corporate-gifts/{city}/`                                                                                                                    |
 | **Target Keyword**   | `corporate gifts {City}`                                                                                                                                                    |
 | **SEO Title**        | `Best Corporate Gifts in {City} – Reet Foods & Giftings`                                                                                                                    |
-| **Meta Description** | `Order premium corporate gift hampers, dry fruit boxes & luxury gifts in {City}. Reet Foods offers custom branding, bulk orders & PAN-India delivery. Call +91 9890609611.` |
+| **Meta Description** | `Order premium corporate gift hampers, dry fruit boxes & luxury gifts in {City}. Reet Foods offers custom branding, bulk orders & PAN-India delivery. Call +91 9225130732.` |
 | **H1**               | `Corporate Gifts in {City} – Premium Hampers & Custom Gifting Solutions`                                                                                                    |
 | **H2 Sections**      | Why {City} Businesses Choose Reet Foods / Featured Products / How to Order / FAQ / Testimonials / CTA                                                                       |
 | **Word Count**       | 800–1,200 words                                                                                                                                                             |
@@ -159,7 +159,7 @@ Each page follows a consistent SEO template with city-specific content customiza
 
 ### Meta Description
 
-`Looking for premium corporate gifts near Hinjewadi Infosys Circle, Pune? Reet Foods offers luxury hampers, dry fruit boxes & custom branded gifts for IT companies. Call +91 9890609611.`
+`Looking for premium corporate gifts near Hinjewadi Infosys Circle, Pune? Reet Foods offers luxury hampers, dry fruit boxes & custom branded gifts for IT companies. Call +91 9225130732.`
 
 ### H1
 
@@ -173,12 +173,12 @@ Each page follows a consistent SEO template with city-specific content customiza
 4. **How to Order Corporate Gifts from Hinjewadi (100 words):** Step-by-step: call/WhatsApp → choose products → approve design → delivery.
 5. **Testimonials (100 words):** 2–3 Hinjewadi client quotes.
 6. **FAQ (5 Q&A, FAQPage schema)**
-7. **CTA Block:** "Order Your Corporate Gifts Today — Call +91 9890609611"
+7. **CTA Block:** "Order Your Corporate Gifts Today — Call +91 9225130732"
 
 ### FAQs
 
 - **Q: Do you deliver corporate gifts in Hinjewadi on the same day?**
-  A: Yes, we offer same-day delivery to Hinjewadi for orders placed before 12 PM. Call +91 9890609611.
+  A: Yes, we offer same-day delivery to Hinjewadi for orders placed before 12 PM. Call +91 9225130732.
 - **Q: What is the minimum order for IT companies in Hinjewadi?**
   A: Minimum bulk order is 50 units. Contact us at reetfoodspune@gmail.com for custom quotes.
 - **Q: Can we add company branding to the gift boxes?**

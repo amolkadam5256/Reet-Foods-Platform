@@ -26,7 +26,7 @@
 
 - [ ] FSSAI licence number `21525083009881` displayed near product buy-boxes and quote forms.
 - [ ] GST invoice availability explicitly stated on all B2B quote components.
-- [ ] Phone click on `tel:+919890609611` triggers custom `phone_call_click` event.
+- [ ] Phone click on `tel:+919225130732` triggers custom `phone_call_click` event.
 - [ ] WhatsApp click opens WhatsApp app/web with pre-filled context string.
 
 ---

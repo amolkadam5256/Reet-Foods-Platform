@@ -3,7 +3,7 @@
 **Business:** Reet Foods and Giftings  
 **Primary Location:** Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057  
 **Secondary Location:** Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027  
-**Audit Date:** August 2026  
+**Audit Date:** August 2026
 
 ---
 
@@ -11,49 +11,52 @@
 
 NAP must be identical across all digital touchpoints.
 
-| Source | Business Name | Address | Phone |
-|--------|--------------|---------|-------|
-| `data/business.ts` | "Reet Foods and Giftings" | Shop No. F14, Streets of Europe Mall, Hinjewadi Phase I, Pune – 411057 | +91 9890609611 |
-| `OrganizationSchema.tsx` | "Reet Foods & Gifting" | Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune | **+91-9876543210 ❌ WRONG** |
-| `LocalBusinessSchema.tsx` | "Reet Foods & Gifting" | Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune | **+91-9876543210 ❌ WRONG** |
-| Contact page | "Reet Foods" | From `business.ts` ✅ | +91 9890609611 ✅ |
-| Corporate Gifting page | — | — | `wa.me/919876543210` ❌ WRONG |
+| Source                    | Business Name             | Address                                                                | Phone                         |
+| ------------------------- | ------------------------- | ---------------------------------------------------------------------- | ----------------------------- |
+| `data/business.ts`        | "Reet Foods and Giftings" | Shop No. F14, Streets of Europe Mall, Hinjewadi Phase I, Pune – 411057 | +91 9225130732                |
+| `OrganizationSchema.tsx`  | "Reet Foods & Gifting"    | Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune              | **+91-9876543210 ❌ WRONG**   |
+| `LocalBusinessSchema.tsx` | "Reet Foods & Gifting"    | Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune              | **+91-9876543210 ❌ WRONG**   |
+| Contact page              | "Reet Foods"              | From `business.ts` ✅                                                  | +91 9225130732 ✅             |
+| Corporate Gifting page    | —                         | —                                                                      | `wa.me/919876543210` ❌ WRONG |
 
 **NAP Inconsistency Summary:**
+
 - **Business Name:** 3 variants — "Reet Foods and Giftings", "Reet Foods & Gifting", "Reet Foods"
 - **Phone:** Correct in `business.ts` and contact page but **WRONG** in both schema components
 - **Address:** Inconsistent formatting between schema (abbreviated) and `business.ts` (full)
 
 **Fix:** Standardize to one canonical NAP:
+
 ```ts
-Name: "Reet Foods & Gifting"       // or full legal name
-Phone: "+91 98906 09611"            // formatted consistently
-Address: "Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune, Maharashtra 411057"
+Name: "Reet Foods & Gifting"; // or full legal name
+Phone: "+91 98906 09611"; // formatted consistently
+Address: "Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune, Maharashtra 411057";
 ```
 
 ---
 
 ## 9.2 Google Business Profile (GBP)
 
-| Check | Status | Finding |
-|-------|--------|---------|
-| GBP claimed and verified | ❌ Unknown | Must verify — critical for local pack |
-| Business name correct | ❌ Unknown | |
-| Address exact match | ❌ Unknown | |
-| Phone correct | ❌ Unknown | |
-| Business category set | ❌ Unknown | Should be: "Gift Shop" + "Dry Goods Store" |
-| Description added | ❌ Unknown | |
-| Hours of operation | ❌ Unknown | |
-| Photos added | ❌ Unknown | |
-| Products listed in GBP | ❌ Unknown | |
-| Q&A managed | ❌ Unknown | |
-| Posts published | ❌ Unknown | |
-| Reviews > 10 | ❌ Unknown | |
-| Average rating ≥ 4.0 | ❌ Unknown | |
+| Check                    | Status     | Finding                                    |
+| ------------------------ | ---------- | ------------------------------------------ |
+| GBP claimed and verified | ❌ Unknown | Must verify — critical for local pack      |
+| Business name correct    | ❌ Unknown |                                            |
+| Address exact match      | ❌ Unknown |                                            |
+| Phone correct            | ❌ Unknown |                                            |
+| Business category set    | ❌ Unknown | Should be: "Gift Shop" + "Dry Goods Store" |
+| Description added        | ❌ Unknown |                                            |
+| Hours of operation       | ❌ Unknown |                                            |
+| Photos added             | ❌ Unknown |                                            |
+| Products listed in GBP   | ❌ Unknown |                                            |
+| Q&A managed              | ❌ Unknown |                                            |
+| Posts published          | ❌ Unknown |                                            |
+| Reviews > 10             | ❌ Unknown |                                            |
+| Average rating ≥ 4.0     | ❌ Unknown |                                            |
 
 **Priority: CRITICAL** — Without an optimized GBP, the site will not appear in local pack (Maps) results.
 
 **Recommended GBP Categories:**
+
 1. **Primary:** Gift Shop
 2. **Secondary:** Dry Goods Store
 3. **Secondary:** Corporate Gift Supplier
@@ -64,12 +67,14 @@ Address: "Shop F14, Streets of Europe Mall, Hinjewadi Phase I, Pune, Maharashtra
 ## 9.3 LocalBusiness Schema Issues
 
 As detailed in Schema audit:
+
 - Wrong `@type`: `FoodEstablishment` → should be `Store`
-- Wrong phone: `+91-9876543210` → fix to `+91-9890609611`
+- Wrong phone: `+91-9876543210` → fix to `+91-9225130732`
 - Missing `hasMap` for Google Maps link
 - Missing `aggregateRating`
 
 **Fixed Schema (Full):**
+
 ```json
 {
   "@context": "https://schema.org",
@@ -77,7 +82,7 @@ As detailed in Schema audit:
   "name": "Reet Foods & Gifting",
   "image": "https://reetfoodsngiftings.com/images/store-front.jpg",
   "url": "https://reetfoodsngiftings.com",
-  "telephone": "+91-9890609611",
+  "telephone": "+91-9225130732",
   "email": "reetfoodspune@gmail.com",
   "priceRange": "₹₹",
   "address": {
@@ -96,7 +101,14 @@ As detailed in Schema audit:
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
       "opens": "09:30",
       "closes": "20:00"
     }
@@ -119,11 +131,11 @@ As detailed in Schema audit:
 
 ## 9.4 Map Embed Audit
 
-| Page | Map Embed | Status |
-|------|-----------|--------|
+| Page         | Map Embed       | Status      |
+| ------------ | --------------- | ----------- |
 | Contact page | ❌ No map embed | **Missing** |
-| About page | ❌ No map embed | Missing |
-| Homepage | ❌ No map embed | Missing |
+| About page   | ❌ No map embed | Missing     |
+| Homepage     | ❌ No map embed | Missing     |
 
 **Fix:** Add a Google Maps embed to the contact page.
 
@@ -144,16 +156,16 @@ As detailed in Schema audit:
 
 ## 9.5 Local Keyword Targeting
 
-| Local Keyword | Current Coverage | Opportunity |
-|--------------|-----------------|-------------|
-| "corporate gifting Pune" | ✅ On corporate-gifting page | Strengthen |
-| "dry fruit shop Hinjewadi" | ❌ None | Add to homepage/contact |
-| "gift shop Hinjewadi Phase I" | ❌ None | Add to about/contact |
-| "premium gift boxes Pune" | ⚠️ Partial | Add local schema |
-| "chocolate gift Pune" | ❌ None | Add product page |
-| "bulk dry fruits Pune" | ❌ None | New page needed |
-| "Diwali gifts Pune" | ❌ None | Seasonal page |
-| "Streets of Europe Mall gift shop" | ❌ None | NAP + schema |
+| Local Keyword                      | Current Coverage             | Opportunity             |
+| ---------------------------------- | ---------------------------- | ----------------------- |
+| "corporate gifting Pune"           | ✅ On corporate-gifting page | Strengthen              |
+| "dry fruit shop Hinjewadi"         | ❌ None                      | Add to homepage/contact |
+| "gift shop Hinjewadi Phase I"      | ❌ None                      | Add to about/contact    |
+| "premium gift boxes Pune"          | ⚠️ Partial                   | Add local schema        |
+| "chocolate gift Pune"              | ❌ None                      | Add product page        |
+| "bulk dry fruits Pune"             | ❌ None                      | New page needed         |
+| "Diwali gifts Pune"                | ❌ None                      | Seasonal page           |
+| "Streets of Europe Mall gift shop" | ❌ None                      | NAP + schema            |
 
 ---
 
@@ -161,33 +173,34 @@ As detailed in Schema audit:
 
 Build local citations (consistent NAP) on these platforms:
 
-| Platform | Priority | Status |
-|----------|----------|--------|
-| Google Business Profile | **Critical** | Unknown |
-| Justdial | HIGH | Unknown |
-| Sulekha | HIGH | Unknown |
-| IndiaMART | HIGH | B2B corporate gifting |
-| TradeIndia | MEDIUM | B2B |
-| IndiaBizz | MEDIUM | |
-| Yelp India | LOW | |
-| Zomato (if applicable) | LOW | Food product listing |
-| Swiggy Genie | LOW | |
-| Bing Places | MEDIUM | Link to Bing Webmaster Tools |
-| Apple Maps | MEDIUM | Growing in India |
+| Platform                | Priority     | Status                       |
+| ----------------------- | ------------ | ---------------------------- |
+| Google Business Profile | **Critical** | Unknown                      |
+| Justdial                | HIGH         | Unknown                      |
+| Sulekha                 | HIGH         | Unknown                      |
+| IndiaMART               | HIGH         | B2B corporate gifting        |
+| TradeIndia              | MEDIUM       | B2B                          |
+| IndiaBizz               | MEDIUM       |                              |
+| Yelp India              | LOW          |                              |
+| Zomato (if applicable)  | LOW          | Food product listing         |
+| Swiggy Genie            | LOW          |                              |
+| Bing Places             | MEDIUM       | Link to Bing Webmaster Tools |
+| Apple Maps              | MEDIUM       | Growing in India             |
 
 ---
 
 ## 9.7 Review Strategy
 
-| Platform | Strategy |
-|----------|---------|
-| Google Reviews | Ask every satisfied corporate client via WhatsApp |
-| Google Reviews — Target | 50+ reviews, 4.7+ average |
-| IndiaMART | Create product listings, collect buyer reviews |
-| Justdial | List with all categories |
-| Social proof on website | Embed Google reviews widget |
+| Platform                | Strategy                                          |
+| ----------------------- | ------------------------------------------------- |
+| Google Reviews          | Ask every satisfied corporate client via WhatsApp |
+| Google Reviews — Target | 50+ reviews, 4.7+ average                         |
+| IndiaMART               | Create product listings, collect buyer reviews    |
+| Justdial                | List with all categories                          |
+| Social proof on website | Embed Google reviews widget                       |
 
 **Review Request Template:**
+
 ```
 Hi [Name], Thank you for choosing Reet Foods for your [gifting occasion].
 We'd be grateful if you could share a quick Google review — it takes 2 minutes!
@@ -200,12 +213,12 @@ We'd be grateful if you could share a quick Google review — it takes 2 minutes
 
 Create geo-targeted landing pages:
 
-| Page | URL | Content |
-|------|-----|---------|
-| Corporate Gifting Pune | `/corporate-gifting-pune` | Already exists as `/corporate-gifting` — add Pune geo-targeting |
-| Dry Fruits Hinjewadi | `/dry-fruits-hinjewadi-pune` | Local landing page |
-| Gift Shop Hinjewadi | `/gift-shop-hinjewadi-pune` | Location-specific page |
-| Diwali Hampers Pune | `/diwali-hampers-pune` | Seasonal landing page |
+| Page                   | URL                          | Content                                                         |
+| ---------------------- | ---------------------------- | --------------------------------------------------------------- |
+| Corporate Gifting Pune | `/corporate-gifting-pune`    | Already exists as `/corporate-gifting` — add Pune geo-targeting |
+| Dry Fruits Hinjewadi   | `/dry-fruits-hinjewadi-pune` | Local landing page                                              |
+| Gift Shop Hinjewadi    | `/gift-shop-hinjewadi-pune`  | Location-specific page                                          |
+| Diwali Hampers Pune    | `/diwali-hampers-pune`       | Seasonal landing page                                           |
 
 ---
 
@@ -214,17 +227,20 @@ Create geo-targeted landing pages:
 ### Fix 1 — Correct Phone in Both Schema Components
 
 **OrganizationSchema.tsx:**
+
 ```tsx
-"telephone": "+91-9890609611",
+"telephone": "+91-9225130732",
 ```
 
 **LocalBusinessSchema.tsx:**
+
 ```tsx
-"telephone": "+91-9890609611",
+"telephone": "+91-9225130732",
 "@type": "Store",
 ```
 
 ### Fix 2 — Add Map Embed to Contact Page
+
 ```tsx
 // app/(site)/contact/page.tsx — add after address section
 <div className="mt-4">
@@ -241,6 +257,7 @@ Create geo-targeted landing pages:
 ```
 
 ### Fix 3 — Add hasMap to LocalBusinessSchema
+
 ```tsx
 "hasMap": "https://www.google.com/maps/place/Reet+Foods+Pune",
 ```

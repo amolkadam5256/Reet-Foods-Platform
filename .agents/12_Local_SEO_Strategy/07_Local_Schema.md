@@ -1,4 +1,5 @@
 ﻿# 07_Local_Schema.md
+
 # Local Schema.org Implementation — Reet Foods & Giftings
 
 ---
@@ -16,7 +17,7 @@
   "url": "https://reetfoodsngiftings.com",
   "logo": "https://reetfoodsngiftings.com/images/reet-foods-logo.png",
   "image": "https://reetfoodsngiftings.com/images/store-front.jpg",
-  "telephone": ["+91-9890609611", "+91-8007518088"],
+  "telephone": ["+91-9225130732", "+91-8007518088"],
   "email": "reetfoodspune@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -34,7 +35,14 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
       "opens": "09:00",
       "closes": "19:00"
     }
@@ -46,21 +54,36 @@
     "@type": "OfferCatalog",
     "name": "Corporate Gifting Products",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Luxury Diwali Hamper"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Premium Dry Fruit Box"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Corporate Gift Box"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Wedding Return Gift"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Custom Branded Hamper"}}
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Luxury Diwali Hamper" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Premium Dry Fruit Box" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Corporate Gift Box" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Wedding Return Gift" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Custom Branded Hamper" }
+      }
     ]
   },
   "areaServed": [
-    {"@type": "City", "name": "Pune"},
-    {"@type": "City", "name": "Mumbai"},
-    {"@type": "City", "name": "Delhi"},
-    {"@type": "City", "name": "Bangalore"},
-    {"@type": "City", "name": "Hyderabad"},
-    {"@type": "AdministrativeArea", "name": "Maharashtra"},
-    {"@type": "Country", "name": "India"}
+    { "@type": "City", "name": "Pune" },
+    { "@type": "City", "name": "Mumbai" },
+    { "@type": "City", "name": "Delhi" },
+    { "@type": "City", "name": "Bangalore" },
+    { "@type": "City", "name": "Hyderabad" },
+    { "@type": "AdministrativeArea", "name": "Maharashtra" },
+    { "@type": "Country", "name": "India" }
   ],
   "sameAs": [
     "https://www.facebook.com/reetfoodsngiftings",
@@ -88,7 +111,7 @@
   "@id": "https://reetfoodsngiftings.com/corporate-gifts/hinjewadi/#localbusiness",
   "name": "Reet Foods & Giftings — Hinjewadi Corporate Gifts",
   "url": "https://reetfoodsngiftings.com/corporate-gifts/hinjewadi/",
-  "telephone": "+91-9890609611",
+  "telephone": "+91-9225130732",
   "email": "reetfoodspune@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -98,7 +121,7 @@
     "postalCode": "411057",
     "addressCountry": "IN"
   },
-  "areaServed": {"@type": "City", "name": "Hinjewadi, Pune"},
+  "areaServed": { "@type": "City", "name": "Hinjewadi, Pune" },
   "description": "Premium corporate gift hampers and dry fruit boxes for IT companies in Hinjewadi, Pune. Same-day delivery available."
 }
 ```
@@ -117,7 +140,7 @@
       "name": "Do you deliver corporate gifts in Hinjewadi Pune same day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Reet Foods & Giftings offers same-day delivery in Hinjewadi for orders placed before 12 PM. Call +91 9890609611."
+        "text": "Yes, Reet Foods & Giftings offers same-day delivery in Hinjewadi for orders placed before 12 PM. Call +91 9225130732."
       }
     },
     {
@@ -149,9 +172,24 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://reetfoodsngiftings.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Corporate Gifts", "item": "https://reetfoodsngiftings.com/corporate-gifts/"},
-    {"@type": "ListItem", "position": 3, "name": "Corporate Gifts Hinjewadi", "item": "https://reetfoodsngiftings.com/corporate-gifts/hinjewadi/"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://reetfoodsngiftings.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Corporate Gifts",
+      "item": "https://reetfoodsngiftings.com/corporate-gifts/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Corporate Gifts Hinjewadi",
+      "item": "https://reetfoodsngiftings.com/corporate-gifts/hinjewadi/"
+    }
   ]
 }
 ```
@@ -166,7 +204,7 @@
   "@type": "Product",
   "name": "Premium Dry Fruit Gift Box",
   "description": "Handcrafted dry fruit gift box with cashews, almonds, raisins, and pistachios. Perfect for Diwali, weddings, and corporate gifting.",
-  "brand": {"@type": "Brand", "name": "Reet Foods & Giftings"},
+  "brand": { "@type": "Brand", "name": "Reet Foods & Giftings" },
   "image": "https://reetfoodsngiftings.com/images/dry-fruit-gift-box.jpg",
   "offers": {
     "@type": "Offer",
@@ -203,7 +241,7 @@
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+91-9890609611",
+      "telephone": "+91-9225130732",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi", "Marathi"]
     },
@@ -237,4 +275,4 @@
 
 ---
 
-*References: 00_Local_SEO_Master.md, 01_Google_Business_Profile.md, 16_Developer_Implementation.md*
+_References: 00_Local_SEO_Master.md, 01_Google_Business_Profile.md, 16_Developer_Implementation.md_

@@ -25,7 +25,7 @@ This document is the master reference for the complete Enterprise Local SEO Stra
 | Brand Name           | Reet Foods                                                                                                          |
 | Store Address        | Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057 |
 | Factory Address      | Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027                         |
-| Phone 1              | +91 9890609611                                                                                                      |
+| Phone 1              | +91 9225130732                                                                                                      |
 | Phone 2              | +91 8007518088                                                                                                      |
 | Email                | reetfoodspune@gmail.com                                                                                             |
 | Website              | https://reetfoodsngiftings.com                                                                                      |

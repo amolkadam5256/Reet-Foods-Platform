@@ -11,7 +11,7 @@ Business Name:  Reet Foods & Giftings
 Store Address:  Shop No. F14, Ground Floor, Streets of Europe Mall,
                 Maan Road near Infosys Circle, Hinjewadi Phase I,
                 Pune – 411057, Maharashtra, India
-Phone 1:        +91 9890609611
+Phone 1:        +91 9225130732
 Phone 2:        +91 8007518088
 Email:          reetfoodspune@gmail.com
 Website:        https://reetfoodsngiftings.com
@@ -40,7 +40,7 @@ Google's local ranking algorithm cross-validates your business details across:
 | ----------------- | ----------------------------- | -------------------------------- |
 | Abbreviated Name  | Reet Foods                    | Reet Foods & Giftings            |
 | Missing Ampersand | Reet Foods and Giftings       | Reet Foods & Giftings            |
-| Old Phone Number  | +91-020-XXXXXXXX              | +91 9890609611                   |
+| Old Phone Number  | +91-020-XXXXXXXX              | +91 9225130732                   |
 | Missing PIN       | Hinjewadi, Pune               | Hinjewadi Phase I, Pune – 411057 |
 | Wrong Email       | info@reetfoodsngiftings.com   | reetfoodspune@gmail.com          |
 | HTTP vs HTTPS     | http://reetfoodsngiftings.com | https://reetfoodsngiftings.com   |
@@ -77,7 +77,7 @@ Google's local ranking algorithm cross-validates your business details across:
   Shop No. F14, Ground Floor, Streets of Europe Mall,<br />
   Maan Road near Infosys Circle, Hinjewadi Phase I,<br />
   Pune – 411057, Maharashtra, India<br />
-  Phone: <a href="tel:+919890609611">+91 9890609611</a> /
+  Phone: <a href="tel:+919225130732">+91 9225130732</a> /
   <a href="tel:+918007518088">+91 8007518088</a><br />
   Email: <a href="mailto:reetfoodspune@gmail.com">reetfoodspune@gmail.com</a>
 </address>

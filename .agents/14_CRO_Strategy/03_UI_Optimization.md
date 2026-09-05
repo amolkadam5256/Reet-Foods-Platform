@@ -24,7 +24,7 @@
 Displayed on mobile viewports for instant lead capture:
 
 ```
-[ 💬 WhatsApp Quote ]  [ 📞 Call Store (+91 9890609611) ]
+[ 💬 WhatsApp Quote ]  [ 📞 Call Store (+91 9225130732) ]
 ```
 
 ### 2. Trust Pill Badges (Under Product Titles)

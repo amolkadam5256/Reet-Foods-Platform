@@ -8,7 +8,7 @@
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ HEADER: Logo | Hinjewadi / Pune Store | Call: +91 9890609611          │
+│ HEADER: Logo | Hinjewadi / Pune Store | Call: +91 9225130732          │
 ├────────────────────────────────────────────────────────────────────────┤
 │ HERO SECTION                                                           │
 │ H1: Premium Corporate Gifts in Hinjewadi, Pune                         │
@@ -29,7 +29,7 @@
 ├────────────────────────────────────────────────────────────────────────┤
 │ FAQ ACCORDION (5 Schema-Marked Questions)                              │
 ├────────────────────────────────────────────────────────────────────────┤
-│ FOOTER CTA: Request Custom Sample Box — Call +91 9890609611            │
+│ FOOTER CTA: Request Custom Sample Box — Call +91 9225130732            │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 

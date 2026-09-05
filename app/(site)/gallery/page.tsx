@@ -79,16 +79,34 @@ export default function GalleryPage() {
       <div className="bg-[#fffbf4] border-t border-reef-gold/20">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-6">
           <div className="rounded-xl border border-reef-gold/30 bg-reef-cream/60 p-5">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-reef-burgundy mb-2">Gallery Disclaimer</p>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-reef-burgundy mb-2">
+              Gallery Disclaimer
+            </p>
             <p className="text-xs leading-relaxed text-reef-charcoal/80">
-              The gallery showcases representative hamper, box and product designs available through our gifting collection. Specific designs, contents and packaging are subject to current availability and can be customized according to your requirement.
+              The gallery showcases representative hamper, box and product
+              designs available through our gifting collection. Specific
+              designs, contents and packaging are subject to current
+              availability and can be customized according to your requirement.
             </p>
             <p className="mt-2 text-xs leading-relaxed text-reef-charcoal/75">
-              <strong>Wooden chests &amp; premium boxes:</strong> Selected wooden chests and premium boxes shown may be available for bulk corporate gifting, subject to current vendor availability. Our team can suggest similar alternatives based on your budget and requirement.
+              <strong>Wooden chests &amp; premium boxes:</strong> Selected
+              wooden chests and premium boxes shown may be available for bulk
+              corporate gifting, subject to current vendor availability. Our
+              team can suggest similar alternatives based on your budget and
+              requirement.
             </p>
             <p className="mt-3 text-xs font-medium text-reef-charcoal/90">
-              Simply note the name of the hamper or take a screenshot and share it with our corporate gifting team via WhatsApp at{" "}
-              <a href="https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20saw%20a%20design%20in%20your%20gallery%20I%20am%20interested%20in." className="font-bold text-reef-burgundy underline" target="_blank" rel="noreferrer">+91 9225130732</a>.
+              Simply note the name of the hamper or take a screenshot and share
+              it with our corporate gifting team via WhatsApp at{" "}
+              <a
+                href="https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20saw%20a%20design%20in%20your%20gallery%20I%20am%20interested%20in."
+                className="font-bold text-reef-burgundy underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                +91 9225130732
+              </a>
+              .
             </p>
           </div>
         </div>

@@ -11,7 +11,7 @@
 **Primary Business:** Corporate Gifting, Premium Dry Fruits, Luxury Hampers, Wedding Gifts, Bulk Orders  
 **Store Address:** Shop No. F14, Ground Floor, Streets of Europe Mall, Maan Road near Infosys Circle, Hinjewadi Phase I, Pune – 411057  
 **Factory Address:** Yashodevi Avenue, Building B2, Vishwashanti Colony No. 4, near Govind Garden, Pune – 411027  
-**Phone:** +91 9890609611 / +91 8007518088 | **Email:** reetfoodspune@gmail.com  
+**Phone:** +91 9225130732 / +91 8007518088 | **Email:** reetfoodspune@gmail.com  
 **FSSAI Licence No.:** 21525083009881 | **GSTIN:** 27FHIPK0363N1ZX
 
 This document serves as the master blueprint for the entire analytics, tracking, measurement, and data architecture for Reet Foods & Giftings.
@@ -32,8 +32,8 @@ This document serves as the master blueprint for the entire analytics, tracking,
 | -------------------- | ------------------------------------ | ---------------------------- | -------------------------- |
 | **Macro Conversion** | Online Purchase                      | Revenue, AOV                 | Direct E-commerce Sales    |
 | **Macro Conversion** | Corporate Quote Request Form         | Lead Count, Deal Size        | High-Value B2B Pipeline    |
-| **Macro Conversion** | Direct Phone Call (+91 9890609611)   | Call Volume, Duration        | Immediate Sales Conversion |
-| **Macro Conversion** | WhatsApp Lead Click (+91 9890609611) | Chat Volume, Conversion Rate | Rapid Local Engagement     |
+| **Macro Conversion** | Direct Phone Call (+91 9225130732)   | Call Volume, Duration        | Immediate Sales Conversion |
+| **Macro Conversion** | WhatsApp Lead Click (+91 9225130732) | Chat Volume, Conversion Rate | Rapid Local Engagement     |
 | **Micro Conversion** | Catalogue PDF Download               | Download Count               | Top-of-Funnel B2B Interest |
 | **Micro Conversion** | Add to Cart / Begin Checkout         | Drop-off Rate, Cart Recovery | E-commerce Funnel Health   |
 | **Micro Conversion** | Newsletter / Offer Signup            | Subscriber Count             | Nurture Campaign Base      |
