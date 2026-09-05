@@ -7,7 +7,7 @@ const steps = [
   ],
   [
     "2. Digital Mock-up",
-    "We share 3D renderings of your branded gift box for approval.",
+    "We share digital mockups of your branded gift box for review and approval.",
   ],
   [
     "3. Production & Packing",

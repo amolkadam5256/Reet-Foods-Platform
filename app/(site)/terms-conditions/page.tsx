@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "Is GST applicable on all corporate gifting orders?",
-    answer: "Yes, applicable GST is charged on all corporate gifting orders. A full GST-compliant invoice is provided for B2B buyers to claim input tax credit (ITC)."
+    answer: "Yes, applicable GST is charged on all corporate gifting orders. An official B2B GST tax invoice is provided for corporate buyers and business accounting."
   },
   {
     question: "Can you cancel a bulk order after confirmation?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "Do you offer any guarantees on product quality?",
-    answer: "Yes, all our FSSAI-certified premium dry fruits and artisanal chocolates are quality-checked before packing. We guarantee freshness and presentation at the time of dispatch."
+    answer: "Yes, all our FSSAI-licensed premium dry fruits and artisanal chocolates are quality-checked before packing. We guarantee freshness and presentation at the time of dispatch."
   },
   {
     question: "Can Reet Foods & Giftings modify terms without notice?",

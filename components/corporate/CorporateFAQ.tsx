@@ -35,7 +35,7 @@ const faqs = [
     question:
       "Are your corporate gift hampers suitable for Diwali gifting?",
     answer:
-      "Absolutely. We are Pune's leading provider of customized Diwali gifts for corporates, offering themed hampers packed with premium dry fruits, chocolates, and diyas.",
+      "Absolutely. We specialize in customized Diwali gifts for corporates in Pune, offering themed hampers packed with premium dry fruits, chocolates, and diyas.",
   },
   {
     question:
@@ -47,7 +47,7 @@ const faqs = [
     question:
       "Is GST invoicing provided for bulk B2B gifting orders?",
     answer:
-      "Yes, we provide 100% GST-compliant invoicing for all B2B corporate gifting orders, allowing your business to claim full input tax credit.",
+      "Yes, we provide official B2B GST tax invoicing for all corporate gifting orders for your business accounting.",
   },
   {
     question:

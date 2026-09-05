@@ -64,7 +64,7 @@ export function BulkOrderSection() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-reef-gold">
-            Enterprise Volume Desk
+            Corporate Bulk Desk
           </p>
           <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl sm:text-5xl font-bold text-white">
             Planning Corporate Diwali Gifts?
@@ -117,7 +117,7 @@ export function BulkOrderSection() {
                     <option value="100 - 250 units" className="bg-[#1c1614]">100 - 250 gifts</option>
                     <option value="250 - 500 units" className="bg-[#1c1614]">250 - 500 gifts</option>
                     <option value="500 - 1,000 units" className="bg-[#1c1614]">500 - 1,000 gifts</option>
-                    <option value="1,000+ units" className="bg-[#1c1614]">1,000+ gifts (Enterprise)</option>
+                    <option value="1,000+ units" className="bg-[#1c1614]">1,000+ gifts (Bulk Order)</option>
                   </select>
                 </div>
 

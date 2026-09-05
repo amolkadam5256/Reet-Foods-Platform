@@ -64,7 +64,7 @@ export const whyUs = [
   },
   {
     title: "Corporate Expertise",
-    desc: "Trusted by HR leaders and procurement teams for branded bulk gifting at scale.",
+    desc: "Experienced in coordinating branded bulk gifting for corporate requirements.",
     icon: "corporate",
   },
   {
@@ -111,8 +111,8 @@ export const corporateGiftingReasons = [
     icon: "briefcase",
   },
   {
-    title: "100% GST Invoicing",
-    desc: "Full B2B tax invoicing with GST input tax credit (ITC) compliance on all corporate consignments.",
+    title: "Official GST Invoicing",
+    desc: "B2B compliant tax invoicing provided on corporate gifting orders.",
     icon: "file",
   },
   {
@@ -125,7 +125,7 @@ export const corporateGiftingReasons = [
 export const testimonials = [
   {
     quote:
-      "Why Choose Reet Foods for Corporate Diwali Gifting? Thoughtfully customized hampers, company logo branding, multiple packaging styles, bulk order handling, 100% GST invoicing, and personalized support.",
+      "Why Choose Reet Foods for Corporate Diwali Gifting? Thoughtfully customized hampers, company logo branding, multiple packaging styles, bulk order handling, official GST invoicing, and personalized support.",
     name: "Corporate Diwali Gifting 2026",
     role: "Reet Foods & Gifting",
     company: "Pune",
@@ -219,7 +219,7 @@ export const faqs = [
     a: "Yes, we specialize in customized employee joining kits for IT companies in Pune and across India, featuring branded boxes, premium dry fruits, and welcome notes.",
   },
   {
-    q: "Are your products FSSAI certified and hygienically packed?",
+    q: "Are your products FSSAI registered and hygienically packed?",
     a: "Yes, Reet Foods operates with valid FSSAI registration (FSSAI No. 21525083009881). Premium dry fruits and corporate gifts are handled with food-grade packaging and rigorous quality checks before dispatch.",
   },
   {

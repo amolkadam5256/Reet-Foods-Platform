@@ -13,8 +13,8 @@ const highlights = [
   },
   {
     icon: FiAward,
-    title: "Tiered Bulk Discounts",
-    desc: "Volume slabs for 25 to 5000+ units",
+    title: "Quantity-Based Pricing",
+    desc: "Bulk corporate discounts available",
   },
   {
     icon: FiTruck,
@@ -23,8 +23,8 @@ const highlights = [
   },
   {
     icon: FiFileText,
-    title: "100% GST Invoicing",
-    desc: "Full input tax credit compliance",
+    title: "Official GST Invoicing",
+    desc: "B2B compliant tax invoices provided",
   },
 ];
 

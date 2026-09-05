@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Do you support GST billing and corporate credit terms?",
-    answer: "Yes, we provide 100% compliant GST invoicing with full input tax credit and flexible payment terms for verified enterprise accounts.",
+    answer: "Yes, we provide standard B2B GST tax invoicing on corporate gifting orders for your accounting requirements.",
   },
 ];
 
@@ -54,15 +54,15 @@ export default function CorporateGiftsCategoryPage() {
         imageAlt="Corporate Branded Gift Box"
         primaryCta={{ label: "View Corporate Gifts", href: "/products" }}
         secondaryCta={{ label: "Request Corporate Proposal", href: "/corporate-gifting" }}
-        sideBadge="Enterprise Ready"
+        sideBadge="Corporate Gifting"
       />
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { icon: <FiBriefcase className="h-6 w-6" />, title: "Custom Logo Printing", desc: "Metallic plate & box lid engraving" },
-          { icon: <FiAward className="h-6 w-6" />, title: "Tiered Volume Discounts", desc: "Exclusive pricing slabs for 50+ units" },
+          { icon: <FiAward className="h-6 w-6" />, title: "Quantity-Based Pricing", desc: "Bulk corporate discounts available" },
           { icon: <FiUsers className="h-6 w-6" />, title: "Pan-India Address Dispatch", desc: "Hassle-free direct recipient shipping" },
-          { icon: <FiCheckCircle className="h-6 w-6" />, title: "100% GST Compliant", desc: "Full input tax credit invoicing" },
+          { icon: <FiCheckCircle className="h-6 w-6" />, title: "Official GST Invoicing", desc: "B2B compliant tax invoices provided" },
         ].map((item, idx) => (
           <div key={idx} className="flex items-start gap-4 rounded-xl border border-reef-gold/20 bg-white p-5 shadow-sm">
             <div className="rounded-lg bg-reef-cream p-3 text-reef-burgundy">{item.icon}</div>

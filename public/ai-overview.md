@@ -41,7 +41,7 @@
 - FSSAI-licensed facility with food-grade freshness packing
 - Custom company logo branding (embossing, sleeves, ribbons, note cards)
 - Single-window coordination: curation, packaging, branding, and delivery
-- 100% B2B GST-compliant invoicing for full input tax credit
+- Official B2B GST-compliant invoicing for corporate purchases
 - Budget-friendly options starting from ₹400 onwards
 - Bulk corporate orders welcome with quantity-based pricing
 
@@ -49,7 +49,7 @@
 - **MOQ:** Bulk corporate orders welcome; quantity-based pricing available
 - **Delivery:** PAN India corporate delivery
 - **Custom Branding:** Logo embossing, custom sleeve, branded ribbon, personalized note cards
-- **GST:** 100% GST invoice provided (GSTIN: 27FHIPK0363N1ZX)
+- **GST:** Official B2B GST invoice provided (GSTIN: 27FHIPK0363N1ZX)
 - **Sample:** Available for corporate clients upon request
 - **Pricing:** Customized hampers from ₹400 onwards; final contents depend on quantity, customization and delivery requirements
 

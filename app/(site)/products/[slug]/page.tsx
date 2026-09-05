@@ -177,8 +177,8 @@ export default async function ProductDetailPage({ params }: Props) {
                 <p className="mt-1 text-xs text-reef-charcoal font-medium">9 to 12 Months when stored in cool dry environment</p>
               </div>
               <div className="rounded-xl bg-reef-cream/50 p-4 border border-reef-gold/15">
-                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">Certification</span>
-                <p className="mt-1 text-xs text-reef-charcoal font-medium">100% FSSAI certified & food-grade compliance</p>
+                <span className="text-xs font-semibold uppercase tracking-wider text-reef-burgundy">FSSAI Registration</span>
+                <p className="mt-1 text-xs text-reef-charcoal font-medium">FSSAI No. 21525083009881 & food-grade compliance</p>
               </div>
             </div>
           </div>
@@ -212,17 +212,17 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Quick Purchase Concierge Sidebar */}
+        {/* Quick Purchase Corporate Sidebar */}
         <div className="space-y-6">
           <div className="rounded-2xl border border-reef-gold/30 bg-reef-charcoal p-6 text-white shadow-xl">
             <span className="inline-block rounded-full bg-reef-gold/20 px-3 py-1 text-[10px] font-semibold uppercase text-reef-gold">
-              Concierge Ordering
+              Corporate Ordering
             </span>
             <h3 className="mt-3 font-[family-name:var(--font-playfair)] text-xl font-bold text-white">
               Instant Corporate Quote
             </h3>
             <p className="mt-2 text-xs leading-relaxed text-white/75">
-              Need 25+ boxes for client gifting or corporate events? Speak directly with our Pune account team for tiered pricing slabs.
+              Looking for bulk gifting for client relationships or corporate events? Speak directly with our Pune team for quantity-based pricing.
             </p>
 
             <div className="mt-6 space-y-3">

@@ -11,8 +11,8 @@ import { getCampaignYear } from "@/lib/site";
 export function generateMetadata() {
   const year = getCampaignYear();
   return constructMetadata({
-    title: `Bulk Corporate Diwali Gifts Pune ${year} | 50 to 5,000+ Units | Reet Foods`,
-    description: `Order Bulk Corporate Diwali Hampers in Pune for ${year}. Tiered volume discounts, 100% GST invoicing, company logo customization, and multi-office delivery in Hinjewadi, Pune & PAN India.`,
+    title: `Bulk Corporate Diwali Gifts Pune ${year} | Bulk Orders | Reet Foods`,
+    description: `Order Bulk Corporate Diwali Hampers in Pune for ${year}. Quantity-based pricing, official GST invoicing, company logo customization, and multi-office delivery in Hinjewadi, Pune & PAN India.`,
     canonical: "/bulk-orders",
     keywords: [
       `bulk corporate Diwali gifts Pune ${year}`,
@@ -38,9 +38,9 @@ export default function BulkOrdersPage() {
 
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
         <PageHero
-          eyebrow="Volume & Enterprise Desk"
-          title={`Planning 50, 100, 500 or 1,000+ Corporate Diwali Gifts for ${year}?`}
-          description={`Seamless bulk fulfillment with tiered pricing, custom metallic logo branding, FSSAI certified freshness, and 100% compliant GST B2B billing from our Hinjewadi, Pune center.`}
+          eyebrow="Corporate Volume Desk"
+          title={`Bulk Corporate Diwali Gifts in Pune (${year})`}
+          description={`Seamless bulk fulfillment with quantity-based pricing, custom metallic logo branding, FSSAI-licensed quality, and official B2B GST billing from our Hinjewadi, Pune center.`}
           breadcrumbs={[{ label: "Bulk Corporate Orders" }]}
           image={Images.sweetiesDesk}
           imageAlt={`Bulk Corporate Diwali Gifting Pune ${year}`}
@@ -52,7 +52,7 @@ export default function BulkOrdersPage() {
             label: "WhatsApp Bulk Desk",
             href: "https://wa.me/919225130732?text=Hi%20Reet%20Foods%2C%20I%20am%20planning%20a%20bulk%20order%20for%20Corporate%20Diwali%20Gifting.%20Please%20share%20bulk%20proposals.",
           }}
-          sideBadge="Volume Discounts to 35%"
+          sideBadge="Quantity Pricing"
         />
       </div>
 

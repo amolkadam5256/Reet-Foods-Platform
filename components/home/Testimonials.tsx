@@ -41,8 +41,8 @@ const reasons = [
   },
   {
     icon: FiFileText,
-    title: "100% GST Invoicing",
-    desc: "Fully compliant B2B GST billing with Input Tax Credit (ITC) support for seamless corporate accounting.",
+    title: "Official GST Invoicing",
+    desc: "B2B compliant GST billing provided for corporate accounting.",
   },
   {
     icon: FiHeadphones,

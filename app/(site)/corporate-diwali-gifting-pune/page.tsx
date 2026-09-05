@@ -63,9 +63,9 @@ const puneFaqs = [
       "Yes, we provide dedicated delivery across all Pune industrial and IT hubs including Hinjewadi Phase 1, 2, 3, Chakan MIDC, Talegaon, Bhosari, Magarpatta, Kharadi, and Baner.",
   },
   {
-    question: "Do you provide GST invoices for corporate tax deduction (ITC)?",
+    question: "Do you provide GST invoices for corporate orders?",
     answer:
-      "All corporate gift orders come with 100% compliant GST B2B tax invoices (GSTIN: 27FHIPK0363N1ZX) eligible for full input tax credit.",
+      "All corporate gift orders come with official GST B2B tax invoices (GSTIN: 27FHIPK0363N1ZX) for your accounting records.",
   },
   {
     question: "What is the typical turnaround time for bulk Diwali orders in Pune?",
@@ -228,7 +228,7 @@ export default function PuneCorporateDiwaliPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-reef-gold">
-                Direct Pune Concierge Desk
+                Direct Pune Corporate Desk
               </span>
               <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-2xl sm:text-3xl font-bold text-white">
                 Visit Our Hinjewadi Showroom or Connect on WhatsApp

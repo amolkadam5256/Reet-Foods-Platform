@@ -6,9 +6,9 @@ import { FAQList } from "@/components/common/FAQList";
 import { generateWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Premium Dry Fruits, Gift Boxes & Corporate Hampers | Reet Foods",
+  title: "Products & Gift Boxes | Reet Foods Pune",
   description:
-    "Explore Reet Foods premium dry fruits, dry fruit gift boxes, festive hampers and custom corporate gifting solutions from Pune. FSSAI certified, luxury packaging with custom logo engraving.",
+    "Explore Reet Foods premium dry fruits, dry fruit gift boxes, festive hampers and custom corporate gifting solutions from Pune. FSSAI No. 21525083009881, luxury packaging with custom logo engraving.",
   keywords: [
     "premium dry fruits",
     "dry fruit gift boxes",
@@ -97,9 +97,9 @@ const faqs = [
   },
   {
     question:
-      "Do you provide FSSAI certified products for corporate distribution?",
+      "Do you provide FSSAI licensed products for corporate distribution?",
     answer:
-      "Yes, Reet Foods operates with FSSAI licensing. Products are handled with food-grade packaging and dispatch quality checks.",
+      "Yes, Reet Foods operates with FSSAI licensing (FSSAI No. 21525083009881). Products are handled with food-grade packaging and dispatch quality checks.",
   },
   {
     question: "Can we create a custom hamper with our choice of products?",
@@ -117,15 +117,15 @@ const faqs = [
       "Yes, we prioritize sustainability by offering reusable tin boxes, handcrafted wooden chests, and biodegradable cardboard packaging for our hampers.",
   },
   {
-    question: "Is GST input tax credit available on corporate gifting orders?",
+    question: "Is GST invoicing available on corporate gifting orders?",
     answer:
-      "Yes, we provide a 100% compliant B2B GST invoice for all corporate gifting orders, allowing your business to claim full input tax credit (ITC).",
+      "Yes, we provide official B2B GST tax invoices for all corporate gifting orders to assist with corporate accounting.",
   },
   {
     question:
       "Can you manage individual deliveries to remote employee addresses?",
     answer:
-      "Yes, our multi-address dispatch service covers over 19,000 pin codes in India, ensuring every employee receives their gift box directly at home.",
+      "Yes, our multi-address dispatch service covers major courier-serviceable pin codes across India, ensuring your team and clients receive their gift boxes directly.",
   },
   {
     question: "Do you offer tiered pricing for large-scale enterprise orders?",

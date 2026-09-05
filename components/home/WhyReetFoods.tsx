@@ -36,7 +36,7 @@ export function WhyReetFoods() {
     {
       icon: <FiPackage className="h-6 w-6 text-reef-gold" />,
       title: "Bulk Orders + GST Invoicing",
-      desc: "Built for enterprise volumes (50 to 5,000+ units) with 100% compliant B2B GST ITC tax billing.",
+      desc: "Bulk corporate orders welcome. Quantity-based pricing available with standard B2B GST tax billing.",
     },
     {
       icon: <FiHeadphones className="h-6 w-6 text-reef-gold" />,
@@ -56,7 +56,7 @@ export function WhyReetFoods() {
             Corporate Diwali Gifting {year} Made Seamless
           </h2>
           <p className="mt-3 text-sm sm:text-base text-reef-charcoal/75 leading-relaxed">
-            Delivering trusted, FSSAI-certified food gifts with end-to-end customization, transparent pricing, and punctual corporate delivery across Pune and PAN India.
+            Delivering trusted, FSSAI-licensed food gifts with end-to-end customization, transparent pricing, and punctual corporate delivery across Pune and PAN India.
           </p>
         </div>
 

@@ -38,8 +38,8 @@ export function IndustriesWeServe() {
           Trusted Across Industries
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-          From Fortune 500 HR teams to boutique wedding planners — our gifting solutions
-          are designed to scale across every sector.
+          From corporate HR teams to boutique event planners — our gifting solutions
+          are thoughtfully tailored across every sector.
         </p>
       </div>
 
