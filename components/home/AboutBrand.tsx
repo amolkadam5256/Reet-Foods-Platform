@@ -50,9 +50,9 @@ export function AboutBrand() {
               bespoke chocolate boxes, every product carries a story of care.
             </p>
             <p className="mt-4 text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
-              We partner with India&apos;s leading corporations, wedding
-              planners, and retail buyers to create memorable gifting moments
-              that elevate brands and celebrate relationships.
+              Designed for Corporate HR, Admin &amp; Procurement Requirements — we
+              create memorable gifting moments that elevate brands, appreciate
+              teams, and celebrate business relationships.
             </p>
 
             <Link

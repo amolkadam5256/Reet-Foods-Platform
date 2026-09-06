@@ -8,7 +8,7 @@ export function TrustBar() {
           "✦ Customized Hampers From ₹400",
           "✦ Company Logo & Branding",
           "✦ Bulk Corporate Orders Welcome",
-          "✦ Official GST Invoicing",
+          "✦ GST Invoicing Available",
           "✦ PAN India Delivery",
           "✦ Prompt Quotation Support",
           // Duplicate for seamless loop
@@ -17,7 +17,7 @@ export function TrustBar() {
           "✦ Customized Hampers From ₹400",
           "✦ Company Logo & Branding",
           "✦ Bulk Corporate Orders Welcome",
-          "✦ Official GST Invoicing",
+          "✦ GST Invoicing Available",
           "✦ PAN India Delivery",
           "✦ Prompt Quotation Support",
         ].map((text, i) => (

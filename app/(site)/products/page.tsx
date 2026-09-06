@@ -119,7 +119,7 @@ const faqs = [
   {
     question: "Is GST invoicing available on corporate gifting orders?",
     answer:
-      "Yes, we provide official B2B GST tax invoices for all corporate gifting orders to assist with corporate accounting.",
+      "Yes, GST invoicing is available for corporate orders. We are GST registered and can provide official B2B invoices for your business accounting.",
   },
   {
     question:

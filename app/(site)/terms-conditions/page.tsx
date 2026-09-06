@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "Is GST applicable on all corporate gifting orders?",
-    answer: "Yes, applicable GST is charged on all corporate gifting orders. An official B2B GST tax invoice is provided for corporate buyers and business accounting."
+    answer: "Yes, applicable GST is charged on all corporate gifting orders. GST invoicing is available for corporate buyers and business accounting."
   },
   {
     question: "Can you cancel a bulk order after confirmation?",

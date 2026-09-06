@@ -80,7 +80,7 @@ export default function ProductsHero({ animVisible }: ProductsHeroProps) {
             <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-4">
               {[
                 { value: "FSSAI", label: "No. 21525083009881" },
-                { value: "GST", label: "Compliant Invoicing" },
+                { value: "GST", label: "Invoicing Available" },
                 { value: "Bulk", label: "Corporate Orders" },
                 { value: "PAN", label: "India Delivery" },
               ].map((stat) => (

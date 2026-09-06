@@ -65,7 +65,7 @@ export function GiftingCategories() {
             Corporate Gifting Categories
           </h2>
           <p className="mt-3 text-sm sm:text-base text-reef-charcoal/75 leading-relaxed">
-            Tailored gifting programs designed specifically for corporate procurement, HR managers, and leadership teams.
+            Designed for Corporate HR, Admin &amp; Procurement Requirements with tailored gifting programs for teams, clients, and leadership associates.
           </p>
         </div>
 

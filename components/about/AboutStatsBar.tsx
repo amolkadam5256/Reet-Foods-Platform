@@ -1,7 +1,7 @@
 const statistics = [
   { value: "Bespoke", label: "Custom Hampers & Branding" },
   { value: "₹400+", label: "Starting Budget Range" },
-  { value: "100%", label: "GST Billing & Compliance" },
+  { value: "GST", label: "Invoicing Available for Corporate Orders" },
   { value: "FSSAI", label: "Licensed Operations" },
 ];
 

@@ -23,8 +23,8 @@ const highlights = [
   },
   {
     icon: FiFileText,
-    title: "Official GST Invoicing",
-    desc: "B2B compliant tax invoices provided",
+    title: "GST Invoicing Available",
+    desc: "Official B2B invoices for corporate orders",
   },
 ];
 

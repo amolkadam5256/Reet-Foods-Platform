@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "What are the payment options for bulk corporate orders?",
-    answer: "We accept NEFT, RTGS, UPI, and Corporate Credit Cards. Official B2B GST tax invoices are provided for your corporate accounting."
+    answer: "We accept NEFT, RTGS, UPI, and Corporate Credit Cards. GST invoicing is available for corporate orders and business accounting."
   },
   {
     question: "Do you cater to festive events other than Diwali?",

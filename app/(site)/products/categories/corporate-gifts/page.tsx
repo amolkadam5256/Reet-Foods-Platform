@@ -62,7 +62,7 @@ export default function CorporateGiftsCategoryPage() {
           { icon: <FiBriefcase className="h-6 w-6" />, title: "Custom Logo Printing", desc: "Metallic plate & box lid engraving" },
           { icon: <FiAward className="h-6 w-6" />, title: "Quantity-Based Pricing", desc: "Bulk corporate discounts available" },
           { icon: <FiUsers className="h-6 w-6" />, title: "Pan-India Address Dispatch", desc: "Hassle-free direct recipient shipping" },
-          { icon: <FiCheckCircle className="h-6 w-6" />, title: "Official GST Invoicing", desc: "B2B compliant tax invoices provided" },
+          { icon: <FiCheckCircle className="h-6 w-6" />, title: "GST Invoicing Available", desc: "Official B2B invoices for corporate orders" },
         ].map((item, idx) => (
           <div key={idx} className="flex items-start gap-4 rounded-xl border border-reef-gold/20 bg-white p-5 shadow-sm">
             <div className="rounded-lg bg-reef-cream p-3 text-reef-burgundy">{item.icon}</div>

@@ -21,7 +21,7 @@ export function WhyReetFoods() {
     {
       icon: <FiGift className="h-6 w-6 text-reef-gold" />,
       title: "Wide Product Selection",
-      desc: "Premium California almonds, Afghani anjeer, artisanal chocolates, cold-pressed beverages & luxury gift boxes.",
+      desc: "Premium graded dry fruits, artisanal chocolates, cold-pressed beverages & luxury gift boxes. Illustrative curation — final contents subject to availability and quotation.",
     },
     {
       icon: <FiAward className="h-6 w-6 text-reef-gold" />,
@@ -35,8 +35,8 @@ export function WhyReetFoods() {
     },
     {
       icon: <FiPackage className="h-6 w-6 text-reef-gold" />,
-      title: "Bulk Orders + GST Invoicing",
-      desc: "Bulk corporate orders welcome. Quantity-based pricing available with standard B2B GST tax billing.",
+      title: "GST Invoicing Available",
+      desc: "GST invoicing available for corporate orders, with quantity-based pricing and official B2B invoices for corporate accounting.",
     },
     {
       icon: <FiHeadphones className="h-6 w-6 text-reef-gold" />,

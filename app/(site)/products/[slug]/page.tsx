@@ -246,7 +246,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="mt-6 border-t border-white/10 pt-4 text-[11px] text-white/60 space-y-1">
               <p>✓ Guaranteed Freshness</p>
               <p>✓ Doorstep Delivery in Pune</p>
-              <p>✓ GST Compliant Invoicing</p>
+              <p>✓ GST Invoicing Available for Corporate Orders</p>
             </div>
           </div>
         </div>

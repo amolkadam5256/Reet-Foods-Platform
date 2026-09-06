@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "Do you offer GST billing for corporate clients?",
     answer:
-      "Absolutely. We are fully registered (GSTIN: 27FHIPK0363N1ZX) and provide complete B2B GST billing for all corporate gift boxes and luxury hampers.",
+      "Yes. GST invoicing is available for corporate orders. We are GST registered (GSTIN: 27FHIPK0363N1ZX) and can provide official B2B invoices for your business accounting.",
   },
   {
     question:

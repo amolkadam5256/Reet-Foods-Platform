@@ -272,7 +272,7 @@ export default function PuneCorporateDiwaliPage() {
                 <FiFileText className="text-reef-gold h-4 w-4 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-white">GST Number:</p>
-                  <p className="mt-0.5 text-white/70">27FHIPK0363N1ZX (100% Tax Invoicing)</p>
+                  <p className="mt-0.5 text-white/70">27FHIPK0363N1ZX (GST Invoicing Available)</p>
                 </div>
               </div>
 

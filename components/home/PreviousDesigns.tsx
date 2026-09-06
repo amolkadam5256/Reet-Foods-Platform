@@ -42,7 +42,7 @@ export function PreviousDesigns() {
             Previous Diwali Designs
           </h2>
           <div className="mt-3 inline-block rounded-xl border border-reef-gold/30 bg-reef-cream/70 px-4 py-2 text-xs font-semibold text-reef-burgundy">
-            Images shown are for reference only. 2026 hamper designs, contents, packaging and branding can be customized according to requirement.
+            Illustrative curation — final contents subject to availability and quotation. 2026 hamper designs, packaging and branding can be customized according to requirement.
           </div>
           <p className="mt-3 text-xs sm:text-sm text-reef-charcoal/70 leading-relaxed max-w-2xl mx-auto">
             Explore concepts crafted for corporate clients across Pune. All {year} collections feature refreshed packaging styles, gourmet combinations, and custom company branding options.

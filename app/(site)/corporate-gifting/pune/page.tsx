@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     question: "Can we get GST invoices for corporate gifting purchases in Pune?",
-    answer: "All corporate gift purchases in Pune come with full GST-compliant invoices. We are GSTIN-registered (GSTIN-27ABCD1234E) and provide B2B billing for all corporate clients.",
+    answer: "Official GST invoicing is available for corporate orders. We are GST registered (GSTIN: 27FHIPK0363N1ZX) and provide official B2B invoices for business accounting.",
   },
   {
     question: "What are the best Diwali gift options for corporate clients in Pune?",
@@ -100,7 +100,7 @@ const highlights = [
   { icon: <FiBriefcase className="h-6 w-6" />, title: "Custom Logo Printing", desc: "Foil stamping & laser engraving" },
   { icon: <FiAward className="h-6 w-6" />, title: "Tiered Bulk Discounts", desc: "Up to 35% off for volume orders" },
   { icon: <FiTruck className="h-6 w-6" />, title: "Same-Day Dispatch", desc: "From our Pune fulfillment center" },
-  { icon: <FiFileText className="h-6 w-6" />, title: "100% GST Billing", desc: "Full ITC compliance for businesses" },
+  { icon: <FiFileText className="h-6 w-6" />, title: "GST Invoicing Available", desc: "Official B2B invoices for corporate orders" },
 ];
 
 const products = [

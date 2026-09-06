@@ -111,8 +111,8 @@ export const corporateGiftingReasons = [
     icon: "briefcase",
   },
   {
-    title: "Official GST Invoicing",
-    desc: "B2B compliant tax invoicing provided on corporate gifting orders.",
+    title: "GST Invoicing Available",
+    desc: "GST invoicing available for corporate orders and business accounting.",
     icon: "file",
   },
   {
@@ -286,6 +286,6 @@ export const galleryPreviewImages = [
 export const stats = [
   { value: "Bespoke", label: "Custom Hampers & Branding" },
   { value: "₹400+", label: "Budgets for Every Scale" },
-  { value: "100%", label: "GST Compliant Invoicing" },
+  { value: "GST", label: "Invoicing Available for Corporate Orders" },
   { value: "FSSAI", label: "No. 21525083009881" },
 ];

@@ -40,7 +40,7 @@ export default function BulkOrdersPage() {
         <PageHero
           eyebrow="Corporate Volume Desk"
           title={`Bulk Corporate Diwali Gifts in Pune (${year})`}
-          description={`Seamless bulk fulfillment with quantity-based pricing, custom metallic logo branding, FSSAI-licensed quality, and official B2B GST billing from our Hinjewadi, Pune center.`}
+          description={`Seamless bulk fulfillment with quantity-based pricing, custom metallic logo branding, FSSAI-licensed quality, and GST invoicing available for corporate orders from our Hinjewadi, Pune center.`}
           breadcrumbs={[{ label: "Bulk Corporate Orders" }]}
           image={Images.sweetiesDesk}
           imageAlt={`Bulk Corporate Diwali Gifting Pune ${year}`}

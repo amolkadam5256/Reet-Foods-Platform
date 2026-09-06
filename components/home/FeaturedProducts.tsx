@@ -27,10 +27,10 @@ export function FeaturedProducts() {
             id="featured-heading"
             className="mt-3 font-[family-name:var(--font-playfair)] text-3xl text-reef-charcoal sm:text-4xl"
           >
-            Trusted by Connoisseurs
+            Signature Corporate Curations
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-reef-charcoal/70">
-            Explore our most sought-after curations — from premium origin dry fruits to artisanal chocolate gift boxes, trusted by India&apos;s leading enterprises.
+            Explore our most sought-after curations — from premium origin dry fruits to artisanal chocolate gift boxes. Designed for Corporate HR, Admin &amp; Procurement Requirements.
           </p>
         </div>
         <Link
@@ -91,6 +91,10 @@ export function FeaturedProducts() {
           </Link>
         ))}
       </div>
+
+      <p className="mt-5 text-center text-xs text-reef-charcoal/65">
+        Illustrative curation — final contents subject to availability and quotation.
+      </p>
     </section>
   );
 }

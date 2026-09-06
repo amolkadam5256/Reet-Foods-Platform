@@ -102,10 +102,13 @@ export function HampersBudgetBands() {
 
                   <div className="mt-4 rounded-lg bg-[#faf8f3] p-3 border border-reef-gold/10">
                     <p className="text-[11px] font-bold uppercase tracking-wider text-reef-charcoal/70 mb-1">
-                      Example Curation:
+                      Illustrative Curation:
                     </p>
                     <p className="text-xs text-reef-charcoal/80 leading-relaxed">
                       {band.popularItems}
+                    </p>
+                    <p className="mt-2 text-[10px] text-reef-charcoal/60 italic border-t border-reef-gold/10 pt-1.5">
+                      Illustrative curation — final contents subject to availability and quotation.
                     </p>
                   </div>
 
@@ -139,7 +142,7 @@ export function HampersBudgetBands() {
         {/* Commercial disclaimer per brief */}
         <div className="mt-8 rounded-xl border border-reef-gold/20 bg-reef-cream/40 p-4 text-center text-xs text-reef-charcoal/80">
           <p>
-            ℹ️ <strong>Note for Procurement & HR:</strong> Final contents and pricing depend on quantity, customization and delivery requirements. Actual product mixes, weights, packaging finishes, and landed prices are confirmed during quotation based on your specific requirements.
+            ℹ️ <strong>Note for Procurement & HR:</strong> Illustrative curation — final contents subject to availability and quotation. Actual product mixes, weights, packaging finishes, and landed prices are confirmed during quotation based on your specific requirements.
           </p>
         </div>
       </div>

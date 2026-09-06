@@ -41,8 +41,8 @@ const reasons = [
   },
   {
     icon: FiFileText,
-    title: "Official GST Invoicing",
-    desc: "B2B compliant GST billing provided for corporate accounting.",
+    title: "GST Invoicing Available",
+    desc: "GST invoicing available for corporate orders and business accounting.",
   },
   {
     icon: FiHeadphones,
@@ -70,7 +70,7 @@ export function Testimonials() {
             Why Choose Reet Foods for Corporate Diwali Gifting?
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-reef-charcoal/75 sm:text-base">
-            We partner with corporate procurement, HR managers, and business leaders to deliver thoughtfully curated hampers with dependable service and transparent pricing.
+            Designed for Corporate HR, Admin &amp; Procurement Requirements — delivering thoughtfully curated hampers with dependable service, transparent pricing, and prompt fulfillment.
           </p>
         </div>
 
